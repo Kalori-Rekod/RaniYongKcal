@@ -1,210 +1,1832 @@
 <!DOCTYPE html>
-<html lang="ms">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Calorie & Macronutrient Budget by Rani Yong</title>
-    <!-- Penyediaan Font Google Sans dan Ikon Grafik Material Icons -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link href="https://googleapis.com" rel="stylesheet">
-    <!-- Framework CSS Tailwind untuk Susun Atur Skrin Laptop & Telefon Pintar -->
-    <script src="https://jsdelivr.net"></script>
-    <style>
-        body {
-            font-family: 'Google Sans', sans-serif;
-            background-color: #f7f8fa;
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta data-sandbox-injected="" http-equiv="Content-Security-Policy" content="
+          default-src 'none';
+          base-uri 'none';
+          connect-src https://fonts.gstatic.com https://www.gstatic.com https://esm.sh/;
+          font-src https://fonts.gstatic.com;
+          form-action 'none';
+          
+          worker-src blob: https://*.scf.usercontent.goog;
+          img-src data: https://encrypted-tbn0.gstatic.com https://encrypted-tbn1.gstatic.com https://encrypted-tbn2.gstatic.com https://encrypted-tbn3.gstatic.com ;
+          media-src 'none';
+          object-src 'none';
+          script-src 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://widgetlibs.static.usercontent.goog https://*.scf.usercontent.goog https://esm.sh/;
+          style-src 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.gstatic.com/ https://esm.sh/;">
+      <meta data-sandbox-injected="" charset="UTF-8">
+      <meta data-sandbox-injected="" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="enable-onep-api" content="false"><script data-sandbox-injected="true">(function(){var g=Object.defineProperty,k=globalThis,l=function(a,b){if(b)a:{var c=k;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&g(c,a,{configurable:!0,writable:!0,value:b})}};l("Promise.withResolvers",function(a){return a?a:function(){var b,c;return{promise:new Promise(function(d,e){b=d;c=e}),resolve:b,reject:c}}});var m=function(a){return typeof a==="object"&&a!==null&&"kind"in a&&typeof a.kind==="string"&&("payload"in a||a.kind==="___CROSS_FRAME_HANDSHAKE___")},n=class{constructor(){this.j=new Map}i(a){var b=a.data;if(m(b)){let c=b.payload;if(b=this.j.get(b.kind))(a=a.ports&&a.ports.length>0?a.ports:void 0)?b(c,a):b(c)}}sendMessage(a,b,c){if(!this.port)throw Error("a");a={kind:String(a),payload:b||{}};c&&c.length>0?this.port.postMessage(a,c):this.port.postMessage(a)}},p=async function(a){var b=window.parent;
+return a.h?{}:new Promise(c=>{var d=e=>{e.source===b&&m(e.data)&&e.data.kind==="___CROSS_FRAME_HANDSHAKE___"&&(window.removeEventListener("message",d),a.port=e.ports[0],a.port.onmessage=a.i.bind(a),a.h=!0,c(e.data.payload||{}))};window.addEventListener("message",d)})},q=class extends n{constructor(){super(...arguments);this.h=!1}};var {promise:r,resolve:t}=Promise.withResolvers(),{promise:u,resolve:v}=Promise.withResolvers(),w=!1;(async function(){var a=new q,b=await p(a);b&&b.enableSandboxToEditorSync&&(w=!!b.enableSandboxToEditorSync);if(b&&b.initialPayload){let c=b.initialPayload;window.initialPayload=c;window.setTimeout(()=>{window.dispatchEvent(new MessageEvent("message",{data:c}))},0)}t(a);(a=a.port)&&v(a)})();function x(a){r.then(b=>{b.sendMessage("ERROR",{error:a})})}window.onerror=(a,b,c,d,e)=>{x(e);return!0};
+window.onunhandledrejection=a=>{x(Error(a.reason));a.preventDefault()};
+window.document.addEventListener("DOMContentLoaded",()=>{r.then(a=>{a.sendMessage("ISOLATE_READY",{});var b=window.document.querySelector("#resize-target")||window.document.body,c=NaN,d=NaN,e=!1;(new ResizeObserver(()=>{e||(e=!0,window.requestAnimationFrame(()=>{e=!1;var f=Math.ceil(b.scrollHeight),h=Math.ceil(b.scrollWidth);f===c&&h===d||f===0&&h===0||(c=f,d=h,a.sendMessage("RESIZE",{height:f,width:h}))}))})).observe(b);if(w){let f;(new MutationObserver(()=>{f&&window.clearTimeout(f);f=window.setTimeout(()=>
+{f=void 0;a.sendMessage("HTML_CHANGED",{html:"<!DOCTYPE html>\n"+window.document.documentElement.outerHTML})},500)})).observe(window.document.documentElement,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}})});window.addEventListener("resizeRequest",()=>{r.then(a=>{var b=window.document.querySelector("#resize-target")||window.document.body,c=Math.ceil(b.scrollHeight);b=Math.ceil(b.scrollWidth);c===0&&b===0||a.sendMessage("MANUAL_RESIZE",{height:c,width:b})})});
+function y(a){var b=null;a instanceof Element?b=a:a&&a.nodeType===Node.TEXT_NODE&&(b=a.parentElement);if(!b)return null;for(a=b;a&&a!==window.document.body;){if(a.matches('a,button,input,textarea,select,option,details,summary,area,[jsaction],[data-jsaction],[role],[tabindex]:not([tabindex="-1"])'))return z(a);if(a instanceof HTMLElement&&a.isContentEditable)return z(a);a=a.parentElement}return null}
+function z(a){var b={tagName:a.tagName.toUpperCase(),attributes:{}},c=["role","jsaction","data-jsaction","tabindex"];for(let d of c)c=a.getAttribute(d),c!==null&&(b.attributes[d]=c);a instanceof HTMLElement&&a.isContentEditable&&(b.isContentEditable=!0);return b}window.addEventListener("click",a=>{var b=(a=a.target)?y(a):null;r.then(c=>{c.sendMessage("CLICK",{matchedNode:b})})},!0);
+window.addEventListener("request_window_open",a=>{var b=a.detail;r.then(c=>{c.sendMessage("REQUEST_WINDOW_OPEN",{url:b.url,hostname:b.hostname,target:b.target,features:b.features,skipConfirmation:b.skipConfirmation})})});window.sandboxConsoleLog=(a,b)=>{r.then(c=>{c.sendMessage("CONSOLE_LOG",{logLevel:a,message:b})})};if(document.querySelector('meta[name="enable-onep-api"]')?.getAttribute("content")==="true"){let a=!1;window.claimPortReady=()=>{if(a)return null;a=!0;return u}}window.logError=x;}).call(this);</script><script>(function(){function f(b){return["https://www.google.com/maps/","https://maps.google.com/","https://www.youtube.com/watch?v=","https://www.youtube.com/v/","https://youtu.be/"].some(a=>b.startsWith(a))}window.open=(b,a,d)=>{var c,e=!1;if(b)try{if(c=b instanceof URL?b.toString():String(b)){var g=(new URL(c,window.location.href)).hostname;e=f(c)}}catch(h){}window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:c,hostname:g,target:a,features:d,h:e}}));return null};
+window.addEventListener("click",b=>{var a=b.target.closest("a");if(a&&a.getAttribute("target")==="_blank"&&a.hasAttribute("href")){a=a.getAttribute("href");let d,c=!1;try{d=(new URL(a,window.location.href)).hostname,c=f(a)}catch(e){}b.preventDefault();b.stopPropagation();window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:a,hostname:d,target:"_blank",h:c}}))}},!0);}).call(this);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="Generated%20Interactive%20Widget_files/css2_uLc8.css" rel="stylesheet"><link href="Generated%20Interactive%20Widget_files/icon_uLc8.css" rel="stylesheet"><title>Generated Interactive Widget</title><script type="module" crossorigin="">
+import { jsx, jsxs } from 'https://esm.sh/react@18.2.0/jsx-runtime';
+import React, { useState, useMemo, useRef, useEffect } from 'https://esm.sh/react@18.2.0';
+import ReactDOM from 'https://esm.sh/react-dom@18.2.0/client';
+import * as ToggleGroup from 'https://esm.sh/@radix-ui/react-toggle-group@1.1.11?deps=react@18.2.0,react-dom@18.2.0';
+import * as Slider from 'https://esm.sh/@radix-ui/react-slider@1.1.2?deps=react@18.2.0,react-dom@18.2.0';
+import { ErrorBoundary } from 'https://esm.sh/react-error-boundary@4.0.0?deps=react@18.2.0,react-dom@18.2.0';
+
+true              &&(function polyfill() {
+  const relList = document.createElement("link").relList;
+  if (relList && relList.supports && relList.supports("modulepreload")) {
+    return;
+  }
+  for (const link of document.querySelectorAll('link[rel="modulepreload"]')) {
+    processPreload(link);
+  }
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type !== "childList") {
+        continue;
+      }
+      for (const node of mutation.addedNodes) {
+        if (node.tagName === "LINK" && node.rel === "modulepreload")
+          processPreload(node);
+      }
+    }
+  }).observe(document, { childList: true, subtree: true });
+  function getFetchOpts(link) {
+    const fetchOpts = {};
+    if (link.integrity) fetchOpts.integrity = link.integrity;
+    if (link.referrerPolicy) fetchOpts.referrerPolicy = link.referrerPolicy;
+    if (link.crossOrigin === "use-credentials")
+      fetchOpts.credentials = "include";
+    else if (link.crossOrigin === "anonymous") fetchOpts.credentials = "omit";
+    else fetchOpts.credentials = "same-origin";
+    return fetchOpts;
+  }
+  function processPreload(link) {
+    if (link.ep)
+      return;
+    link.ep = true;
+    const fetchOpts = getFetchOpts(link);
+    fetch(link.href, fetchOpts);
+  }
+}());
+
+const INITIAL_PROFILES = [
+  { id: "user-1", name: "Ahmad", targetCalories: 2e3, targetCarbs: 250, targetProtein: 130, targetFat: 55 },
+  { id: "user-2", name: "Siti", targetCalories: 1600, targetCarbs: 200, targetProtein: 100, targetFat: 44 },
+  { id: "user-3", name: "Rani", targetCalories: 2400, targetCarbs: 300, targetProtein: 160, targetFat: 66 }
+];
+const DEFAULT_FOOD_LOGS = {
+  "user-1": {
+    "2026-08-19": [
+      { id: "f1", name: "Nasi Lemak", carbs: 65, protein: 12, fat: 22, calories: 506 },
+      { id: "f2", name: "Ayam Goreng", carbs: 5, protein: 25, fat: 18, calories: 282 }
+    ]
+  },
+  "user-2": {
+    "2026-08-19": [
+      { id: "f3", name: "Mee Goreng", carbs: 55, protein: 15, fat: 14, calories: 406 }
+    ]
+  },
+  "user-3": {
+    "2026-08-19": [
+      { id: "f4", name: "Roti Canai", carbs: 45, protein: 8, fat: 12, calories: 320 },
+      { id: "f5", name: "Teh Tarik", carbs: 25, protein: 2, fat: 6, calories: 162 }
+    ]
+  }
+};
+function ErrorFallback({ error }) {
+  return /* @__PURE__ */ jsxs("div", { className: "p-5 text-error bg-card rounded-xl", children: [
+    /* @__PURE__ */ jsx("p", { className: "text-lg font-medium", children: "Sesuatu tidak kena:" }),
+    /* @__PURE__ */ jsx("pre", { className: "text-xs mt-2 tabular-nums", children: error.message })
+  ] });
+}
+function App() {
+  return /* @__PURE__ */ jsx(ErrorBoundary, { FallbackComponent: ErrorFallback, children: /* @__PURE__ */ jsx(CalorieTrackerWidget, {}) });
+}
+function CalorieTrackerWidget() {
+  const [profiles, setProfiles] = useState(INITIAL_PROFILES);
+  const [activeProfileId, setActiveProfileId] = useState("ui-profile-1");
+  const mappedProfileIndex = useMemo(() => {
+    if (activeProfileId === "ui-profile-1") return 0;
+    if (activeProfileId === "ui-profile-2") return 1;
+    return 2;
+  }, [activeProfileId]);
+  const activeProfile = profiles[mappedProfileIndex] || profiles[0];
+  const [tarikhRekod, setTarikhRekod] = useState("2026-08-19");
+  const [foodLogs, setFoodLogs] = useState(DEFAULT_FOOD_LOGS);
+  const [newFoodName, setNewFoodName] = useState("");
+  const [newFoodCarbs, setNewFoodCarbs] = useState(20);
+  const [newFoodProtein, setNewFoodProtein] = useState(15);
+  const [newFoodFat, setNewFoodFat] = useState(8);
+  const currentDayEntries = useMemo(() => {
+    const userLog = foodLogs[activeProfile.id] || {};
+    return userLog[tarikhRekod] || [];
+  }, [foodLogs, activeProfile.id, tarikhRekod]);
+  const totals = useMemo(() => {
+    return currentDayEntries.reduce(
+      (acc, item) => {
+        acc.carbs += item.carbs;
+        acc.protein += item.protein;
+        acc.fat += item.fat;
+        acc.calories += item.calories;
+        return acc;
+      },
+      { carbs: 0, protein: 0, fat: 0, calories: 0 }
+    );
+  }, [currentDayEntries]);
+  const remainingCalories = activeProfile.targetCalories - totals.calories;
+  const carbsPercentage = Math.min(100, Math.round(totals.carbs / activeProfile.targetCarbs * 100)) || 0;
+  const proteinPercentage = Math.min(100, Math.round(totals.protein / activeProfile.targetProtein * 100)) || 0;
+  const fatPercentage = Math.min(100, Math.round(totals.fat / activeProfile.targetFat * 100)) || 0;
+  const overallCaloriePercentage = Math.min(100, Math.round(totals.calories / activeProfile.targetCalories * 100)) || 0;
+  const handleAddFood = (e) => {
+    e.preventDefault();
+    if (!newFoodName.trim()) return;
+    const calculatedKcal = newFoodCarbs * 4 + newFoodProtein * 4 + newFoodFat * 9;
+    const newEntry = {
+      id: `food-${Date.now()}`,
+      name: newFoodName,
+      carbs: newFoodCarbs,
+      protein: newFoodProtein,
+      fat: newFoodFat,
+      calories: calculatedKcal
+    };
+    setFoodLogs((prev) => {
+      const userKey = activeProfile.id;
+      const userMap = prev[userKey] || {};
+      const dayList = userMap[tarikhRekod] || [];
+      return {
+        ...prev,
+        [userKey]: {
+          ...userMap,
+          [tarikhRekod]: [...dayList, newEntry]
         }
-        html, body {
-            overflow-y: auto;
-            scroll-behavior: smooth;
+      };
+    });
+    setNewFoodName("");
+  };
+  const handleClearAll = () => {
+    setFoodLogs((prev) => {
+      const userKey = activeProfile.id;
+      const userMap = prev[userKey] || {};
+      return {
+        ...prev,
+        [userKey]: {
+          ...userMap,
+          [tarikhRekod]: []
         }
-    </style>
-</head>
-<body class="w-full min-h-screen text-gray-900 flex flex-col p-3 sm:p-6">
-
-    <!-- BEKAS UTAMA UNTUK RENDERING KOD REACT -->
-    <div id="root" class="max-w-5xl w-full mx-auto flex flex-col gap-4"></div>
-
-    <script type="module">
-        import { jsx, jsxs } from 'https://esm.sh';
-        import React, { useState, useEffect, useRef } from 'https://esm.sh';
-        import ReactDOM from 'https://esm.sh';
-
-        // KONFIGURASI LINK BACKEND GAS KAK NURUL
-        const GAS_URL = "https://google.com";
-
-        function CalorieTrackerWidget() {
-            const TODAY_DATE = new Date().toISOString().split("T")[0];
-
-            const [profiles, setProfiles] = useState(["Nurul Hairani"]);
-            const [currentUser, setCurrentUser] = useState("Nurul Hairani");
-            const [dailyGoal, setDailyGoal] = useState(2020);
-            const [visualizationStyle, setVisualizationStyle] = useState("bar");
-            const [logs, setLogs] = useState([]);
-            
-            const [newUserName, setNewUserName] = useState("");
-            const [inputDate, setInputDate] = useState(TODAY_DATE);
-            const [inputMeal, setInputMeal] = useState("Sarapan");
-            const [inputCalories, setInputCalories] = useState("");
-            const [userLimitWarning, setUserLimitWarning] = useState("");
-            const [isLoading, setIsLoading] = useState(false);
-
-            // 1. FUNGSI UNTUK MENARIK DATA TERKINI DARI GOOGLE SHEETS
-            const refreshDataFromDatabase = async (username) => {
-                setIsLoading(true);
-                try {
-                    const response = await fetch(GAS_URL, {
-                        method: "POST",
-                        body: JSON.stringify({ action: "fetchData", username: username })
-                    });
-                    const resData = await response.json();
-                    if (resData.status === "success") {
-                        if (resData.allUsers && resData.allUsers.length > 0) setProfiles(resData.allUsers);
-                        if (resData.dailyGoal) setDailyGoal(resData.dailyGoal);
-                        if (resData.logs) {
-                            // Tukar nama field objek pangkalan data mengikut format frontend asal
-                            const formattedLogs = resData.logs.map(l => ({
-                                id: l.id,
-                                user: username,
-                                date: l.recordDate.split("T")[0],
-                                mealType: l.foodName,
-                                calories: parseInt(l.calories),
-                                time: "Log DB"
-                            }));
-                            setLogs(formattedLogs);
-                        }
+      };
+    });
+  };
+  const handleDownloadReport = () => {
+    const reportData = {
+      title: `Monthly Budget Report - ${activeProfile.name}`,
+      date: tarikhRekod,
+      summary: {
+        targetCalories: activeProfile.targetCalories,
+        consumedCalories: totals.calories,
+        remainingCalories
+      },
+      macronutrients: {
+        carbohydrates: `${totals.carbs}g / ${activeProfile.targetCarbs}g (${carbsPercentage}%)`,
+        proteins: `${totals.protein}g / ${activeProfile.targetProtein}g (${proteinPercentage}%)`,
+        fats: `${totals.fat}g / ${activeProfile.targetFat}g (${fatPercentage}%)`
+      },
+      itemsLogged: currentDayEntries.map((f) => ({ name: f.name, kcal: f.calories })),
+      attribution: "Daily Calorie & Macronutrient Budget by Rani Yong"
+    };
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(reportData, null, 2));
+    const downloadAnchor = document.createElement("a");
+    downloadAnchor.setAttribute("href", dataStr);
+    downloadAnchor.setAttribute("download", `Calorie_Report_${activeProfile.name}_${tarikhRekod}.json`);
+    document.body.appendChild(downloadAnchor);
+    downloadAnchor.click();
+    downloadAnchor.remove();
+  };
+  const [canvasWidth, setCanvasWidth] = useState(800);
+  const canvasRef = useRef(null);
+  useEffect(() => {
+    if (!canvasRef.current) return;
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        if (entry.contentRect.width) {
+          setCanvasWidth(Math.max(360, entry.contentRect.width));
+        }
+      }
+    });
+    resizeObserver.observe(canvasRef.current);
+    return () => resizeObserver.disconnect();
+  }, []);
+  const canvasHeight = canvasWidth * 0.42;
+  const radiusCalorieCircle = Math.min(canvasHeight * 0.35, 75);
+  return /* @__PURE__ */ jsxs("div", { className: "w-full bg-card text-foreground font-sans min-h-screen flex flex-col justify-between selection:bg-primary/20", children: [
+    /* @__PURE__ */ jsxs("div", { children: [
+      /* @__PURE__ */ jsx("div", { ref: canvasRef, className: "w-full relative overflow-hidden bg-muted/30 border-b border-border", children: /* @__PURE__ */ jsxs(
+        "svg",
+        {
+          role: "img",
+          "aria-label": "Grafik Interaktif Belanjawan Kalori dan Makronutrien Harian",
+          viewBox: `0 0 ${canvasWidth} ${canvasHeight}`,
+          width: "100%",
+          height: canvasHeight,
+          className: "block",
+          children: [
+            /* @__PURE__ */ jsx(
+              "line",
+              {
+                x1: canvasWidth * 0.45,
+                y1: 0,
+                x2: canvasWidth * 0.45,
+                y2: canvasHeight,
+                stroke: "var(--color-border)",
+                strokeWidth: "1",
+                strokeDasharray: "4 4",
+                opacity: "0.6"
+              }
+            ),
+            /* @__PURE__ */ jsxs("g", { transform: `translate(${canvasWidth * 0.24}, ${canvasHeight * 0.5})`, children: [
+              /* @__PURE__ */ jsx(
+                "circle",
+                {
+                  r: radiusCalorieCircle,
+                  fill: "none",
+                  stroke: "var(--color-border)",
+                  strokeWidth: "14",
+                  opacity: "0.4"
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "circle",
+                {
+                  r: radiusCalorieCircle,
+                  fill: "none",
+                  stroke: "var(--color-primary)",
+                  strokeWidth: "14",
+                  strokeDasharray: `${2 * Math.PI * radiusCalorieCircle}`,
+                  strokeDashoffset: `${2 * Math.PI * radiusCalorieCircle * (1 - overallCaloriePercentage / 100)}`,
+                  strokeLinecap: "round",
+                  transform: "rotate(-90)",
+                  className: "transition-all duration-300 ease-out"
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "text",
+                {
+                  textAnchor: "middle",
+                  y: "-6",
+                  fontSize: 24,
+                  className: "fill-foreground font-medium tabular-nums",
+                  children: remainingCalories
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "text",
+                {
+                  textAnchor: "middle",
+                  y: "16",
+                  fontSize: 12,
+                  className: "fill-muted-foreground font-normal",
+                  children: "kcal baki"
+                }
+              )
+            ] }),
+            /* @__PURE__ */ jsxs("g", { transform: `translate(${canvasWidth * 0.52}, ${canvasHeight * 0.22})`, children: [
+              /* @__PURE__ */ jsx("text", { x: "0", y: "12", fontSize: 13, className: "fill-muted-foreground font-medium", children: "Karbohidrat" }),
+              /* @__PURE__ */ jsxs("text", { x: canvasWidth * 0.42, y: "12", textAnchor: "end", fontSize: 12, className: "fill-foreground font-medium tabular-nums", children: [
+                totals.carbs,
+                "g / ",
+                activeProfile.targetCarbs,
+                "g"
+              ] }),
+              /* @__PURE__ */ jsx("rect", { x: "0", y: "20", width: canvasWidth * 0.42, height: "8", rx: "4", fill: "var(--color-border)", opacity: "0.5" }),
+              /* @__PURE__ */ jsx(
+                "rect",
+                {
+                  x: "0",
+                  y: "20",
+                  width: canvasWidth * 0.42 * (carbsPercentage / 100),
+                  height: "8",
+                  rx: "4",
+                  fill: "var(--color-warning)",
+                  className: "transition-all duration-300 ease-out"
+                }
+              ),
+              /* @__PURE__ */ jsxs("g", { transform: "translate(0, 42)", children: [
+                /* @__PURE__ */ jsx("text", { x: "0", y: "12", fontSize: 13, className: "fill-muted-foreground font-medium", children: "Protein" }),
+                /* @__PURE__ */ jsxs("text", { x: canvasWidth * 0.42, y: "12", textAnchor: "end", fontSize: 12, className: "fill-foreground font-medium tabular-nums", children: [
+                  totals.protein,
+                  "g / ",
+                  activeProfile.targetProtein,
+                  "g"
+                ] }),
+                /* @__PURE__ */ jsx("rect", { x: "0", y: "20", width: canvasWidth * 0.42, height: "8", rx: "4", fill: "var(--color-border)", opacity: "0.5" }),
+                /* @__PURE__ */ jsx(
+                  "rect",
+                  {
+                    x: "0",
+                    y: "20",
+                    width: canvasWidth * 0.42 * (proteinPercentage / 100),
+                    height: "8",
+                    rx: "4",
+                    fill: "var(--color-primary)",
+                    className: "transition-all duration-300 ease-out"
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxs("g", { transform: "translate(0, 84)", children: [
+                /* @__PURE__ */ jsx("text", { x: "0", y: "12", fontSize: 13, className: "fill-muted-foreground font-medium", children: "Lemak" }),
+                /* @__PURE__ */ jsxs("text", { x: canvasWidth * 0.42, y: "12", textAnchor: "end", fontSize: 12, className: "fill-foreground font-medium tabular-nums", children: [
+                  totals.fat,
+                  "g / ",
+                  activeProfile.targetFat,
+                  "g"
+                ] }),
+                /* @__PURE__ */ jsx("rect", { x: "0", y: "20", width: canvasWidth * 0.42, height: "8", rx: "4", fill: "var(--color-border)", opacity: "0.5" }),
+                /* @__PURE__ */ jsx(
+                  "rect",
+                  {
+                    x: "0",
+                    y: "20",
+                    width: canvasWidth * 0.42 * (fatPercentage / 100),
+                    height: "8",
+                    rx: "4",
+                    fill: "var(--color-success)",
+                    className: "transition-all duration-300 ease-out"
+                  }
+                )
+              ] })
+            ] })
+          ]
+        }
+      ) }),
+      /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0", children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Tenaga Diambil" }),
+          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+            totals.calories,
+            " kcal"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Protein Capai" }),
+          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+            proteinPercentage,
+            "%"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+          /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Jumlah Log" }),
+          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+            currentDayEntries.length,
+            " makanan"
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "p-5 flex flex-col gap-5", children: [
+        /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-4 items-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Profil Pengguna (Maks 3)" }),
+            /* @__PURE__ */ jsxs(
+              ToggleGroup.Root,
+              {
+                type: "single",
+                value: activeProfileId,
+                onValueChange: (val) => {
+                  if (val) setActiveProfileId(val);
+                },
+                className: "rounded-full flex w-full bg-muted h-9 p-1",
+                "aria-label": "Tukar Profil Pengguna",
+                children: [
+                  /* @__PURE__ */ jsx(
+                    ToggleGroup.Item,
+                    {
+                      value: "ui-profile-1",
+                      className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                      children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: profiles[0].name })
                     }
-                } catch (e) {
-                    console.error("Gagal memuatkan data dari Google Sheets", e);
-                } finally {
-                    setIsLoading(false);
-                }
-            };
-
-            useEffect(() => {
-                refreshDataFromDatabase(currentUser);
-            }, [currentUser]);
-
-            // 2. FUNGSI MENDAFTAR USER BARU KE DATABASE (MAX 3)
-            const handleAddNewUser = async (e) => {
-                e.preventDefault();
-                if (!newUserName.trim()) return;
-                const cleaned = newUserName.trim();
-
-                if (profiles.length >= 3 && !profiles.includes(cleaned)) {
-                    setUserLimitWarning("Had maksimum 3 profil aktif dicapai! Sila padam salah satu profil lama sebelum menambah profil baru.");
-                    return;
-                }
-
-                setIsLoading(true);
-                try {
-                    const response = await fetch(GAS_URL, {
-                        method: "POST",
-                        body: JSON.stringify({ action: "addUser", username: cleaned, dailyGoal: 2020 })
-                    });
-                    const resData = await response.json();
-                    if (resData.status === "success" || resData.status === "exists") {
-                        setUserLimitWarning("");
-                        setCurrentUser(cleaned);
-                        setNewUserName("");
-                    } else if (resData.status === "denied") {
-                        setUserLimitWarning(resData.message);
+                  ),
+                  /* @__PURE__ */ jsx(
+                    ToggleGroup.Item,
+                    {
+                      value: "ui-profile-2",
+                      className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                      children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: profiles[1].name })
                     }
-                } catch (err) {
-                    alert("Ralat sistem pangkalan data.");
-                } finally {
-                    setIsLoading(false);
-                }
-            };
-
-            // 3. FUNGSI MEMADAM USER DARI DATABASE
-            const handleDeleteUserProfile = async () => {
-                if (profiles.length <= 1) {
-                    alert("Tidak boleh memadam profil terakhir. Sila tambah profil baru terlebih dahulu.");
-                    return;
-                }
-                if (window.confirm(`Adakah anda pasti untuk memadam profil "${currentUser}" daripada Google Sheets?`)) {
-                    setIsLoading(true);
-                    try {
-                        const response = await fetch(GAS_URL, {
-                            method: "POST",
-                            body: JSON.stringify({ action: "deleteUser", username: currentUser })
-                        });
-                        const resData = await response.json();
-                        if (resData.status === "success") {
-                            const remaining = profiles.filter(p => p !== currentUser);
-                            setCurrentUser(remaining[0]);
-                        }
-                    } catch (err) {
-                        alert("Ralat memproses pemadaman pengguna.");
-                    } finally {
-                        setIsLoading(false);
+                  ),
+                  /* @__PURE__ */ jsx(
+                    ToggleGroup.Item,
+                    {
+                      value: "ui-profile-3",
+                      className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                      children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: profiles[2].name })
                     }
+                  )
+                ]
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Tarikh Rekod" }),
+            /* @__PURE__ */ jsx("div", { className: "relative h-11 flex items-center bg-muted rounded-lg px-2.5", children: /* @__PURE__ */ jsx(
+              "input",
+              {
+                type: "date",
+                value: tarikhRekod,
+                onChange: (e) => setTarikhRekod(e.target.value),
+                className: "w-full bg-transparent text-sm font-medium text-foreground focus:outline-none cursor-pointer"
+              }
+            ) })
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "flex flex-col gap-1.5 md:pt-5", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxs(
+              "button",
+              {
+                type: "button",
+                onClick: handleDownloadReport,
+                className: "flex-1 rounded-full text-sm font-medium h-9 whitespace-nowrap bg-primary text-white relative after:absolute after:-inset-y-1 after:inset-x-0 flex items-center justify-center gap-1 cursor-pointer transition-colors hover:bg-primary-hover",
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: "material-icons !text-base", children: "download" }),
+                  /* @__PURE__ */ jsx("span", { children: "Muat Turun Report" })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxs(
+              "button",
+              {
+                type: "button",
+                onClick: handleClearAll,
+                className: "px-4 rounded-full text-sm font-medium h-9 whitespace-nowrap bg-muted text-foreground relative after:absolute after:-inset-y-1 after:inset-x-0 flex items-center justify-center gap-1 cursor-pointer transition-colors hover:bg-secondary-hover",
+                title: "Kosongkan Log",
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: "material-icons !text-base", children: "clear_all" }),
+                  /* @__PURE__ */ jsx("span", { children: "Kosongkan" })
+                ]
+              }
+            )
+          ] }) })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "border-t border-border/60 pt-4", children: /* @__PURE__ */ jsxs("form", { onSubmit: handleAddFood, className: "flex flex-col gap-4", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row gap-3 items-end", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex-1 w-full flex flex-col gap-1.5", children: [
+              /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Nama Makanan / Hidangan" }),
+              /* @__PURE__ */ jsx(
+                "input",
+                {
+                  type: "text",
+                  placeholder: "Contoh: Ayam Masak Kicap, Nasi Putih...",
+                  value: newFoodName,
+                  onChange: (e) => setNewFoodName(e.target.value),
+                  className: "h-11 w-full border-t-[4px] border-b-[4px] border-transparent bg-clip-padding rounded-lg bg-muted text-sm font-medium px-2.5 focus:outline-none focus:ring-1 focus:ring-primary"
                 }
-            };
+              )
+            ] }),
+            /* @__PURE__ */ jsxs(
+              "button",
+              {
+                type: "submit",
+                disabled: !newFoodName.trim(),
+                className: "w-full sm:w-auto px-5 rounded-full text-sm font-medium h-9 whitespace-nowrap bg-success text-white relative after:absolute after:-inset-y-1 after:inset-x-0 flex items-center justify-center gap-1 cursor-pointer transition-colors disabled:opacity-40 disabled:cursor-not-allowed",
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: "material-icons !text-base", children: "add" }),
+                  /* @__PURE__ */ jsx("span", { children: "Tambah Hidangan" })
+                ]
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3.5", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+              /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Karbohidrat (g)" }),
+              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full h-11 py-3 -my-3", children: [
+                /* @__PURE__ */ jsxs(
+                  Slider.Root,
+                  {
+                    min: 0,
+                    max: 150,
+                    step: 1,
+                    value: [newFoodCarbs],
+                    onValueChange: (val) => setNewFoodCarbs(val[0]),
+                    className: "relative flex items-center select-none touch-none w-full h-5 grow cursor-pointer",
+                    "aria-label": "Slaid Karbohidrat",
+                    children: [
+                      /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow rounded-full !bg-muted", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full rounded-full bg-warning" }) }),
+                      /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums w-[6ch] text-right shrink-0 whitespace-nowrap", children: [
+                  newFoodCarbs,
+                  "g"
+                ] })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+              /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Protein (g)" }),
+              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full h-11 py-3 -my-3", children: [
+                /* @__PURE__ */ jsxs(
+                  Slider.Root,
+                  {
+                    min: 0,
+                    max: 100,
+                    step: 1,
+                    value: [newFoodProtein],
+                    onValueChange: (val) => setNewFoodProtein(val[0]),
+                    className: "relative flex items-center select-none touch-none w-full h-5 grow cursor-pointer",
+                    "aria-label": "Slaid Protein",
+                    children: [
+                      /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow rounded-full !bg-muted", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full rounded-full bg-primary" }) }),
+                      /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums w-[6ch] text-right shrink-0 whitespace-nowrap", children: [
+                  newFoodProtein,
+                  "g"
+                ] })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+              /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Lemak (g)" }),
+              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full h-11 py-3 -my-3", children: [
+                /* @__PURE__ */ jsxs(
+                  Slider.Root,
+                  {
+                    min: 0,
+                    max: 80,
+                    step: 1,
+                    value: [newFoodFat],
+                    onValueChange: (val) => setNewFoodFat(val[0]),
+                    className: "relative flex items-center select-none touch-none w-full h-5 grow cursor-pointer",
+                    "aria-label": "Slaid Lemak",
+                    children: [
+                      /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow rounded-full !bg-muted", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full rounded-full bg-success" }) }),
+                      /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" })
+                    ]
+                  }
+                ),
+                /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums w-[6ch] text-right shrink-0 whitespace-nowrap", children: [
+                  newFoodFat,
+                  "g"
+                ] })
+              ] })
+            ] })
+          ] })
+        ] }) }),
+        /* @__PURE__ */ jsxs("div", { className: "mt-2 bg-muted/20 rounded-xl p-3.5 border border-border/50", children: [
+          /* @__PURE__ */ jsxs("span", { className: "text-xs font-medium text-muted-foreground block mb-2", children: [
+            "Senarai Log Makanan untuk ",
+            tarikhRekod
+          ] }),
+          currentDayEntries.length === 0 ? /* @__PURE__ */ jsx("p", { className: "text-sm text-muted-foreground font-normal py-2 text-center", children: "Tiada hidangan direkodkan untuk tarikh ini. Sila tambah makanan di atas." }) : /* @__PURE__ */ jsx("div", { className: "flex flex-col gap-1.5 max-h-[160px] overflow-y-auto pr-1", children: currentDayEntries.map((item) => /* @__PURE__ */ jsxs(
+            "div",
+            {
+              className: "flex justify-between items-center text-sm bg-card px-3 py-2 rounded-lg border border-border/30",
+              children: [
+                /* @__PURE__ */ jsxs("div", { className: "min-w-0 flex-1", children: [
+                  /* @__PURE__ */ jsx("span", { className: "font-medium text-foreground block truncate", children: item.name }),
+                  /* @__PURE__ */ jsxs("span", { className: "text-xs text-muted-foreground space-x-2 tabular-nums", children: [
+                    /* @__PURE__ */ jsxs("span", { children: [
+                      "K: ",
+                      item.carbs,
+                      "g"
+                    ] }),
+                    /* @__PURE__ */ jsxs("span", { children: [
+                      "P: ",
+                      item.protein,
+                      "g"
+                    ] }),
+                    /* @__PURE__ */ jsxs("span", { children: [
+                      "L: ",
+                      item.fat,
+                      "g"
+                    ] })
+                  ] })
+                ] }),
+                /* @__PURE__ */ jsxs("span", { className: "font-medium text-primary shrink-0 tabular-nums ml-2", children: [
+                  item.calories,
+                  " kcal"
+                ] })
+              ]
+            },
+            item.id
+          )) })
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsx("footer", { className: "w-full border-t border-border px-5 py-3 text-center text-xs text-muted-foreground font-normal tracking-wide", children: "Daily Calorie & Macronutrient Budget by Rani Yong" })
+  ] });
+}
 
-            // 4. FUNGSI MENAMBAH REKOD KALORI MAKANAN (AUTO-DATE SYNC)
-            const handleAddLog = async (e) => {
-                e.preventDefault();
-                const cals = parseInt(inputCalories);
-                if (isNaN(cals) || cals <= 0) return;
+ReactDOM.createRoot(document.getElementById("root")).render(
+  /* @__PURE__ */ jsx(React.StrictMode, { children: /* @__PURE__ */ jsx(App, {}) })
+);
 
-                setIsLoading(true);
-                try {
-                    const response = await fetch(GAS_URL, {
-                        method: "POST",
-                        body: JSON.stringify({
-                            action: "addLog",
-                            username: currentUser,
-                            foodName: inputMeal,
-                            calories: cals,
-                            recordDate: inputDate
-                        })
-                    });
-                    const resData = await response.json();
-                    if (resData.status === "success") {
-                        setInputCalories("");
-                        await refreshDataFromDatabase(currentUser);
-                    }
-                } catch (err) {
-                    alert("Gagal menghantar rekod makanan ke database.");
-                } finally {
-                    setIsLoading(false);
-                }
-            };
+</script><style>
+/*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
+@layer properties {
+  @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+    *, :before, :after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-x-reverse: 0;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-ordinal: initial;
+      --tw-slashed-zero: initial;
+      --tw-numeric-figure: initial;
+      --tw-numeric-spacing: initial;
+      --tw-numeric-fraction: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
+      --tw-ease: initial;
+      --tw-content: "";
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+    }
+  }
+}
 
-            // 5. FUNGSI MEMADAM SATU ENTRI LOG MAKANAN
-            const handleDeleteLog = async (id) => {
-                setIsLoading(true);
-                try {
-                    const response = await fetch(GAS_URL, {
-                        method: "POST",
-                        body: JSON.stringify({ action: "deleteLog", username: currentUser, logId: id })
-                    });
-                    const resData = await response.json();
-                    if (resData.status === "success") {
-                        await refreshDataFromDatabase(currentUser);
-                    }
-                } catch (err) {
-                    alert("Ralat ketika memadam rekod.");
-                } finally {
-                    setIsLoading(false);
-                }
-            };
+@layer theme {
+  :root, :host {
+    --font-sans: "Google Sans", "Roboto", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+    --color-white: #fff;
+    --spacing: .25rem;
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --tracking-wide: .025em;
+    --radius-lg: .5rem;
+    --radius-xl: .75rem;
+    --ease-out: cubic-bezier(0, 0, .2, 1);
+    --default-transition-duration: .15s;
+    --default-transition-timing-function: cubic-bezier(.31, .94, .34, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-primary: var(--primary, #336ef3);
+    --color-primary-hover: var(--primary-hover, #395fe1);
+    --color-error: var(--brand-red, #ea4335);
+    --color-warning: var(--brand-yellow, #fbbc04);
+    --color-success: var(--brand-green, #34a853);
+    --color-card: var(--surface-container-de-emphasis, #f7f8fa);
+    --color-border: var(--divider, #dcdfe5);
+    --color-secondary-hover: var(--surface-container-highest, #e1e3e8);
+    --color-muted: var(--surface-container, #f0f2f5);
+    --color-muted-foreground: var(--on-surface-de-emphasis, #56595e);
+    --color-foreground: var(--on-surface-default, #0a0a0a);
+  }
+}
 
-            // 6. LOGIK PRINT/DOWNLOAD LAPORAN SEBULAN KAK NURUL
-            const handlePrintPDF = () => {
-                const totalCals = logs.reduce((sum, l) => sum + l.calories, 0);
-                const htmlContent = `
-                    <html>
-                    <head>
-                        <title>Laporan_Kalori_${currentUser}</title>
-                        <style>
-                            body { font-family: system-ui, sans-serif; padding: 40px; color: #0a0a0a; }
-                            .header { border-bottom: 2px solid #336ef3; padding-bottom: 15px; margin-bottom: 25px; }
-                            h2 { color: #336ef3; margin: 0; }
-                            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-                            th, td { border: 1px solid #dcdfe5; padding: 12px; text-align: left; }
-                            th { background-color: #f0f2f5; }
-                            .total-row { font-weight: bold; color: #336ef3; background: #f7f8fa; }
-.footer { margin-top: 40px; font-size: 11px; text-align: center; border-top: 1px solid #e5e7eb; padding-top: 10px; }Laporan Kalori Bulanan (30 Hari Terkini)Nama Pengguna: ${currentUser} | Tarikh Dijana: ${TODAY_DATE}Daily Calorie & Macronutrient Budget by Rani Yong © 2026.window.onload = function() { window.print(); };</script>`;const blob = new Blob([htmlContent], { type: "text/html" });const url = URL.createObjectURL(blob);const link = document.createElement("a");link.href = url;link.download = Laporan_Kalori_${currentUser}_${TODAY_DATE}.html;document.body.appendChild(link);link.click();document.body.removeChild(link);URL.revokeObjectURL(url);};const todayTotalCalories = logs.filter(l => l.date === inputDate).reduce((sum, l) => sum + l.calories, 0);// DATA TURUTAN GRAF 5 HARI TERAKHIR MENGIKUT KOTAK PILIHAN "TARIKH REKOD"const last5Days = Array.from({ length: 5 }, (_, i) => {const d = new Date(inputDate);d.setDate(d.getDate() - (4 - i));return d.toISOString().split("T")[0];});const dailyTrendData = last5Days.map(dateStr => {const total = logs.filter(l => l.date === dateStr).reduce((sum, l) => sum + l.calories, 0);return { date: dateStr.substring(5), calories: total, fullDate: dateStr };});const mealTypesList = ["Sarapan", "Makan Tengahari", "Makan Malam", "Snek / Lain-lain"];const pieBreakdown = mealTypesList.map(type => {const total = logs.filter(l => l.mealType === type && l.date === inputDate).reduce((sum, l) => sum + l.calories, 0);return { type, calories: total };});const totalPieCalories = pieBreakdown.reduce((sum, item) => sum + item.calories, 0) || 1;const progressPercent = Math.min(100, (todayTotalCalories / (dailyGoal || 1)) * 100);return jsxs("div", { className: "w-full flex flex-col gap-4 relative", children: [// INDIKATOR LOADING STATUS JIKA API SEDANG MEMPROSES DATAisLoading && jsx("div", { className: "absolute top-2 right-4 bg-blue-600 text-white text-xs px-3 py-1 rounded-full animate-pulse z-50", children: "Menghubungkan ke Google Sheets..." }),// BAHAGIAN ATAS: GRAF TERSELARAS DENGAN PILIHAN TARIKHjsxs("div", { className: "w-full bg-white rounded-2xl p-4 border border-gray-200 flex flex-col gap-3 shadow-xs", children: [jsxs("div", { className: "flex justify-between items-center flex-wrap gap-2", children: [jsxs("div", { children: [jsxs("h3", { className: "text-sm font-bold text-gray-800 flex items-center gap-1.5", children: [jsx("span", { className: "material-icons text-blue-600 text-sm", children: "bar_chart" }),Visualisasi Analisis Kalori (${currentUser})] }),jsx("p", { className: "text-[11px] text-gray-500", children: "Graf auto-sync mengikut pilihan kotak input Tarikh Rekod di bawah" })] }),jsxs("div", { className: "flex p-0.5 bg-gray-100 rounded-full border border-gray-200", children: [jsx("button", { onClick: () => setVisualizationStyle("bar"), className: px-3 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${visualizationStyle === "bar" ? "bg-blue-600 text-white" : "text-gray-600"}, children: "Graf Bar" }),jsx("button", { onClick: () => setVisualizationStyle("line"), className: px-3 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${visualizationStyle === "line" ? "bg-blue-600 text-white" : "text-gray-600"}, children: "Graf Garisan" }),jsx("button", { onClick: () => setVisualizationStyle("pie"), className: px-3 py-1 text-xs font-semibold rounded-full transition-all cursor-pointer ${visualizationStyle === "pie" ? "bg-blue-600 text-white" : "text-gray-600"}, children: "Carta Pai" })] })] }),jsx("div", { className: "w-full bg-gray-50 rounded-xl p-3 border border-gray-200 min-h-[160px] flex items-center justify-center", children:logs.length === 0 ? jsxs("div", { className: "text-center py-6", children: [jsx("span", { className: "material-icons text-gray-400 text-lg block mb-1", children: "cloud_done" }),jsx("p", { className: "text-xs text-gray-500", children: "Masukkan data rekod pemakanan untuk memaparkan perkembangan grafik" })] }) : visualizationStyle === "pie" ? (jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-4 items-center w-full max-w-md mx-auto", children: [jsx("div", { className: "flex justify-center", children: jsxs("svg", { width: "120", height: "120", viewBox: "0 0 120 120", className: "transform -rotate-90", children: [(() => {let accumulatedAngle = 0;const colors = ["#336ef3", "#34a853", "#fbbc04", "#ea4335"];return pieBreakdown.map((item, index) => {if (item.calories === 0) return null;const percentage = item.calories / totalPieCalories;const angle = percentage * 360;const r = 40, cx = 60, cy = 60;const radStart = accumulatedAngle * Math.PI / 180;accumulatedAngle += angle;const radEnd = accumulatedAngle * Math.PI / 180;return jsx("path", { d: M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${(angle > 180 ? 1 : 0)} 1 ${x2} ${y2} Z, fill: colors[index % colors.length], className: "stroke-white stroke-2" }, item.type);});})(),jsx("circle", { cx: "60", cy: "60", r: "20", fill: "#f7f8fa" })] }) }),jsx("div", { className: "flex flex-col gap-1.5 justify-center", children: pieBreakdown.map((item, index) => {const colors = ["bg-blue-600", "bg-green-600", "bg-yellow-500", "bg-red-500"];return jsxs("div", { className: "flex items-center justify-between text-xs", children: [jsxs("div", { className: "flex items-center gap-1.5 text-gray-600", children: [jsx("span", { className: w-2.5 h-2.5 rounded-sm shrink-0 ${colors[index]} }),jsx("span", { children: item.type })] }),jsxs("span", { className: "font-semibold text-gray-800 pl-2", children: [item.calories, " kcal"] })] }, item.type);}) })] })) : (jsxs("div", { className: "w-full flex flex-col gap-1", children: [jsxs("div", { className: "h-28 w-full flex items-end justify-between px-4 pt-4 border-b border-gray-200 relative", children: [(() => {const maxVal = Math.max(...dailyTrendData.map(d => d.calories), dailyGoal, 1);return dailyTrendData.map(d => {const barHeightPercent = (d.calories / maxVal) * 100;return jsxs("div", { className: "flex flex-col items-center flex-1 group relative h-full justify-end", children: [jsxs("div", { className: "absolute bottom-full mb-1 bg-gray-900 text-white text-[10px] px-1.5 py-0.5 rounded font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10", children: [d.calories, " kcal ", d.fullDate === inputDate ? "(Pilihan)" : ""] }),visualizationStyle === "bar" ? (jsx("div", { style: { height: ${Math.max(4, barHeightPercent)}% }, className: w-8 sm:w-12 rounded-t-xs transition-all duration-300 ${d.fullDate === inputDate ? "bg-blue-600" : "bg-blue-400/50"} })) : (jsxs("div", { className: "w-full flex flex-col items-center justify-end h-full relative", children: [jsx("div", { style: { bottom: ${barHeightPercent}% }, className: absolute w-3 h-3 rounded-full border-2 border-white ${d.fullDate === inputDate ? "bg-blue-600 scale-125" : "bg-blue-400"} }),jsx("div", { style: { height: ${barHeightPercent}% }, className: "w-[2px] bg-blue-100" })] }))] }, d.fullDate);});})()] }),jsx("div", { className: "flex justify-between px-4 text-[10px] text-gray-500 font-semibold pt-1", children: dailyTrendData.map(d => jsx("span", { className: d.fullDate === inputDate ? "text-blue-600 font-bold" : "", children: d.fullDate === inputDate ? ${d.date} (Kini) : d.date }, d.fullDate)) })] }))} })] }),// GRID INPUT & REKOD LOG JADUALjsxs("div", { className: "grid grid-cols-1 lg:grid-cols-12 gap-4 items-start", children: [jsxs("div", { className: "lg:col-span-7 bg-white rounded-2xl p-4 sm:p-5 border border-gray-200 flex flex-col gap-4 shadow-xs", children: [jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-3 items-center", children: [jsxs("div", { className: "flex flex-col gap-1", children: [jsx("span", { className: "text-[11px] font-bold text-gray-500 uppercase tracking-wider", children: "Pengguna Aktif" }),jsxs("div", { className: "flex gap-1.5 items-center", children: [jsx("select", { value: currentUser, onChange: (e) => setCurrentUser(e.target.value), className: "h-9 rounded-lg bg-gray-100 text-xs font-semibold px-2 border-none grow cursor-pointer focus:ring-1 focus:ring-blue-600", children: profiles.map(p => jsx("option", { value: p, children: p }, p)) }),jsx("button", { type: "button", onClick: handleDeleteUserProfile, className: "h-9 w-9 bg-gray-100 text-gray-500 hover:bg-red-50 hover:text-red-600 rounded-lg flex items-center justify-center transition-colors cursor-pointer", children: jsx("span", { className: "material-icons text-sm", children: "delete" }) })] })] }),jsxs("div", { className: "flex flex-col gap-1", children: [jsx("span", { className: "text-[11px] font-bold text-gray-500 uppercase tracking-wider", children: "Sasaran Kalori (kcal)" }),jsx("input", { type: "number", value: dailyGoal, onChange: (e) => handleGoalChange(Math.max(1, parseInt(e.target.value) || 0)), className: "h-9 rounded-lg bg-gray-100 text-xs font-semibold px-3 focus:ring-1 focus:ring-blue-600 w-full" })] })] }),userLimitWarning && jsxs("div", { className: "p-2.5 bg-red-50 text-red-600 rounded-lg text-xs font-semibold flex items-start gap-1.5 border border-red-200", children: [jsx("span", { className: "material-icons text-sm mt-0.5", children: "warning" }),jsx("span", { children: userLimitWarning })] }),jsxs("form", { onSubmit: handleAddNewUser, className: "flex gap-2 items-center bg-gray-50 p-2 rounded-lg border border-gray-200", children: [jsx("input", { type: "text", placeholder: profiles.length >= 3 ? "Had 3 profil penuh..." : "Daftar & tumpangkan akaun baru...", disabled: profiles.length >= 3, value: newUserName, onChange: (e) => setNewUserName(e.target.value), className: "h-8 bg-white rounded px-2 text-xs grow focus:outline-none" }),jsx("button", { type: "submit", disabled: profiles.length >= 3, className: "h-8 px-3 bg-blue-600 text-white rounded-full text-xs font-semibold hover:bg-blue-700 cursor-pointer disabled:opacity-50", children: "Tambah" })] }),jsxs("div", { className: "bg-gray-50 rounded-xl p-4 border border-gray-200 flex flex-col gap-2", children: [jsxs("div", { className: "flex justify-between items-end flex-wrap gap-2", children: [jsxs("div", { children: [jsxs("span", { className: "text-[11px] text-gray-500 block font-semibold", children: ["Jumlah Kalori Hari Ini (", inputDate, ")"] }),jsxs("span", { className: "text-xl font-bold text-blue-600", children: [todayTotalCalories, " ", jsxs("span", { className: "text-xs font-normal text-gray-500", children: ["/ ", dailyGoal, " kcal"] })] })] }),jsxs("span", { className: "text-xs font-semibold bg-gray-200 px-2 py-0.5 rounded-full text-gray-600", children: [progressPercent.toFixed(0), "% Selesai"] })] }),jsx("div", { className: "w-full bg-gray-200 h-2.5 rounded-full overflow-hidden relative", children: jsx("div", { className: h-full transition-all duration-500 rounded-full ${progressPercent > 100 ? "bg-red-500" : "bg-green-500"}, style: { width: ${progressPercent}% } }) })] }),jsxs("div", { className: "pt-2 border-t border-gray-200", children: [jsx("span", { className: "text-xs font-bold text-gray-800 block mb-2", children: "Tambah Rekod Baru" }),jsxs("form", { onSubmit: handleAddLog, className: "grid grid-cols-1 sm:grid-cols-2 gap-2.5 items-end", children: [jsxs("div", { className: "flex flex-col gap-1", children: [jsx("label", { className: "text-[11px] font-semibold text-gray-500", children: "Tarikh Rekod" }),jsx("input", { type: "date", value: inputDate, onChange: (e) => setInputDate(e.target.value), className: "h-9 w-full rounded-lg bg-gray-100 text-xs font-semibold px-2 focus:outline-none" })] }),jsxs("div", { className: "flex flex-col gap-1", children: [jsx("label", { className: "text-[11px] font-semibold text-gray-500", children: "Waktu Makan" }),jsxs("select", { value: inputMeal, onChange: (e) => setInputMeal(e.target.value), className: "h-9 w-full rounded-lg bg-gray-100 text-xs font-semibold px-2 focus:outline-none", children: [jsx("option", { value: "Sarapan", children: "Sarapan" }),jsx("option", { value: "Makan Tengahari", children: "Makan Tengahari" }),jsx("option", { value: "Makan Malam", children: "Makan Malam" }),jsx("option", { value: "Snek / Lain-lain", children: "Snek / Lain-lain" })] })] }),jsxs("div", { className: "flex flex-col gap-1", children: [jsx("label", { className: "text-[11px] font-semibold text-gray-500", children: "Kalori (kcal)" }),jsx("input", { type: "number", min: "1", value: inputCalories, onChange: (e) => setInputCalories(e.target.value), placeholder: "Cth: 350", className: "h-9 w-full rounded-lg bg-gray-100 text-xs font-semibold px-3 focus:outline-none", required: true })] }),jsx("div", { children: jsx("button", { type: "submit", className: "w-full rounded-full bg-blue-600 text-white text-xs font-semibold h-9 transition-colors hover:bg-blue-700 flex items-center justify-center gap-1 cursor-pointer", children: "Simpan Rekod" }) })] })] })] }),// PANEL KANAN: REKOD JADUAL SENARAI MAKANAN (MEMAPARKAN IKON REKOD DENGAN BETUL)jsxs("div", { className: "lg:col-span-5 bg-white rounded-2xl border border-gray-200 overflow-hidden flex flex-col shadow-xs", children: [jsxs("div", { className: "px-4 py-3 flex items-center justify-between bg-gray-50 border-b border-gray-200 flex-wrap gap-2", children: [jsxs("span", { className: "text-xs font-bold text-gray-500", children: ["Log Kalori (", logs.length, " entri)"] }),jsx("button", { onClick: handlePrintPDF, className: "text-[11px] text-blue-600 font-bold flex items-center gap-1 hover:underline cursor-pointer bg-transparent p-0", children: [jsx("span", { className: "material-icons !text-xs", children: "download" }), " Muat Turun Laporan"] })] }),jsx("div", { className: "divide-y divide-gray-100 p-1 overflow-y-auto max-h-[360px]", children:logs.length === 0 ? jsx("p", { className: "text-xs text-gray-400 text-center py-8", children: "Tiada rekod kalori ditemui dalam storan database Google Sheets." }) :logs.map(log => jsxs("div", { className: "p-3 flex justify-between items-center text-xs hover:bg-gray-50 transition-colors rounded-lg group", children: [jsxs("div", { className: "min-w-0 flex-1 pr-2", children: [jsx("span", { className: "font-semibold text-gray-800 block truncate", children: log.mealType }),jsx("span", { className: "text-[10px] text-gray-400 block", children: [log.date] })] }),jsxs("div", { className: "flex items-center gap-3 shrink-0", children: [jsxs("span", { className: "font-bold text-gray-800 whitespace-nowrap", children: [log.calories, " kcal"] }),jsx("button", { onClick: () => handleDeleteLog(log.id), className: "h-7 w-7 rounded-full bg-gray-100 hover:bg-red-50 hover:text-red-500 flex items-center justify-center text-gray-400 transition-colors cursor-pointer", children: jsx("span", { className: "material-icons !text-xs", children: "close" }) })] })] }, log.id))})] })] }),// FOOTER HAK CIPTA RASMIjsx("div", { className: "w-full text-center py-4 border-t border-gray-200 mt-auto", children:jsx("p", { className: "text-xs text-gray-500 font-medium", children: "Daily Calorie & Macronutrient Budget by Rani Yong" })})] });}ReactDOM.createRoot(document.getElementById("root")).render(jsx(React.StrictMode, { children: jsx(CalorieTrackerWidget, {}) }));
+@layer base {
+  *, :after, :before, ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::file-selector-button {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, :host {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    line-height: 1.5;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+
+  b, strong {
+    font-weight: bolder;
+  }
+
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub, sup {
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+  }
+
+  sub {
+    bottom: -.25em;
+  }
+
+  sup {
+    top: -.5em;
+  }
+
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+
+  :-moz-focusring {
+    outline: auto;
+  }
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  ol, ul, menu {
+    list-style: none;
+  }
+
+  img, svg, video, canvas, audio, iframe, embed, object {
+    vertical-align: middle;
+    display: block;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, input, select, optgroup, textarea {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+
+  ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+
+  ::placeholder {
+    opacity: 1;
+  }
+
+  @supports (not ((-webkit-appearance: -apple-pay-button))) or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentColor;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      ::placeholder {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+
+  ::-webkit-datetime-edit {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-year-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-month-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-day-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-hour-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-minute-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-second-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-millisecond-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+  button, input:where([type="button"], [type="reset"], [type="submit"]) {
+    appearance: button;
+  }
+
+  ::file-selector-button {
+    appearance: button;
+  }
+
+  ::-webkit-inner-spin-button {
+    height: auto;
+  }
+
+  ::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+
+@layer components;
+
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .static {
+    position: static;
+  }
+
+  .-my-3 {
+    margin-block: calc(var(--spacing) * -3);
+  }
+
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+
+  .block {
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .h-1 {
+    height: var(--spacing);
+  }
+
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+
+  .h-\[18px\] {
+    height: 18px;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .max-h-\[160px\] {
+    max-height: 160px;
+  }
+
+  .min-h-screen {
+    min-height: 100vh;
+  }
+
+  .w-\[6ch\] {
+    width: 6ch;
+  }
+
+  .w-\[18px\] {
+    width: 18px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .min-w-0 {
+    min-width: 0;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+
+  .transform {
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .touch-none {
+    touch-action: none;
+  }
+
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .items-end {
+    align-items: flex-end;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .gap-0\.5 {
+    gap: calc(var(--spacing) * .5);
+  }
+
+  .gap-1 {
+    gap: var(--spacing);
+  }
+
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-x-6 {
+    column-gap: calc(var(--spacing) * 6);
+  }
+
+  :where(.space-x-2 > :not(:last-child)) {
+    --tw-space-x-reverse: 0;
+    margin-inline-start: calc(calc(var(--spacing) * 2) * var(--tw-space-x-reverse));
+    margin-inline-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .gap-y-3\.5 {
+    row-gap: calc(var(--spacing) * 3.5);
+  }
+
+  .truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .overflow-visible {
+    overflow: visible;
+  }
+
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+
+  .rounded-full {
+    border-radius: 3.40282e38px;
+  }
+
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+
+  .border-t-\[4px\] {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 4px;
+  }
+
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+
+  .border-b-\[4px\] {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 4px;
+  }
+
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
+
+  .border-border, .border-border\/30 {
+    border-color: var(--color-border);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-border\/30 {
+      border-color: color-mix(in oklab, var(--color-border) 30%, transparent);
+    }
+  }
+
+  .border-border\/50 {
+    border-color: var(--color-border);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-border\/50 {
+      border-color: color-mix(in oklab, var(--color-border) 50%, transparent);
+    }
+  }
+
+  .border-border\/60 {
+    border-color: var(--color-border);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-border\/60 {
+      border-color: color-mix(in oklab, var(--color-border) 60%, transparent);
+    }
+  }
+
+  .border-transparent {
+    border-color: #0000;
+  }
+
+  .\!bg-muted {
+    background-color: var(--color-muted) !important;
+  }
+
+  .bg-card {
+    background-color: var(--color-card);
+  }
+
+  .bg-muted, .bg-muted\/20 {
+    background-color: var(--color-muted);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-muted\/20 {
+      background-color: color-mix(in oklab, var(--color-muted) 20%, transparent);
+    }
+  }
+
+  .bg-muted\/30 {
+    background-color: var(--color-muted);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-muted\/30 {
+      background-color: color-mix(in oklab, var(--color-muted) 30%, transparent);
+    }
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-success {
+    background-color: var(--color-success);
+  }
+
+  .bg-transparent {
+    background-color: #0000;
+  }
+
+  .bg-warning {
+    background-color: var(--color-warning);
+  }
+
+  .bg-clip-padding {
+    background-clip: padding-box;
+  }
+
+  .fill-foreground {
+    fill: var(--color-foreground);
+  }
+
+  .fill-muted-foreground {
+    fill: var(--color-muted-foreground);
+  }
+
+  .p-1 {
+    padding: var(--spacing);
+  }
+
+  .p-3\.5 {
+    padding: calc(var(--spacing) * 3.5);
+  }
+
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+
+  .pr-1 {
+    padding-right: var(--spacing);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .\!text-base {
+    font-size: var(--text-base) !important;
+    line-height: var(--tw-leading, var(--text-base--line-height)) !important;
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+
+  .text-foreground {
+    color: var(--color-foreground);
+  }
+
+  .text-muted-foreground {
+    color: var(--color-muted-foreground);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-white {
+    color: var(--color-white);
+  }
+
+  .tabular-nums {
+    --tw-numeric-spacing: tabular-nums;
+    font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, );
+  }
+
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-none {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .ring {
+    --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .duration-300 {
+    --tw-duration: .3s;
+    transition-duration: .3s;
+  }
+
+  .ease-out {
+    --tw-ease: var(--ease-out);
+    transition-timing-function: var(--ease-out);
+  }
+
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .selection\:bg-primary\/20 ::selection {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .selection\:bg-primary\/20 ::selection {
+      background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+    }
+  }
+
+  .selection\:bg-primary\/20::selection {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .selection\:bg-primary\/20::selection {
+      background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+    }
+  }
+
+  .after\:absolute:after {
+    content: var(--tw-content);
+    position: absolute;
+  }
+
+  .after\:inset-x-0:after {
+    content: var(--tw-content);
+    inset-inline: 0;
+  }
+
+  .after\:-inset-y-1:after {
+    content: var(--tw-content);
+    inset-block: calc(var(--spacing) * -1);
+  }
+
+  .after\:-inset-y-2:after {
+    content: var(--tw-content);
+    inset-block: calc(var(--spacing) * -2);
+  }
+
+  .after\:top-1\/2:after {
+    content: var(--tw-content);
+    top: 50%;
+  }
+
+  .after\:left-1\/2:after {
+    content: var(--tw-content);
+    left: 50%;
+  }
+
+  .after\:h-11:after {
+    content: var(--tw-content);
+    height: calc(var(--spacing) * 11);
+  }
+
+  .after\:w-11:after {
+    content: var(--tw-content);
+    width: calc(var(--spacing) * 11);
+  }
+
+  .after\:-translate-x-1\/2:after {
+    content: var(--tw-content);
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .after\:-translate-y-1\/2:after {
+    content: var(--tw-content);
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-primary-hover:hover {
+      background-color: var(--color-primary-hover);
+    }
+
+    .hover\:bg-secondary-hover:hover {
+      background-color: var(--color-secondary-hover);
+    }
+  }
+
+  .focus\:ring-1:focus {
+    --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .focus\:ring-primary:focus {
+    --tw-ring-color: var(--color-primary);
+  }
+
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+
+  .disabled\:cursor-not-allowed:disabled {
+    cursor: not-allowed;
+  }
+
+  .disabled\:opacity-40:disabled {
+    opacity: .4;
+  }
+
+  .data-\[state\=on\]\:bg-primary[data-state="on"] {
+    background-color: var(--color-primary);
+  }
+
+  .data-\[state\=on\]\:text-white[data-state="on"] {
+    color: var(--color-white);
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:w-auto {
+      width: auto;
+    }
+
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sm\:flex-row {
+      flex-direction: row;
+    }
+
+    .sm\:gap-x-8 {
+      column-gap: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:gap-x-12 {
+      column-gap: calc(var(--spacing) * 12);
+    }
+
+    .md\:pt-5 {
+      padding-top: calc(var(--spacing) * 5);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-primary: var(--primary, #336ef3);
+    --color-primary-hover: var(--primary-hover, #395fe1);
+    --color-error: var(--brand-red, #ea4335);
+    --color-warning: var(--brand-yellow, #fbbc04);
+    --color-success: var(--brand-green, #34a853);
+    --color-background: var(--surface-container-de-emphasis, #272930);
+    --color-card: var(--surface-container-de-emphasis, #272930);
+    --color-card-hover: var(--surface-container-high, #363840);
+    --color-border: var(--divider, #363840);
+    --color-input: var(--surface-container, #2c2e35);
+    --color-secondary: var(--surface-container-high, #363840);
+    --color-secondary-hover: var(--surface-container-highest, #42444d);
+    --color-accent: var(--surface-container-highest, #42444d);
+    --color-accent-foreground: var(--on-surface-default, #e6e8f0);
+    --color-muted: var(--surface-container, #2c2e35);
+    --color-muted-foreground: var(--on-surface-de-emphasis, #adafb8);
+    --color-foreground: var(--on-surface-default, #e6e8f0);
+    --color-disabled: var(--surface-container, #2c2e35);
+    --color-disabled-foreground: var(--disabled-foreground, #797c90);
+  }
+}
+
+.dark {
+  --color-primary: var(--primary, #336ef3);
+  --color-primary-hover: var(--primary-hover, #395fe1);
+  --color-error: var(--brand-red, #ea4335);
+  --color-warning: var(--brand-yellow, #fbbc04);
+  --color-success: var(--brand-green, #34a853);
+  --color-background: var(--surface-container-de-emphasis, #272930);
+  --color-card: var(--surface-container-de-emphasis, #272930);
+  --color-card-hover: var(--surface-container-high, #363840);
+  --color-border: var(--divider, #363840);
+  --color-input: var(--surface-container, #2c2e35);
+  --color-secondary: var(--surface-container-high, #363840);
+  --color-secondary-hover: var(--surface-container-highest, #42444d);
+  --color-accent: var(--surface-container-highest, #42444d);
+  --color-accent-foreground: var(--on-surface-default, #e6e8f0);
+  --color-muted: var(--surface-container, #2c2e35);
+  --color-muted-foreground: var(--on-surface-de-emphasis, #adafb8);
+  --color-foreground: var(--on-surface-default, #e6e8f0);
+  --color-disabled: var(--surface-container, #2c2e35);
+  --color-disabled-foreground: var(--disabled-foreground, #797c90);
+}
+
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-figure {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-spacing {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-fraction {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-duration {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ease {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-content {
+  syntax: "*";
+  inherits: false;
+  initial-value: "";
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+</style><link href="Generated%20Interactive%20Widget_files/m=capy_widget_colors_uLc8.css" rel="stylesheet"></head>
+    <body class="">
+  
+  <div id="root"><div class="w-full bg-card text-foreground font-sans min-h-screen flex flex-col justify-between selection:bg-primary/20"><div><div class="w-full relative overflow-hidden bg-muted/30 border-b border-border"><svg role="img" aria-label="Grafik Interaktif Belanjawan Kalori dan Makronutrien Harian" viewBox="0 0 652.5 274.05" width="100%" height="274.05" class="block"><line x1="293.625" y1="0" x2="293.625" y2="274.05" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 4" opacity="0.6"></line><g transform="translate(156.6, 137.025)"><circle r="75" fill="none" stroke="var(--color-border)" stroke-width="14" opacity="0.4"></circle><circle r="75" fill="none" stroke="var(--color-primary)" stroke-width="14" stroke-dasharray="471.23889803846896" stroke-dashoffset="287.45572780346606" stroke-linecap="round" transform="rotate(-90)" class="transition-all duration-300 ease-out"></circle><text text-anchor="middle" y="-6" font-size="24" class="fill-foreground font-medium tabular-nums">1212</text><text text-anchor="middle" y="16" font-size="12" class="fill-muted-foreground font-normal">kcal baki</text></g><g transform="translate(339.3, 60.291000000000004)"><text x="0" y="12" font-size="13" class="fill-muted-foreground font-medium">Karbohidrat</text><text x="274.05" y="12" text-anchor="end" font-size="12" class="fill-foreground font-medium tabular-nums">70g / 250g</text><rect x="0" y="20" width="274.05" height="8" rx="4" fill="var(--color-border)" opacity="0.5"></rect><rect x="0" y="20" width="76.73400000000001" height="8" rx="4" fill="var(--color-warning)" class="transition-all duration-300 ease-out"></rect><g transform="translate(0, 42)"><text x="0" y="12" font-size="13" class="fill-muted-foreground font-medium">Protein</text><text x="274.05" y="12" text-anchor="end" font-size="12" class="fill-foreground font-medium tabular-nums">37g / 130g</text><rect x="0" y="20" width="274.05" height="8" rx="4" fill="var(--color-border)" opacity="0.5"></rect><rect x="0" y="20" width="76.73400000000001" height="8" rx="4" fill="var(--color-primary)" class="transition-all duration-300 ease-out"></rect></g><g transform="translate(0, 84)"><text x="0" y="12" font-size="13" class="fill-muted-foreground font-medium">Lemak</text><text x="274.05" y="12" text-anchor="end" font-size="12" class="fill-foreground font-medium tabular-nums">40g / 55g</text><rect x="0" y="20" width="274.05" height="8" rx="4" fill="var(--color-border)" opacity="0.5"></rect><rect x="0" y="20" width="200.0565" height="8" rx="4" fill="var(--color-success)" class="transition-all duration-300 ease-out"></rect></g></g></svg></div><div class="flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0"><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Tenaga Diambil</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">788 kcal</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Protein Capai</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">28%</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Jumlah Log</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">2 makanan</span></div></div><div class="p-5 flex flex-col gap-5"><div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center"><div class="flex flex-col gap-1.5"><label class="text-sm font-medium text-muted-foreground">Profil Pengguna (Maks 3)</label><div role="group" dir="ltr" class="rounded-full flex w-full bg-muted h-9 p-1" aria-label="Tukar Profil Pengguna" tabindex="0" style="outline: none;"><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Ahmad</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Siti</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Rani</span></button></div></div><div class="flex flex-col gap-1.5"><label class="text-sm font-medium text-muted-foreground">Tarikh Rekod</label><div class="relative h-11 flex items-center bg-muted rounded-lg px-2.5"><input type="date" class="w-full bg-transparent text-sm font-medium text-foreground focus:outline-none cursor-pointer" value="2026-08-19"></div></div><div class="flex flex-col gap-1.5 md:pt-5"><div class="flex items-center gap-2"><button type="button" class="flex-1 rounded-full text-sm font-medium h-9 whitespace-nowrap bg-primary text-white relative after:absolute after:-inset-y-1 after:inset-x-0 flex items-center justify-center gap-1 cursor-pointer transition-colors hover:bg-primary-hover"><span class="material-icons !text-base">download</span><span>Muat Turun Report</span></button><button type="button" class="px-4 rounded-full text-sm font-medium h-9 whitespace-nowrap bg-muted text-foreground relative after:absolute after:-inset-y-1 after:inset-x-0 flex items-center justify-center gap-1 cursor-pointer transition-colors hover:bg-secondary-hover" title="Kosongkan Log"><span class="material-icons !text-base">clear_all</span><span>Kosongkan</span></button></div></div></div><div class="border-t border-border/60 pt-4"><form class="flex flex-col gap-4"><div class="flex flex-col sm:flex-row gap-3 items-end"><div class="flex-1 w-full flex flex-col gap-1.5"><label class="text-sm font-medium text-muted-foreground">Nama Makanan / Hidangan</label><input type="text" placeholder="Contoh: Ayam Masak Kicap, Nasi Putih..." class="h-11 w-full border-t-[4px] border-b-[4px] border-transparent bg-clip-padding rounded-lg bg-muted text-sm font-medium px-2.5 focus:outline-none focus:ring-1 focus:ring-primary"></div><button type="submit" disabled="disabled" class="w-full sm:w-auto px-5 rounded-full text-sm font-medium h-9 whitespace-nowrap bg-success text-white relative after:absolute after:-inset-y-1 after:inset-x-0 flex items-center justify-center gap-1 cursor-pointer transition-colors disabled:opacity-40 disabled:cursor-not-allowed"><span class="material-icons !text-base">add</span><span>Tambah Hidangan</span></button></div><div class="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-3.5"><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Karbohidrat (g)</label><div class="flex items-center gap-3 w-full h-11 py-3 -my-3"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-5 grow cursor-pointer" aria-label="Slaid Karbohidrat" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow rounded-full !bg-muted"><span data-orientation="horizontal" class="absolute h-full rounded-full bg-warning" style="left: 0%; right: 86.6667%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(13.3333% + 6.6px);"><span role="slider" aria-valuemin="0" aria-valuemax="150" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="20"></span></span></span><input style="display: none;" value="20"><span class="text-sm font-medium text-foreground tabular-nums w-[6ch] text-right shrink-0 whitespace-nowrap">20g</span></div></div><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Protein (g)</label><div class="flex items-center gap-3 w-full h-11 py-3 -my-3"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-5 grow cursor-pointer" aria-label="Slaid Protein" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow rounded-full !bg-muted"><span data-orientation="horizontal" class="absolute h-full rounded-full bg-primary" style="left: 0%; right: 85%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(15% + 6.3px);"><span role="slider" aria-valuemin="0" aria-valuemax="100" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="15"></span></span></span><input style="display: none;" value="15"><span class="text-sm font-medium text-foreground tabular-nums w-[6ch] text-right shrink-0 whitespace-nowrap">15g</span></div></div><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Lemak (g)</label><div class="flex items-center gap-3 w-full h-11 py-3 -my-3"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-5 grow cursor-pointer" aria-label="Slaid Lemak" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow rounded-full !bg-muted"><span data-orientation="horizontal" class="absolute h-full rounded-full bg-success" style="left: 0%; right: 90%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(10% + 7.2px);"><span role="slider" aria-valuemin="0" aria-valuemax="80" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="8"></span></span></span><input style="display: none;" value="8"><span class="text-sm font-medium text-foreground tabular-nums w-[6ch] text-right shrink-0 whitespace-nowrap">8g</span></div></div></div></form></div><div class="mt-2 bg-muted/20 rounded-xl p-3.5 border border-border/50"><span class="text-xs font-medium text-muted-foreground block mb-2">Senarai Log Makanan untuk 2026-08-19</span><div class="flex flex-col gap-1.5 max-h-[160px] overflow-y-auto pr-1"><div class="flex justify-between items-center text-sm bg-card px-3 py-2 rounded-lg border border-border/30"><div class="min-w-0 flex-1"><span class="font-medium text-foreground block truncate">Nasi Lemak</span><span class="text-xs text-muted-foreground space-x-2 tabular-nums"><span>K: 65g</span><span>P: 12g</span><span>L: 22g</span></span></div><span class="font-medium text-primary shrink-0 tabular-nums ml-2">506 kcal</span></div><div class="flex justify-between items-center text-sm bg-card px-3 py-2 rounded-lg border border-border/30"><div class="min-w-0 flex-1"><span class="font-medium text-foreground block truncate">Ayam Goreng</span><span class="text-xs text-muted-foreground space-x-2 tabular-nums"><span>K: 5g</span><span>P: 25g</span><span>L: 18g</span></span></div><span class="font-medium text-primary shrink-0 tabular-nums ml-2">282 kcal</span></div></div></div></div></div><footer class="w-full border-t border-border px-5 py-3 text-center text-xs text-muted-foreground font-normal tracking-wide">Daily Calorie &amp; Macronutrient Budget by Rani Yong</footer></div></div></body></html>
