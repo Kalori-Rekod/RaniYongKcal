@@ -26,11 +26,31 @@
             background-color: #1a252f;
             color: #ffffff;
             padding: 15px 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             font-size: 1.25rem;
             font-weight: 600;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             z-index: 10;
+        }
+
+        /* Logout Button Style */
+        .btn-logout {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            display: none; /* Disembunyikan secara lalai */
+            transition: background 0.2s;
+        }
+
+        .btn-logout:hover {
+            background-color: #c0392b;
         }
 
         /* Main Body Wrapper for Iframe */
@@ -63,6 +83,8 @@
             header {
                 font-size: 1rem;
                 padding: 12px 10px;
+                flex-direction: column;
+                gap: 10px;
             }
             footer {
                 font-size: 0.75rem;
@@ -74,13 +96,18 @@
 
     <!-- Header Section -->
     <header>
-        Daily Calorie & Macronutrient Calculator by Rani Yong
+        <span>Daily Calorie & Macronutrient Calculator by Rani Yong</span>
+        <!-- Tambah butang log keluar -->
+        <button id="logoutBtn" class="btn-logout" onclick="triggerLogout()">Log Keluar</button>
     </header>
 
     <!-- App Body (Iframe Section) -->
     <div class="iframe-container">
         <iframe 
-            src="https://kalori-rekod.github.io/RaniYongKcal/login.html" class="w-full h-screen border-none" scrolling="auto">
+            id="myIframe"
+            src="https://kalori-rekod.github.io/RaniYongKcal/login.html" 
+            class="w-full h-screen border-none" 
+            scrolling="auto">
         </iframe>
     </div>
 
@@ -88,6 +115,38 @@
     <footer>
         &copy; 2026 Daily Calorie & Macronutrient Calculator by Rani Yong.
     </footer>
+
+    <script>
+        const loginUrl = "https://kalori-rekod.github.io/RaniYongKcal/login.html";
+        const iframe = document.getElementById('myIframe');
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        // Fungsi yang berjalan setiap kali iframe memuatkan halaman
+        iframe.addEventListener('load', function() {
+            try {
+                // Mengambil URL semasa di dalam iframe
+                const currentUrl = iframe.contentWindow.location.href;
+
+                // Menyemak sama ada URL semasa mengandungi perkataan 'login.html'
+                if (currentUrl.includes('login.html')) {
+                    logoutBtn.style.display = 'none';  // Sembunyikan butang jika di page login
+                } else {
+                    logoutBtn.style.display = 'block'; // Tunjukkan butang untuk page lain
+                }
+            } catch (error) {
+                // Jika pengguna pergi ke domain luar (Cross-Origin), pelayar akan sekat pembacaan URL.
+                // Kita anggap pengguna sudah keluar dari sistem asal, jadi tunjukkan butang logout.
+                logoutBtn.style.display = 'block';
+            }
+        });
+
+        // Fungsi apabila butang log keluar ditekan
+        function triggerLogout() {
+            iframe.src = loginUrl;
+            logoutBtn.style.display = 'none'; // Sembunyikan serta-merta selepas ditekan
+        }
+    </script>
+
 
 </body>
 </html>
