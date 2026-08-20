@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'https://widgetlibs.static.us
 import ReactDOM from 'https://widgetlibs.static.usercontent.goog/react-dom/client-BTuQ-l8_.js';
 import { ErrorBoundary } from 'https://widgetlibs.static.usercontent.goog/react-error-boundary-BY2GTZrN.js';
 import { Download, Trash2 } from 'https://widgetlibs.static.usercontent.goog/lucide-react-5WMLBm_f.js';
- 
+
 true              &&(function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
