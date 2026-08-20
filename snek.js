@@ -9,7 +9,7 @@ const databaseKuih = [
     { id: "SNK868", nama: "Kuih Red Velvet", carbs: 10, protein: 1, fat: 5 },
     { id: "SNK869", nama: "Kuih Almond London", carbs: 7, protein: 2, fat: 6 },
     { id: "SNK870", nama: "Kuih Tart Nenas", carbs: 10, protein: 1, fat: 4 }
-];
+]; 
 
 let selectedItems = [];
 
