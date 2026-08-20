@@ -83,15 +83,72 @@
 
     <!-- JavaScript Logik Penghalaan URL Utama (window.top) -->
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            
-            const user = encodeURIComponent(document.getElementById('username').value.trim());
-            const pass = encodeURIComponent(document.getElementById('password').value.trim());
-            
-            if (user && pass) {
-                // Memecah keluar dari lingkungan iframe untuk menukar URL asal pelayar
-                window.location.href = 'https://kalori-rekod.github.io//RaniYongKcal/' + user + '/' + pass + '.html';
+        // PASTE URL WEB APP GAS ANDA DI SINI.
+        const GAS_API_URL = "PASTE_WEB_APP_URL_HERE";
+        const AUTH_TOKEN_KEY = "kalori_auth_token";
+        const AUTH_USER_KEY = "calorie_current_user";
+        const NEXT_PAGE = "Wanie123.html";
+
+        const form = document.getElementById("loginForm");
+        const button = form.querySelector("button[type=submit]");
+
+        function showError(message) {
+            let box = document.getElementById("loginError");
+            if (!box) {
+                box = document.createElement("div");
+                box.id = "loginError";
+                box.className = "mt-4 text-center text-sm font-semibold text-red-400";
+                form.appendChild(box);
+            }
+            box.textContent = message;
+        }
+
+        form.addEventListener("submit", async function(event) {
+            event.preventDefault();
+            showError("");
+
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (!GAS_API_URL || GAS_API_URL.includes("PASTE_WEB_APP_URL_HERE")) {
+                showError("URL Web App GAS belum dimasukkan.");
+                return;
+            }
+
+            if (!username || !password) {
+                showError("Sila masukkan username dan password.");
+                return;
+            }
+
+            button.disabled = true;
+            button.textContent = "Sedang log masuk...";
+
+            try {
+                const response = await fetch(GAS_API_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "text/plain;charset=utf-8" },
+                    body: JSON.stringify({
+                        action: "login",
+                        username: username,
+                        password: password
+                    })
+                });
+
+                if (!response.ok) throw new Error("HTTP " + response.status);
+                const data = await response.json();
+
+                if (data.status !== "success") {
+                    throw new Error(data.message || "Username atau password salah.");
+                }
+
+                localStorage.setItem(AUTH_TOKEN_KEY, data.token);
+                localStorage.setItem(AUTH_USER_KEY, data.username);
+                window.location.replace(NEXT_PAGE);
+            } catch (error) {
+                showError(error.message || "Login gagal. Sila cuba lagi.");
+            } finally {
+                button.disabled = false;
+                button.textContent = "Log Masuk";
             }
         });
     </script>
