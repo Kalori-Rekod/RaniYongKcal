@@ -156,7 +156,7 @@
       selected=[]; renderSelected();
     }catch(e){setStatus(e.message||String(e),'err');}
     finally{$('saveBtn').disabled=false;}
-  }
+  } 
 
   $('search').addEventListener('input',e=>{
     const q=e.target.value;
