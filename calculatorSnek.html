@@ -48,10 +48,8 @@
           <div class="metric"><span>Item</span><strong id="sumItems">0</strong></div>
         </div>
         <div class="total"><div class="total-line"><span>Total Kcal</span><strong id="sumKcal">0</strong></div></div>
-        <!-- Butang Copy -->
-<button id="btn-copy" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors cursor-pointer text-sm">
-    Copy Total Kcal
-</button>
+<button id="copyBtn" class="btn-theme" onclick="copyKcal()">Copy Total Kcal</button>
+
         <button id="clearBtn" class="btn btn-secondary" style="width:100%;margin-top:8px">Kosongkan pilihan</button>
         <div id="saveStatus" class="status"></div>
       </aside>
@@ -231,6 +229,34 @@ btnCopy.addEventListener("click", () => {
         alert("Gagal menyalin nilai kcal.");
     });
 });
+
+  // Contoh senarai snek yang dipilih (sesuaikan dengan pembolehubah snek sistem anda)
+let selectedSnacks = []; 
+
+// Fungsi utama untuk mengira jumlah Kcal secara automatik
+function calculateTotalKcal() {
+  let totalKcal = 0;
+  
+  // Mengira jumlah keseluruhan daripada snek yang aktif dalam pilihan
+  selectedSnacks.forEach(snack => {
+    totalKcal += snack.kcal; // Pastikan objek snek anda mempunyai atribut .kcal
+  });
+  
+  // Kemaskini paparan pada skrin secara automatik
+  document.getElementById("totalKcalDisplay").innerText = totalKcal;
+}
+
+// Fungsi untuk menyalin nilai Total Kcal apabila butang diklik
+function copyKcal() {
+  // Ambil teks angka dari element paparan Total Kcal
+  const kcalValue = document.getElementById("totalKcalDisplay").innerText;
+  
+  navigator.clipboard.writeText(kcalValue).then(() => {
+    alert("Total Kcal berjaya disalin: " + kcalValue);
+  }).catch(err => {
+    console.error("Gagal menyalin: ", err);
+  });
+}
 
 </script>
 </body>
