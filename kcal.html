@@ -490,7 +490,23 @@ function CalorieTrackerWidget() {
             ]}),
             /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[
               /* @__PURE__ */ jsx("span",{className:"text-[11px] font-medium text-muted-foreground uppercase tracking-wider",children:"Sasaran Kalori (kcal)"}),
-              /* @__PURE__ */ jsx("input",{type:"number",value:dailyGoal,readOnly:true,className:"h-9 rounded-lg bg-muted text-xs font-medium px-3 w-full opacity-80",min:"500",max:"10000",title:"Sasaran dibaca daripada sheet users melalui GAS."})
+/* @__PURE__ */ jsx("input", {
+  type: "number",
+  // Styling asal mengikut reka bentuk gelap (dark mode) dalam gambar anda
+  className: "w-full bg-[#1e2230] text-white text-base px-3 py-2 rounded-md outline-none border border-transparent focus:border-blue-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-auto [&::-webkit-inner-spin-button]:appearance-auto",
+  value: sasaranKalori, // Sila ganti dengan nama variable state kalori anda (cth: targetCalorie atau data.target)
+  min: "0",
+  step: "1", // Membolehkan klik up/down naik satu demi satu angka
+  onChange: (e) => {
+    const nilaiBaru = parseInt(e.target.value) || 0;
+    
+    // 1. Kemaskini State React/Solid anda (Ganti dengan fungsi set-state sebenar anda)
+    setSasaranKalori(nilaiBaru); 
+    
+    // 2. Logik AUTOSAVE: Terus simpan ke localStorage atau database
+    localStorage.setItem("sasaranKalori", nilaiBaru);
+  }
+})
             ]})
           ]}),
           error && /* @__PURE__ */ jsx("div",{className:"p-2.5 bg-error/10 text-error rounded-lg text-xs font-medium border border-error/20",children:error}),
