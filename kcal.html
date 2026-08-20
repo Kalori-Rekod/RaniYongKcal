@@ -494,24 +494,27 @@ function CalorieTrackerWidget() {
   type: "number",
   className: "w-full bg-[#1e2230] text-white text-base px-3 py-2 rounded-md outline-none border border-transparent focus:border-blue-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-auto [&::-webkit-inner-spin-button]:appearance-auto",
   
-  // 1. Dibuang rujukan 'data.dailyGoal' yang menyebabkan ralat.
-  // Letakkan nilai lalai permulaan secara terus.
-  defaultValue: 2020, 
+  // 🟢 1. PENYEGERAKAN AUTOMATIK (Reactive Binding)
+  // Membaca nilai mengikut apa yang dipaparkan pada progress bar bawah
+  value: data?.dailyGoal || activeProfile?.dailyGoal || 2000, 
   
   min: "0",
   step: "1",
-  onInput: (e) => {
+  onChange: (e) => {
     const nilaiBaru = parseInt(e.target.value) || 0;
     
-    // 2. Logik Debounce: Padam pemasa lama untuk elakkan lag semasa klik laju
+    // 🟢 2. KEMASKINI STATE TEMPATAN SERTA-MERTA
+    // Mengubah angka di petak atas akan terus menukar angka progress bar bawah tanpa lag
+    if (typeof setData === "function") {
+      setData(prev => ({ ...prev, dailyGoal: nilaiBaru }));
+    } else if (typeof setActiveProfile === "function") {
+      setActiveProfile(prev => ({ ...prev, dailyGoal: nilaiBaru }));
+    }
+
+    // 🟢 3. AUTOSAVE KE GOOGLE SHEETS (DEBOUNCE)
     clearTimeout(debounceTimer);
-    
-    // Tunggu 1 saat selepas selesai klik/menaip baru hantar data ke GAS
     debounceTimer = setTimeout(() => {
-      // Ambil token sesi aktif secara selamat terus dari localStorage browser anda
-      const tokenSesi = localStorage.getItem("session_token") || localStorage.getItem("token");
-      
-      // Panggil fungsi untuk hantar data ke Google Sheets
+      const tokenSesi = localStorage.getItem("session_token") || localStorage.getItem("token") || data?.token;
       hantarKeGAS(nilaiBaru, tokenSesi); 
     }, 1000); 
   }
