@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta data-sandbox-injected="" http-equiv="Content-Security-Policy" content="
+          default-src 'none';
+          base-uri 'none';
+          connect-src https://fonts.gstatic.com https://www.gstatic.com https://esm.sh/;
+          font-src https://fonts.gstatic.com;
+          form-action 'none';
+          
+          worker-src blob: https://*.scf.usercontent.goog;
+          img-src data: https://encrypted-tbn0.gstatic.com https://encrypted-tbn1.gstatic.com https://encrypted-tbn2.gstatic.com https://encrypted-tbn3.gstatic.com ;
+          media-src 'none';
+          object-src 'none';
+          script-src 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://widgetlibs.static.usercontent.goog https://*.scf.usercontent.goog https://esm.sh/;
+          style-src 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.gstatic.com/ https://esm.sh/;">
+      <meta data-sandbox-injected="" charset="UTF-8">
+      <meta data-sandbox-injected="" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="enable-onep-api" content="false"><script data-sandbox-injected="true">(function(){var g=Object.defineProperty,k=globalThis,l=function(a,b){if(b)a:{var c=k;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&g(c,a,{configurable:!0,writable:!0,value:b})}};l("Promise.withResolvers",function(a){return a?a:function(){var b,c;return{promise:new Promise(function(d,e){b=d;c=e}),resolve:b,reject:c}}});var m=function(a){return typeof a==="object"&&a!==null&&"kind"in a&&typeof a.kind==="string"&&("payload"in a||a.kind==="___CROSS_FRAME_HANDSHAKE___")},n=class{constructor(){this.j=new Map}i(a){var b=a.data;if(m(b)){let c=b.payload;if(b=this.j.get(b.kind))(a=a.ports&&a.ports.length>0?a.ports:void 0)?b(c,a):b(c)}}sendMessage(a,b,c){if(!this.port)throw Error("a");a={kind:String(a),payload:b||{}};c&&c.length>0?this.port.postMessage(a,c):this.port.postMessage(a)}},p=async function(a){var b=window.parent;
+return a.h?{}:new Promise(c=>{var d=e=>{e.source===b&&m(e.data)&&e.data.kind==="___CROSS_FRAME_HANDSHAKE___"&&(window.removeEventListener("message",d),a.port=e.ports[0],a.port.onmessage=a.i.bind(a),a.h=!0,c(e.data.payload||{}))};window.addEventListener("message",d)})},q=class extends n{constructor(){super(...arguments);this.h=!1}};var {promise:r,resolve:t}=Promise.withResolvers(),{promise:u,resolve:v}=Promise.withResolvers(),w=!1;(async function(){var a=new q,b=await p(a);b&&b.enableSandboxToEditorSync&&(w=!!b.enableSandboxToEditorSync);if(b&&b.initialPayload){let c=b.initialPayload;window.initialPayload=c;window.setTimeout(()=>{window.dispatchEvent(new MessageEvent("message",{data:c}))},0)}t(a);(a=a.port)&&v(a)})();function x(a){r.then(b=>{b.sendMessage("ERROR",{error:a})})}window.onerror=(a,b,c,d,e)=>{x(e);return!0};
+window.onunhandledrejection=a=>{x(Error(a.reason));a.preventDefault()};
+window.document.addEventListener("DOMContentLoaded",()=>{r.then(a=>{a.sendMessage("ISOLATE_READY",{});var b=window.document.querySelector("#resize-target")||window.document.body,c=NaN,d=NaN,e=!1;(new ResizeObserver(()=>{e||(e=!0,window.requestAnimationFrame(()=>{e=!1;var f=Math.ceil(b.scrollHeight),h=Math.ceil(b.scrollWidth);f===c&&h===d||f===0&&h===0||(c=f,d=h,a.sendMessage("RESIZE",{height:f,width:h}))}))})).observe(b);if(w){let f;(new MutationObserver(()=>{f&&window.clearTimeout(f);f=window.setTimeout(()=>
+{f=void 0;a.sendMessage("HTML_CHANGED",{html:"<!DOCTYPE html>\n"+window.document.documentElement.outerHTML})},500)})).observe(window.document.documentElement,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}})});window.addEventListener("resizeRequest",()=>{r.then(a=>{var b=window.document.querySelector("#resize-target")||window.document.body,c=Math.ceil(b.scrollHeight);b=Math.ceil(b.scrollWidth);c===0&&b===0||a.sendMessage("MANUAL_RESIZE",{height:c,width:b})})});
+function y(a){var b=null;a instanceof Element?b=a:a&&a.nodeType===Node.TEXT_NODE&&(b=a.parentElement);if(!b)return null;for(a=b;a&&a!==window.document.body;){if(a.matches('a,button,input,textarea,select,option,details,summary,area,[jsaction],[data-jsaction],[role],[tabindex]:not([tabindex="-1"])'))return z(a);if(a instanceof HTMLElement&&a.isContentEditable)return z(a);a=a.parentElement}return null}
+function z(a){var b={tagName:a.tagName.toUpperCase(),attributes:{}},c=["role","jsaction","data-jsaction","tabindex"];for(let d of c)c=a.getAttribute(d),c!==null&&(b.attributes[d]=c);a instanceof HTMLElement&&a.isContentEditable&&(b.isContentEditable=!0);return b}window.addEventListener("click",a=>{var b=(a=a.target)?y(a):null;r.then(c=>{c.sendMessage("CLICK",{matchedNode:b})})},!0);
+window.addEventListener("request_window_open",a=>{var b=a.detail;r.then(c=>{c.sendMessage("REQUEST_WINDOW_OPEN",{url:b.url,hostname:b.hostname,target:b.target,features:b.features,skipConfirmation:b.skipConfirmation})})});window.sandboxConsoleLog=(a,b)=>{r.then(c=>{c.sendMessage("CONSOLE_LOG",{logLevel:a,message:b})})};if(document.querySelector('meta[name="enable-onep-api"]')?.getAttribute("content")==="true"){let a=!1;window.claimPortReady=()=>{if(a)return null;a=!0;return u}}window.logError=x;}).call(this);</script><script>(function(){function f(b){return["https://www.google.com/maps/","https://maps.google.com/","https://www.youtube.com/watch?v=","https://www.youtube.com/v/","https://youtu.be/"].some(a=>b.startsWith(a))}window.open=(b,a,d)=>{var c,e=!1;if(b)try{if(c=b instanceof URL?b.toString():String(b)){var g=(new URL(c,window.location.href)).hostname;e=f(c)}}catch(h){}window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:c,hostname:g,target:a,features:d,h:e}}));return null};
+window.addEventListener("click",b=>{var a=b.target.closest("a");if(a&&a.getAttribute("target")==="_blank"&&a.hasAttribute("href")){a=a.getAttribute("href");let d,c=!1;try{d=(new URL(a,window.location.href)).hostname,c=f(a)}catch(e){}b.preventDefault();b.stopPropagation();window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:a,hostname:d,target:"_blank",h:c}}))}},!0);}).call(this);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="Kalkulator_files/css2_i403.css" rel="stylesheet"><link href="Kalkulator_files/icon_i403.css" rel="stylesheet"><title>Generated Interactive Widget</title><script type="module" crossorigin="">
+import { jsx, jsxs } from 'https://widgetlibs.static.usercontent.goog/react/jsx-runtime-Dc9ViRTo.js';
+import React, { useState, useEffect, useMemo } from 'https://widgetlibs.static.usercontent.goog/react-Dd1pKoqe.js';
+import ReactDOM from 'https://widgetlibs.static.usercontent.goog/react-dom/client-BTuQ-l8_.js';
+import * as ToggleGroup from 'https://widgetlibs.static.usercontent.goog/@radix-ui/react-toggle-group-SAzue8E6.js';
+import * as Slider from 'https://widgetlibs.static.usercontent.goog/@radix-ui/react-slider-DXk-CvUR.js';
+import { ErrorBoundary } from 'https://widgetlibs.static.usercontent.goog/react-error-boundary-BY2GTZrN.js';
+
+true              &&(function polyfill() {
+	const relList = document.createElement("link").relList;
+	if (relList && relList.supports && relList.supports("modulepreload")) return;
+	for (const link of document.querySelectorAll("link[rel=\"modulepreload\"]")) processPreload(link);
+	new MutationObserver((mutations) => {
+		for (const mutation of mutations) {
+			if (mutation.type !== "childList") continue;
+			for (const node of mutation.addedNodes) if (node.tagName === "LINK" && node.rel === "modulepreload") processPreload(node);
+		}
+	}).observe(document, {
+		childList: true,
+		subtree: true
+	});
+	function getFetchOpts(link) {
+		const fetchOpts = {};
+		if (link.integrity) fetchOpts.integrity = link.integrity;
+		if (link.referrerPolicy) fetchOpts.referrerPolicy = link.referrerPolicy;
+		if (link.crossOrigin === "use-credentials") fetchOpts.credentials = "include";
+		else if (link.crossOrigin === "anonymous") fetchOpts.credentials = "omit";
+		else fetchOpts.credentials = "same-origin";
+		return fetchOpts;
+	}
+	function processPreload(link) {
+		if (link.ep) return;
+		link.ep = true;
+		const fetchOpts = getFetchOpts(link);
+		fetch(link.href, fetchOpts);
+	}
+}());
+
+function ErrorFallback({ error }) {
+  return /* @__PURE__ */ jsxs("div", { className: "p-5 text-error bg-card rounded-lg", children: [
+    /* @__PURE__ */ jsx("p", { className: "font-medium text-sm", children: "Sesuatu tidak kena:" }),
+    /* @__PURE__ */ jsx("pre", { className: "text-xs overflow-auto", children: error.message })
+  ] });
+}
+function App() {
+  const [method, setMethod] = useState("berat");
+  const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 500);
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const [weightCarb, setWeightCarb] = useState(150);
+  const [weightProtein, setWeightProtein] = useState(100);
+  const [weightVeg, setWeightVeg] = useState(100);
+  const [handCarb, setHandCarb] = useState(1.5);
+  const [handProtein, setHandProtein] = useState(1);
+  const [handVeg, setHandVeg] = useState(2);
+  const [plateSize, setPlateSize] = useState("standard");
+  const [plateDensity, setPlateDensity] = useState("sederhana");
+  const kcalPerGramCarb = 4;
+  const kcalPerGramProtein = 4;
+  const kcalPerGramVeg = 0.5;
+  const gPerFistCarb = 80;
+  const gPerPalmProtein = 90;
+  const gPerCuppedVeg = 75;
+  const metrics = useMemo(() => {
+    let carbs = 0;
+    let protein = 0;
+    let veg = 0;
+    let totalKcal = 0;
+    if (method === "berat") {
+      carbs = weightCarb;
+      protein = weightProtein;
+      veg = weightVeg;
+      totalKcal = carbs * kcalPerGramCarb + protein * kcalPerGramProtein + veg * kcalPerGramVeg;
+    } else if (method === "tapak") {
+      carbs = handCarb * gPerFistCarb;
+      protein = handProtein * gPerPalmProtein;
+      veg = handVeg * gPerCuppedVeg;
+      totalKcal = carbs * kcalPerGramCarb + protein * kcalPerGramProtein + veg * kcalPerGramVeg;
+    } else {
+      let baseKcal = 450;
+      if (plateSize === "kecil") baseKcal = 350;
+      if (plateSize === "besar") baseKcal = 600;
+      let modifier = 1;
+      if (plateDensity === "rendah") modifier = 0.8;
+      if (plateDensity === "tinggi") modifier = 1.3;
+      totalKcal = baseKcal * modifier;
+      carbs = totalKcal * 0.5 / kcalPerGramCarb;
+      protein = totalKcal * 0.25 / kcalPerGramProtein;
+      veg = totalKcal * 0.25 / kcalPerGramVeg;
+    }
+    return {
+      carbs: Math.round(carbs),
+      protein: Math.round(protein),
+      veg: Math.round(veg),
+      totalKcal: Math.round(totalKcal)
+    };
+  }, [method, weightCarb, weightProtein, weightVeg, handCarb, handProtein, handVeg, plateSize, plateDensity]);
+  const canvasWidth = Math.max(windowWidth, 360);
+  const canvasHeight = canvasWidth * 0.5;
+  return /* @__PURE__ */ jsx(ErrorBoundary, { FallbackComponent: ErrorFallback, children: /* @__PURE__ */ jsxs("div", { className: "w-full bg-card text-foreground font-sans flex flex-col select-none antialiased min-h-screen", children: [
+    /* @__PURE__ */ jsxs("div", { className: "w-full relative border-b border-border overflow-hidden bg-card", children: [
+      /* @__PURE__ */ jsxs(
+        "svg",
+        {
+          role: "img",
+          "aria-label": "Visualisasi Anggaran Kalori Makanan",
+          viewBox: `0 0 ${canvasWidth} ${canvasHeight}`,
+          width: "100%",
+          height: canvasHeight,
+          className: "w-full h-auto transition-all duration-300",
+          children: [
+            /* @__PURE__ */ jsxs("g", { opacity: "0.05", children: [
+              /* @__PURE__ */ jsx("line", { x1: 0, y1: canvasHeight * 0.5, x2: canvasWidth, y2: canvasHeight * 0.5, stroke: "currentColor", strokeWidth: "1", strokeDasharray: "4 4" }),
+              /* @__PURE__ */ jsx("line", { x1: canvasWidth * 0.5, y1: 0, x2: canvasWidth * 0.5, y2: canvasHeight, stroke: "currentColor", strokeWidth: "1", strokeDasharray: "4 4" })
+            ] }),
+            method === "berat" && /* @__PURE__ */ jsxs("g", { transform: `translate(${canvasWidth / 2}, ${canvasHeight / 2})`, children: [
+              /* @__PURE__ */ jsx("path", { d: "M -80,50 L 80,50 L 60,70 L -60,70 Z", fill: "var(--color-muted)", stroke: "var(--color-border)", strokeWidth: "1.5" }),
+              /* @__PURE__ */ jsx("rect", { x: "-50", y: "0", width: "100", height: "50", rx: "6", fill: "var(--color-secondary)", stroke: "var(--color-border)", strokeWidth: "1.5" }),
+              /* @__PURE__ */ jsx("rect", { x: "-35", y: "12", width: "70", height: "22", rx: "4", fill: "var(--color-card)", stroke: "var(--color-border)", strokeWidth: "1" }),
+              /* @__PURE__ */ jsxs("text", { x: "0", y: "28", textAnchor: "middle", fontSize: 13, fontWeight: "500", fill: "var(--color-primary)", className: "tabular-nums", children: [
+                metrics.carbs + metrics.protein + metrics.veg,
+                " g"
+              ] }),
+              /* @__PURE__ */ jsx("ellipse", { cx: "0", cy: "-10", rx: "90", ry: "25", fill: "var(--color-card)", stroke: "var(--color-border)", strokeWidth: "2" }),
+              /* @__PURE__ */ jsx("ellipse", { cx: "0", cy: "-10", rx: "75", ry: "18", fill: "none", stroke: "var(--color-border)", strokeWidth: "1", strokeDasharray: "3 3" }),
+              /* @__PURE__ */ jsxs("g", { opacity: weightCarb > 0 ? 0.9 : 0.2, transform: "translate(-35, -15)", children: [
+                /* @__PURE__ */ jsx("rect", { x: "-20", y: -Math.min(35, weightCarb * 0.15), width: "40", height: Math.min(35, weightCarb * 0.15), rx: "4", fill: "#E9B44C" }),
+                /* @__PURE__ */ jsx("text", { x: "0", y: "-5", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: "Karb" })
+              ] }),
+              /* @__PURE__ */ jsxs("g", { opacity: weightProtein > 0 ? 0.9 : 0.2, transform: "translate(15, -15)", children: [
+                /* @__PURE__ */ jsx("rect", { x: "-20", y: -Math.min(35, weightProtein * 0.25), width: "40", height: Math.min(35, weightProtein * 0.25), rx: "4", fill: "#E26D5C" }),
+                /* @__PURE__ */ jsx("text", { x: "0", y: "-5", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: "Prot" })
+              ] }),
+              /* @__PURE__ */ jsxs("g", { opacity: weightVeg > 0 ? 0.9 : 0.2, transform: "translate(0, -5)", children: [
+                /* @__PURE__ */ jsx("rect", { x: "-40", y: -Math.min(15, weightVeg * 0.12), width: "80", height: Math.min(15, weightVeg * 0.12), rx: "4", fill: "#5A9E70" }),
+                /* @__PURE__ */ jsx("text", { x: "0", y: "-2", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: "Sayur" })
+              ] })
+            ] }),
+            method === "tapak" && /* @__PURE__ */ jsxs("g", { transform: `translate(${canvasWidth / 2}, ${canvasHeight / 2})`, children: [
+              /* @__PURE__ */ jsx(
+                "path",
+                {
+                  d: "M -60,60 C -60,30 -55,10 -50,0 C -45,-10 -35,-10 -35,5 L -35,25 C -35,5 -25,0 -20,5 L -20,30 C -20,5 -10,0 -5,5 L -5,35 C -5,10 5,5 10,15 L 10,50 C 20,40 35,30 45,40 C 55,50 40,65 20,75 L -40,75 Z",
+                  fill: "var(--color-muted)",
+                  stroke: "var(--color-border)",
+                  strokeWidth: "2"
+                }
+              ),
+              /* @__PURE__ */ jsx("circle", { cx: "-20", cy: "45", r: 20 + handProtein * 5, fill: "#E26D5C", opacity: "0.75" }),
+              /* @__PURE__ */ jsx("text", { x: "-20", y: "49", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "white", children: "Protein" }),
+              /* @__PURE__ */ jsx("circle", { cx: "-40", cy: "5", r: 15 + handCarb * 5, fill: "#E9B44C", opacity: "0.75" }),
+              /* @__PURE__ */ jsx("text", { x: "-40", y: "9", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "white", children: "Karb" }),
+              /* @__PURE__ */ jsx("circle", { cx: "25", cy: "40", r: 15 + handVeg * 6, fill: "#5A9E70", opacity: "0.75" }),
+              /* @__PURE__ */ jsx("text", { x: "25", y: "44", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "white", children: "Sayur" })
+            ] }),
+            method === "pinggan" && /* @__PURE__ */ jsxs("g", { transform: `translate(${canvasWidth / 2}, ${canvasHeight / 2})`, children: [
+              /* @__PURE__ */ jsx(
+                "circle",
+                {
+                  cx: "0",
+                  cy: "0",
+                  r: plateSize === "kecil" ? 65 : plateSize === "besar" ? 95 : 80,
+                  fill: "var(--color-card)",
+                  stroke: "var(--color-border)",
+                  strokeWidth: "4",
+                  className: "transition-all duration-300"
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "circle",
+                {
+                  cx: "0",
+                  cy: "0",
+                  r: plateSize === "kecil" ? 55 : plateSize === "besar" ? 85 : 70,
+                  fill: "none",
+                  stroke: "var(--color-border)",
+                  strokeWidth: "1.5",
+                  strokeDasharray: "4 2",
+                  className: "transition-all duration-300"
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "path",
+                {
+                  d: `M 0,0 L 0,-65 A 65,65 0 0,1 0,65 Z`,
+                  transform: plateSize === "kecil" ? "scale(1)" : plateSize === "besar" ? "scale(1.3)" : "scale(1.15)",
+                  fill: "#5A9E70",
+                  opacity: "0.7",
+                  className: "transition-all duration-300"
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "path",
+                {
+                  d: `M 0,0 L -65,0 A 65,65 0 0,1 0,-65 Z`,
+                  transform: plateSize === "kecil" ? "scale(1)" : plateSize === "besar" ? "scale(1.3)" : "scale(1.15)",
+                  fill: "#E9B44C",
+                  opacity: "0.75",
+                  className: "transition-all duration-300"
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "path",
+                {
+                  d: `M 0,0 L 0,65 A 65,65 0 0,1 -65,0 Z`,
+                  transform: plateSize === "kecil" ? "scale(1)" : plateSize === "besar" ? "scale(1.3)" : "scale(1.15)",
+                  fill: "#E26D5C",
+                  opacity: "0.75",
+                  className: "transition-all duration-300"
+                }
+              ),
+              /* @__PURE__ */ jsx("text", { x: "35", y: "5", textAnchor: "middle", fontSize: 12, fontWeight: "500", fill: "var(--color-foreground)", children: "Separuh" }),
+              /* @__PURE__ */ jsx("text", { x: "-30", y: "-30", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: "Suku" }),
+              /* @__PURE__ */ jsx("text", { x: "-30", y: "35", textAnchor: "middle", fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: "Suku" })
+            ] })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxs("div", { className: "absolute top-3 left-3 bg-card/60 backdrop-blur-xs rounded-full px-2.5 py-0.5 text-xs font-medium pointer-events-none text-muted-foreground", children: [
+        "Kaedah: ",
+        method === "berat" ? "Timbangan Berat Semasa" : method === "tapak" ? "Anggaran Tapak Tangan" : "Suku-Suku Separuh"
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Karbohidrat" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+          metrics.carbs,
+          "g"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Protein" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+          metrics.protein,
+          "g"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Sayuran" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+          metrics.veg,
+          "g"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1 bg-primary/10 rounded-lg py-1 px-2", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-primary font-medium truncate text-center w-full", children: "Total Kalori" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-primary tabular-nums truncate text-center w-full", children: [
+          metrics.totalKcal,
+          " kcal"
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxs("div", { className: "p-5 flex flex-col gap-5", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Cara Kiraan Kalori" }),
+        /* @__PURE__ */ jsxs(
+          ToggleGroup.Root,
+          {
+            type: "single",
+            value: method,
+            onValueChange: (val) => {
+              if (val) setMethod(val);
+            },
+            "aria-label": "Pilih cara kiraan kalori",
+            className: "rounded-full flex w-full bg-muted h-9 p-1",
+            children: [
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "berat",
+                  className: "flex-1 min-w-0 text-center px-1 rounded-full text-sm font-medium transition-colors cursor-pointer relative overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Berat (g)" })
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "tapak",
+                  className: "flex-1 min-w-0 text-center px-1 rounded-full text-sm font-medium transition-colors cursor-pointer relative overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Tapak Tangan" })
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "pinggan",
+                  className: "flex-1 min-w-0 text-center px-1 rounded-full text-sm font-medium transition-colors cursor-pointer relative overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Saiz Pinggan" })
+                }
+              )
+            ]
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-4", children: [
+        method === "berat" && /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-3 gap-4", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Karbohidrat (Nasi/Mi)" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+              /* @__PURE__ */ jsxs(
+                Slider.Root,
+                {
+                  className: "grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3",
+                  value: [weightCarb],
+                  onValueChange: (val) => setWeightCarb(val[0]),
+                  max: 400,
+                  min: 0,
+                  step: 5,
+                  "aria-label": "Berat Karbohidrat",
+                  children: [
+                    /* @__PURE__ */ jsx(Slider.Track, { className: "relative grow h-1 !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                    /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap", children: [
+                weightCarb,
+                " g"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Protein (Ayam/Ikan)" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+              /* @__PURE__ */ jsxs(
+                Slider.Root,
+                {
+                  className: "grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3",
+                  value: [weightProtein],
+                  onValueChange: (val) => setWeightProtein(val[0]),
+                  max: 300,
+                  min: 0,
+                  step: 5,
+                  "aria-label": "Berat Protein",
+                  children: [
+                    /* @__PURE__ */ jsx(Slider.Track, { className: "relative grow h-1 !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                    /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap", children: [
+                weightProtein,
+                " g"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Sayur & Buah" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+              /* @__PURE__ */ jsxs(
+                Slider.Root,
+                {
+                  className: "grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3",
+                  value: [weightVeg],
+                  onValueChange: (val) => setWeightVeg(val[0]),
+                  max: 300,
+                  min: 0,
+                  step: 5,
+                  "aria-label": "Berat Sayuran",
+                  children: [
+                    /* @__PURE__ */ jsx(Slider.Track, { className: "relative grow h-1 !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                    /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap", children: [
+                weightVeg,
+                " g"
+              ] })
+            ] })
+          ] })
+        ] }),
+        method === "tapak" && /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-3 gap-4", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Karbohidrat (Genggam)" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+              /* @__PURE__ */ jsxs(
+                Slider.Root,
+                {
+                  className: "grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3",
+                  value: [handCarb],
+                  onValueChange: (val) => setHandCarb(val[0]),
+                  max: 4,
+                  min: 0,
+                  step: 0.5,
+                  "aria-label": "Portion Genggam Karbohidrat",
+                  children: [
+                    /* @__PURE__ */ jsx(Slider.Track, { className: "relative grow h-1 !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                    /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap", children: [
+                handCarb.toFixed(1),
+                " x"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Protein (Tapak Tangan)" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+              /* @__PURE__ */ jsxs(
+                Slider.Root,
+                {
+                  className: "grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3",
+                  value: [handProtein],
+                  onValueChange: (val) => setHandProtein(val[0]),
+                  max: 4,
+                  min: 0,
+                  step: 0.5,
+                  "aria-label": "Portion Tapak Protein",
+                  children: [
+                    /* @__PURE__ */ jsx(Slider.Track, { className: "relative grow h-1 !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                    /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap", children: [
+                handProtein.toFixed(1),
+                " x"
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Sayur (Saup Dua Tangan)" }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+              /* @__PURE__ */ jsxs(
+                Slider.Root,
+                {
+                  className: "grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3",
+                  value: [handVeg],
+                  onValueChange: (val) => setHandVeg(val[0]),
+                  max: 5,
+                  min: 0,
+                  step: 0.5,
+                  "aria-label": "Portion Saup Sayuran",
+                  children: [
+                    /* @__PURE__ */ jsx(Slider.Track, { className: "relative grow h-1 !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                    /* @__PURE__ */ jsx(Slider.Thumb, { className: "block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" })
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap", children: [
+                handVeg.toFixed(1),
+                " x"
+              ] })
+            ] })
+          ] })
+        ] }),
+        method === "pinggan" && /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-4", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Saiz Pinggan Hidangan" }),
+            /* @__PURE__ */ jsxs("div", { className: "relative h-9 rounded-lg bg-muted px-3 pointer-events-none flex items-center justify-between", children: [
+              /* @__PURE__ */ jsx("span", { className: "text-sm font-medium text-foreground", children: plateSize === "kecil" ? "Pinggan Kecil (6-7 inci)" : plateSize === "besar" ? "Pinggan Besar (10-11 inci)" : "Pinggan Standard (9 inci)" }),
+              /* @__PURE__ */ jsx("span", { className: "material-icons !text-base pointer-events-none text-muted-foreground", children: "expand_more" }),
+              /* @__PURE__ */ jsxs(
+                "select",
+                {
+                  value: plateSize,
+                  onChange: (e) => setPlateSize(e.target.value),
+                  className: "absolute inset-x-0 top-1/2 -translate-y-1/2 h-11 w-full opacity-0 cursor-pointer pointer-events-auto",
+                  children: [
+                    /* @__PURE__ */ jsx("option", { value: "kecil", children: "Pinggan Kecil" }),
+                    /* @__PURE__ */ jsx("option", { value: "standard", children: "Pinggan Standard" }),
+                    /* @__PURE__ */ jsx("option", { value: "besar", children: "Pinggan Besar" })
+                  ]
+                }
+              )
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+            /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Jenis Masakan / Kepadatan Minyak" }),
+            /* @__PURE__ */ jsxs("div", { className: "relative h-9 rounded-lg bg-muted px-3 pointer-events-none flex items-center justify-between", children: [
+              /* @__PURE__ */ jsx("span", { className: "text-sm font-medium text-foreground", children: plateDensity === "rendah" ? "Rendah Kalori (Rebus/Kukus)" : plateDensity === "tinggi" ? "Tinggi Kalori (Goreng/Santan)" : "Sederhana (Tumis/Biasa)" }),
+              /* @__PURE__ */ jsx("span", { className: "material-icons !text-base pointer-events-none text-muted-foreground", children: "expand_more" }),
+              /* @__PURE__ */ jsxs(
+                "select",
+                {
+                  value: plateDensity,
+                  onChange: (e) => setPlateDensity(e.target.value),
+                  className: "absolute inset-x-0 top-1/2 -translate-y-1/2 h-11 w-full opacity-0 cursor-pointer pointer-events-auto",
+                  children: [
+                    /* @__PURE__ */ jsx("option", { value: "rendah", children: "Rendah Kalori (Rebus/Kukus)" }),
+                    /* @__PURE__ */ jsx("option", { value: "sederhana", children: "Sederhana (Tumis/Biasa)" }),
+                    /* @__PURE__ */ jsx("option", { value: "tinggi", children: "Tinggi Kalori (Goreng/Santan)" })
+                  ]
+                }
+              )
+            ] })
+          ] })
+        ] })
+      ] })
+    ] })
+  ] }) });
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  /* @__PURE__ */ jsx(React.StrictMode, { children: /* @__PURE__ */ jsx(App, {}) })
+);
+
+</script><style>
+/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties {
+  @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+    *, :before, :after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-ordinal: initial;
+      --tw-slashed-zero: initial;
+      --tw-numeric-figure: initial;
+      --tw-numeric-spacing: initial;
+      --tw-numeric-fraction: initial;
+      --tw-outline-style: solid;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+    }
+  }
+}
+
+@layer theme {
+  :root, :host {
+    --font-sans: "Google Sans", "Roboto", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-white: #fff;
+    --spacing: .25rem;
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --font-weight-medium: 500;
+    --radius-lg: .5rem;
+    --blur-xs: 4px;
+    --default-transition-duration: .15s;
+    --default-transition-timing-function: cubic-bezier(.31, .94, .34, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-primary: var(--primary, #336ef3);
+    --color-error: var(--brand-red, #ea4335);
+    --color-card: var(--surface-container-de-emphasis, #f7f8fa);
+    --color-border: var(--divider, #dcdfe5);
+    --color-secondary: var(--surface-container-high, #e9ebf0);
+    --color-muted: var(--surface-container, #f0f2f5);
+    --color-muted-foreground: var(--on-surface-de-emphasis, #56595e);
+    --color-foreground: var(--on-surface-default, #0a0a0a);
+  }
+}
+
+@layer base {
+  *, :after, :before, ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::file-selector-button {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, :host {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    line-height: 1.5;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+
+  b, strong {
+    font-weight: bolder;
+  }
+
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub, sup {
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+  }
+
+  sub {
+    bottom: -.25em;
+  }
+
+  sup {
+    top: -.5em;
+  }
+
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+
+  :-moz-focusring {
+    outline: auto;
+  }
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  ol, ul, menu {
+    list-style: none;
+  }
+
+  img, svg, video, canvas, audio, iframe, embed, object {
+    vertical-align: middle;
+    display: block;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, input, select, optgroup, textarea {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+
+  ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+
+  ::placeholder {
+    opacity: 1;
+  }
+
+  @supports (not ((-webkit-appearance: -apple-pay-button))) or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentColor;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      ::placeholder {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+
+  ::-webkit-datetime-edit {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-year-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-month-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-day-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-hour-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-minute-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-second-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-millisecond-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+  button, input:where([type="button"], [type="reset"], [type="submit"]) {
+    appearance: button;
+  }
+
+  ::file-selector-button {
+    appearance: button;
+  }
+
+  ::-webkit-inner-spin-button {
+    height: auto;
+  }
+
+  ::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+
+@layer components;
+
+@layer utilities {
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
+
+  .pointer-events-none {
+    pointer-events: none;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .static {
+    position: static;
+  }
+
+  .inset-x-0 {
+    inset-inline: calc(var(--spacing) * 0);
+  }
+
+  .top-1\/2 {
+    top: 50%;
+  }
+
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+
+  .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  @media (min-width: 40rem) {
+    .container {
+      max-width: 40rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .container {
+      max-width: 48rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .container {
+      max-width: 64rem;
+    }
+  }
+
+  @media (min-width: 80rem) {
+    .container {
+      max-width: 80rem;
+    }
+  }
+
+  @media (min-width: 96rem) {
+    .container {
+      max-width: 96rem;
+    }
+  }
+
+  .-my-3 {
+    margin-block: calc(var(--spacing) * -3);
+  }
+
+  .block {
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .grid {
+    display: grid;
+  }
+
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+
+  .h-\[18px\] {
+    height: 18px;
+  }
+
+  .h-auto {
+    height: auto;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .min-h-screen {
+    min-height: 100vh;
+  }
+
+  .w-\[7ch\] {
+    width: 7ch;
+  }
+
+  .w-\[18px\] {
+    width: 18px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .grow {
+    flex-grow: 1;
+  }
+
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .transform {
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .touch-none {
+    touch-action: none;
+  }
+
+  .resize {
+    resize: both;
+  }
+
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .gap-0\.5 {
+    gap: calc(var(--spacing) * .5);
+  }
+
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
+
+  .truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .overflow-auto {
+    overflow: auto;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .overflow-visible {
+    overflow: visible;
+  }
+
+  .rounded-full {
+    border-radius: 3.40282e38px;
+  }
+
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
+
+  .border-border {
+    border-color: var(--color-border);
+  }
+
+  .\!bg-muted {
+    background-color: var(--color-muted) !important;
+  }
+
+  .bg-card, .bg-card\/60 {
+    background-color: var(--color-card);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-card\/60 {
+      background-color: color-mix(in oklab, var(--color-card) 60%, transparent);
+    }
+  }
+
+  .bg-muted {
+    background-color: var(--color-muted);
+  }
+
+  .bg-primary, .bg-primary\/10 {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-primary\/10 {
+      background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
+    }
+  }
+
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
+
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
+
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
+
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * .5);
+  }
+
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .\!text-base {
+    font-size: var(--text-base) !important;
+    line-height: var(--tw-leading, var(--text-base--line-height)) !important;
+  }
+
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+
+  .text-foreground {
+    color: var(--color-foreground);
+  }
+
+  .text-muted-foreground {
+    color: var(--color-muted-foreground);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .tabular-nums {
+    --tw-numeric-spacing: tabular-nums;
+    font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, );
+  }
+
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .opacity-0 {
+    opacity: 0;
+  }
+
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+
+  .backdrop-blur-xs {
+    --tw-backdrop-blur: blur(var(--blur-xs));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+    backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+  }
+
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .duration-300 {
+    --tw-duration: .3s;
+    transition-duration: .3s;
+  }
+
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+
+  .data-\[state\=on\]\:bg-primary[data-state="on"] {
+    background-color: var(--color-primary);
+  }
+
+  .data-\[state\=on\]\:text-white[data-state="on"] {
+    color: var(--color-white);
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sm\:gap-x-8 {
+      column-gap: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:gap-x-12 {
+      column-gap: calc(var(--spacing) * 12);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-primary: var(--primary, #336ef3);
+    --color-primary-hover: var(--primary-hover, #395fe1);
+    --color-error: var(--brand-red, #ea4335);
+    --color-warning: var(--brand-yellow, #fbbc04);
+    --color-success: var(--brand-green, #34a853);
+    --color-background: var(--surface-container-de-emphasis, #272930);
+    --color-card: var(--surface-container-de-emphasis, #272930);
+    --color-card-hover: var(--surface-container-high, #363840);
+    --color-border: var(--divider, #363840);
+    --color-input: var(--surface-container, #2c2e35);
+    --color-secondary: var(--surface-container-high, #363840);
+    --color-secondary-hover: var(--surface-container-highest, #42444d);
+    --color-accent: var(--surface-container-highest, #42444d);
+    --color-accent-foreground: var(--on-surface-default, #e6e8f0);
+    --color-muted: var(--surface-container, #2c2e35);
+    --color-muted-foreground: var(--on-surface-de-emphasis, #adafb8);
+    --color-foreground: var(--on-surface-default, #e6e8f0);
+    --color-disabled: var(--surface-container, #2c2e35);
+    --color-disabled-foreground: var(--disabled-foreground, #797c90);
+  }
+}
+
+.dark {
+  --color-primary: var(--primary, #336ef3);
+  --color-primary-hover: var(--primary-hover, #395fe1);
+  --color-error: var(--brand-red, #ea4335);
+  --color-warning: var(--brand-yellow, #fbbc04);
+  --color-success: var(--brand-green, #34a853);
+  --color-background: var(--surface-container-de-emphasis, #272930);
+  --color-card: var(--surface-container-de-emphasis, #272930);
+  --color-card-hover: var(--surface-container-high, #363840);
+  --color-border: var(--divider, #363840);
+  --color-input: var(--surface-container, #2c2e35);
+  --color-secondary: var(--surface-container-high, #363840);
+  --color-secondary-hover: var(--surface-container-highest, #42444d);
+  --color-accent: var(--surface-container-highest, #42444d);
+  --color-accent-foreground: var(--on-surface-default, #e6e8f0);
+  --color-muted: var(--surface-container, #2c2e35);
+  --color-muted-foreground: var(--on-surface-de-emphasis, #adafb8);
+  --color-foreground: var(--on-surface-default, #e6e8f0);
+  --color-disabled: var(--surface-container, #2c2e35);
+  --color-disabled-foreground: var(--disabled-foreground, #797c90);
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-figure {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-spacing {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-fraction {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-duration {
+  syntax: "*";
+  inherits: false
+}
+
+</style><link href="Kalkulator_files/m=capy_widget_colors_i403.css" rel="stylesheet"></head>
+    <body class="">
+  
+  <div id="root"><div class="w-full bg-card text-foreground font-sans flex flex-col select-none antialiased min-h-screen"><div class="w-full relative border-b border-border overflow-hidden bg-card"><svg role="img" aria-label="Visualisasi Anggaran Kalori Makanan" viewBox="0 0 653 326.5" width="100%" height="326.5" class="w-full h-auto transition-all duration-300"><g opacity="0.05"><line x1="0" y1="163.25" x2="653" y2="163.25" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"></line><line x1="326.5" y1="0" x2="326.5" y2="326.5" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"></line></g><g transform="translate(326.5, 163.25)"><path d="M -80,50 L 80,50 L 60,70 L -60,70 Z" fill="var(--color-muted)" stroke="var(--color-border)" stroke-width="1.5"></path><rect x="-50" y="0" width="100" height="50" rx="6" fill="var(--color-secondary)" stroke="var(--color-border)" stroke-width="1.5"></rect><rect x="-35" y="12" width="70" height="22" rx="4" fill="var(--color-card)" stroke="var(--color-border)" stroke-width="1"></rect><text x="0" y="28" text-anchor="middle" font-size="13" font-weight="500" fill="var(--color-primary)" class="tabular-nums">350 g</text><ellipse cx="0" cy="-10" rx="90" ry="25" fill="var(--color-card)" stroke="var(--color-border)" stroke-width="2"></ellipse><ellipse cx="0" cy="-10" rx="75" ry="18" fill="none" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="3 3"></ellipse><g opacity="0.9" transform="translate(-35, -15)"><rect x="-20" y="-22.5" width="40" height="22.5" rx="4" fill="#E9B44C"></rect><text x="0" y="-5" text-anchor="middle" font-size="11" font-weight="500" fill="var(--color-foreground)">Karb</text></g><g opacity="0.9" transform="translate(15, -15)"><rect x="-20" y="-25" width="40" height="25" rx="4" fill="#E26D5C"></rect><text x="0" y="-5" text-anchor="middle" font-size="11" font-weight="500" fill="var(--color-foreground)">Prot</text></g><g opacity="0.9" transform="translate(0, -5)"><rect x="-40" y="-12" width="80" height="12" rx="4" fill="#5A9E70"></rect><text x="0" y="-2" text-anchor="middle" font-size="11" font-weight="500" fill="var(--color-foreground)">Sayur</text></g></g></svg><div class="absolute top-3 left-3 bg-card/60 backdrop-blur-xs rounded-full px-2.5 py-0.5 text-xs font-medium pointer-events-none text-muted-foreground">Kaedah: Timbangan Berat Semasa</div></div><div class="flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0"><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Karbohidrat</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">150g</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Protein</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">100g</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Sayuran</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">100g</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1 bg-primary/10 rounded-lg py-1 px-2"><span class="text-xs text-primary font-medium truncate text-center w-full">Total Kalori</span><span class="text-sm font-medium text-primary tabular-nums truncate text-center w-full">1050 kcal</span></div></div><div class="p-5 flex flex-col gap-5"><div class="flex flex-col gap-1.5"><label class="text-sm font-medium text-muted-foreground">Cara Kiraan Kalori</label><div role="group" dir="ltr" aria-label="Pilih cara kiraan kalori" class="rounded-full flex w-full bg-muted h-9 p-1" tabindex="0" style="outline: none;"><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 min-w-0 text-center px-1 rounded-full text-sm font-medium transition-colors cursor-pointer relative overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Berat (g)</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-1 rounded-full text-sm font-medium transition-colors cursor-pointer relative overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Tapak Tangan</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-1 rounded-full text-sm font-medium transition-colors cursor-pointer relative overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Saiz Pinggan</span></button></div></div><div class="flex flex-col gap-4"><div class="grid grid-cols-1 sm:grid-cols-3 gap-4"><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Karbohidrat (Nasi/Mi)</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3" aria-label="Berat Karbohidrat" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative grow h-1 !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 62.5%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(37.5% + 2.25px);"><span role="slider" aria-valuemin="0" aria-valuemax="400" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" style="" data-radix-collection-item="" aria-valuenow="150"></span></span></span><span class="text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap">150 g</span></div></div><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Protein (Ayam/Ikan)</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3" aria-label="Berat Protein" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative grow h-1 !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 66.6667%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(33.3333% + 3px);"><span role="slider" aria-valuemin="0" aria-valuemax="300" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" style="" data-radix-collection-item="" aria-valuenow="100"></span></span></span><span class="text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap">100 g</span></div></div><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Sayur &amp; Buah</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="grow relative flex items-center h-11 cursor-pointer select-none touch-none py-3 -my-3" aria-label="Berat Sayuran" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative grow h-1 !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 66.6667%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(33.3333% + 3px);"><span role="slider" aria-valuemin="0" aria-valuemax="300" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none focus:outline-none" style="" data-radix-collection-item="" aria-valuenow="100"></span></span></span><span class="text-sm font-medium tabular-nums text-right w-[7ch] shrink-0 whitespace-nowrap">100 g</span></div></div></div></div></div></div></div></body></html>
