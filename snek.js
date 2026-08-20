@@ -1,4 +1,4 @@
-// Database Mock Snek GAS
+// Database Mock Snek GAS 
 const databaseKuih = [
     { id: "SNK862", nama: "Kuih Almond London Premium", carbs: 9, protein: 1, fat: 4 },
     { id: "SNK863", nama: "Kuih Makmur", carbs: 8, protein: 1, fat: 3 },
