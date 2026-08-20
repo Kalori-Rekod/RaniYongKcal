@@ -667,3 +667,36 @@ function doGet(e) {
   });
 }
 
+// Letakkan ini di baris teratas fail Code.js anda (di luar komponen)
+let debounceTimer;
+function hantarKeGAS(nilaiBaru, tokenSesi) {
+  // 1. MASUKKAN URL WEB APP GAS SPREADSHEET ANDA DI SINI
+  const gasUrl = "https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec"; 
+
+  if (!tokenSesi) {
+    console.error("Autosave gagal: Sesi log masuk tidak dikesan atau telah tamat.");
+    return;
+  }
+
+  // 2. Lakukan panggilan API latar belakang menggunakan kaedah POST
+  fetch(gasUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8" // Cara terbaik mengelakkan ralat CORS pada GAS
+    },
+    body: JSON.stringify({
+      action: "updateDailyGoal",
+      token: tokenSesi, // Menyertakan token sesi sah yang disahkan oleh requireAuth_() di GAS
+      dailyGoal: nilaiBaru
+    })
+  })
+  .then(res => res.json())
+  .then(resData => {
+    if (resData.status === "success") {
+      console.log("✅ GAS Autosave Berjaya:", resData.message);
+    } else {
+      console.error("❌ GAS Autosave Ditolak:", resData.message);
+    }
+  })
+  .catch(err => console.error("Ralat Rangkaian GAS:", err));
+}
