@@ -78,621 +78,514 @@ function App() {
 }
 function CalorieTrackerWidget() {
   const TODAY_DATE = (() => {
-    const d = /* @__PURE__ */ new Date();
+    const d = new Date();
     const offset = d.getTimezoneOffset();
     const localDate = new Date(d.getTime() - offset * 60 * 1e3);
     return localDate.toISOString().split("T")[0];
   })();
-  const [profiles, setProfiles] = useState(() => {
-    const saved = typeof localStorage !== "undefined" ? localStorage.getItem("calorie_profiles") : null;
-    return saved ? JSON.parse(saved) : ["Nurul Hairani", "Ahmad Fauzi", "Siti Aminah"];
-  });
-  const [currentUser, setCurrentUser] = useState(() => {
-    return typeof localStorage !== "undefined" && localStorage.getItem("calorie_current_user") || "Nurul Hairani";
-  });
-  const [dailyGoal, setDailyGoal] = useState(() => {
-    const saved = typeof localStorage !== "undefined" ? localStorage.getItem(`calorie_goal_${currentUser}`) : null;
-    return saved ? parseInt(saved) : 2e3;
-  });
-  const [visualizationStyle, setVisualizationStyle] = useState("bar");
-  const [logs, setLogs] = useState(() => {
-    const saved = typeof localStorage !== "undefined" ? localStorage.getItem("calorie_tracker_all_logs") : null;
-    let parsed = [];
-    if (saved) {
-      try {
-        parsed = JSON.parse(saved);
-      } catch (e) {
-      }
-    } else {
-      parsed = [
-        { id: "1", user: "Nurul Hairani", date: "2026-08-18", time: "08:15", mealType: "Sarapan", calories: 420 },
-        { id: "2", user: "Nurul Hairani", date: "2026-08-18", time: "13:00", mealType: "Makan Tengahari", calories: 650 },
-        { id: "3", user: "Nurul Hairani", date: "2026-08-17", time: "20:30", mealType: "Makan Malam", calories: 580 },
-        { id: "4", user: "Nurul Hairani", date: "2026-08-16", time: "07:45", mealType: "Sarapan", calories: 510 },
-        { id: "5", user: "Nurul Hairani", date: "2026-08-15", time: "13:10", mealType: "Makan Tengahari", calories: 720 },
-        { id: "6", user: "Ahmad Fauzi", date: "2026-08-18", time: "07:45", mealType: "Sarapan", calories: 550 }
-      ];
-    }
-    const cutoffDate = new Date(TODAY_DATE);
-    cutoffDate.setDate(cutoffDate.getDate() - 30);
-    return parsed.filter((l) => {
-      const logDate = new Date(l.date);
-      return !isNaN(logDate.getTime()) && logDate >= cutoffDate;
-    });
-  });
-  const [newUserName, setNewUserName] = useState("");
+
+  // PASTE URL WEB APP GAS ANDA DI SINI.
+  // Contoh: https://script.google.com/macros/s/XXXXXXXX/exec
+  const GAS_API_URL = "PASTE_WEB_APP_URL_HERE";
+  const LOGIN_PAGE = "login.html";
+  const AUTH_TOKEN_KEY = "kalori_auth_token";
+  const AUTH_USER_KEY = "calorie_current_user";
+
+  const [profiles, setProfiles] = useState([]);
+  const [currentUser, setCurrentUser] = useState("");
+  const [dailyGoal, setDailyGoal] = useState(2000);
+  const [logs, setLogs] = useState([]);
   const [inputDate, setInputDate] = useState(TODAY_DATE);
   const [inputMeal, setInputMeal] = useState("Sarapan");
   const [inputCalories, setInputCalories] = useState("");
-  const [userLimitWarning, setUserLimitWarning] = useState("");
-  useEffect(() => {
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem("calorie_profiles", JSON.stringify(profiles));
-    }
-  }, [profiles]);
-  useEffect(() => {
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem("calorie_current_user", currentUser);
-      const savedGoal = localStorage.getItem(`calorie_goal_${currentUser}`);
-      setDailyGoal(savedGoal ? parseInt(savedGoal) : 2e3);
-    }
-  }, [currentUser]);
-  const handleGoalChange = (val) => {
-    setDailyGoal(val);
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem(`calorie_goal_${currentUser}`, val.toString());
-    }
-  };
-  useEffect(() => {
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem("calorie_tracker_all_logs", JSON.stringify(logs));
-    }
-  }, [logs]);
-  const handleAddNewUser = (e) => {
-    e.preventDefault();
-    if (!newUserName.trim()) return;
-    const cleaned = newUserName.trim();
-    if (!profiles.includes(cleaned)) {
-      if (profiles.length >= 3) {
-        setUserLimitWarning("Had maksimum 3 profil aktif dicapai! Sila padam salah satu profil lama sebelum menambah profil baru.");
-        return;
-      }
-      setProfiles([...profiles, cleaned]);
-      setUserLimitWarning("");
-    }
-    setCurrentUser(cleaned);
-    setNewUserName("");
-  };
-  const handleDeleteUserProfile = () => {
-    if (profiles.length <= 1) {
-      alert("Tidak boleh memadam profil terakhir. Sila tambah profil baru terlebih dahulu.");
-      return;
-    }
-    if (window.confirm(`Adakah anda pasti untuk memadam profil "${currentUser}" dan semua rekodnya?`)) {
-      const remaining = profiles.filter((p) => p !== currentUser);
-      setProfiles(remaining);
-      setLogs(logs.filter((l) => l.user !== currentUser));
-      setCurrentUser(remaining[0]);
-      setUserLimitWarning("");
-    }
-  };
-  const handlePrintPDF = () => {
-    const cutoffDate = new Date(TODAY_DATE);
-    cutoffDate.setDate(cutoffDate.getDate() - 30);
-    const oneMonthLogs = logs.filter((l) => {
-      if (l.user !== currentUser) return false;
-      const logDate = new Date(l.date);
-      return !isNaN(logDate.getTime()) && logDate >= cutoffDate;
-    });
-    const totalCals = oneMonthLogs.reduce((sum, l) => sum + l.calories, 0);
-    const htmlContent = `
-      <html>
-        <head>
-          <title>Laporan_Kalori_${currentUser}</title>
-          <style>
-            body { font-family: system-ui, -apple-system, sans-serif; padding: 40px; color: #0a0a0a; background: #ffffff; }
-            .header { border-bottom: 2px solid #336ef3; padding-bottom: 15px; margin-bottom: 25px; }
-            h2 { color: #336ef3; margin: 0 0 5px 0; font-size: 24px; }
-            p { margin: 5px 0; font-size: 14px; color: #56595e; }
-            table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-            th, td { border: 1px solid #dcdfe5; padding: 12px; text-align: left; font-size: 13px; }
-            th { background-color: #f0f2f5; font-weight: 600; color: #0a0a0a; }
-            .total-row { font-weight: bold; background: #f7f8fa; color: #336ef3; }
-            .footer { margin-top: 40px; font-size: 11px; color: #56595e; text-align: center; border-top: 1px solid #e5e7eb; padding-top: 10px; }
-          </style>
-        </head>
-        <body>
-          <div class="header">
-            <h2>Laporan Kalori Bulanan (30 Hari Terkini)</h2>
-            <p><strong>Nama Pengguna:</strong> ${currentUser} &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Tarikh Dijana:</strong> ${TODAY_DATE}</p>
-          </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Tarikh</th>
-                <th>Waktu</th>
-                <th>Jenis Makanan</th>
-                <th>Kalori (kcal)</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${oneMonthLogs.length === 0 ? '<tr><td colspan="4" style="text-align:center; padding: 30px;">Tiada rekod disimpan dalam tempoh 30 hari lepas.</td></tr>' : oneMonthLogs.map((l) => `
-                  <tr>
-                    <td>${l.date}</td>
-                    <td>${l.time}</td>
-                    <td>${l.mealType}</td>
-                    <td><b>${l.calories}</b> kcal</td>
-                  </tr>
-                `).join("")}
-              <tr class="total-row">
-                <td colspan="3" style="text-align: right;">Jumlah Keseluruhan (30 Hari):</td>
-                <td>${totalCals} kcal</td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="footer">
-            Penjana Log Kalori Pintar © 2026. Sila buka fail ini dan tekan Ctrl+P atau Cmd+P untuk cetak sebagai PDF.
-          </div>
-          <script>
-            window.onload = function() { window.print(); };
-          <\/script>
-        </body>
-      </html>
-    `;
-    try {
-      const blob = new Blob([htmlContent], { type: "text/html" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `Laporan_Kalori_${currentUser}_${TODAY_DATE}.html`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-    } catch (e) {
-      alert("Ralat memproses muat turun.");
-    }
-  };
-  const handleAddLog = (e) => {
-    e.preventDefault();
-    const cals = parseInt(inputCalories);
-    if (isNaN(cals) || cals <= 0) return;
-    const now = /* @__PURE__ */ new Date();
-    const timeString = now.toTimeString().split(" ")[0].substring(0, 5);
-    const newLog = {
-      id: Math.random().toString(),
-      user: currentUser,
-      date: inputDate,
-      time: timeString,
-      mealType: inputMeal,
-      calories: cals
-    };
-    setLogs([newLog, ...logs]);
-    setInputCalories("");
-  };
-  const handleClearHistory = () => {
-    if (window.confirm(`Adakah anda pasti untuk memadam semua rekod kalori terdahulu untuk ${currentUser}?`)) {
-      setLogs(logs.filter((l) => l.user !== currentUser));
-    }
-  };
-  const handleDeleteLog = (id) => {
-    setLogs(logs.filter((l) => l.id !== id));
-  };
-  const userLogs = logs.filter((l) => l.user === currentUser);
-  const todayTotalCalories = userLogs.filter((l) => l.date === inputDate).reduce((sum, l) => sum + l.calories, 0);
+  const [newUserName, setNewUserName] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const [editingLog, setEditingLog] = useState(null);
+  const [visualizationStyle, setVisualizationStyle] = useState("bar");
+  const [loading, setLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const [containerWidth, setContainerWidth] = useState(500);
   const containerRef = useRef(null);
+  const [authReady, setAuthReady] = useState(false);
+
+  const redirectToLogin = () => {
+    try {
+      localStorage.removeItem(AUTH_TOKEN_KEY);
+      localStorage.removeItem(AUTH_USER_KEY);
+    } catch (_) {}
+    window.location.replace(LOGIN_PAGE);
+  };
+
+  const getAuthToken = () => {
+    try { return localStorage.getItem(AUTH_TOKEN_KEY) || ""; }
+    catch (_) { return ""; }
+  };
+
+  const apiPost = async (payload) => {
+    if (!GAS_API_URL || GAS_API_URL.includes("PASTE_WEB_APP_URL_HERE")) {
+      throw new Error("Sila masukkan URL Web App Google Apps Script pada GAS_API_URL.");
+    }
+
+    const token = getAuthToken();
+    if (!token) {
+      redirectToLogin();
+      throw new Error("Sesi login diperlukan.");
+    }
+
+    const response = await fetch(GAS_API_URL, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify({ ...payload, token })
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+
+    if (data.status === "unauthorized") {
+      redirectToLogin();
+      throw new Error(data.message || "Sesi login telah tamat.");
+    }
+    if (data.status !== "success" && data.status !== "denied") {
+      throw new Error(data.message || "Ralat daripada GAS.");
+    }
+    return data;
+  };
+
+  const normaliseLog = (log) => ({
+    id: String(log.id),
+    user: currentUser,
+    foodName: log.foodName || "Lain-lain",
+    mealType: log.foodName || "Lain-lain",
+    calories: Number(log.calories) || 0,
+    date: String(log.recordDate || TODAY_DATE),
+    time: log.time || "—"
+  });
+
+  const loadData = async (username) => {
+    if (!username) return;
+    setLoading(true);
+    setError("");
+    try {
+      const data = await apiPost({ action: "fetchData", username });
+      setProfiles(Array.isArray(data.allUsers) ? data.allUsers : []);
+      setDailyGoal(Number(data.dailyGoal) || 2000);
+      setLogs((Array.isArray(data.logs) ? data.logs : []).map(normaliseLog));
+    } catch (e) {
+      setError(e.message || "Gagal mengambil data daripada GAS.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    const token = getAuthToken();
+    const savedUser = typeof localStorage !== "undefined"
+      ? localStorage.getItem(AUTH_USER_KEY)
+      : "";
+
+    if (!token || !savedUser) {
+      redirectToLogin();
+      return;
+    }
+
+    setCurrentUser(savedUser);
+    setAuthReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!authReady || !currentUser) return;
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem(AUTH_USER_KEY, currentUser);
+    }
+    loadData(currentUser);
+  }, [authReady, currentUser]);
+
   useEffect(() => {
     if (!containerRef.current) return;
     const observer = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         if (entry.contentRect.width) setContainerWidth(entry.contentRect.width);
       }
     });
     observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
+
+  const showMessage = (text) => {
+    setMessage(text);
+    setTimeout(() => setMessage(""), 2500);
+  };
+
+  const resetForm = () => {
+    setEditingLog(null);
+    setInputDate(TODAY_DATE);
+    setInputMeal("Sarapan");
+    setInputCalories("");
+  };
+
+  const handleAddNewUser = async (e) => {
+    e.preventDefault();
+    const username = newUserName.trim();
+    if (!username) return;
+    setSaving(true);
+    setError("");
+    try {
+      const data = await apiPost({
+        action: "addUser",
+        username,
+        dailyGoal: dailyGoal || 2000
+      });
+      if (data.status === "denied") throw new Error(data.message);
+      setNewUserName("");
+      setCurrentUser(username);
+      showMessage("Profil berjaya ditambah.");
+    } catch (e) {
+      setError(e.message || "Gagal menambah profil.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleDeleteUserProfile = async () => {
+    if (profiles.length <= 1) {
+      alert("Tidak boleh memadam profil terakhir.");
+      return;
+    }
+    if (!window.confirm(`Adakah anda pasti untuk memadam profil "${currentUser}" dan semua rekodnya?`)) return;
+
+    setSaving(true);
+    setError("");
+    try {
+      await apiPost({ action: "deleteUser", username: currentUser });
+      const remaining = profiles.filter((p) => p !== currentUser);
+      setCurrentUser(remaining[0] || "");
+      showMessage("Profil dan semua rekod berjaya dipadam.");
+    } catch (e) {
+      setError(e.message || "Gagal memadam profil.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleSubmitLog = async (e) => {
+    e.preventDefault();
+    const cals = parseInt(inputCalories, 10);
+    if (!inputDate || !inputMeal.trim() || isNaN(cals) || cals <= 0) {
+      setError("Sila lengkapkan tarikh, jenis makanan dan kalori.");
+      return;
+    }
+
+    setSaving(true);
+    setError("");
+    try {
+      if (editingLog) {
+        await apiPost({
+          action: "updateLog",
+          username: currentUser,
+          logId: editingLog.id,
+          foodName: inputMeal.trim(),
+          calories: cals,
+          recordDate: inputDate
+        });
+      } else {
+        await apiPost({
+          action: "addLog",
+          username: currentUser,
+          foodName: inputMeal.trim(),
+          calories: cals,
+          recordDate: inputDate
+        });
+      }
+
+      resetForm();
+      await loadData(currentUser);
+      showMessage(editingLog ? "Rekod berjaya diedit." : "Rekod berjaya ditambah.");
+    } catch (e) {
+      setError(e.message || "Gagal menyimpan rekod.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const startEditLog = (log) => {
+    setEditingLog(log);
+    setInputDate(log.date);
+    setInputMeal(log.foodName || log.mealType || "Lain-lain");
+    setInputCalories(String(log.calories));
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  };
+
+  const handleDeleteLog = async (id) => {
+    if (!window.confirm("Padam rekod ini?")) return;
+    setSaving(true);
+    setError("");
+    try {
+      await apiPost({
+        action: "deleteLog",
+        username: currentUser,
+        logId: id
+      });
+      await loadData(currentUser);
+      showMessage("Rekod berjaya dipadam.");
+    } catch (e) {
+      setError(e.message || "Gagal memadam rekod.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleClearHistory = async () => {
+    if (!userLogs.length) return;
+    if (!window.confirm(`Padam semua ${userLogs.length} rekod untuk ${currentUser}?`)) return;
+    setSaving(true);
+    setError("");
+    try {
+      for (const log of userLogs) {
+        await apiPost({ action: "deleteLog", username: currentUser, logId: log.id });
+      }
+      await loadData(currentUser);
+      showMessage("Semua rekod berjaya dipadam.");
+    } catch (e) {
+      setError(e.message || "Gagal memadam semua rekod.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handlePrintPDF = () => {
+    const oneMonthLogs = logs.filter((l) => {
+      const d = new Date(l.date);
+      const cutoff = new Date(TODAY_DATE);
+      cutoff.setDate(cutoff.getDate() - 30);
+      return !isNaN(d.getTime()) && d >= cutoff;
+    });
+    const totalCals = oneMonthLogs.reduce((sum, l) => sum + l.calories, 0);
+    const htmlContent = `
+      <html><head><title>Laporan_Kalori_${currentUser}</title>
+      <style>
+        body{font-family:system-ui,sans-serif;padding:40px;color:#0a0a0a}
+        h2{color:#336ef3}.header{border-bottom:2px solid #336ef3;padding-bottom:15px}
+        table{width:100%;border-collapse:collapse;margin-top:20px}
+        th,td{border:1px solid #dcdfe5;padding:10px;text-align:left}
+        th{background:#f0f2f5}.total{font-weight:bold}
+      </style></head>
+      <body>
+        <div class="header"><h2>Laporan Kalori 30 Hari Terkini</h2>
+        <p><b>Pengguna:</b> ${currentUser} &nbsp; <b>Tarikh:</b> ${TODAY_DATE}</p></div>
+        <table><thead><tr><th>Tarikh</th><th>Jenis Makanan</th><th>Kalori</th></tr></thead>
+        <tbody>${oneMonthLogs.length ? oneMonthLogs.map(l => `<tr><td>${l.date}</td><td>${l.foodName}</td><td>${l.calories} kcal</td></tr>`).join("") : `<tr><td colspan="3">Tiada rekod.</td></tr>`}
+        <tr class="total"><td colspan="2">Jumlah</td><td>${totalCals} kcal</td></tr></tbody></table>
+        <script>window.onload=function(){window.print();};<\/script>
+      </body></html>`;
+    const blob = new Blob([htmlContent], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `Laporan_Kalori_${currentUser}_${TODAY_DATE}.html`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const userLogs = logs.filter((l) => l.user === currentUser);
+  const filteredLogs = logs;
+
+  useEffect(() => {
+    if (!currentUser) return;
+    const timer = setTimeout(async () => {
+      try {
+        if (!searchText.trim()) {
+          await loadData(currentUser);
+          return;
+        }
+        const data = await apiPost({
+          action: "searchLog",
+          username: currentUser,
+          query: searchText.trim()
+        });
+        setLogs((Array.isArray(data.logs) ? data.logs : []).map(normaliseLog));
+      } catch (e) {
+        setError(e.message || "Carian gagal.");
+      }
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [searchText, currentUser]);
+
+  const todayTotalCalories = userLogs
+    .filter((l) => l.date === inputDate)
+    .reduce((sum, l) => sum + l.calories, 0);
+
   const last5Days = Array.from({ length: 5 }, (_, i) => {
     const d = new Date(inputDate);
     d.setDate(d.getDate() - (4 - i));
     return d.toISOString().split("T")[0];
   });
-  const dailyTrendData = last5Days.map((dateStr) => {
-    const total = userLogs.filter((l) => l.date === dateStr).reduce((sum, l) => sum + l.calories, 0);
-    const dayLabel = dateStr.substring(5);
-    return { date: dayLabel, calories: total, fullDate: dateStr };
-  });
+
+  const dailyTrendData = last5Days.map((dateStr) => ({
+    date: dateStr.substring(5),
+    calories: userLogs.filter((l) => l.date === dateStr).reduce((sum, l) => sum + l.calories, 0),
+    fullDate: dateStr
+  }));
+
   const mealTypesList = ["Sarapan", "Makan Tengahari", "Makan Malam", "Snek / Lain-lain"];
-  const pieBreakdown = mealTypesList.map((type) => {
-    const total = userLogs.filter((l) => l.mealType === type).reduce((sum, l) => sum + l.calories, 0);
-    return { type, calories: total };
-  });
+  const pieBreakdown = mealTypesList.map((type) => ({
+    type,
+    calories: userLogs.filter((l) => l.foodName === type).reduce((sum, l) => sum + l.calories, 0)
+  }));
   const totalPieCalories = pieBreakdown.reduce((sum, item) => sum + item.calories, 0) || 1;
-  const progressPercent = Math.min(100, todayTotalCalories / (dailyGoal || 1) * 100);
-  return /* @__PURE__ */ jsx(
-    "div",
-    {
-      ref: containerRef,
-      className: "w-full min-h-screen bg-background text-foreground font-sans flex flex-col p-3 sm:p-6",
-      children: /* @__PURE__ */ jsxs("div", { className: "max-w-5xl w-full mx-auto flex flex-col gap-4", children: [
-        /* @__PURE__ */ jsxs("div", { className: "w-full bg-card rounded-2xl p-4 border border-border flex flex-col gap-3", children: [
-          /* @__PURE__ */ jsxs("div", { className: "flex justify-between items-center flex-wrap gap-2", children: [
-            /* @__PURE__ */ jsxs("div", { children: [
-              /* @__PURE__ */ jsxs("h3", { className: "text-sm font-medium text-foreground flex items-center gap-1.5", children: [
-                /* @__PURE__ */ jsx("span", { className: "material-icons text-primary text-sm", children: "" }),
-                "Visualisasi Analisis Kalori (",
-                currentUser,
-                ")"
-              ] }),
-              /* @__PURE__ */ jsx("p", { className: "text-[11px] text-muted-foreground", children: "Tukar gaya graf di butang pilihan sebelah kanan" })
+  const progressPercent = Math.min(100, (todayTotalCalories / (dailyGoal || 1)) * 100);
+
+  return /* @__PURE__ */ jsx("div", {
+    ref: containerRef,
+    className: "w-full min-h-screen bg-background text-foreground font-sans flex flex-col p-3 sm:p-6",
+    children: /* @__PURE__ */ jsxs("div", { className: "max-w-5xl w-full mx-auto flex flex-col gap-4", children: [
+      /* @__PURE__ */ jsxs("div", { className: "w-full bg-card rounded-2xl p-4 border border-border flex flex-col gap-3", children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex justify-between items-center flex-wrap gap-2", children: [
+          /* @__PURE__ */ jsxs("div", { children: [
+            /* @__PURE__ */ jsxs("h3", { className: "text-sm font-medium flex items-center gap-1.5", children: [
+              /* @__PURE__ */ jsx("span", { className: "material-icons text-primary text-sm", children: "analytics" }),
+              "Visualisasi Analisis Kalori (", currentUser || "—", ")"
             ] }),
-            /* @__PURE__ */ jsxs("div", { className: "flex p-0.5 bg-muted rounded-full border border-border/40", children: [
-              /* @__PURE__ */ jsx(
-                "button",
-                {
-                  type: "button",
-                  onClick: () => setVisualizationStyle("bar"),
-                  className: `px-3 py-1 text-xs font-medium rounded-full transition-all cursor-pointer ${visualizationStyle === "bar" ? "bg-primary text-white shadow-xs" : "text-muted-foreground hover:text-foreground"}`,
-                  children: "Graf Bar"
-                }
-              ),
-              /* @__PURE__ */ jsx(
-                "button",
-                {
-                  type: "button",
-                  onClick: () => setVisualizationStyle("line"),
-                  className: `px-3 py-1 text-xs font-medium rounded-full transition-all cursor-pointer ${visualizationStyle === "line" ? "bg-primary text-white shadow-xs" : "text-muted-foreground hover:text-foreground"}`,
-                  children: "Graf Garisan"
-                }
-              ),
-              /* @__PURE__ */ jsx(
-                "button",
-                {
-                  type: "button",
-                  onClick: () => setVisualizationStyle("pie"),
-                  className: `px-3 py-1 text-xs font-medium rounded-full transition-all cursor-pointer ${visualizationStyle === "pie" ? "bg-primary text-white shadow-xs" : "text-muted-foreground hover:text-foreground"}`,
-                  children: "Carta Pai"
-                }
-              )
-            ] })
+            /* @__PURE__ */ jsx("p", { className: "text-[11px] text-muted-foreground", children: loading ? "Sedang mengambil data dari Google Sheets..." : "Data dibaca terus daripada GAS / Google Sheets" })
           ] }),
-          /* @__PURE__ */ jsx("div", { className: "w-full bg-background rounded-xl p-3 border border-border/40 min-h-[160px] flex items-center justify-center", children: userLogs.length === 0 ? /* @__PURE__ */ jsxs("div", { className: "text-center py-6", children: [
-            /* @__PURE__ */ jsx("span", { className: "material-icons text-muted-foreground/60 text-lg block mb-1", children: "analytics" }),
-            /* @__PURE__ */ jsx("p", { className: "text-xs text-muted-foreground", children: "Sila tambah rekod makanan di bawah untuk melihat carta" })
-          ] }) : visualizationStyle === "pie" ? (
-            /* High Fidelity Pie Chart View */
-            /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-4 items-center w-full max-w-md mx-auto", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex justify-center", children: /* @__PURE__ */ jsxs("svg", { width: "120", height: "120", viewBox: "0 0 120 120", className: "transform -rotate-90", children: [
-                (() => {
-                  let accumulatedAngle = 0;
-                  const colors = ["#336ef3", "#34a853", "#fbbc04", "#ea4335"];
-                  return pieBreakdown.map((item, index) => {
-                    if (item.calories === 0) return null;
-                    const percentage = item.calories / totalPieCalories;
-                    const angle = percentage * 360;
-                    const r = 40;
-                    const cx = 60;
-                    const cy = 60;
-                    const radStart = accumulatedAngle * Math.PI / 180;
-                    accumulatedAngle += angle;
-                    const radEnd = accumulatedAngle * Math.PI / 180;
-                    const x1 = cx + r * Math.cos(radStart);
-                    const y1 = cy + r * Math.sin(radStart);
-                    const x2 = cx + r * Math.cos(radEnd);
-                    const y2 = cy + r * Math.sin(radEnd);
-                    const largeArcFlag = angle > 180 ? 1 : 0;
-                    const pathData = `M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
-                    return /* @__PURE__ */ jsx(
-                      "path",
-                      {
-                        d: pathData,
-                        fill: colors[index % colors.length],
-                        className: "transition-all duration-300 hover:opacity-90 stroke-background stroke-2"
-                      },
-                      item.type
-                    );
-                  });
-                })(),
-                /* @__PURE__ */ jsx("circle", { cx: "60", cy: "60", r: "20", fill: "var(--color-background)" })
-              ] }) }),
-              /* @__PURE__ */ jsx("div", { className: "flex flex-col gap-1.5 justify-center", children: pieBreakdown.map((item, index) => {
-                const colors = ["bg-primary", "bg-success", "bg-warning", "bg-error"];
-                return /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between text-xs", children: [
-                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-1.5 text-muted-foreground min-w-0", children: [
-                    /* @__PURE__ */ jsx("span", { className: `w-2.5 h-2.5 rounded-xs shrink-0 ${colors[index]}` }),
-                    /* @__PURE__ */ jsx("span", { className: "truncate", children: item.type })
-                  ] }),
-                  /* @__PURE__ */ jsxs("span", { className: "font-medium text-foreground pl-2", children: [
-                    item.calories,
-                    " kcal"
-                  ] })
-                ] }, item.type);
-              }) })
-            ] })
-          ) : (
-            /* High Fidelity Bar & Line Chart View */
-            /* @__PURE__ */ jsxs("div", { className: "w-full flex flex-col gap-1", children: [
-              /* @__PURE__ */ jsxs("div", { className: "h-28 w-full flex items-end justify-between px-4 pt-4 border-b border-border/60 relative", children: [
-                /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 flex flex-col justify-between pointer-events-none pb-[1px] opacity-10", children: [
-                  /* @__PURE__ */ jsx("div", { className: "border-b border-foreground w-full" }),
-                  /* @__PURE__ */ jsx("div", { className: "border-b border-foreground w-full" }),
-                  /* @__PURE__ */ jsx("div", { className: "border-b border-foreground w-full" })
-                ] }),
-                (() => {
-                  const maxVal = Math.max(...dailyTrendData.map((d) => d.calories), dailyGoal, 1);
-                  return dailyTrendData.map((d, index) => {
-                    const barHeightPercent = d.calories / maxVal * 100;
-                    return /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center flex-1 group relative h-full justify-end", children: [
-                      /* @__PURE__ */ jsxs("div", { className: "absolute bottom-full mb-1 bg-foreground text-background text-[10px] px-1.5 py-0.5 rounded font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none", children: [
-                        d.calories,
-                        " kcal ",
-                        d.fullDate === inputDate ? "(Pilihan)" : ""
-                      ] }),
-                      visualizationStyle === "bar" ? (
-                        /* Bar Style */
-                        /* @__PURE__ */ jsx(
-                          "div",
-                          {
-                            style: { height: `${Math.max(4, barHeightPercent)}%` },
-                            className: `w-8 sm:w-12 rounded-t-sm transition-all duration-300 ${d.fullDate === inputDate ? "bg-primary" : "bg-primary/50 group-hover:bg-primary/70"}`
-                          }
-                        )
-                      ) : (
-                        /* Line / Node style */
-                        /* @__PURE__ */ jsxs("div", { className: "w-full flex flex-col items-center justify-end h-full relative", children: [
-                          /* @__PURE__ */ jsx(
-                            "div",
-                            {
-                              style: { bottom: `${barHeightPercent}%` },
-                              className: `absolute w-3 h-3 rounded-full transition-all duration-300 z-5 border-2 border-background ${d.fullDate === inputDate ? "bg-primary scale-125" : "bg-primary/70"}`
-                            }
-                          ),
-                          /* @__PURE__ */ jsx(
-                            "div",
-                            {
-                              style: { height: `${barHeightPercent}%` },
-                              className: "w-[2px] bg-primary/20 group-hover:bg-primary/40 transition-colors"
-                            }
-                          )
-                        ] })
-                      )
-                    ] }, d.fullDate);
-                  });
-                })()
-              ] }),
-              /* @__PURE__ */ jsx("div", { className: "flex justify-between px-4 text-[10px] text-muted-foreground font-medium pt-1", children: dailyTrendData.map((d) => /* @__PURE__ */ jsxs("span", { className: d.fullDate === inputDate ? "text-primary font-bold" : "", children: [
-                d.date,
-                " ",
-                d.fullDate === inputDate ? "(Kini)" : ""
-              ] }, d.fullDate)) })
-            ] })
-          ) })
-        ] }),
-        /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-12 gap-4 items-start", children: [
-          /* @__PURE__ */ jsxs("div", { className: "lg:col-span-7 bg-card rounded-2xl p-4 sm:p-5 border border-border flex flex-col gap-4", children: [
-            /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-3 items-center justify-between", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-                /* @__PURE__ */ jsx("span", { className: "text-[11px] font-medium text-muted-foreground uppercase tracking-wider", children: "Pengguna Aktif" }),
-                /* @__PURE__ */ jsxs("div", { className: "flex gap-1.5 items-center", children: [
-                  /* @__PURE__ */ jsx(
-                    "select",
-                    {
-                      value: currentUser,
-                      onChange: (e) => setCurrentUser(e.target.value),
-                      className: "h-9 rounded-lg bg-muted text-xs font-medium px-2 border-none focus:ring-1 focus:ring-primary grow cursor-pointer",
-                      children: profiles.map((p) => /* @__PURE__ */ jsx("option", { value: p, children: p }, p))
-                    }
-                  ),
-                  /* @__PURE__ */ jsx(
-                    "button",
-                    {
-                      type: "button",
-                      onClick: handleDeleteUserProfile,
-                      title: "Padam profil ini",
-                      className: "h-9 w-9 shrink-0 bg-muted hover:bg-error/10 hover:text-error text-muted-foreground rounded-lg flex items-center justify-center transition-colors cursor-pointer",
-                      children: /* @__PURE__ */ jsx("span", { className: "material-icons !text-sm", children: "delete" })
-                    }
-                  )
-                ] })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-                /* @__PURE__ */ jsx("span", { className: "text-[11px] font-medium text-muted-foreground uppercase tracking-wider", children: "Sasaran Kalori (kcal)" }),
-                /* @__PURE__ */ jsx(
-                  "input",
-                  {
-                    type: "number",
-                    value: dailyGoal,
-                    onChange: (e) => handleGoalChange(Math.max(1, parseInt(e.target.value) || 0)),
-                    className: "h-9 rounded-lg bg-muted text-xs font-medium px-3 focus:ring-1 focus:ring-primary w-full",
-                    min: "500",
-                    max: "10000"
-                  }
-                )
-              ] })
-            ] }),
-            userLimitWarning && /* @__PURE__ */ jsxs("div", { className: "p-2.5 bg-error/10 text-error rounded-lg text-xs font-medium flex items-start gap-1.5 border border-error/20", children: [
-              /* @__PURE__ */ jsx("span", { className: "material-icons !text-sm mt-0.5", children: "warning" }),
-              /* @__PURE__ */ jsx("span", { children: userLimitWarning })
-            ] }),
-            /* @__PURE__ */ jsxs("form", { onSubmit: handleAddNewUser, className: "flex gap-2 items-center bg-muted/50 p-2 rounded-lg border border-border/60", children: [
-              /* @__PURE__ */ jsx(
-                "input",
-                {
-                  type: "text",
-                  placeholder: profiles.length >= 3 ? "Had 3 profil penuh..." : "Daftar & tukar pengguna baru...",
-                  disabled: profiles.length >= 3,
-                  value: newUserName,
-                  onChange: (e) => {
-                    setNewUserName(e.target.value);
-                    if (userLimitWarning) setUserLimitWarning("");
-                  },
-                  className: "h-8 bg-background rounded px-2 text-xs grow focus:outline-none disabled:opacity-50"
-                }
-              ),
-              /* @__PURE__ */ jsx(
-                "button",
-                {
-                  type: "submit",
-                  disabled: profiles.length >= 3,
-                  className: "h-8 px-3 bg-primary text-white rounded-full text-xs font-medium hover:bg-primary/90 transition-colors whitespace-nowrap cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed",
-                  children: "Tambah Profil"
-                }
-              )
-            ] }),
-            /* @__PURE__ */ jsxs("div", { className: "bg-background rounded-xl p-4 border border-border flex flex-col gap-2", children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex justify-between items-end flex-wrap gap-2", children: [
-                /* @__PURE__ */ jsxs("div", { children: [
-                  /* @__PURE__ */ jsxs("span", { className: "text-[11px] text-muted-foreground block font-medium", children: [
-                    "Jumlah Kalori Hari Ini (",
-                    inputDate,
-                    ")"
-                  ] }),
-                  /* @__PURE__ */ jsxs("span", { className: "text-xl font-bold tabular-nums text-primary", children: [
-                    todayTotalCalories,
-                    " ",
-                    /* @__PURE__ */ jsxs("span", { className: "text-xs font-normal text-muted-foreground", children: [
-                      "/ ",
-                      dailyGoal,
-                      " kcal"
-                    ] })
-                  ] })
-                ] }),
-                /* @__PURE__ */ jsxs("span", { className: "text-xs font-medium bg-muted px-2 py-0.5 rounded-full text-muted-foreground", children: [
-                  progressPercent.toFixed(0),
-                  "% Selesai"
-                ] })
-              ] }),
-              /* @__PURE__ */ jsx("div", { className: "w-full bg-muted h-2.5 rounded-full overflow-hidden relative", children: /* @__PURE__ */ jsx(
-                "div",
-                {
-                  className: `h-full transition-all duration-500 rounded-full ${progressPercent > 100 ? "bg-error" : "bg-success"}`,
-                  style: { width: `${progressPercent}%` }
-                }
-              ) })
-            ] }),
-            /* @__PURE__ */ jsxs("div", { className: "pt-2 border-t border-border/60", children: [
-              /* @__PURE__ */ jsx("span", { className: "text-xs font-medium text-foreground block mb-2", children: "Tambah Rekod Baru" }),
-              /* @__PURE__ */ jsxs("form", { onSubmit: handleAddLog, className: "grid grid-cols-1 sm:grid-cols-2 gap-2.5 items-end", children: [
-                /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-                  /* @__PURE__ */ jsx("label", { className: "text-[11px] font-medium text-muted-foreground", children: "Tarikh Rekod" }),
-                  /* @__PURE__ */ jsx(
-                    "input",
-                    {
-                      type: "date",
-                      value: inputDate,
-                      onChange: (e) => setInputDate(e.target.value),
-                      className: "h-9 w-full rounded-lg bg-muted text-xs font-medium px-2 focus:outline-none"
-                    }
-                  )
-                ] }),
-                /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-                  /* @__PURE__ */ jsx("label", { className: "text-[11px] font-medium text-muted-foreground", children: "Waktu Makan" }),
-                  /* @__PURE__ */ jsxs(
-                    "select",
-                    {
-                      value: inputMeal,
-                      onChange: (e) => setInputMeal(e.target.value),
-                      className: "h-9 w-full rounded-lg bg-muted text-xs font-medium px-2 focus:outline-none",
-                      children: [
-                        /* @__PURE__ */ jsx("option", { value: "Sarapan", children: "Sarapan" }),
-                        /* @__PURE__ */ jsx("option", { value: "Makan Tengahari", children: "Makan Tengahari" }),
-                        /* @__PURE__ */ jsx("option", { value: "Makan Malam", children: "Makan Malam" }),
-                        /* @__PURE__ */ jsx("option", { value: "Snek / Lain-lain", children: "Snek / Lain-lain" })
-                      ]
-                    }
-                  )
-                ] }),
-                /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-                  /* @__PURE__ */ jsx("label", { className: "text-[11px] font-medium text-muted-foreground", children: "Kalori (kcal)" }),
-                  /* @__PURE__ */ jsx(
-                    "input",
-                    {
-                      type: "number",
-                      min: "1",
-                      max: "5000",
-                      value: inputCalories,
-                      onChange: (e) => setInputCalories(e.target.value),
-                      placeholder: "Cth: 350",
-                      className: "h-9 w-full rounded-lg bg-muted text-xs font-medium px-3 focus:outline-none",
-                      required: true
-                    }
-                  )
-                ] }),
-                /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx(
-                  "button",
-                  {
-                    type: "submit",
-                    className: "w-full rounded-full bg-primary text-white text-xs font-medium h-9 transition-colors hover:bg-primary/90 flex items-center justify-center gap-1 cursor-pointer",
-                    children: "Simpan Rekod"
-                  }
-                ) })
-              ] })
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxs("div", { className: "lg:col-span-5 bg-card rounded-2xl border border-border overflow-hidden flex flex-col", children: [
-            /* @__PURE__ */ jsxs("div", { className: "px-4 py-3 flex items-center justify-between bg-muted/60 border-b border-border/60 flex-wrap gap-2", children: [
-              /* @__PURE__ */ jsxs("span", { className: "text-xs font-medium text-muted-foreground", children: [
-                "Log Kalori (",
-                userLogs.length,
-                " entri)"
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-                /* @__PURE__ */ jsxs(
-                  "button",
-                  {
-                    onClick: handlePrintPDF,
-                    className: "text-[11px] text-primary font-medium flex items-center gap-1 hover:underline cursor-pointer bg-transparent border-none p-0",
-                    title: "Muat turun dokumen laporan kalori 30 hari terkini",
-                    children: [
-                      /* @__PURE__ */ jsx(Download, { className: "w-3.5 h-3.5" }),
-                      " Muat Turun Laporan"
-                    ]
-                  }
-                ),
-                userLogs.length > 0 && /* @__PURE__ */ jsxs(
-                  "button",
-                  {
-                    onClick: handleClearHistory,
-                    className: "text-[11px] text-error font-medium flex items-center gap-1 hover:underline cursor-pointer bg-transparent border-none p-0",
-                    children: [
-                      /* @__PURE__ */ jsx(Trash2, { className: "w-3.5 h-3.5" }),
-                      " Semua"
-                    ]
-                  }
-                )
-              ] })
-            ] }),
-            /* @__PURE__ */ jsx("div", { className: "divide-y divide-border/60 p-1 overflow-y-auto max-h-[360px]", children: userLogs.length === 0 ? /* @__PURE__ */ jsx("p", { className: "text-xs text-muted-foreground text-center py-8", children: "Tiada rekod kalori ditemui untuk pengguna ini." }) : userLogs.map((log) => /* @__PURE__ */ jsxs("div", { className: "p-3 flex justify-between items-center text-xs hover:bg-muted/30 transition-colors rounded-lg group", children: [
-              /* @__PURE__ */ jsxs("div", { className: "min-w-0 flex-1 pr-2", children: [
-                /* @__PURE__ */ jsx("span", { className: "font-medium text-foreground block truncate", children: log.mealType }),
-                /* @__PURE__ */ jsxs("span", { className: "text-[10px] text-muted-foreground block", children: [
-                  log.date,
-                  " • ",
-                  log.time
-                ] })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 shrink-0", children: [
-                /* @__PURE__ */ jsxs("span", { className: "font-bold text-foreground tabular-nums whitespace-nowrap", children: [
-                  log.calories,
-                  " kcal"
-                ] }),
-                /* @__PURE__ */ jsx(
-                  "button",
-                  {
-                    onClick: () => handleDeleteLog(log.id),
-                    className: "h-7 w-7 rounded-full bg-muted hover:bg-error/10 hover:text-error flex items-center justify-center text-muted-foreground transition-colors cursor-pointer",
-                    title: "Padam rekod ini",
-                    children: /* @__PURE__ */ jsx("span", { className: "material-icons !text-xs", children: "close" })
-                  }
-                )
-              ] })
-            ] }, log.id)) })
+          /* @__PURE__ */ jsxs("div", { className: "flex p-0.5 bg-muted rounded-full border border-border/40", children: [
+            null
           ] })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "w-full text-center py-4 border-t border-border/40 mt-auto", children: /* @__PURE__ */ jsx("p", { className: "text-xs text-muted-foreground", children: "Daily Calorie & Macronutrient Calculator by Rani Yong" }) })
-      ] })
-    }
-  );
+        /* @__PURE__ */ jsxs("div", { className: "flex p-0.5 bg-muted rounded-full border border-border/40 w-fit ml-auto", children: [
+          /* @__PURE__ */ jsx("button", { type:"button", onClick:()=>setVisualizationStyle("bar"), className:`px-3 py-1 text-xs font-medium rounded-full ${visualizationStyle==="bar"?"bg-primary text-white":"text-muted-foreground"}`, children:"Graf Bar" }),
+          /* @__PURE__ */ jsx("button", { type:"button", onClick:()=>setVisualizationStyle("line"), className:`px-3 py-1 text-xs font-medium rounded-full ${visualizationStyle==="line"?"bg-primary text-white":"text-muted-foreground"}`, children:"Graf Garisan" }),
+          /* @__PURE__ */ jsx("button", { type:"button", onClick:()=>setVisualizationStyle("pie"), className:`px-3 py-1 text-xs font-medium rounded-full ${visualizationStyle==="pie"?"bg-primary text-white":"text-muted-foreground"}`, children:"Carta Pai" })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "w-full bg-background rounded-xl p-3 border border-border/40 min-h-[160px] flex items-center justify-center", children:
+          userLogs.length === 0 ? /* @__PURE__ */ jsx("p", { className:"text-xs text-muted-foreground", children:"Tiada rekod untuk dipaparkan." }) :
+          visualizationStyle === "pie" ?
+          /* @__PURE__ */ jsxs("div", { className:"grid grid-cols-1 sm:grid-cols-2 gap-4 items-center w-full max-w-md mx-auto", children:[
+            /* @__PURE__ */ jsx("div", { className:"flex justify-center", children:
+              /* @__PURE__ */ jsxs("svg", { width:"120",height:"120",viewBox:"0 0 120 120",className:"transform -rotate-90",children:[
+                (() => {
+                  let accumulatedAngle=0;
+                  const colors=["#336ef3","#34a853","#fbbc04","#ea4335"];
+                  return pieBreakdown.map((item,index)=>{
+                    if(item.calories===0)return null;
+                    const percentage=item.calories/totalPieCalories;
+                    const angle=percentage*360;
+                    const r=40,cx=60,cy=60;
+                    const radStart=accumulatedAngle*Math.PI/180;
+                    accumulatedAngle+=angle;
+                    const radEnd=accumulatedAngle*Math.PI/180;
+                    const x1=cx+r*Math.cos(radStart),y1=cy+r*Math.sin(radStart);
+                    const x2=cx+r*Math.cos(radEnd),y2=cy+r*Math.sin(radEnd);
+                    const largeArcFlag=angle>180?1:0;
+                    const pathData=`M ${cx} ${cy} L ${x1} ${y1} A ${r} ${r} 0 ${largeArcFlag} 1 ${x2} ${y2} Z`;
+                    return /* @__PURE__ */ jsx("path",{d:pathData,fill:colors[index%colors.length],className:"stroke-background stroke-2"},item.type);
+                  });
+                })(),
+                /* @__PURE__ */ jsx("circle",{cx:"60",cy:"60",r:"20",fill:"var(--color-background)"})
+              ]})
+            }),
+            /* @__PURE__ */ jsx("div",{className:"flex flex-col gap-1.5",children:pieBreakdown.map((item,index)=>/* @__PURE__ */ jsxs("div",{className:"flex justify-between text-xs",children:[
+              /* @__PURE__ */ jsx("span",{className:"text-muted-foreground",children:item.type}),
+              /* @__PURE__ */ jsxs("span",{className:"font-medium",children:[item.calories," kcal"]})
+            ]},item.type))})
+          ]}) :
+          /* @__PURE__ */ jsxs("div",{className:"w-full flex flex-col gap-1",children:[
+            /* @__PURE__ */ jsxs("div",{className:"h-28 w-full flex items-end justify-between px-4 pt-4 border-b border-border/60 relative",children:[
+              (()=> {
+                const maxVal=Math.max(...dailyTrendData.map(d=>d.calories),dailyGoal,1);
+                return dailyTrendData.map(d=>{
+                  const barHeightPercent=d.calories/maxVal*100;
+                  return /* @__PURE__ */ jsxs("div",{className:"flex flex-col items-center flex-1 group relative h-full justify-end",children:[
+                    /* @__PURE__ */ jsxs("div",{className:"absolute bottom-full mb-1 bg-foreground text-background text-[10px] px-1.5 py-0.5 rounded font-medium opacity-0 group-hover:opacity-100 whitespace-nowrap z-10",children:[d.calories," kcal"]}),
+                    visualizationStyle==="bar" ?
+                    /* @__PURE__ */ jsx("div",{style:{height:`${Math.max(4,barHeightPercent)}%`},className:`w-8 sm:w-12 rounded-t-sm ${d.fullDate===inputDate?"bg-primary":"bg-primary/50"}`}) :
+                    /* @__PURE__ */ jsxs("div",{className:"w-full flex flex-col items-center justify-end h-full relative",children:[
+                      /* @__PURE__ */ jsx("div",{style:{bottom:`${barHeightPercent}%`},className:`absolute w-3 h-3 rounded-full z-5 border-2 border-background ${d.fullDate===inputDate?"bg-primary":"bg-primary/70"}`}),
+                      /* @__PURE__ */ jsx("div",{style:{height:`${barHeightPercent}%`},className:"w-[2px] bg-primary/30"})
+                    ]})
+                  ]},d.fullDate);
+                });
+              })()
+            ]}),
+            /* @__PURE__ */ jsx("div",{className:"flex justify-between px-4 text-[10px] text-muted-foreground font-medium pt-1",children:dailyTrendData.map(d=>/* @__PURE__ */ jsxs("span",{className:d.fullDate===inputDate?"text-primary font-bold":"",children:[d.date,d.fullDate===inputDate?" (Kini)":"" ]},d.fullDate))})
+          ]})
+        })
+      ]}),
+
+      /* @__PURE__ */ jsxs("div", { className:"grid grid-cols-1 lg:grid-cols-12 gap-4 items-start", children:[
+        /* @__PURE__ */ jsxs("div",{className:"lg:col-span-7 bg-card rounded-2xl p-4 sm:p-5 border border-border flex flex-col gap-4",children:[
+          /* @__PURE__ */ jsxs("div",{className:"grid grid-cols-1 sm:grid-cols-2 gap-3 items-center",children:[
+            /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[
+              /* @__PURE__ */ jsx("span",{className:"text-[11px] font-medium text-muted-foreground uppercase tracking-wider",children:"Pengguna Aktif"}),
+              /* @__PURE__ */ jsxs("div",{className:"flex gap-1.5 items-center",children:[
+                /* @__PURE__ */ jsx("select",{value:currentUser,onChange:e=>setCurrentUser(e.target.value),className:"h-9 rounded-lg bg-muted text-xs font-medium px-2 grow cursor-pointer",children:profiles.map(p=>/* @__PURE__ */ jsx("option",{value:p,children:p},p))}),
+                /* @__PURE__ */ jsx("button",{type:"button",onClick:handleDeleteUserProfile,disabled:saving,className:"h-9 w-9 shrink-0 bg-muted hover:bg-error/10 hover:text-error rounded-lg flex items-center justify-center disabled:opacity-50",title:"Padam profil",children:/* @__PURE__ */ jsx("span",{className:"material-icons !text-sm",children:"delete"})})
+              ]})
+            ]}),
+            /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[
+              /* @__PURE__ */ jsx("span",{className:"text-[11px] font-medium text-muted-foreground uppercase tracking-wider",children:"Sasaran Kalori (kcal)"}),
+              /* @__PURE__ */ jsx("input",{type:"number",value:dailyGoal,readOnly:true,className:"h-9 rounded-lg bg-muted text-xs font-medium px-3 w-full opacity-80",min:"500",max:"10000",title:"Sasaran dibaca daripada sheet users melalui GAS."})
+            ]})
+          ]}),
+          /* @__PURE__ */ jsxs("form",{onSubmit:handleAddNewUser,className:"flex gap-2 items-center bg-muted/50 p-2 rounded-lg border border-border/60",children:[
+            /* @__PURE__ */ jsx("input",{type:"text",placeholder:profiles.length>=3?"Had 3 profil penuh...":"Daftar pengguna baru...",disabled:profiles.length>=3||saving,value:newUserName,onChange:e=>setNewUserName(e.target.value),className:"h-8 bg-background rounded px-2 text-xs grow disabled:opacity-50"}),
+            /* @__PURE__ */ jsx("button",{type:"submit",disabled:profiles.length>=3||saving,className:"h-8 px-3 bg-primary text-white rounded-full text-xs font-medium disabled:opacity-50",children:"Tambah Profil"})
+          ]}),
+          error && /* @__PURE__ */ jsx("div",{className:"p-2.5 bg-error/10 text-error rounded-lg text-xs font-medium border border-error/20",children:error}),
+          message && /* @__PURE__ */ jsx("div",{className:"p-2.5 bg-success/10 text-success rounded-lg text-xs font-medium border border-success/20",children:message}),
+          /* @__PURE__ */ jsxs("div",{className:"bg-background rounded-xl p-4 border border-border flex flex-col gap-2",children:[
+            /* @__PURE__ */ jsxs("div",{className:"flex justify-between items-end gap-2",children:[
+              /* @__PURE__ */ jsxs("div",{children:[
+                /* @__PURE__ */ jsxs("span",{className:"text-[11px] text-muted-foreground block font-medium",children:["Jumlah Kalori (",inputDate,")"]}),
+                /* @__PURE__ */ jsxs("span",{className:"text-xl font-bold tabular-nums text-primary",children:[todayTotalCalories," ",/* @__PURE__ */ jsxs("span",{className:"text-xs font-normal text-muted-foreground",children:["/ ",dailyGoal," kcal"]})]})
+              ]}),
+              /* @__PURE__ */ jsxs("span",{className:"text-xs font-medium bg-muted px-2 py-0.5 rounded-full text-muted-foreground",children:[progressPercent.toFixed(0),"% Selesai"]})
+            ]}),
+            /* @__PURE__ */ jsx("div",{className:"w-full bg-muted h-2.5 rounded-full overflow-hidden",children:/* @__PURE__ */ jsx("div",{className:`h-full rounded-full ${progressPercent>100?"bg-error":"bg-success"}`,style:{width:`${progressPercent}%`}})})
+          ]}),
+          /* @__PURE__ */ jsxs("div",{className:"pt-2 border-t border-border/60",children:[
+            /* @__PURE__ */ jsxs("div",{className:"flex justify-between items-center mb-2 gap-2",children:[
+              /* @__PURE__ */ jsx("span",{className:"text-xs font-medium",children:editingLog?"Edit Rekod":"Tambah Rekod Baru"}),
+              editingLog && /* @__PURE__ */ jsx("button",{type:"button",onClick:resetForm,className:"text-[11px] text-muted-foreground hover:underline",children:"Batal Edit"})
+            ]}),
+            /* @__PURE__ */ jsxs("form",{onSubmit:handleSubmitLog,className:"grid grid-cols-1 sm:grid-cols-2 gap-2.5 items-end",children:[
+              /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[/* @__PURE__ */ jsx("label",{className:"text-[11px] font-medium text-muted-foreground",children:"Tarikh Rekod"}),/* @__PURE__ */ jsx("input",{type:"date",value:inputDate,onChange:e=>setInputDate(e.target.value),className:"h-9 w-full rounded-lg bg-muted text-xs font-medium px-2"})]}),
+              /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[/* @__PURE__ */ jsx("label",{className:"text-[11px] font-medium text-muted-foreground",children:"Jenis Makanan"}),/* @__PURE__ */ jsxs("select",{value:mealTypesList.includes(inputMeal)?inputMeal:"Snek / Lain-lain",onChange:e=>setInputMeal(e.target.value),className:"h-9 w-full rounded-lg bg-muted text-xs font-medium px-2",children:[/* @__PURE__ */ jsx("option",{value:"Sarapan",children:"Sarapan"}),/* @__PURE__ */ jsx("option",{value:"Makan Tengahari",children:"Makan Tengahari"}),/* @__PURE__ */ jsx("option",{value:"Makan Malam",children:"Makan Malam"}),/* @__PURE__ */ jsx("option",{value:"Snek / Lain-lain",children:"Snek / Lain-lain"})]})]}),
+              /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[/* @__PURE__ */ jsx("label",{className:"text-[11px] font-medium text-muted-foreground",children:"Kalori (kcal)"}),/* @__PURE__ */ jsx("input",{type:"number",min:"1",max:"5000",value:inputCalories,onChange:e=>setInputCalories(e.target.value),placeholder:"Cth: 350",className:"h-9 w-full rounded-lg bg-muted text-xs font-medium px-3",required:true})]}),
+              /* @__PURE__ */ jsx("button",{type:"submit",disabled:saving,className:"w-full rounded-full bg-primary text-white text-xs font-medium h-9 disabled:opacity-50",children:saving?"Menyimpan...":editingLog?"Simpan Edit":"Simpan Rekod"})
+            ]})
+          ]})
+        ]}),
+        /* @__PURE__ */ jsxs("div",{className:"lg:col-span-5 bg-card rounded-2xl border border-border overflow-hidden flex flex-col",children:[
+          /* @__PURE__ */ jsxs("div",{className:"px-4 py-3 flex items-center justify-between bg-muted/60 border-b border-border/60 gap-2",children:[
+            /* @__PURE__ */ jsxs("span",{className:"text-xs font-medium text-muted-foreground",children:["Log Kalori (",filteredLogs.length," / ",userLogs.length,")"]}),
+            /* @__PURE__ */ jsxs("div",{className:"flex items-center gap-3",children:[
+              /* @__PURE__ */ jsx("button",{onClick:handlePrintPDF,className:"text-[11px] text-primary font-medium hover:underline",children:"Muat Turun Laporan"}),
+              userLogs.length>0 && /* @__PURE__ */ jsx("button",{onClick:handleClearHistory,disabled:saving,className:"text-[11px] text-error font-medium hover:underline disabled:opacity-50",children:"Semua"})
+            ]})
+          ]}),
+          /* @__PURE__ */ jsx("div",{className:"p-2 border-b border-border/60",children:/* @__PURE__ */ jsx("input",{type:"search",value:searchText,onChange:e=>setSearchText(e.target.value),placeholder:"Cari makanan, tarikh atau kalori...",className:"h-9 w-full rounded-lg bg-muted text-xs px-3 focus:outline-none"})}),
+          /* @__PURE__ */ jsx("div",{className:"divide-y divide-border/60 p-1 overflow-y-auto max-h-[360px]",children:
+            filteredLogs.length===0 ? /* @__PURE__ */ jsx("p",{className:"text-xs text-muted-foreground text-center py-8",children:searchText?"Tiada hasil carian.":"Tiada rekod kalori."}) :
+            filteredLogs.map(log=>/* @__PURE__ */ jsxs("div",{className:"p-3 flex justify-between items-center text-xs hover:bg-muted/30 rounded-lg group",children:[
+              /* @__PURE__ */ jsxs("div",{className:"min-w-0 flex-1 pr-2",children:[
+                /* @__PURE__ */ jsx("span",{className:"font-medium block truncate",children:log.foodName}),
+                /* @__PURE__ */ jsxs("span",{className:"text-[10px] text-muted-foreground block",children:[log.date," • ",log.time]})
+              ]}),
+              /* @__PURE__ */ jsxs("div",{className:"flex items-center gap-2 shrink-0",children:[
+                /* @__PURE__ */ jsxs("span",{className:"font-bold tabular-nums whitespace-nowrap",children:[log.calories," kcal"]}),
+                /* @__PURE__ */ jsx("button",{onClick:()=>startEditLog(log),disabled:saving,className:"h-7 w-7 rounded-full bg-muted hover:bg-primary/10 hover:text-primary flex items-center justify-center disabled:opacity-50",title:"Edit rekod",children:/* @__PURE__ */ jsx("span",{className:"material-icons !text-xs",children:"edit"})}),
+                /* @__PURE__ */ jsx("button",{onClick:()=>handleDeleteLog(log.id),disabled:saving,className:"h-7 w-7 rounded-full bg-muted hover:bg-error/10 hover:text-error flex items-center justify-center disabled:opacity-50",title:"Padam rekod",children:/* @__PURE__ */ jsx("span",{className:"material-icons !text-xs",children:"delete"})})
+              ]})
+            ]},log.id))
+          })
+        ]})
+      ]}),
+      /* @__PURE__ */ jsx("div",{className:"w-full text-center py-4 border-t border-border/40 mt-auto",children:/* @__PURE__ */ jsx("p",{className:"text-xs text-muted-foreground",children:"Daily Calorie & Macronutrient Calculator by Rani Yong • GAS Backend"})})
+    ]})
+  });
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(
