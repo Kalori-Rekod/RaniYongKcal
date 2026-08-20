@@ -107,7 +107,7 @@ function CalorieTrackerWidget() {
   const containerRef = useRef(null);
 
   const apiPost = async (payload) => {
-    if (!GAS_API_URL || GAS_API_URL.includes("https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec")) {
+    if (!GAS_API_URL || GAS_API_URL.includes("PASTE_WEB_APP_URL_HERE")) {
       throw new Error("Sila masukkan URL Web App Google Apps Script pada GAS_API_URL.");
     }
     const response = await fetch(GAS_API_URL, {
