@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
@@ -87,7 +87,8 @@
         const GAS_API_URL = "https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec";
         const AUTH_TOKEN_KEY = "kalori_auth_token";
         const AUTH_USER_KEY = "calorie_current_user";
-        const NEXT_PAGE = "kcal.html";
+        const AUTH_USER_ID_KEY = "calorie_current_user_id";
+        const NEXT_PAGE = "Wanie123.html";
 
         const form = document.getElementById("loginForm");
         const button = form.querySelector("button[type=submit]");
@@ -143,6 +144,7 @@
 
                 localStorage.setItem(AUTH_TOKEN_KEY, data.token);
                 localStorage.setItem(AUTH_USER_KEY, data.username);
+                localStorage.setItem(AUTH_USER_ID_KEY, data.userId);
                 window.location.replace(NEXT_PAGE);
             } catch (error) {
                 showError(error.message || "Login gagal. Sila cuba lagi.");
