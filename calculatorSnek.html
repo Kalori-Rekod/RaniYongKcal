@@ -1,78 +1,202 @@
 <!DOCTYPE html>
 <html lang="ms">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Snek</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<head>
+  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Kalkulator Snek</title>
+  <style>
+    :root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e5e7eb;--primary:#111827;--accent:#f59e0b;--ok:#15803d;--danger:#b91c1c;--shadow:0 12px 35px rgba(15,23,42,.08)}
+    *{box-sizing:border-box}html{font-size:16px}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    button,input{font:inherit}button{cursor:pointer}.app{width:min(1120px,100%);margin:auto;padding:18px}
+    .hero{padding:18px 2px 14px}.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--primary);color:#fff;font-size:24px;box-shadow:0 7px 18px rgba(17,24,39,.18)}h1{font-size:clamp(20px,3vw,28px);margin:0;font-weight:850;letter-spacing:-.03em}.sub{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+    .search-card{padding:14px;margin-bottom:14px}.search-wrap{position:relative}.search{width:100%;height:52px;border:1px solid var(--line);border-radius:15px;padding:0 46px 0 16px;outline:none;background:#fff;color:var(--text);font-size:16px}.search:focus{border-color:#9ca3af;box-shadow:0 0 0 4px rgba(17,24,39,.07)}.search-icon{position:absolute;right:15px;top:50%;transform:translateY(-50%);color:#98a2b3;font-size:19px}.hint{display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-size:11px;color:var(--muted)}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;align-items:start}.results{padding:14px}.results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:2px 2px 12px}.results-title{font-size:15px;font-weight:800}.count{font-size:11px;color:var(--muted);background:#f2f4f7;border-radius:999px;padding:6px 9px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.food{appearance:none;text-align:left;border:1px solid var(--line);border-radius:16px;background:#fff;padding:14px;min-height:108px;display:flex;justify-content:space-between;gap:12px;transition:.15s}.food:hover{border-color:#cbd5e1;transform:translateY(-1px);box-shadow:0 7px 18px rgba(15,23,42,.06)}.food:active{transform:scale(.99)}.food-name{font-size:14px;font-weight:800;line-height:1.35}.food-meta{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5}.food-kcal{font-weight:850;font-size:16px;white-space:nowrap;text-align:right}.food-macro{font-size:10px;color:var(--muted);margin-top:4px;text-align:right;white-space:nowrap}.tag{display:inline-block;margin-top:7px;padding:4px 7px;border-radius:999px;background:#fff7e6;color:#9a6700;font-size:10px;font-weight:750}
+    .side{padding:16px;position:sticky;top:12px}.side h2{font-size:15px;margin:0 0 12px}.selected-empty{font-size:12px;color:var(--muted);padding:15px 0}.selected{display:flex;justify-content:space-between;gap:10px;padding:11px;border:1px solid var(--line);border-radius:13px;background:#f8fafc;margin-bottom:8px}.selected-name{font-size:12px;font-weight:800}.selected-meta{font-size:10px;color:var(--muted);margin-top:3px}.remove{border:0;background:transparent;color:var(--danger);font-size:20px;line-height:1;padding:0 2px}.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:12px 0}.metric{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fafafa}.metric span{display:block;color:var(--muted);font-size:10px}.metric strong{font-size:15px}.total{padding:12px 13px;border-radius:14px;background:#fff8e8;border:1px solid #fde7b0}.total-line{display:flex;justify-content:space-between;align-items:center}.total-line strong{font-size:24px}.btn{border:0;border-radius:12px;height:44px;padding:0 14px;font-weight:800}.btn-primary{background:var(--primary);color:#fff;width:100%;margin-top:10px}.btn-secondary{background:#eef2f6;color:#344054}.btn:disabled{opacity:.55;cursor:not-allowed}.status{min-height:19px;margin-top:9px;font-size:11px;color:var(--muted)}.status.ok{color:var(--ok)}.status.err{color:var(--danger)}
+    .loading{opacity:.55;pointer-events:none}.empty{padding:35px 15px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed var(--line);border-radius:15px;grid-column:1/-1}.source{margin-top:12px;font-size:10px;color:#98a2b3;text-align:right}.source b{color:#667085}
+    @media(max-width:850px){.layout{grid-template-columns:1fr}.side{position:static}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){.app{padding:10px}.hero{padding:12px 2px}.logo{width:40px;height:40px;font-size:21px;border-radius:12px}.grid{grid-template-columns:1fr}.food{min-height:96px;padding:13px}.food-kcal{font-size:15px}.search-card{padding:11px}.search{height:50px}.hint{font-size:10px}.side{padding:14px}.card{border-radius:17px}.results{padding:11px}}
+  </style>
 </head>
-<body class="p-6 bg-gray-50">
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="brand"><div class="logo">🥨</div><div><h1>Kalkulator Snek</h1><p class="sub">Cari terus daripada database GAS. Default: 10 jenis kuih teratas.</p></div></div>
+    </header>
 
-    <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-md p-6">
-        <h1 class="text-2xl font-bold text-gray-800 mb-6">🥨 Kalkulator Snek</h1>
-        
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Senarai Item & Input Carian -->
-            <div class="lg:col-span-2 space-y-4">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-2">
-                    <h2 class="text-lg font-semibold text-gray-700">10 Kuih Teratas</h2>
-                    <!-- Kotak Carian Dikembalikan -->
-                    <div class="relative w-full md:w-72">
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">⌕</span>
-                        <input type="text" id="search-input" placeholder="Cari terus daripada database GAS..." 
-                               class="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 bg-white">
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="items-container"></div>
-            </div>
+    <section class="card search-card">
+      <div class="search-wrap"><input id="search" class="search" type="search" autocomplete="off" placeholder="Cari nama snek..." aria-label="Cari nama snek"><span class="search-icon">⌕</span></div>
+      <div class="hint"><span id="hintText">Sedang membaca database GAS…</span><span id="countText"></span></div>
+    </section>
 
-            <!-- Sidebar Snek Dipilih -->
-            <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 flex flex-col justify-between min-h-[500px]">
-                <div>
-                    <h2 class="text-lg font-bold text-gray-800 mb-4">Snek dipilih</h2>
-                    <div id="selected-list" class="space-y-2 max-h-[250px] overflow-y-auto mb-4"></div>
-                </div>
+    <div class="layout">
+      <section class="card results">
+        <div class="results-head"><div class="results-title" id="resultsTitle">10 kuih teratas</div><div class="count" id="countBadge">—</div></div>
+        <div id="foodGrid" class="grid"></div>
+        <div class="source" id="sourceText"></div>
+      </section>
 
-                <!-- Rumusan Makro & Butang Aksi -->
-                <div class="space-y-4 pt-4 border-t border-gray-200">
-                    <div class="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                        <div class="bg-white p-2 rounded border border-gray-200">
-                            <p class="text-xs text-gray-400">Karbo</p>
-                            <p class="font-bold text-gray-800" id="total-carbs">0 g</p>
-                        </div>
-                        <div class="bg-white p-2 rounded border border-gray-200">
-                            <p class="text-xs text-gray-400">Protein</p>
-                            <p class="font-bold text-gray-800" id="total-protein">0 g</p>
-                        </div>
-                        <div class="bg-white p-2 rounded border border-gray-200">
-                            <p class="text-xs text-gray-400">Lemak</p>
-                            <p class="font-bold text-gray-800" id="total-fat">0 g</p>
-                        </div>
-                        <div class="bg-white p-2 rounded border border-gray-200">
-                            <p class="text-xs text-gray-400">Item</p>
-                            <p class="font-bold text-gray-800" id="total-items">0</p>
-                        </div>
-                    </div>
-
-                    <!-- Total Kcal Bulat Merah (Auto-kira) -->
-                    <div class="flex justify-between items-center bg-white p-3 rounded-lg border-2 border-red-500 font-bold text-lg">
-                        <span class="text-gray-700">Total Kcal</span>
-                        <span class="text-gray-900" id="total-kcal">0</span>
-                    </div>
-
-                    <!-- Butang Copy Kcal -->
-                    <button id="btn-copy" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors cursor-pointer text-sm">
-                        Copy Total Kcal
-                    </button>
-                    
-                    <button id="btn-clear" class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors cursor-pointer text-sm">
-                        Kosongkan pilihan
-                    </button>
-                </div>
-            </div>
+      <aside class="card side">
+        <h2>Snek dipilih</h2>
+        <div id="selectedList"><div class="selected-empty">Tekan mana-mana snek untuk pilih.</div></div>
+        <div class="summary">
+          <div class="metric"><span>Karbo</span><strong id="sumCarb">0 g</strong></div>
+          <div class="metric"><span>Protein</span><strong id="sumProtein">0 g</strong></div>
+          <div class="metric"><span>Lemak</span><strong id="sumFat">0 g</strong></div>
+          <div class="metric"><span>Item</span><strong id="sumItems">0</strong></div>
         </div>
+        <div class="total"><div class="total-line"><span>Total Kcal</span><strong id="sumKcal">0</strong></div></div>
+        <button id="saveBtn" class="btn btn-primary">Simpan ke snek_logs</button>
+        <button id="clearBtn" class="btn btn-secondary" style="width:100%;margin-top:8px">Kosongkan pilihan</button>
+        <div id="saveStatus" class="status"></div>
+      </aside>
     </div>
+  </main>
 
-    <script src="snek.js"></script>
+<script>
+  let selected = [];
+  let searchTimer = null;
+  let requestSeq = 0;
+  let lastResults = [];
+
+  const $ = id => document.getElementById(id);
+  const API_URL = 'https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec';
+
+  async function apiGet(action, params={}){
+    const url = new URL(API_URL);
+    url.searchParams.set('api', action);
+    Object.entries(params).forEach(([k,v]) => url.searchParams.set(k, v ?? ''));
+    const response = await fetch(url.toString(), { method:'GET', cache:'no-store', credentials:'omit' });
+    const text = await response.text();
+    let data;
+    try { data = JSON.parse(text); } catch(e) { throw new Error('API GAS tidak memulangkan JSON yang sah.'); }
+    if(!response.ok || data.status === 'error') throw new Error(data.message || 'API GAS gagal.');
+    return data;
+  }
+
+  async function apiPost(action, payload={}){
+    const url = new URL(API_URL);
+    url.searchParams.set('api', action);
+    const response = await fetch(url.toString(), {
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body:JSON.stringify(payload),
+      cache:'no-store',
+      credentials:'omit'
+    });
+    const text = await response.text();
+    let data;
+    try { data = JSON.parse(text); } catch(e) { throw new Error('API GAS tidak memulangkan JSON yang sah.'); }
+    if(!response.ok || data.status === 'error') throw new Error(data.message || 'API GAS gagal.');
+    return data;
+  }
+
+  function fmt(n){
+    const x=Number(n||0);
+    if(Number.isInteger(x)) return String(x);
+    return x.toFixed(1).replace(/\.0$/,'');
+  }
+  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function setStatus(msg,type=''){ $('saveStatus').textContent=msg||''; $('saveStatus').className='status '+type; }
+
+  function renderFoods(items, query){
+    lastResults = items || [];
+    const searching = String(query||'').trim().length > 0;
+    $('resultsTitle').textContent = searching ? 'Hasil carian' : '10 kuih teratas';
+    $('countBadge').textContent = `${lastResults.length} item`;
+    $('countText').textContent = searching ? `${lastResults.length} padanan` : 'Default';
+
+    if(!lastResults.length){
+      $('foodGrid').innerHTML = `<div class="empty">${searching ? 'Tiada snek yang sepadan dengan carian.' : 'Tiada data kuih ditemui dalam database GAS.'}</div>`;
+      return;
+    }
+
+    $('foodGrid').innerHTML = lastResults.map((f,i)=>`
+      <button class="food" data-index="${i}" type="button">
+        <div>
+          <div class="food-name">${esc(f.name || 'Tanpa nama')}</div>
+          <div class="food-meta">${f.serving ? esc(f.serving)+' · ' : ''}${f.id ? 'ID: '+esc(f.id) : ''}</div>
+          ${f.category ? `<span class="tag">${esc(f.category)}</span>` : ''}
+        </div>
+        <div>
+          <div class="food-kcal">${fmt(f.calories)} kcal</div>
+          <div class="food-macro">C ${fmt(f.carbs)}g · P ${fmt(f.protein)}g · F ${fmt(f.fat)}g</div>
+        </div>
+      </button>`).join('');
+
+    $('foodGrid').querySelectorAll('.food').forEach(btn=>btn.addEventListener('click',()=>addFood(lastResults[Number(btn.dataset.index)])));
+  }
+
+  async function searchGAS(query=''){
+    const seq = ++requestSeq;
+    $('foodGrid').classList.add('loading');
+    $('hintText').textContent = query.trim() ? 'Mencari dalam database GAS…' : 'Memuatkan 10 kuih teratas…';
+    try{
+      const res = await apiGet('getSnek', { q: query });
+      if(seq !== requestSeq) return;
+      if(!res || res.status !== 'success') throw new Error(res?.message || 'Gagal membaca database GAS.');
+      renderFoods(res.results || [], query);
+      $('sourceText').innerHTML = res.sourceSheet ? `Sumber: <b>${esc(res.sourceSheet)}</b>` : '';
+      $('hintText').textContent = query.trim() ? 'Paparan hanya hasil yang sepadan dengan carian.' : 'Paparan default hanya 10 kuih teratas.';
+    }catch(e){
+      if(seq !== requestSeq) return;
+      $('foodGrid').innerHTML = `<div class="empty">${esc(e.message || String(e))}</div>`;
+      $('hintText').textContent = 'Ralat membaca database GAS.';
+      $('countBadge').textContent = 'Ralat';
+    }finally{
+      if(seq === requestSeq) $('foodGrid').classList.remove('loading');
+    }
+  }
+
+  function addFood(food){
+    if(!food) return;
+    selected.push({...food});
+    renderSelected();
+    setStatus('');
+  }
+  function removeFood(i){selected.splice(i,1);renderSelected();}
+  function renderSelected(){
+    $('selectedList').innerHTML = selected.length ? selected.map((f,i)=>`
+      <div class="selected"><div><div class="selected-name">${esc(f.name)}</div><div class="selected-meta">${fmt(f.calories)} kcal · C ${fmt(f.carbs)}g · P ${fmt(f.protein)}g · F ${fmt(f.fat)}g</div></div><button class="remove" type="button" data-remove="${i}">×</button></div>`).join('') : '<div class="selected-empty">Tekan mana-mana snek untuk pilih.</div>';
+    $('selectedList').querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>removeFood(Number(b.dataset.remove)));
+    const t=selected.reduce((a,f)=>({k:a.k+Number(f.calories||0),c:a.c+Number(f.carbs||0),p:a.p+Number(f.protein||0),f:a.f+Number(f.fat||0)}),{k:0,c:0,p:0,f:0});
+    $('sumKcal').textContent=fmt(t.k); $('sumCarb').textContent=fmt(t.c)+' g'; $('sumProtein').textContent=fmt(t.p)+' g'; $('sumFat').textContent=fmt(t.f)+' g'; $('sumItems').textContent=selected.length;
+  }
+
+  async function saveSelected(){
+    if(!selected.length){setStatus('Pilih sekurang-kurangnya satu snek.','err');return;}
+    const t=selected.reduce((a,f)=>({k:a.k+Number(f.calories||0),c:a.c+Number(f.carbs||0),p:a.p+Number(f.protein||0),f:a.f+Number(f.fat||0)}),{k:0,c:0,p:0,f:0});
+    const names=selected.map(x=>x.name).join(' + ');
+    const id=selected.length===1 ? (selected[0].id || '') : 'combo_'+Date.now();
+    $('saveBtn').disabled=true; setStatus('Menyimpan ke snek_logs…');
+    try{
+      const res=await apiPost('saveSnekLog',{snekId:id,namaSnek:names,totalKcal:t.k,karbo:t.c,protein:t.p,lemak:t.f});
+      if(!res || res.status!=='success') throw new Error(res?.message || 'Gagal simpan.');
+      setStatus('✓ Berjaya disimpan ke snek_logs.','ok');
+      selected=[]; renderSelected();
+    }catch(e){setStatus(e.message||String(e),'err');}
+    finally{$('saveBtn').disabled=false;}
+  }
+
+  $('search').addEventListener('input',e=>{
+    const q=e.target.value;
+    clearTimeout(searchTimer);
+    searchTimer=setTimeout(()=>searchGAS(q),250);
+  });
+  $('saveBtn').onclick=saveSelected;
+  $('clearBtn').onclick=()=>{selected=[];renderSelected();setStatus('');};
+
+  (async function boot(){
+    renderSelected();
+    if(!API_URL || API_URL === '__API_URL__'){
+      $('hintText').textContent='API GAS belum dikonfigurasi.';
+      $('foodGrid').innerHTML='<div class="empty">API URL belum disambungkan.</div>';
+      return;
+    }
+    await searchGAS('');
+  })();
+</script>
 </body>
 </html>
