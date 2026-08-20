@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta data-sandbox-injected="" http-equiv="Content-Security-Policy" content="
+          default-src 'none';
+          base-uri 'none';
+          connect-src https://fonts.gstatic.com https://www.gstatic.com https://esm.sh/;
+          font-src https://fonts.gstatic.com;
+          form-action 'none';
+          
+          worker-src blob: https://*.scf.usercontent.goog;
+          img-src data: https://encrypted-tbn0.gstatic.com https://encrypted-tbn1.gstatic.com https://encrypted-tbn2.gstatic.com https://encrypted-tbn3.gstatic.com ;
+          media-src 'none';
+          object-src 'none';
+          script-src 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://widgetlibs.static.usercontent.goog https://*.scf.usercontent.goog https://esm.sh/;
+          style-src 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.gstatic.com/ https://esm.sh/;">
+      <meta data-sandbox-injected="" charset="UTF-8">
+      <meta data-sandbox-injected="" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="enable-onep-api" content="false"><script data-sandbox-injected="true">(function(){var g=Object.defineProperty,k=globalThis,l=function(a,b){if(b)a:{var c=k;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&g(c,a,{configurable:!0,writable:!0,value:b})}};l("Promise.withResolvers",function(a){return a?a:function(){var b,c;return{promise:new Promise(function(d,e){b=d;c=e}),resolve:b,reject:c}}});var m=function(a){return typeof a==="object"&&a!==null&&"kind"in a&&typeof a.kind==="string"&&("payload"in a||a.kind==="___CROSS_FRAME_HANDSHAKE___")},n=class{constructor(){this.j=new Map}i(a){var b=a.data;if(m(b)){let c=b.payload;if(b=this.j.get(b.kind))(a=a.ports&&a.ports.length>0?a.ports:void 0)?b(c,a):b(c)}}sendMessage(a,b,c){if(!this.port)throw Error("a");a={kind:String(a),payload:b||{}};c&&c.length>0?this.port.postMessage(a,c):this.port.postMessage(a)}},p=async function(a){var b=window.parent;
+return a.h?{}:new Promise(c=>{var d=e=>{e.source===b&&m(e.data)&&e.data.kind==="___CROSS_FRAME_HANDSHAKE___"&&(window.removeEventListener("message",d),a.port=e.ports[0],a.port.onmessage=a.i.bind(a),a.h=!0,c(e.data.payload||{}))};window.addEventListener("message",d)})},q=class extends n{constructor(){super(...arguments);this.h=!1}};var {promise:r,resolve:t}=Promise.withResolvers(),{promise:u,resolve:v}=Promise.withResolvers(),w=!1;(async function(){var a=new q,b=await p(a);b&&b.enableSandboxToEditorSync&&(w=!!b.enableSandboxToEditorSync);if(b&&b.initialPayload){let c=b.initialPayload;window.initialPayload=c;window.setTimeout(()=>{window.dispatchEvent(new MessageEvent("message",{data:c}))},0)}t(a);(a=a.port)&&v(a)})();function x(a){r.then(b=>{b.sendMessage("ERROR",{error:a})})}window.onerror=(a,b,c,d,e)=>{x(e);return!0};
+window.onunhandledrejection=a=>{x(Error(a.reason));a.preventDefault()};
+window.document.addEventListener("DOMContentLoaded",()=>{r.then(a=>{a.sendMessage("ISOLATE_READY",{});var b=window.document.querySelector("#resize-target")||window.document.body,c=NaN,d=NaN,e=!1;(new ResizeObserver(()=>{e||(e=!0,window.requestAnimationFrame(()=>{e=!1;var f=Math.ceil(b.scrollHeight),h=Math.ceil(b.scrollWidth);f===c&&h===d||f===0&&h===0||(c=f,d=h,a.sendMessage("RESIZE",{height:f,width:h}))}))})).observe(b);if(w){let f;(new MutationObserver(()=>{f&&window.clearTimeout(f);f=window.setTimeout(()=>
+{f=void 0;a.sendMessage("HTML_CHANGED",{html:"<!DOCTYPE html>\n"+window.document.documentElement.outerHTML})},500)})).observe(window.document.documentElement,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}})});window.addEventListener("resizeRequest",()=>{r.then(a=>{var b=window.document.querySelector("#resize-target")||window.document.body,c=Math.ceil(b.scrollHeight);b=Math.ceil(b.scrollWidth);c===0&&b===0||a.sendMessage("MANUAL_RESIZE",{height:c,width:b})})});
+function y(a){var b=null;a instanceof Element?b=a:a&&a.nodeType===Node.TEXT_NODE&&(b=a.parentElement);if(!b)return null;for(a=b;a&&a!==window.document.body;){if(a.matches('a,button,input,textarea,select,option,details,summary,area,[jsaction],[data-jsaction],[role],[tabindex]:not([tabindex="-1"])'))return z(a);if(a instanceof HTMLElement&&a.isContentEditable)return z(a);a=a.parentElement}return null}
+function z(a){var b={tagName:a.tagName.toUpperCase(),attributes:{}},c=["role","jsaction","data-jsaction","tabindex"];for(let d of c)c=a.getAttribute(d),c!==null&&(b.attributes[d]=c);a instanceof HTMLElement&&a.isContentEditable&&(b.isContentEditable=!0);return b}window.addEventListener("click",a=>{var b=(a=a.target)?y(a):null;r.then(c=>{c.sendMessage("CLICK",{matchedNode:b})})},!0);
+window.addEventListener("request_window_open",a=>{var b=a.detail;r.then(c=>{c.sendMessage("REQUEST_WINDOW_OPEN",{url:b.url,hostname:b.hostname,target:b.target,features:b.features,skipConfirmation:b.skipConfirmation})})});window.sandboxConsoleLog=(a,b)=>{r.then(c=>{c.sendMessage("CONSOLE_LOG",{logLevel:a,message:b})})};if(document.querySelector('meta[name="enable-onep-api"]')?.getAttribute("content")==="true"){let a=!1;window.claimPortReady=()=>{if(a)return null;a=!0;return u}}window.logError=x;}).call(this);</script><script>(function(){function f(b){return["https://www.google.com/maps/","https://maps.google.com/","https://www.youtube.com/watch?v=","https://www.youtube.com/v/","https://youtu.be/"].some(a=>b.startsWith(a))}window.open=(b,a,d)=>{var c,e=!1;if(b)try{if(c=b instanceof URL?b.toString():String(b)){var g=(new URL(c,window.location.href)).hostname;e=f(c)}}catch(h){}window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:c,hostname:g,target:a,features:d,h:e}}));return null};
+window.addEventListener("click",b=>{var a=b.target.closest("a");if(a&&a.getAttribute("target")==="_blank"&&a.hasAttribute("href")){a=a.getAttribute("href");let d,c=!1;try{d=(new URL(a,window.location.href)).hostname,c=f(a)}catch(e){}b.preventDefault();b.stopPropagation();window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:a,hostname:d,target:"_blank",h:c}}))}},!0);}).call(this);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="123_files/css2_9vWv.css" rel="stylesheet"><link href="123_files/icon_9vWv.css" rel="stylesheet"><title>Generated Interactive Widget</title><script type="module" crossorigin="">
+import { jsx, jsxs } from 'https://widgetlibs.static.usercontent.goog/react/jsx-runtime-Dc9ViRTo.js';
+import React, { useState, useRef, useEffect } from 'https://widgetlibs.static.usercontent.goog/react-Dd1pKoqe.js';
+import ReactDOM from 'https://widgetlibs.static.usercontent.goog/react-dom/client-BTuQ-l8_.js';
+import * as Slider from 'https://widgetlibs.static.usercontent.goog/@radix-ui/react-slider-DXk-CvUR.js';
+import * as ToggleGroup from 'https://widgetlibs.static.usercontent.goog/@radix-ui/react-toggle-group-SAzue8E6.js';
+import { ErrorBoundary } from 'https://widgetlibs.static.usercontent.goog/react-error-boundary-BY2GTZrN.js';
+
+true              &&(function polyfill() {
+	const relList = document.createElement("link").relList;
+	if (relList && relList.supports && relList.supports("modulepreload")) return;
+	for (const link of document.querySelectorAll("link[rel=\"modulepreload\"]")) processPreload(link);
+	new MutationObserver((mutations) => {
+		for (const mutation of mutations) {
+			if (mutation.type !== "childList") continue;
+			for (const node of mutation.addedNodes) if (node.tagName === "LINK" && node.rel === "modulepreload") processPreload(node);
+		}
+	}).observe(document, {
+		childList: true,
+		subtree: true
+	});
+	function getFetchOpts(link) {
+		const fetchOpts = {};
+		if (link.integrity) fetchOpts.integrity = link.integrity;
+		if (link.referrerPolicy) fetchOpts.referrerPolicy = link.referrerPolicy;
+		if (link.crossOrigin === "use-credentials") fetchOpts.credentials = "include";
+		else if (link.crossOrigin === "anonymous") fetchOpts.credentials = "omit";
+		else fetchOpts.credentials = "same-origin";
+		return fetchOpts;
+	}
+	function processPreload(link) {
+		if (link.ep) return;
+		link.ep = true;
+		const fetchOpts = getFetchOpts(link);
+		fetch(link.href, fetchOpts);
+	}
+}());
+
+function ErrorFallback({ error }) {
+  return /* @__PURE__ */ jsxs("div", { className: "p-5 text-error bg-card rounded-lg", children: [
+    /* @__PURE__ */ jsx("p", { className: "text-lg font-medium", children: "Sesuatu tidak kena:" }),
+    /* @__PURE__ */ jsx("pre", { className: "text-xs", children: error.message })
+  ] });
+}
+function App() {
+  const [jantina, setJantina] = useState("lelaki");
+  const [berat, setBerat] = useState(75);
+  const [aktiviti, setAktiviti] = useState("1.375");
+  const [intensiti, setIntensiti] = useState("300");
+  const containerRef = useRef(null);
+  const [dimensions, setDimensions] = useState({ width: 600, height: 300 });
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        const { width: width2 } = entry.contentRect;
+        const computedWidth = width2 || 600;
+        setDimensions({
+          width: computedWidth,
+          height: computedWidth * 0.5
+          // 2:1 aspect ratio
+        });
+      }
+    });
+    resizeObserver.observe(containerRef.current);
+    return () => resizeObserver.disconnect();
+  }, []);
+  const bmr = jantina === "lelaki" ? berat * 23 : berat * 20;
+  const tdee = Math.round(bmr * parseFloat(aktiviti));
+  const defisitKalori = parseInt(intensiti);
+  const targetKalori = Math.max(1200, tdee - defisitKalori);
+  const targetProteinGrams = Math.round(berat * 2.2);
+  const proteinCalories = targetProteinGrams * 4;
+  const targetFatGrams = Math.round(berat * 0.9);
+  const fatCalories = targetFatGrams * 9;
+  const remainingCalories = targetKalori - (proteinCalories + fatCalories);
+  const targetCarbGrams = Math.max(30, Math.round((remainingCalories > 0 ? remainingCalories : 0) / 4));
+  const finalTotalCaloriesCalculated = targetProteinGrams * 4 + targetCarbGrams * 4 + targetFatGrams * 9;
+  const anggaranTurunLemakMinggu = defisitKalori * 7 / 7700;
+  const totalMacrosGrams = targetProteinGrams + targetCarbGrams + targetFatGrams;
+  const proteinPercent = targetProteinGrams / totalMacrosGrams * 100;
+  const carbPercent = targetCarbGrams / totalMacrosGrams * 100;
+  const fatPercent = targetFatGrams / totalMacrosGrams * 100;
+  const { width, height } = dimensions;
+  return /* @__PURE__ */ jsx(ErrorBoundary, { FallbackComponent: ErrorFallback, children: /* @__PURE__ */ jsxs("div", { ref: containerRef, className: "w-full bg-card text-foreground font-sans selection:bg-primary/30 flex flex-col", children: [
+    /* @__PURE__ */ jsxs("div", { className: "p-4 bg-background border-b border-border flex flex-col gap-1.5 items-center justify-center", children: [
+      /* @__PURE__ */ jsx("span", { className: "text-xs font-medium text-muted-foreground uppercase tracking-wider", children: "Jantina (Gender)" }),
+      /* @__PURE__ */ jsxs(
+        ToggleGroup.Root,
+        {
+          type: "single",
+          value: jantina,
+          onValueChange: (val) => {
+            if (val) setJantina(val);
+          },
+          className: "rounded-full flex bg-muted h-9 p-1 max-w-[280px] w-full",
+          "aria-label": "Pilihan jantina",
+          children: [
+            /* @__PURE__ */ jsx(
+              ToggleGroup.Item,
+              {
+                value: "lelaki",
+                className: "flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white",
+                children: "Lelaki"
+              }
+            ),
+            /* @__PURE__ */ jsx(
+              ToggleGroup.Item,
+              {
+                value: "perempuan",
+                className: "flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white",
+                children: "Perempuan"
+              }
+            )
+          ]
+        }
+      )
+    ] }),
+    /* @__PURE__ */ jsxs("div", { className: "w-full relative border-b border-border overflow-hidden select-none", style: { height }, children: [
+      /* @__PURE__ */ jsxs(
+        "svg",
+        {
+          role: "img",
+          "aria-label": "Grafik pembahagian kalori dan makro untuk pemeliharaan otot semasa fasa penurunan lemak",
+          viewBox: `0 0 ${width} ${height}`,
+          className: "w-full h-full",
+          children: [
+            /* @__PURE__ */ jsx("line", { x1: width * 0.5, y1: 0, x2: width * 0.5, y2: height, stroke: "var(--color-border)", strokeWidth: "1", strokeDasharray: "4 4" }),
+            /* @__PURE__ */ jsxs("g", { transform: `translate(${width * 0.08}, ${height * 0.15})`, children: [
+              /* @__PURE__ */ jsx("text", { x: 0, y: 0, fontSize: 13, fontWeight: "500", fill: "var(--color-muted-foreground)", children: "Keperluan Harian (TDEE)" }),
+              /* @__PURE__ */ jsx("rect", { x: 0, y: 15, width: width * 0.34, height: 24, rx: 6, fill: "var(--color-muted)" }),
+              /* @__PURE__ */ jsx("rect", { x: 0, y: 15, width: targetKalori / tdee * (width * 0.34), height: 24, rx: 6, fill: "var(--color-primary)", opacity: "0.85" }),
+              tdee > targetKalori && /* @__PURE__ */ jsx(
+                "rect",
+                {
+                  x: targetKalori / tdee * (width * 0.34),
+                  y: 15,
+                  width: (1 - targetKalori / tdee) * (width * 0.34),
+                  height: 24,
+                  rx: 4,
+                  fill: "var(--color-success)",
+                  opacity: "0.35"
+                }
+              ),
+              /* @__PURE__ */ jsxs("text", { x: 10, y: 31, fontSize: 11, fontWeight: "500", fill: "white", children: [
+                targetKalori,
+                " kcal (Sasaran)"
+              ] }),
+              tdee > targetKalori && /* @__PURE__ */ jsxs("text", { x: width * 0.34 - 5, y: 31, fontSize: 11, fontWeight: "500", fill: "var(--color-success)", textAnchor: "end", children: [
+                "-",
+                defisitKalori
+              ] }),
+              /* @__PURE__ */ jsxs("g", { transform: `translate(0, ${height * 0.3})`, children: [
+                /* @__PURE__ */ jsx("text", { x: 0, y: 0, fontSize: 12, fontWeight: "500", fill: "var(--color-muted-foreground)", children: "Zon Selamat Otot (Muscle Retention)" }),
+                /* @__PURE__ */ jsx("circle", { cx: defisitKalori > 600 ? width * 0.28 : width * 0.1, cy: 18, r: 6, fill: defisitKalori > 600 ? "var(--color-warning)" : "var(--color-success)" }),
+                /* @__PURE__ */ jsx("text", { x: (defisitKalori > 600 ? width * 0.28 : width * 0.1) + 12, y: 22, fontSize: 11, fill: "var(--color-foreground)", children: defisitKalori > 600 ? "Defisit tinggi: Risiko otot susut" : "Defisit optimum untuk pelihara otot" })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs("g", { transform: `translate(${width * 0.56}, ${height * 0.15})`, children: [
+              /* @__PURE__ */ jsx("text", { x: 0, y: 0, fontSize: 13, fontWeight: "500", fill: "var(--color-muted-foreground)", children: "Agihan Makro (Fokus Kekal Otot)" }),
+              /* @__PURE__ */ jsxs("g", { transform: "translate(0, 15)", children: [
+                /* @__PURE__ */ jsx("rect", { x: 0, y: 0, width: proteinPercent / 100 * (width * 0.36), height: 24, rx: 4, fill: "#2ec4b6" }),
+                /* @__PURE__ */ jsx("rect", { x: proteinPercent / 100 * (width * 0.36), y: 0, width: carbPercent / 100 * (width * 0.36), height: 24, rx: 4, fill: "#ff9f1c" }),
+                /* @__PURE__ */ jsx("rect", { x: (proteinPercent + carbPercent) / 100 * (width * 0.36), y: 0, width: fatPercent / 100 * (width * 0.36), height: 24, rx: 4, fill: "#e71d36" })
+              ] }),
+              /* @__PURE__ */ jsxs("g", { transform: `translate(0, ${height * 0.22})`, children: [
+                /* @__PURE__ */ jsx("circle", { cx: 6, cy: 0, r: 5, fill: "#2ec4b6" }),
+                /* @__PURE__ */ jsxs("text", { x: 16, y: 4, fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: [
+                  "Protein: ",
+                  targetProteinGrams,
+                  "g (Tinggi untuk otot)"
+                ] }),
+                /* @__PURE__ */ jsx("circle", { cx: 6, cy: 20, r: 5, fill: "#ff9f1c" }),
+                /* @__PURE__ */ jsxs("text", { x: 16, y: 24, fontSize: 11, fill: "var(--color-foreground)", children: [
+                  "Karbohidrat: ",
+                  targetCarbGrams,
+                  "g"
+                ] }),
+                /* @__PURE__ */ jsx("circle", { cx: 6, cy: 40, r: 5, fill: "#e71d36" }),
+                /* @__PURE__ */ jsxs("text", { x: 16, y: 44, fontSize: 11, fill: "var(--color-foreground)", children: [
+                  "Lemak: ",
+                  targetFatGrams,
+                  "g"
+                ] })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsx(
+              "path",
+              {
+                d: `M ${width * 0.05} ${height * 0.82} Q ${width * 0.5} ${height * 0.78} ${width * 0.95} ${height * 0.82}`,
+                fill: "none",
+                stroke: "var(--color-border)",
+                strokeWidth: "1.5",
+                strokeDasharray: "4 4"
+              }
+            )
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxs("div", { className: "absolute left-[8%] bottom-[24%] bg-card/60 text-muted-foreground px-2 py-0.5 rounded-full text-xs font-medium pointer-events-none", children: [
+        "TDEE Asal: ",
+        tdee,
+        " kcal"
+      ] }),
+      /* @__PURE__ */ jsx("div", { className: "absolute right-[8%] bottom-[24%] bg-card/60 text-success rounded-full px-2 py-0.5 text-xs font-medium pointer-events-none", children: "Fokus: Protein 2.2g/kg" })
+    ] }),
+    /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Sasaran Kalori" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+          finalTotalCaloriesCalculated,
+          " kcal/hari"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Target Protein" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-success tabular-nums truncate text-center w-full", children: [
+          targetProteinGrams,
+          " g/hari"
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
+        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Kadar Turun Lemak" }),
+        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
+          "~",
+          anggaranTurunLemakMinggu.toFixed(2),
+          " kg/minggu"
+        ] })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxs("div", { className: "p-5 flex flex-col gap-4", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Berat Badan Semasa" }),
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+          /* @__PURE__ */ jsxs(
+            Slider.Root,
+            {
+              className: "relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer",
+              value: [berat],
+              onValueChange: (val) => setBerat(val[0]),
+              min: 40,
+              max: 150,
+              step: 1,
+              "aria-label": "Slaid berat badan semasa",
+              children: [
+                /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                /* @__PURE__ */ jsx(
+                  Slider.Thumb,
+                  {
+                    className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11",
+                    "aria-label": "Penunjuk berat"
+                  }
+                )
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[7ch]", children: [
+            berat,
+            " kg"
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Intensiti Defisit Kalori" }),
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
+          /* @__PURE__ */ jsxs(
+            Slider.Root,
+            {
+              className: "relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer",
+              value: [defisitKalori],
+              onValueChange: (val) => setIntensiti(val[0].toString()),
+              min: 200,
+              max: 900,
+              step: 50,
+              "aria-label": "Slaid intensiti defisit kalori",
+              children: [
+                /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+                /* @__PURE__ */ jsx(
+                  Slider.Thumb,
+                  {
+                    className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11",
+                    "aria-label": "Penunjuk defisit"
+                  }
+                )
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[9ch]", children: [
+            defisitKalori,
+            " kcal"
+          ] })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Tahap Aktiviti Harian" }),
+        /* @__PURE__ */ jsxs(
+          ToggleGroup.Root,
+          {
+            type: "single",
+            value: aktiviti,
+            onValueChange: (val) => {
+              if (val) setAktiviti(val);
+            },
+            className: "rounded-full flex w-full bg-muted h-9 p-1",
+            "aria-label": "Pilihan tahap aktiviti harian",
+            children: [
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "1.2",
+                  className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Sikit (Sedentary)" })
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "1.375",
+                  className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Sederhana" })
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "1.55",
+                  className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Aktif (Sukan)" })
+                }
+              )
+            ]
+          }
+        )
+      ] })
+    ] })
+  ] }) });
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  /* @__PURE__ */ jsx(React.StrictMode, { children: /* @__PURE__ */ jsx(App, {}) })
+);
+
+</script><style>
+/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties {
+  @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
+    *, :before, :after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-ordinal: initial;
+      --tw-slashed-zero: initial;
+      --tw-numeric-figure: initial;
+      --tw-numeric-spacing: initial;
+      --tw-numeric-fraction: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
+      --tw-content: "";
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+    }
+  }
+}
+
+@layer theme {
+  :root, :host {
+    --font-sans: "Google Sans", "Roboto", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --color-white: #fff;
+    --spacing: .25rem;
+    --text-xs: .75rem;
+    --text-xs--line-height: calc(1 / .75);
+    --text-sm: .875rem;
+    --text-sm--line-height: calc(1.25 / .875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --font-weight-medium: 500;
+    --tracking-wider: .05em;
+    --radius-lg: .5rem;
+    --default-transition-duration: .15s;
+    --default-transition-timing-function: cubic-bezier(.31, .94, .34, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --color-primary: var(--primary, #336ef3);
+    --color-primary-hover: var(--primary-hover, #395fe1);
+    --color-error: var(--brand-red, #ea4335);
+    --color-warning: var(--brand-yellow, #fbbc04);
+    --color-success: var(--brand-green, #34a853);
+    --color-background: var(--surface-container-de-emphasis, #f7f8fa);
+    --color-card: var(--surface-container-de-emphasis, #f7f8fa);
+    --color-card-hover: var(--surface-container-high, #e9ebf0);
+    --color-border: var(--divider, #dcdfe5);
+    --color-input: var(--surface-container, #f0f2f5);
+    --color-secondary: var(--surface-container-high, #e9ebf0);
+    --color-secondary-hover: var(--surface-container-highest, #e1e3e8);
+    --color-accent: var(--surface-container-highest, #e1e3e8);
+    --color-accent-foreground: var(--on-surface-default, #0a0a0a);
+    --color-muted: var(--surface-container, #f0f2f5);
+    --color-muted-foreground: var(--on-surface-de-emphasis, #56595e);
+    --color-foreground: var(--on-surface-default, #0a0a0a);
+    --color-disabled: var(--surface-container, #f0f2f5);
+    --color-disabled-foreground: var(--disabled-foreground, #95989c);
+  }
+}
+
+@layer base {
+  *, :after, :before, ::backdrop {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::file-selector-button {
+    box-sizing: border-box;
+    border: 0 solid;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, :host {
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    line-height: 1.5;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+
+  b, strong {
+    font-weight: bolder;
+  }
+
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+
+  small {
+    font-size: 80%;
+  }
+
+  sub, sup {
+    vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+  }
+
+  sub {
+    bottom: -.25em;
+  }
+
+  sup {
+    top: -.5em;
+  }
+
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+
+  :-moz-focusring {
+    outline: auto;
+  }
+
+  progress {
+    vertical-align: baseline;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  ol, ul, menu {
+    list-style: none;
+  }
+
+  img, svg, video, canvas, audio, iframe, embed, object {
+    vertical-align: middle;
+    display: block;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, input, select, optgroup, textarea {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+
+  ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    opacity: 1;
+    background-color: #0000;
+    border-radius: 0;
+  }
+
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+
+  ::placeholder {
+    opacity: 1;
+  }
+
+  @supports (not ((-webkit-appearance: -apple-pay-button))) or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentColor;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      ::placeholder {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+
+  ::-webkit-datetime-edit {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-year-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-month-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-day-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-hour-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-minute-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-second-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-millisecond-field {
+    padding-block: 0;
+  }
+
+  ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+
+  button, input:where([type="button"], [type="reset"], [type="submit"]) {
+    appearance: button;
+  }
+
+  ::file-selector-button {
+    appearance: button;
+  }
+
+  ::-webkit-inner-spin-button {
+    height: auto;
+  }
+
+  ::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
+  }
+}
+
+@layer components;
+
+@layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .static {
+    position: static;
+  }
+
+  .right-\[8\%\] {
+    right: 8%;
+  }
+
+  .bottom-\[24\%\] {
+    bottom: 24%;
+  }
+
+  .left-\[8\%\] {
+    left: 8%;
+  }
+
+  .-my-3 {
+    margin-block: calc(var(--spacing) * -3);
+  }
+
+  .block {
+    display: block;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .table {
+    display: table;
+  }
+
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+
+  .h-11 {
+    height: calc(var(--spacing) * 11);
+  }
+
+  .h-\[18px\] {
+    height: 18px;
+  }
+
+  .h-full {
+    height: 100%;
+  }
+
+  .w-\[7ch\] {
+    width: 7ch;
+  }
+
+  .w-\[9ch\] {
+    width: 9ch;
+  }
+
+  .w-\[18px\] {
+    width: 18px;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .max-w-\[280px\] {
+    max-width: 280px;
+  }
+
+  .min-w-0 {
+    min-width: calc(var(--spacing) * 0);
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .flex-grow, .grow {
+    flex-grow: 1;
+  }
+
+  .border-collapse {
+    border-collapse: collapse;
+  }
+
+  .transform {
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .touch-none {
+    touch-action: none;
+  }
+
+  .resize {
+    resize: both;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .items-center {
+    align-items: center;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
+
+  .gap-0\.5 {
+    gap: calc(var(--spacing) * .5);
+  }
+
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-x-4 {
+    column-gap: calc(var(--spacing) * 4);
+  }
+
+  .truncate {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .overflow-visible {
+    overflow: visible;
+  }
+
+  .rounded-full {
+    border-radius: 3.40282e38px;
+  }
+
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+
+  .border-none {
+    --tw-border-style: none;
+    border-style: none;
+  }
+
+  .border-border {
+    border-color: var(--color-border);
+  }
+
+  .\!bg-muted {
+    background-color: var(--color-muted) !important;
+  }
+
+  .bg-background {
+    background-color: var(--color-background);
+  }
+
+  .bg-card, .bg-card\/60 {
+    background-color: var(--color-card);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-card\/60 {
+      background-color: color-mix(in oklab, var(--color-card) 60%, transparent);
+    }
+  }
+
+  .bg-muted {
+    background-color: var(--color-muted);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
+  }
+
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
+
+  .py-0 {
+    padding-block: calc(var(--spacing) * 0);
+  }
+
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * .5);
+  }
+
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .text-error {
+    color: var(--color-error);
+  }
+
+  .text-foreground {
+    color: var(--color-foreground);
+  }
+
+  .text-muted-foreground {
+    color: var(--color-muted-foreground);
+  }
+
+  .text-success {
+    color: var(--color-success);
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .tabular-nums {
+    --tw-numeric-spacing: tabular-nums;
+    font-variant-numeric: var(--tw-ordinal, ) var(--tw-slashed-zero, ) var(--tw-numeric-figure, ) var(--tw-numeric-spacing, ) var(--tw-numeric-fraction, );
+  }
+
+  .underline {
+    text-decoration-line: underline;
+  }
+
+  .shadow-none {
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  .selection\:bg-primary\/30 ::selection {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .selection\:bg-primary\/30 ::selection {
+      background-color: color-mix(in oklab, var(--color-primary) 30%, transparent);
+    }
+  }
+
+  .selection\:bg-primary\/30::selection {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .selection\:bg-primary\/30::selection {
+      background-color: color-mix(in oklab, var(--color-primary) 30%, transparent);
+    }
+  }
+
+  .after\:absolute:after {
+    content: var(--tw-content);
+    position: absolute;
+  }
+
+  .after\:inset-x-0:after {
+    content: var(--tw-content);
+    inset-inline: calc(var(--spacing) * 0);
+  }
+
+  .after\:-inset-y-2:after {
+    content: var(--tw-content);
+    inset-block: calc(var(--spacing) * -2);
+  }
+
+  .after\:top-1\/2:after {
+    content: var(--tw-content);
+    top: 50%;
+  }
+
+  .after\:left-1\/2:after {
+    content: var(--tw-content);
+    left: 50%;
+  }
+
+  .after\:h-11:after {
+    content: var(--tw-content);
+    height: calc(var(--spacing) * 11);
+  }
+
+  .after\:w-11:after {
+    content: var(--tw-content);
+    width: calc(var(--spacing) * 11);
+  }
+
+  .after\:-translate-x-1\/2:after {
+    content: var(--tw-content);
+    --tw-translate-x: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .after\:-translate-y-1\/2:after {
+    content: var(--tw-content);
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+
+  .data-\[state\=on\]\:bg-primary[data-state="on"] {
+    background-color: var(--color-primary);
+  }
+
+  .data-\[state\=on\]\:text-white[data-state="on"] {
+    color: var(--color-white);
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:gap-x-8 {
+      column-gap: calc(var(--spacing) * 8);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:gap-x-12 {
+      column-gap: calc(var(--spacing) * 12);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-primary: var(--primary, #336ef3);
+    --color-primary-hover: var(--primary-hover, #395fe1);
+    --color-error: var(--brand-red, #ea4335);
+    --color-warning: var(--brand-yellow, #fbbc04);
+    --color-success: var(--brand-green, #34a853);
+    --color-background: var(--surface-container-de-emphasis, #272930);
+    --color-card: var(--surface-container-de-emphasis, #272930);
+    --color-card-hover: var(--surface-container-high, #363840);
+    --color-border: var(--divider, #363840);
+    --color-input: var(--surface-container, #2c2e35);
+    --color-secondary: var(--surface-container-high, #363840);
+    --color-secondary-hover: var(--surface-container-highest, #42444d);
+    --color-accent: var(--surface-container-highest, #42444d);
+    --color-accent-foreground: var(--on-surface-default, #e6e8f0);
+    --color-muted: var(--surface-container, #2c2e35);
+    --color-muted-foreground: var(--on-surface-de-emphasis, #adafb8);
+    --color-foreground: var(--on-surface-default, #e6e8f0);
+    --color-disabled: var(--surface-container, #2c2e35);
+    --color-disabled-foreground: var(--disabled-foreground, #797c90);
+  }
+}
+
+.dark {
+  --color-primary: var(--primary, #336ef3);
+  --color-primary-hover: var(--primary-hover, #395fe1);
+  --color-error: var(--brand-red, #ea4335);
+  --color-warning: var(--brand-yellow, #fbbc04);
+  --color-success: var(--brand-green, #34a853);
+  --color-background: var(--surface-container-de-emphasis, #272930);
+  --color-card: var(--surface-container-de-emphasis, #272930);
+  --color-card-hover: var(--surface-container-high, #363840);
+  --color-border: var(--divider, #363840);
+  --color-input: var(--surface-container, #2c2e35);
+  --color-secondary: var(--surface-container-high, #363840);
+  --color-secondary-hover: var(--surface-container-highest, #42444d);
+  --color-accent: var(--surface-container-highest, #42444d);
+  --color-accent-foreground: var(--on-surface-default, #e6e8f0);
+  --color-muted: var(--surface-container, #2c2e35);
+  --color-muted-foreground: var(--on-surface-de-emphasis, #adafb8);
+  --color-foreground: var(--on-surface-default, #e6e8f0);
+  --color-disabled: var(--surface-container, #2c2e35);
+  --color-disabled-foreground: var(--disabled-foreground, #797c90);
+}
+
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-figure {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-spacing {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-numeric-fraction {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false
+}
+
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+@property --tw-content {
+  syntax: "*";
+  inherits: false;
+  initial-value: "";
+}
+
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+</style><link href="123_files/m=capy_widget_colors_9vWv.css" rel="stylesheet"></head>
+    <body class="">
+  
+  <div id="root"><div class="w-full bg-card text-foreground font-sans selection:bg-primary/30 flex flex-col"><div class="p-4 bg-background border-b border-border flex flex-col gap-1.5 items-center justify-center"><span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Jantina (Gender)</span><div role="group" dir="ltr" class="rounded-full flex bg-muted h-9 p-1 max-w-[280px] w-full" aria-label="Pilihan jantina" tabindex="0" style="outline: none;"><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item="">Lelaki</button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item="">Perempuan</button></div></div><div class="w-full relative border-b border-border overflow-hidden select-none" style="height: 326.25px;"><svg role="img" aria-label="Grafik pembahagian kalori dan makro untuk pemeliharaan otot semasa fasa penurunan lemak" viewBox="0 0 652.5 326.25" class="w-full h-full"><line x1="326.25" y1="0" x2="326.25" y2="326.25" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 4"></line><g transform="translate(52.2, 48.9375)"><text x="0" y="0" font-size="13" font-weight="500" fill="var(--color-muted-foreground)">Keperluan Harian (TDEE)</text><rect x="0" y="15" width="221.85000000000002" height="24" rx="6" fill="var(--color-muted)"></rect><rect x="0" y="15" width="193.7913996627319" height="24" rx="6" fill="var(--color-primary)" opacity="0.85"></rect><rect x="193.7913996627319" y="15" width="28.058600337268132" height="24" rx="4" fill="var(--color-success)" opacity="0.35"></rect><text x="10" y="31" font-size="11" font-weight="500" fill="white">2072 kcal (Sasaran)</text><text x="216.85000000000002" y="31" font-size="11" font-weight="500" fill="var(--color-success)" text-anchor="end">-300</text><g transform="translate(0, 97.875)"><text x="0" y="0" font-size="12" font-weight="500" fill="var(--color-muted-foreground)">Zon Selamat Otot (Muscle Retention)</text><circle cx="65.25" cy="18" r="6" fill="var(--color-success)"></circle><text x="77.25" y="22" font-size="11" fill="var(--color-foreground)">Defisit optimum untuk pelihara otot</text></g></g><g transform="translate(365.40000000000003, 48.9375)"><text x="0" y="0" font-size="13" font-weight="500" fill="var(--color-muted-foreground)">Agihan Makro (Fokus Kekal Otot)</text><g transform="translate(0, 15)"><rect x="0" y="0" width="89.51154734411087" height="24" rx="4" fill="#2ec4b6"></rect><rect x="89.51154734411087" y="0" width="108.4988452655889" height="24" rx="4" fill="#ff9f1c"></rect><rect x="198.01039260969978" y="0" width="36.88960739030023" height="24" rx="4" fill="#e71d36"></rect></g><g transform="translate(0, 71.775)"><circle cx="6" cy="0" r="5" fill="#2ec4b6"></circle><text x="16" y="4" font-size="11" font-weight="500" fill="var(--color-foreground)">Protein: 165g (Tinggi untuk otot)</text><circle cx="6" cy="20" r="5" fill="#ff9f1c"></circle><text x="16" y="24" font-size="11" fill="var(--color-foreground)">Karbohidrat: 200g</text><circle cx="6" cy="40" r="5" fill="#e71d36"></circle><text x="16" y="44" font-size="11" fill="var(--color-foreground)">Lemak: 68g</text></g></g><path d="M 32.625 267.525 Q 326.25 254.47500000000002 619.875 267.525" fill="none" stroke="var(--color-border)" stroke-width="1.5" stroke-dasharray="4 4"></path></svg><div class="absolute left-[8%] bottom-[24%] bg-card/60 text-muted-foreground px-2 py-0.5 rounded-full text-xs font-medium pointer-events-none">TDEE Asal: 2372 kcal</div><div class="absolute right-[8%] bottom-[24%] bg-card/60 text-success rounded-full px-2 py-0.5 text-xs font-medium pointer-events-none">Fokus: Protein 2.2g/kg</div></div><div class="flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0"><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Sasaran Kalori</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">2072 kcal/hari</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Target Protein</span><span class="text-sm font-medium text-success tabular-nums truncate text-center w-full">165 g/hari</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Kadar Turun Lemak</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">~0.27 kg/minggu</span></div></div><div class="p-5 flex flex-col gap-4"><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Berat Badan Semasa</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer" aria-label="Slaid berat badan semasa" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 68.1818%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(31.8182% + 3.27273px);"><span role="slider" aria-label="Penunjuk berat" aria-valuemin="40" aria-valuemax="150" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="75"></span></span></span><span class="text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[7ch]">75 kg</span></div></div><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Intensiti Defisit Kalori</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer" aria-label="Slaid intensiti defisit kalori" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 85.7143%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(14.2857% + 6.42857px);"><span role="slider" aria-label="Penunjuk defisit" aria-valuemin="200" aria-valuemax="900" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="300"></span></span></span><span class="text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[9ch]">300 kcal</span></div></div><div class="flex flex-col gap-1.5"><label class="text-sm font-medium text-muted-foreground">Tahap Aktiviti Harian</label><div role="group" dir="ltr" class="rounded-full flex w-full bg-muted h-9 p-1" aria-label="Pilihan tahap aktiviti harian" tabindex="0" style="outline: none;"><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Sikit (Sedentary)</span></button><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Sederhana</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Aktif (Sukan)</span></button></div></div></div></div></div></body></html>
