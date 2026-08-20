@@ -6,23 +6,17 @@
     <title>Kalkulator Snek</title>
     <style>
         :root {
-            --primary: #d35400;
-            --primary-hover: #e67e22;
-            --background: #f9f9f9;
-            --surface: #ffffff;
-            --text: #2c3e50;
-            --text-muted: #7f8c8d;
-            --border: #e0e0e0;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --primary: #4a5568;
+            --accent: #dd6b20;
+            --bg: #f7fafc;
+            --card: #ffffff;
+            --border: #e2e8f0;
         }
         body {
-            background-color: var(--background);
-            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--primary);
+            margin: 0;
             padding: 20px;
             display: flex;
             justify-content: center;
@@ -30,194 +24,158 @@
         .container {
             width: 100%;
             max-width: 600px;
-            background: var(--surface);
-            padding: 25px;
+            background: var(--card);
+            padding: 24px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 5px;
-            color: var(--text);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .subtitle {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
+        h1, h2 {
+            margin-top: 0;
+            color: #2d3748;
         }
         .search-box {
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .search-box input {
             width: 100%;
-            padding: 12px 40px 12px 15px;
+            padding: 12px 16px;
             border: 1px solid var(--border);
             border-radius: 8px;
             font-size: 16px;
+            box-sizing: border-box;
             outline: none;
             transition: border-color 0.2s;
         }
         .search-box input:focus {
-            border-color: var(--primary);
+            border-color: var(--accent);
         }
-        .search-box .search-icon {
+        .search-icon {
             position: absolute;
-            right: 15px;
+            right: 16px;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--text-muted);
-            pointer-events: none;
+            color: #a0aec0;
+            cursor: pointer;
         }
-        h2 {
-            font-size: 18px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        .snack-list {
-            max-height: 250px;
+        .snek-list {
+            max-height: 300px;
             overflow-y: auto;
             border: 1px solid var(--border);
             border-radius: 8px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
-        .snack-item {
-            padding: 12px 15px;
-            border-bottom: 1px solid var(--border);
-            cursor: pointer;
+        .snek-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            cursor: pointer;
             transition: background 0.2s;
         }
-        .snack-item:last-child {
+        .snek-item:last-child {
             border-bottom: none;
         }
-        .snack-item:hover {
-            background-color: #fff5ee;
+        .snek-item:hover {
+            background-color: #f7fafc;
         }
-        .snack-info .name {
+        .snek-info .name {
             font-weight: 600;
-            font-size: 15px;
+            margin-bottom: 4px;
         }
-        .snack-info .serving {
+        .snek-info .serving {
             font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 2px;
+            color: #718096;
         }
-        .snack-kcal {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 15px;
+        .snek-kcal {
+            font-weight: bold;
+            color: var(--accent);
         }
-        .selected-section {
-            background: #fdfefe;
-            border: 1px dashed var(--primary);
-            padding: 15px;
+        .selected-box {
+            border: 2px dashed #e2e8f0;
             border-radius: 8px;
+            padding: 16px;
             margin-bottom: 20px;
-        }
-        .selected-list {
-            max-height: 150px;
-            overflow-y: auto;
-            margin-bottom: 15px;
+            background-color: #fffaf0;
+            border-color: #fbd38d;
         }
         .selected-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 6px 0;
-            font-size: 14px;
-            border-bottom: 1px solid #f2f4f4;
+            margin-top: 8px;
+            padding: 4px 0;
         }
-        .selected-item:last-child {
-            border-bottom: none;
-        }
-        .selected-item .remove-btn {
-            color: #e74c3c;
+        .remove-btn {
+            color: #e53e3e;
             cursor: pointer;
             font-weight: bold;
-            margin-left: 10px;
-            padding: 2px 5px;
+            font-size: 18px;
         }
         .macro-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            gap: 12px;
             margin-bottom: 20px;
         }
-        .macro-box {
-            background: #f8f9fa;
-            border: 1px solid var(--border);
+        .macro-card {
+            background: #edf2f7;
             padding: 12px;
             border-radius: 8px;
             text-align: center;
         }
         .macro-label {
             font-size: 12px;
-            color: var(--text-muted);
+            color: #4a5568;
             margin-bottom: 4px;
         }
         .macro-value {
-            font-weight: 700;
-            font-size: 16px;
+            font-weight: bold;
+            font-size: 18px;
         }
-        .summary-box {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #fff5ee;
-            border: 1px solid #fbdcce;
-            padding: 15px;
+        .total-kcal-box {
+            background: #feebc8;
             border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .summary-left .item-count {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-        .summary-left .total-kcal {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-top: 2px;
+            padding: 16px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #c05621;
+            margin-bottom: 16px;
         }
         .btn-group {
-            display: flex;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
-        .btn {
-            flex: 1;
+        button {
             padding: 12px;
             border: none;
             border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background 0.2s, color 0.2s;
+            transition: background 0.2s;
         }
-        .btn-primary {
-            background-color: var(--primary);
+        .btn-copy {
+            background-color: #edf2f7;
+            color: #2d3748;
+        }
+        .btn-copy:hover {
+            background-color: #e2e8f0;
+        }
+        .btn-clear {
+            background-color: #e53e3e;
             color: white;
         }
-        .btn-primary:hover {
-            background-color: var(--primary-hover);
+        .btn-clear:hover {
+            background-color: #c53030;
         }
-        .btn-secondary {
-            background-color: #e0e0e0;
-            color: var(--text);
-        }
-        .btn-secondary:hover {
-            background-color: #d5d5d5;
-        }
-        .loading, .empty-msg {
+        .loading {
             padding: 20px;
             text-align: center;
-            color: var(--text-muted);
-            font-size: 14px;
+            color: #718096;
         }
     </style>
 </head>
@@ -225,199 +183,218 @@
 
 <div class="container">
     <h1>🥨 Kalkulator Snek</h1>
-    <div class="subtitle">Cari terus daripada database GAS. Default: 10 jenis kuih teratas.</div>
+    <p style="font-size: 14px; color: #718096; margin-top:-8px;">Cari terus daripada database GAS. Default: 10 jenis kuih teratas.</p>
 
     <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Cari snek atau jenis kuih...">
-        <span class="search-icon">⌕</span>
+        <input type="text" id="searchInput" placeholder="Cari snek atau kuih...">
+        <span class="search-icon" id="searchBtn">⌕</span>
     </div>
 
-    <h2 id="listTitle">10 Kuih Teratas</h2>
-    <div class="snack-list" id="snackList">
+    <h2 id="listTitle" style="font-size: 18px; margin-bottom: 10px;">10 Kuih Teratas</h2>
+    <div class="snek-list" id="snekList">
         <div class="loading">Memuatkan data dari Google Sheets...</div>
     </div>
 
-    <div class="selected-section">
-        <h2>Snek dipilih</h2>
-        <div class="selected-list" id="selectedList">
-            <div class="empty-msg" style="padding:0; text-align:left;">Tekan mana-mana snek untuk pilih.</div>
+    <div class="selected-box">
+        <h2 style="font-size: 16px; margin-bottom: 8px;">Snek dipilih</h2>
+        <div id="selectedItemsContainer">
+            <div style="color: #a0aec0; font-size: 14px;">Tekan mana-mana snek untuk pilih.</div>
         </div>
     </div>
 
     <div class="macro-grid">
-        <div class="macro-box">
+        <div class="macro-card">
             <div class="macro-label">Karbo</div>
-            <div class="macro-value" id="totalCarbs">0 g</div>
+            <div class="macro-value"><span id="totalCarbs">0</span> g</div>
         </div>
-        <div class="macro-box">
+        <div class="macro-card">
             <div class="macro-label">Protein</div>
-            <div class="macro-value" id="totalProtein">0 g</div>
+            <div class="macro-value"><span id="totalProtein">0</span> g</div>
         </div>
-        <div class="macro-box">
+        <div class="macro-card">
             <div class="macro-label">Lemak</div>
-            <div class="macro-value" id="totalFat">0 g</div>
+            <div class="macro-value"><span id="totalFat">0</span> g</div>
         </div>
     </div>
 
-    <div class="summary-box">
-        <div class="summary-left">
-            <div class="item-count"><span id="totalItems">0</span> Item</div>
-            <div class="total-kcal">Total Kcal <span id="totalKcal">0</span></div>
-        </div>
+    <div class="total-kcal-box">
+        <span id="itemCount">0 Item</span> | Total Kcal: <span id="totalCalories">0</span>
     </div>
 
     <div class="btn-group">
-        <button class="btn btn-primary" id="copyBtn">Copy Total Kcal</button>
-        <button class="btn btn-secondary" id="clearBtn">Kosongkan pilihan</button>
+        <button class="btn-copy" id="copyBtn">Copy Total Kcal</button>
+        <button class="btn-clear" id="clearBtn">Kosongkan pilihan</button>
     </div>
 </div>
 
 <script>
-    const API_URL = "https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec";
-    
-    let allSnacks = [];
-    let selectedSnacks = [];
-    let debounceTimer;
+    // MASUKKAN URL WEB APP GOOGLE APPS SCRIPT ANDA DI SINI
+    const API_URL = "SILA_GANTIKAN_DENGAN_URL_WEB_APP_ANDA";
 
-    // Elements
+    let snekDatabase = [];
+    let selectedSnekList = [];
+
     const searchInput = document.getElementById('searchInput');
-    const snackList = document.getElementById('snackList');
+    const snekListContainer = document.getElementById('snekList');
     const listTitle = document.getElementById('listTitle');
-    const selectedList = document.getElementById('selectedList');
-    const totalCarbs = document.getElementById('totalCarbs');
-    const totalProtein = document.getElementById('totalProtein');
-    const totalFat = document.getElementById('totalFat');
-    const totalItems = document.getElementById('totalItems');
-    const totalKcal = document.getElementById('totalKcal');
-    const copyBtn = document.getElementById('copyBtn');
-    const clearBtn = document.getElementById('clearBtn');
+    const selectedItemsContainer = document.getElementById('selectedItemsContainer');
+    
+    const totalCarbsEl = document.getElementById('totalCarbs');
+    const totalProteinEl = document.getElementById('totalProtein');
+    const totalFatEl = document.getElementById('totalFat');
+    const totalCaloriesEl = document.getElementById('totalCalories');
+    const itemCountEl = document.getElementById('itemCount');
 
-    // Fetch initial 10 snacks on load
-    async function fetchSnacks(query = "") {
+    // Load initial 10 items
+    async function loadInitialSnek() {
+        if(API_URL === "SILA_GANTIKAN_DENGAN_URL_WEB_APP_ANDA") {
+            snekListContainer.innerHTML = '<div class="loading" style="color:#e53e3e;">Sila konfigurasi API_URL dalam file HTML terlebih dahulu.</div>';
+            return;
+        }
         try {
-            if (!query) {
-                snackList.innerHTML = '<div class="loading">Memuatkan data dari Google Sheets...</div>';
-            } else {
-                snackList.innerHTML = '<div class="loading">Mencari...</div>';
-            }
-
-            const url = new URL(API_URL);
-            url.searchParams.append('api', 'searchSnek');
-            if (query) url.searchParams.append('q', query);
-
-            const response = await fetch(url);
+            const response = await fetch(`${API_URL}?api=searchSnek`);
             const data = await response.json();
-
             if (data.status === "success") {
-                allSnacks = data.results || [];
-                renderSnackList(allSnacks);
-                
-                if (query) {
-                    listTitle.textContent = `Hasil Carian (${allSnacks.length})`;
-                } else {
-                    listTitle.textContent = "10 Kuih Teratas";
-                }
+                snekDatabase = data.data || [];
+                renderSnekList(snekDatabase);
             } else {
-                snackList.innerHTML = `<div class="empty-msg">Ralat: ${data.message}</div>`;
+                snekListContainer.innerHTML = `<div class="loading">Gagal memuatkan data: ${data.message}</div>`;
             }
         } catch (error) {
-            console.error("Error fetching data:", error);
-            snackList.innerHTML = '<div class="empty-msg">Gagal menghubungi API database. Cuba lagi.</div>';
+            snekListContainer.innerHTML = '<div class="loading">Ralat sambungan ke server GAS.</div>';
+            console.error(error);
         }
     }
 
-    function renderSnackList(snacks) {
-        if (snacks.length === 0) {
-            snackList.innerHTML = '<div class="empty-msg">Tiada snek dijumpai.</div>';
+    // Search function
+    async function searchSnek(query) {
+        snekListContainer.innerHTML = '<div class="loading">Mencari...</div>';
+        try {
+            const response = await fetch(`${API_URL}?api=searchSnek&q=${encodeURIComponent(query)}`);
+            const data = await response.json();
+            if (data.status === "success") {
+                snekDatabase = data.data || [];
+                listTitle.innerText = query ? `Hasil Carian (${snekDatabase.length})` : "10 Kuih Teratas";
+                renderSnekList(snekDatabase);
+            }
+        } catch (error) {
+            snekListContainer.innerHTML = '<div class="loading">Ralat semasa carian.</div>';
+        }
+    }
+
+    // Render list to UI
+    function renderSnekList(items) {
+        if (items.length === 0) {
+            snekListContainer.innerHTML = '<div class="loading">Tiada snek ditemui.</div>';
             return;
         }
-
-        snackList.innerHTML = snacks.map(snack => `
-            <div class="snack-item" onclick="selectSnack('${snack.id}')">
-                <div class="snack-info">
-                    <div class="name">${snack.name}</div>
-                    <div class="serving">${snack.serving ? snack.serving : '1 hidangan'} ${snack.category ? '• ' + snack.category : ''}</div>
+        snekListContainer.innerHTML = '';
+        items.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'snek-item';
+            
+            // Menggunakan property '.calories' hasil mapping daripada backend script secara betul
+            div.innerHTML = `
+                <div class="snek-info">
+                    <div class="name">${item.name}</div>
+                    <div class="serving">${item.serving || '1 hidangan'}</div>
                 </div>
-                <div class="snack-kcal">${snack.calories} kcal</div>
-            </div>
-        `).join('');
+                <div class="snek-kcal">${item.calories} kcal</div>
+            `;
+            div.addEventListener('click', () => addSnekToSelection(item));
+            snekListContainer.appendChild(div);
+        });
     }
 
-    window.selectSnack = function(id) {
-        const snack = allSnacks.find(s => s.id === id);
-        if (!snack) return;
+    // Add item to active selection
+    function addSnekToSelection(item) {
+        selectedSnekList.push(item);
+        updateSelectionUI();
+    }
 
-        selectedSnacks.push(snack);
-        updateUI();
-    };
+    // Remove item from selection
+    function removeSnekFromSelection(index) {
+        selectedSnekList.splice(index, 1);
+        updateSelectionUI();
+    }
 
-    window.removeSelected = function(index) {
-        selectedSnacks.splice(index, 1);
-        updateUI();
-    };
-
-    function updateUI() {
-        if (selectedSnacks.length === 0) {
-            selectedList.innerHTML = '<div class="empty-msg" style="padding:0; text-align:left;">Tekan mana-mana snek untuk pilih.</div>';
-            totalCarbs.textContent = '0 g';
-            totalProtein.textContent = '0 g';
-            totalFat.textContent = '0 g';
-            totalItems.textContent = '0';
-            totalKcal.textContent = '0';
+    // Recalculate totals and refresh UI
+    function updateSelectionUI() {
+        if (selectedSnekList.length === 0) {
+            selectedItemsContainer.innerHTML = '<div style="color: #a0aec0; font-size: 14px;">Tekan mana-mana snek untuk pilih.</div>';
+            totalCarbsEl.innerText = '0';
+            totalProteinEl.innerText = '0';
+            totalFatEl.innerText = '0';
+            totalCaloriesEl.innerText = '0';
+            itemCountEl.innerText = '0 Item';
             return;
         }
 
-        selectedList.innerHTML = selectedSnacks.map((snack, index) => `
-            <div class="selected-item">
-                <span>${snack.name} (${snack.calories} kcal)</span>
-                <span class="remove-btn" onclick="removeSelected(${index})">×</span>
-            </div>
-        `).join('');
+        selectedItemsContainer.innerHTML = '';
+        let totalCalories = 0;
+        let totalCarbs = 0;
+        let totalProtein = 0;
+        let totalFat = 0;
 
-        let carbs = 0, protein = 0, fat = 0, kcal = 0;
-        selectedSnacks.forEach(s => {
-            carbs += Number(s.carbs || 0);
-            protein += Number(s.protein || 0);
-            fat += Number(s.fat || 0);
-            kcal += Number(s.calories || 0);
+        selectedSnekList.forEach((item, index) => {
+            totalCalories += Number(item.calories || 0);
+            totalCarbs += Number(item.carbs || 0);
+            totalProtein += Number(item.protein || 0);
+            totalFat += Number(item.fat || 0);
+
+            const div = document.createElement('div');
+            div.className = 'selected-item';
+            div.innerHTML = `
+                <div style="font-size: 14px;">${item.name} (${item.calories} kcal)</div>
+                <span class="remove-btn" data-index="${index}">&times;</span>
+            `;
+            
+            div.querySelector('.remove-btn').addEventListener('click', (e) => {
+                const idx = parseInt(e.target.getAttribute('data-index'));
+                removeSnekFromSelection(idx);
+            });
+            
+            selectedItemsContainer.appendChild(div);
         });
 
-        totalCarbs.textContent = `${carbs.toFixed(1).replace('.0', '')} g`;
-        totalProtein.textContent = `${protein.toFixed(1).replace('.0', '')} g`;
-        totalFat.textContent = `${fat.toFixed(1).replace('.0', '')} g`;
-        totalItems.textContent = selectedSnacks.length;
-        totalKcal.textContent = kcal;
+        // Round decimals nicely
+        totalCaloriesEl.innerText = Math.round(totalCalories);
+        totalCarbsEl.innerText = Math.round(totalCarbs);
+        totalProteinEl.innerText = Math.round(totalProtein);
+        totalFatEl.innerText = Math.round(totalFat);
+        itemCountEl.innerText = `${selectedSnekList.length} Item`;
     }
 
     // Event Listeners
+    let debounceTimer;
     searchInput.addEventListener('input', (e) => {
         clearTimeout(debounceTimer);
         const query = e.target.value.trim();
         debounceTimer = setTimeout(() => {
-            fetchSnacks(query);
-        }, 300);
+            searchSnek(query);
+        }, 400);
     });
 
-    clearBtn.addEventListener('click', () => {
-        selectedSnacks = [];
-        updateUI();
+    document.getElementById('searchBtn').addEventListener('click', () => {
+        searchSnek(searchInput.value.trim());
     });
 
-    copyBtn.addEventListener('click', () => {
-        const kcalText = totalKcal.textContent;
-        if (kcalText === '0') {
-            alert('Sila pilih snek terlebih dahulu.');
-            return;
-        }
-        navigator.clipboard.writeText(`${kcalText} kcal`).then(() => {
-            alert(`Berjaya disalin: ${kcalText} kcal`);
+    document.getElementById('clearBtn').addEventListener('click', () => {
+        selectedSnekList = [];
+        updateSelectionUI();
+    });
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+        const textToCopy = totalCaloriesEl.innerText;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            alert(`Total Kcal (${textToCopy}) berjaya disalin!`);
         }).catch(err => {
             console.error('Gagal menyalin teks: ', err);
         });
     });
 
-    // Initial load
-    fetchSnacks();
+    // Run setup
+    loadInitialSnek();
 </script>
 
 </body>
