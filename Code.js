@@ -667,31 +667,3 @@ function doGet(e) {
   });
 }
 
-// Letakkan ini di baris teratas fail Code.js anda (di luar komponen)
-let debounceTimer;
-function hantarKeGAS(nilaiBaru, tokenSesi) {
-  const gasUrl = "https://google.com"; 
-
-  if (!tokenSesi) {
-    console.error("Autosave gagal: Sesi log masuk tidak dikesan.");
-    return;
-  }
-
-  fetch(gasUrl, {
-    method: "POST",
-    mode: "no-cors", // 🟢 WAJIB TAMBAH INI untuk elakkan browser menyekat respon simpanan makanan anda
-    headers: {
-      "Content-Type": "text/plain;charset=utf-8"
-    },
-    body: JSON.stringify({
-      action: "updateDailyGoal",
-      token: tokenSesi,
-      dailyGoal: nilaiBaru
-    })
-  })
-  .then(() => {
-    console.log("✅ GAS Autosave Sasaran Kalori Selesai!");
-  })
-  .catch(err => console.error("Ralat Rangkaian GAS:", err));
-}
-
