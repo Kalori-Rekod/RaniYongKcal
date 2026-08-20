@@ -16,113 +16,195 @@
             height: 100%;
             overflow: hidden;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* Bekas utama untuk halaman */
-        .container {
+        /* 1. GAYA HEADER */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        /* Kawasan Kandungan Utama (Iframe) */
+        .main-content {
+            flex: 1; /* Mengisi ruang kosong antara header dan footer */
             position: relative;
             width: 100%;
             height: 100%;
         }
 
-        /* Susunan Iframe memenuhi skrin */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
 
-        /* Gaya Butang Menu 3 Garis (Hamburger Button) */
+        /* 2. GAYA FOOTER */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid #34495e;
+            z-index: 10;
+        }
+
+        /* 3. GAYA BUTANG MENU 3 GARIS */
         .menu-btn {
             position: absolute;
-            top: 20px;
+            top: 15px;
             right: 20px;
-            width: 45px;
-            height: 45px;
-            background-color: #333;
-            border-radius: 8px;
-            display: none; /* Disembunyikan secara lalai */
+            width: 40px;
+            height: 40px;
+            background-color: #e74c3c;
+            border-radius: 5px;
+            display: none; /* Disembunyikan secara lalai (muncul jika bukan page login) */
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             cursor: pointer;
-            z-index: 9999;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: background-color 0.3s;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            transition: background 0.3s;
         }
 
         .menu-btn:hover {
-            background-color: #555;
+            background-color: #c0392b;
         }
 
-        /* Tiga garis melintang */
         .bar {
-            width: 25px;
+            width: 22px;
             height: 3px;
             background-color: white;
             border-radius: 2px;
             transition: 0.3s;
         }
 
-        /* Animasi bertukar menjadi 'X' apabila menu dibuka (Optional) */
-        .menu-btn.open .bar:nth-child(1) {
-            transform: translateY(9px) rotate(45deg);
+        /* Animasi butang jadi 'X' apabila dibuka */
+        .menu-btn.open .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .menu-btn.open .bar:nth-child(2) { opacity: 0; }
+        .menu-btn.open .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        /* 4. GAYA SIDEBAR MENU (Peti Pautan Anda) */
+        .sidebar {
+            position: absolute;
+            top: 0;
+            right: -250px; /* Tersembunyi di luar skrin kanan */
+            width: 250px;
+            height: 100%;
+            background-color: #34495e;
+            padding-top: 70px; /* Jarak supaya tidak ditindih butang */
+            transition: 0.3s ease;
+            z-index: 999;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
         }
-        .menu-btn.open .bar:nth-child(2) {
-            opacity: 0;
+
+        .sidebar.active {
+            right: 0; /* Meluncur masuk ke dalam skrin */
         }
-        .menu-btn.open .bar:nth-child(3) {
-            transform: translateY(-9px) rotate(-45deg);
+
+        /* Gaya Pautan Di Dalam Menu */
+        .sidebar a {
+            display: block;
+            padding: 15px 25px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 1rem;
+            border-bottom: 1px solid #2c3e50;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #2c3e50;
+            color: #3498db;
+            padding-left: 35px; /* Kesan animasi bergerak sedikit */
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Butang Menu 3 Garis -->
+    <!-- HEADER -->
+    <header>
+        Sistem Analisis Kalori by Rani Yong
+    </header>
+
+    <!-- UTAMA -->
+    <div class="main-content">
+        
+        <!-- Butang Hamburger -->
         <div id="hamburgerMenu" class="menu-btn" onclick="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
 
-        <!-- Iframe anda -->
-        <iframe id="myIframe" src="https://kalori-rekod.github.io/RaniYongKcal/login.html"></iframe>
+        <!-- ========================================== -->
+        <!-- TEMPAT UNTUK ANDA EDIT PAUTAN / LINK MENU -->
+        <!-- ========================================== -->
+        <div id="sidebarMenu" class="sidebar">
+            <!-- Nota: Tukar URL di href="..." dan tukar teks nama menu mengikut kesesuaian anda -->
+            <a href="https://kalori-rekod.github.io/RaniYongKcal/kcal.html" target="myIframe">Laman Utama</a>
+            <a href="https://kalori-rekod.github.io/RaniYongKcal/calculator.html" target="myIframe">Kalkulator Kalori</a>
+            <a href="https://kalori-rekod.github.io/RaniYongKcal/login.html" target="myIframe">Log Keluar</a>
+        </div>
+
+        <!-- IFRAME KANDUNGAN -->
+        <iframe id="myIframe" name="myIframe" src="https://github.io"></iframe>
     </div>
+
+    <!-- FOOTER -->
+    <footer>
+       Daily Calorie & Macronutrient Calculator by Rani Yong • GAS Backend
+    </footer>
 
     <script>
         const iframe = document.getElementById('myIframe');
         const menuBtn = document.getElementById('hamburgerMenu');
-        const loginUrl = "https://kalori-rekod.github.io/RaniYongKcal/login.html";
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const loginUrl = "https://github.io";
 
-        // Fungsi yang berjalan setiap kali iframe selesai memuatkan halaman baru
+        // Semakan automatik status URL Iframe
         iframe.onload = function() {
             try {
-                // Mendapatkan URL semasa di dalam iframe (jika sama domain)
                 const currentUrl = iframe.contentWindow.location.href;
 
-                // Jika URL semasa tidak sama dengan URL login, paparkan butang menu
                 if (currentUrl !== loginUrl) {
                     menuBtn.style.display = 'flex';
                 } else {
                     menuBtn.style.display = 'none';
+                    // Tutup semula menu sekiranya pengguna kembali ke halaman login
+                    menuBtn.classList.remove('open');
+                    sidebarMenu.classList.remove('active');
                 }
             } catch (error) {
-                // Jika berlaku Cross-Origin Error (pautan luar / berbeza domain), 
-                // ini bermakna halaman sudah bertukar dari pautan asal login.html.
-                // Maka, kita paparkan butang menu secara automatik.
+                // Selesaikan isu sekatan Same-Origin Policy jika bertukar ke domain luar
                 console.log("Bertukar ke pautan domain berbeza. Papar butang menu.");
                 menuBtn.style.display = 'flex';
             }
         };
 
-        // Fungsi klik butang menu (Suaikan tindakan mengikut kehendak anda)
+        // Fungsi Buka & Tutup Menu Tepi
         function toggleMenu() {
             menuBtn.classList.toggle('open');
-            
-            // Contoh tindakan: Letakkan fungsi buka sidebar atau popup menu anda di sini
-            alert("Butang menu diklik! Anda boleh letakkan fungsi buka menu anda di sini.");
+            sidebarMenu.classList.toggle('active');
+        }
+
+        // Menutup menu secara automatik apabila salah satu pautan menu di klik
+        const menuLinks = sidebarMenu.getElementsByTagName('a');
+        for (let link of menuLinks) {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('open');
+                sidebarMenu.classList.remove('active');
+            });
         }
     </script>
 
