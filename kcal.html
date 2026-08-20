@@ -492,19 +492,29 @@ function CalorieTrackerWidget() {
               /* @__PURE__ */ jsx("span",{className:"text-[11px] font-medium text-muted-foreground uppercase tracking-wider",children:"Sasaran Kalori (kcal)"}),
 /* @__PURE__ */ jsx("input", {
   type: "number",
-  // Styling asal mengikut reka bentuk gelap (dark mode) dalam gambar anda
   className: "w-full bg-[#1e2230] text-white text-base px-3 py-2 rounded-md outline-none border border-transparent focus:border-blue-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-auto [&::-webkit-inner-spin-button]:appearance-auto",
-  value: CalorieTrackerWidget , // Sila ganti dengan nama variable state kalori anda (cth: targetCalorie atau data.target)
+  
+  // 1. GANTIKAN 'value' KEPADA 'defaultValue' supaya kotak input tidak terkunci dan boleh ditaip bebas
+  defaultValue: data.dailyGoal || 2020, 
+  
   min: "0",
-  step: "1", // Membolehkan klik up/down naik satu demi satu angka
-  onChange: (e) => {
+  step: "1",
+  onInput: (e) => {
+    // 2. Gunakan 'onInput' untuk mengesan setiap perubahan angka secara langsung
     const nilaiBaru = parseInt(e.target.value) || 0;
     
-    // 1. Kemaskini State React/Solid anda (Ganti dengan fungsi set-state sebenar anda)
-    setCalorieTrackerWidget (nilaiBaru); 
-    
-    // 2. Logik AUTOSAVE: Terus simpan ke localStorage atau database
-    localStorage.setItem("CalorieTrackerWidget ", nilaiBaru);
+    // Kemaskini state aplikasi jika ada (pilihan)
+    if (typeof setData === "function") {
+      setData(prev => ({ ...prev, dailyGoal: nilaiBaru }));
+    }
+
+    // 3. LOGIK DEBOUNCE AUTOSAVE KE GAS
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+      // Ambil token daripada data atau localStorage sistem anda
+      const tokenSesi = data.token || localStorage.getItem("session_token");
+      hantarKeGAS(nilaiBaru, tokenSesi); 
+    }, 1000); 
   }
 })
             ]})
