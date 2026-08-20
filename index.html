@@ -3,150 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Calorie & Macronutrient Calculator by Rani Yong</title>
+    <title>Kalkulator Kalori</title>
     <style>
-        /* Reset default styles */
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
-            background-color: #f4f6f9;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #1a252f;
-            color: #ffffff;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.25rem;
-            font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 10;
-        }
-
-        /* Logout Button Style */
-        .btn-logout {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            border-radius: 4px;
-            cursor: pointer;
-            display: none; /* Disembunyikan secara lalai */
-            transition: background 0.2s;
-        }
-
-        .btn-logout:hover {
-            background-color: #c0392b;
-        }
-
-        /* Main Body Wrapper for Iframe */
-        .iframe-container {
-            flex: 1;
+        body, html {
             width: 100%;
-            position: relative;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
         }
 
-        /* Responsive Full-Screen Iframe */
+        /* Bekas utama untuk halaman */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Susunan Iframe memenuhi skrin */
         iframe {
             width: 100%;
             height: 100%;
             border: none;
-            display: block;
         }
 
-        /* Footer Styles */
-        footer {
-            background-color: #2c3e50;
-            color: #bdc3c7;
-            text-align: center;
-            padding: 10px 20px;
-            font-size: 0.85rem;
-            z-index: 10;
+        /* Gaya Butang Menu 3 Garis (Hamburger Button) */
+        .menu-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background-color: #333;
+            border-radius: 8px;
+            display: none; /* Disembunyikan secara lalai */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
         }
 
-        /* Responsive text size for smaller screens */
-        @media (max-width: 600px) {
-            header {
-                font-size: 1rem;
-                padding: 12px 10px;
-                flex-direction: column;
-                gap: 10px;
-            }
-            footer {
-                font-size: 0.75rem;
-            }
+        .menu-btn:hover {
+            background-color: #555;
+        }
+
+        /* Tiga garis melintang */
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* Animasi bertukar menjadi 'X' apabila menu dibuka (Optional) */
+        .menu-btn.open .bar:nth-child(1) {
+            transform: translateY(9px) rotate(45deg);
+        }
+        .menu-btn.open .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-btn.open .bar:nth-child(3) {
+            transform: translateY(-9px) rotate(-45deg);
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <span>Daily Calorie & Macronutrient Calculator by Rani Yong</span>
-        <!-- Tambah butang log keluar -->
-        <button id="logoutBtn" class="btn-logout" onclick="triggerLogout()">Log Keluar</button>
-    </header>
+    <div class="container">
+        <!-- Butang Menu 3 Garis -->
+        <div id="hamburgerMenu" class="menu-btn" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
 
-    <!-- App Body (Iframe Section) -->
-    <div class="iframe-container">
-        <iframe 
-            id="myIframe"
-            src="https://kalori-rekod.github.io/RaniYongKcal/login.html" 
-            class="w-full h-screen border-none" 
-            scrolling="auto">
-        </iframe>
+        <!-- Iframe anda -->
+        <iframe id="myIframe" src="https://kalori-rekod.github.io/RaniYongKcal/login.html"></iframe>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-        &copy; 2026 Daily Calorie & Macronutrient Calculator by Rani Yong.
-    </footer>
-
     <script>
-        const loginUrl = "https://kalori-rekod.github.io/RaniYongKcal/login.html";
         const iframe = document.getElementById('myIframe');
-        const logoutBtn = document.getElementById('logoutBtn');
+        const menuBtn = document.getElementById('hamburgerMenu');
+        const loginUrl = "https://kalori-rekod.github.io/RaniYongKcal/login.html";
 
-        // Fungsi yang berjalan setiap kali iframe memuatkan halaman
-        iframe.addEventListener('load', function() {
+        // Fungsi yang berjalan setiap kali iframe selesai memuatkan halaman baru
+        iframe.onload = function() {
             try {
-                // Mengambil URL semasa di dalam iframe
+                // Mendapatkan URL semasa di dalam iframe (jika sama domain)
                 const currentUrl = iframe.contentWindow.location.href;
 
-                // Menyemak sama ada URL semasa mengandungi perkataan 'login.html'
-                if (currentUrl.includes('login.html')) {
-                    logoutBtn.style.display = 'none';  // Sembunyikan butang jika di page login
+                // Jika URL semasa tidak sama dengan URL login, paparkan butang menu
+                if (currentUrl !== loginUrl) {
+                    menuBtn.style.display = 'flex';
                 } else {
-                    logoutBtn.style.display = 'block'; // Tunjukkan butang untuk page lain
+                    menuBtn.style.display = 'none';
                 }
             } catch (error) {
-                // Jika pengguna pergi ke domain luar (Cross-Origin), pelayar akan sekat pembacaan URL.
-                // Kita anggap pengguna sudah keluar dari sistem asal, jadi tunjukkan butang logout.
-                logoutBtn.style.display = 'block';
+                // Jika berlaku Cross-Origin Error (pautan luar / berbeza domain), 
+                // ini bermakna halaman sudah bertukar dari pautan asal login.html.
+                // Maka, kita paparkan butang menu secara automatik.
+                console.log("Bertukar ke pautan domain berbeza. Papar butang menu.");
+                menuBtn.style.display = 'flex';
             }
-        });
+        };
 
-        // Fungsi apabila butang log keluar ditekan
-        function triggerLogout() {
-            iframe.src = loginUrl;
-            logoutBtn.style.display = 'none'; // Sembunyikan serta-merta selepas ditekan
+        // Fungsi klik butang menu (Suaikan tindakan mengikut kehendak anda)
+        function toggleMenu() {
+            menuBtn.classList.toggle('open');
+            
+            // Contoh tindakan: Letakkan fungsi buka sidebar atau popup menu anda di sini
+            alert("Butang menu diklik! Anda boleh letakkan fungsi buka menu anda di sini.");
         }
     </script>
-
 
 </body>
 </html>
