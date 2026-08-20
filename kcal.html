@@ -494,17 +494,17 @@ function CalorieTrackerWidget() {
   type: "number",
   // Styling asal mengikut reka bentuk gelap (dark mode) dalam gambar anda
   className: "w-full bg-[#1e2230] text-white text-base px-3 py-2 rounded-md outline-none border border-transparent focus:border-blue-500 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-auto [&::-webkit-inner-spin-button]:appearance-auto",
-  value: sasaranKalori, // Sila ganti dengan nama variable state kalori anda (cth: targetCalorie atau data.target)
+  value: CalorieTrackerWidget , // Sila ganti dengan nama variable state kalori anda (cth: targetCalorie atau data.target)
   min: "0",
   step: "1", // Membolehkan klik up/down naik satu demi satu angka
   onChange: (e) => {
     const nilaiBaru = parseInt(e.target.value) || 0;
     
     // 1. Kemaskini State React/Solid anda (Ganti dengan fungsi set-state sebenar anda)
-    setSasaranKalori(nilaiBaru); 
+    setCalorieTrackerWidget (nilaiBaru); 
     
     // 2. Logik AUTOSAVE: Terus simpan ke localStorage atau database
-    localStorage.setItem("sasaranKalori", nilaiBaru);
+    localStorage.setItem("CalorieTrackerWidget ", nilaiBaru);
   }
 })
             ]})
