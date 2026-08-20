@@ -24,13 +24,14 @@ window.document.addEventListener("DOMContentLoaded",()=>{r.then(a=>{a.sendMessag
 function y(a){var b=null;a instanceof Element?b=a:a&&a.nodeType===Node.TEXT_NODE&&(b=a.parentElement);if(!b)return null;for(a=b;a&&a!==window.document.body;){if(a.matches('a,button,input,textarea,select,option,details,summary,area,[jsaction],[data-jsaction],[role],[tabindex]:not([tabindex="-1"])'))return z(a);if(a instanceof HTMLElement&&a.isContentEditable)return z(a);a=a.parentElement}return null}
 function z(a){var b={tagName:a.tagName.toUpperCase(),attributes:{}},c=["role","jsaction","data-jsaction","tabindex"];for(let d of c)c=a.getAttribute(d),c!==null&&(b.attributes[d]=c);a instanceof HTMLElement&&a.isContentEditable&&(b.isContentEditable=!0);return b}window.addEventListener("click",a=>{var b=(a=a.target)?y(a):null;r.then(c=>{c.sendMessage("CLICK",{matchedNode:b})})},!0);
 window.addEventListener("request_window_open",a=>{var b=a.detail;r.then(c=>{c.sendMessage("REQUEST_WINDOW_OPEN",{url:b.url,hostname:b.hostname,target:b.target,features:b.features,skipConfirmation:b.skipConfirmation})})});window.sandboxConsoleLog=(a,b)=>{r.then(c=>{c.sendMessage("CONSOLE_LOG",{logLevel:a,message:b})})};if(document.querySelector('meta[name="enable-onep-api"]')?.getAttribute("content")==="true"){let a=!1;window.claimPortReady=()=>{if(a)return null;a=!0;return u}}window.logError=x;}).call(this);</script><script>(function(){function f(b){return["https://www.google.com/maps/","https://maps.google.com/","https://www.youtube.com/watch?v=","https://www.youtube.com/v/","https://youtu.be/"].some(a=>b.startsWith(a))}window.open=(b,a,d)=>{var c,e=!1;if(b)try{if(c=b instanceof URL?b.toString():String(b)){var g=(new URL(c,window.location.href)).hostname;e=f(c)}}catch(h){}window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:c,hostname:g,target:a,features:d,h:e}}));return null};
-window.addEventListener("click",b=>{var a=b.target.closest("a");if(a&&a.getAttribute("target")==="_blank"&&a.hasAttribute("href")){a=a.getAttribute("href");let d,c=!1;try{d=(new URL(a,window.location.href)).hostname,c=f(a)}catch(e){}b.preventDefault();b.stopPropagation();window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:a,hostname:d,target:"_blank",h:c}}))}},!0);}).call(this);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="123_files/css2_9vWv.css" rel="stylesheet"><link href="123_files/icon_9vWv.css" rel="stylesheet"><title>Generated Interactive Widget</title><script type="module" crossorigin="">
+window.addEventListener("click",b=>{var a=b.target.closest("a");if(a&&a.getAttribute("target")==="_blank"&&a.hasAttribute("href")){a=a.getAttribute("href");let d,c=!1;try{d=(new URL(a,window.location.href)).hostname,c=f(a)}catch(e){}b.preventDefault();b.stopPropagation();window.dispatchEvent(new CustomEvent("request_window_open",{detail:{url:a,hostname:d,target:"_blank",h:c}}))}},!0);}).call(this);</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="123_files/css2_l6Uj.css" rel="stylesheet"><link href="123_files/icon_l6Uj.css" rel="stylesheet"><title>Generated Interactive Widget</title><script type="module" crossorigin="">
 import { jsx, jsxs } from 'https://widgetlibs.static.usercontent.goog/react/jsx-runtime-Dc9ViRTo.js';
-import React, { useState, useRef, useEffect } from 'https://widgetlibs.static.usercontent.goog/react-Dd1pKoqe.js';
+import React, { useState } from 'https://widgetlibs.static.usercontent.goog/react-Dd1pKoqe.js';
 import ReactDOM from 'https://widgetlibs.static.usercontent.goog/react-dom/client-BTuQ-l8_.js';
 import * as Slider from 'https://widgetlibs.static.usercontent.goog/@radix-ui/react-slider-DXk-CvUR.js';
 import * as ToggleGroup from 'https://widgetlibs.static.usercontent.goog/@radix-ui/react-toggle-group-SAzue8E6.js';
 import { ErrorBoundary } from 'https://widgetlibs.static.usercontent.goog/react-error-boundary-BY2GTZrN.js';
+import { User, Flame, Dumbbell, TrendingDown, Target, Info } from 'https://widgetlibs.static.usercontent.goog/lucide-react-5WMLBm_f.js';
 
 true              &&(function polyfill() {
 	const relList = document.createElement("link").relList;
@@ -63,34 +64,16 @@ true              &&(function polyfill() {
 }());
 
 function ErrorFallback({ error }) {
-  return /* @__PURE__ */ jsxs("div", { className: "p-5 text-error bg-card rounded-lg", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "p-5 text-error bg-card rounded-lg m-4", children: [
     /* @__PURE__ */ jsx("p", { className: "text-lg font-medium", children: "Sesuatu tidak kena:" }),
-    /* @__PURE__ */ jsx("pre", { className: "text-xs", children: error.message })
+    /* @__PURE__ */ jsx("pre", { className: "text-xs mt-2", children: error.message })
   ] });
 }
 function App() {
   const [jantina, setJantina] = useState("lelaki");
   const [berat, setBerat] = useState(75);
   const [aktiviti, setAktiviti] = useState("1.375");
-  const [intensiti, setIntensiti] = useState("300");
-  const containerRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ width: 600, height: 300 });
-  useEffect(() => {
-    if (!containerRef.current) return;
-    const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        const { width: width2 } = entry.contentRect;
-        const computedWidth = width2 || 600;
-        setDimensions({
-          width: computedWidth,
-          height: computedWidth * 0.5
-          // 2:1 aspect ratio
-        });
-      }
-    });
-    resizeObserver.observe(containerRef.current);
-    return () => resizeObserver.disconnect();
-  }, []);
+  const [intensiti, setIntensiti] = useState("400");
   const bmr = jantina === "lelaki" ? berat * 23 : berat * 20;
   const tdee = Math.round(bmr * parseFloat(aktiviti));
   const defisitKalori = parseInt(intensiti);
@@ -104,221 +87,258 @@ function App() {
   const finalTotalCaloriesCalculated = targetProteinGrams * 4 + targetCarbGrams * 4 + targetFatGrams * 9;
   const anggaranTurunLemakMinggu = defisitKalori * 7 / 7700;
   const totalMacrosGrams = targetProteinGrams + targetCarbGrams + targetFatGrams;
-  const proteinPercent = targetProteinGrams / totalMacrosGrams * 100;
-  const carbPercent = targetCarbGrams / totalMacrosGrams * 100;
-  const fatPercent = targetFatGrams / totalMacrosGrams * 100;
-  const { width, height } = dimensions;
-  return /* @__PURE__ */ jsx(ErrorBoundary, { FallbackComponent: ErrorFallback, children: /* @__PURE__ */ jsxs("div", { ref: containerRef, className: "w-full bg-card text-foreground font-sans selection:bg-primary/30 flex flex-col", children: [
-    /* @__PURE__ */ jsxs("div", { className: "p-4 bg-background border-b border-border flex flex-col gap-1.5 items-center justify-center", children: [
-      /* @__PURE__ */ jsx("span", { className: "text-xs font-medium text-muted-foreground uppercase tracking-wider", children: "Jantina (Gender)" }),
-      /* @__PURE__ */ jsxs(
-        ToggleGroup.Root,
-        {
-          type: "single",
-          value: jantina,
-          onValueChange: (val) => {
-            if (val) setJantina(val);
-          },
-          className: "rounded-full flex bg-muted h-9 p-1 max-w-[280px] w-full",
-          "aria-label": "Pilihan jantina",
-          children: [
-            /* @__PURE__ */ jsx(
-              ToggleGroup.Item,
-              {
-                value: "lelaki",
-                className: "flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white",
-                children: "Lelaki"
-              }
-            ),
-            /* @__PURE__ */ jsx(
-              ToggleGroup.Item,
-              {
-                value: "perempuan",
-                className: "flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white",
-                children: "Perempuan"
-              }
-            )
-          ]
-        }
-      )
-    ] }),
-    /* @__PURE__ */ jsxs("div", { className: "w-full relative border-b border-border overflow-hidden select-none", style: { height }, children: [
-      /* @__PURE__ */ jsxs(
-        "svg",
-        {
-          role: "img",
-          "aria-label": "Grafik pembahagian kalori dan makro untuk pemeliharaan otot semasa fasa penurunan lemak",
-          viewBox: `0 0 ${width} ${height}`,
-          className: "w-full h-full",
-          children: [
-            /* @__PURE__ */ jsx("line", { x1: width * 0.5, y1: 0, x2: width * 0.5, y2: height, stroke: "var(--color-border)", strokeWidth: "1", strokeDasharray: "4 4" }),
-            /* @__PURE__ */ jsxs("g", { transform: `translate(${width * 0.08}, ${height * 0.15})`, children: [
-              /* @__PURE__ */ jsx("text", { x: 0, y: 0, fontSize: 13, fontWeight: "500", fill: "var(--color-muted-foreground)", children: "Keperluan Harian (TDEE)" }),
-              /* @__PURE__ */ jsx("rect", { x: 0, y: 15, width: width * 0.34, height: 24, rx: 6, fill: "var(--color-muted)" }),
-              /* @__PURE__ */ jsx("rect", { x: 0, y: 15, width: targetKalori / tdee * (width * 0.34), height: 24, rx: 6, fill: "var(--color-primary)", opacity: "0.85" }),
-              tdee > targetKalori && /* @__PURE__ */ jsx(
-                "rect",
+  const proteinPercent = Math.max(10, Math.round(targetProteinGrams / totalMacrosGrams * 100));
+  const fatPercent = Math.max(10, Math.round(targetFatGrams / totalMacrosGrams * 100));
+  const carbPercent = Math.max(10, 100 - (proteinPercent + fatPercent));
+  return /* @__PURE__ */ jsx(ErrorBoundary, { FallbackComponent: ErrorFallback, children: /* @__PURE__ */ jsxs("div", { className: "w-full min-h-screen bg-background text-foreground font-sans antialiased flex flex-col justify-between selection:bg-primary/20", children: [
+    /* @__PURE__ */ jsxs("div", { className: "p-4 sm:p-6 lg:p-8 flex flex-col gap-6 max-w-7xl mx-auto w-full", children: [
+      /* @__PURE__ */ jsxs("div", { className: "bg-card rounded-2xl p-4 border border-border flex flex-col sm:flex-row gap-4 items-center justify-between shadow-xs", children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2.5", children: [
+          /* @__PURE__ */ jsx("div", { className: "p-2 bg-muted rounded-full text-primary", children: /* @__PURE__ */ jsx(User, { size: 18 }) }),
+          /* @__PURE__ */ jsxs("div", { children: [
+            /* @__PURE__ */ jsx("div", { className: "text-xs font-medium text-muted-foreground uppercase tracking-wider", children: "Profil Jantina" }),
+            /* @__PURE__ */ jsx("div", { className: "text-xs text-muted-foreground/80", children: "Mempengaruhi formula kadar metabolik asas (BMR)" })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs(
+          ToggleGroup.Root,
+          {
+            type: "single",
+            value: jantina,
+            onValueChange: (val) => {
+              if (val) setJantina(val);
+            },
+            className: "rounded-full flex bg-muted p-1 max-w-[280px] w-full border border-border",
+            "aria-label": "Pilihan jantina",
+            children: [
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
                 {
-                  x: targetKalori / tdee * (width * 0.34),
-                  y: 15,
-                  width: (1 - targetKalori / tdee) * (width * 0.34),
-                  height: 24,
-                  rx: 4,
-                  fill: "var(--color-success)",
-                  opacity: "0.35"
+                  value: "lelaki",
+                  className: "flex-1 text-center py-1.5 px-4 rounded-full text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs",
+                  children: "Lelaki"
                 }
               ),
-              /* @__PURE__ */ jsxs("text", { x: 10, y: 31, fontSize: 11, fontWeight: "500", fill: "white", children: [
-                targetKalori,
-                " kcal (Sasaran)"
+              /* @__PURE__ */ jsx(
+                ToggleGroup.Item,
+                {
+                  value: "perempuan",
+                  className: "flex-1 text-center py-1.5 px-4 rounded-full text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs",
+                  children: "Perempuan"
+                }
+              )
+            ]
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch", children: [
+        /* @__PURE__ */ jsxs("div", { className: "bg-card rounded-2xl p-5 border border-border flex flex-col justify-between shadow-xs", children: [
+          /* @__PURE__ */ jsxs("div", { children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between mb-4", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ jsx(Flame, { className: "text-error", size: 18 }),
+                /* @__PURE__ */ jsx("h2", { className: "text-sm font-medium text-foreground", children: "Analisis Tenaga & Defisit" })
               ] }),
-              tdee > targetKalori && /* @__PURE__ */ jsxs("text", { x: width * 0.34 - 5, y: 31, fontSize: 11, fontWeight: "500", fill: "var(--color-success)", textAnchor: "end", children: [
-                "-",
-                defisitKalori
-              ] }),
-              /* @__PURE__ */ jsxs("g", { transform: `translate(0, ${height * 0.3})`, children: [
-                /* @__PURE__ */ jsx("text", { x: 0, y: 0, fontSize: 12, fontWeight: "500", fill: "var(--color-muted-foreground)", children: "Zon Selamat Otot (Muscle Retention)" }),
-                /* @__PURE__ */ jsx("circle", { cx: defisitKalori > 600 ? width * 0.28 : width * 0.1, cy: 18, r: 6, fill: defisitKalori > 600 ? "var(--color-warning)" : "var(--color-success)" }),
-                /* @__PURE__ */ jsx("text", { x: (defisitKalori > 600 ? width * 0.28 : width * 0.1) + 12, y: 22, fontSize: 11, fill: "var(--color-foreground)", children: defisitKalori > 600 ? "Defisit tinggi: Risiko otot susut" : "Defisit optimum untuk pelihara otot" })
+              /* @__PURE__ */ jsxs("span", { className: "text-[11px] bg-muted text-muted-foreground px-2 py-0.5 rounded-full", children: [
+                "TDEE Semasa: ",
+                tdee,
+                " kcal"
               ] })
             ] }),
-            /* @__PURE__ */ jsxs("g", { transform: `translate(${width * 0.56}, ${height * 0.15})`, children: [
-              /* @__PURE__ */ jsx("text", { x: 0, y: 0, fontSize: 13, fontWeight: "500", fill: "var(--color-muted-foreground)", children: "Agihan Makro (Fokus Kekal Otot)" }),
-              /* @__PURE__ */ jsxs("g", { transform: "translate(0, 15)", children: [
-                /* @__PURE__ */ jsx("rect", { x: 0, y: 0, width: proteinPercent / 100 * (width * 0.36), height: 24, rx: 4, fill: "#2ec4b6" }),
-                /* @__PURE__ */ jsx("rect", { x: proteinPercent / 100 * (width * 0.36), y: 0, width: carbPercent / 100 * (width * 0.36), height: 24, rx: 4, fill: "#ff9f1c" }),
-                /* @__PURE__ */ jsx("rect", { x: (proteinPercent + carbPercent) / 100 * (width * 0.36), y: 0, width: fatPercent / 100 * (width * 0.36), height: 24, rx: 4, fill: "#e71d36" })
+            /* @__PURE__ */ jsxs("div", { className: "my-5", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex justify-between text-xs mb-1.5 text-muted-foreground", children: [
+                /* @__PURE__ */ jsx("span", { children: "Pelan Pemakanan" }),
+                /* @__PURE__ */ jsxs("span", { className: "font-medium text-foreground", children: [
+                  finalTotalCaloriesCalculated,
+                  " / ",
+                  tdee,
+                  " kcal"
+                ] })
               ] }),
-              /* @__PURE__ */ jsxs("g", { transform: `translate(0, ${height * 0.22})`, children: [
-                /* @__PURE__ */ jsx("circle", { cx: 6, cy: 0, r: 5, fill: "#2ec4b6" }),
-                /* @__PURE__ */ jsxs("text", { x: 16, y: 4, fontSize: 11, fontWeight: "500", fill: "var(--color-foreground)", children: [
-                  "Protein: ",
-                  targetProteinGrams,
-                  "g (Tinggi untuk otot)"
+              /* @__PURE__ */ jsxs("div", { className: "w-full h-7 bg-muted rounded-lg overflow-hidden relative flex border border-border/40", children: [
+                /* @__PURE__ */ jsx(
+                  "div",
+                  {
+                    className: "h-full bg-primary flex items-center pl-3 transition-all duration-300",
+                    style: { width: `${Math.min(100, finalTotalCaloriesCalculated / tdee * 100)}%` },
+                    children: /* @__PURE__ */ jsxs("span", { className: "text-[11px] text-white font-medium whitespace-nowrap", children: [
+                      "Sasaran: ",
+                      finalTotalCaloriesCalculated,
+                      " kcal"
+                    ] })
+                  }
+                ),
+                defisitKalori > 0 && /* @__PURE__ */ jsx(
+                  "div",
+                  {
+                    className: "h-full bg-success/20 flex items-center justify-end pr-3 transition-all duration-300 flex-1",
+                    title: "Zon Defisit Kalori",
+                    children: /* @__PURE__ */ jsxs("span", { className: "text-[11px] text-success font-medium whitespace-nowrap", children: [
+                      "-",
+                      defisitKalori,
+                      " kcal"
+                    ] })
+                  }
+                )
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "p-3 bg-background rounded-xl border border-border/60 flex gap-3 items-start", children: [
+              /* @__PURE__ */ jsx("div", { className: `p-1.5 rounded-full mt-0.5 shrink-0 ${defisitKalori > 600 ? "bg-warning/10 text-warning" : "bg-success/10 text-success"}`, children: /* @__PURE__ */ jsx(Dumbbell, { size: 15 }) }),
+              /* @__PURE__ */ jsxs("div", { className: "text-xs", children: [
+                /* @__PURE__ */ jsx("span", { className: "font-medium text-foreground block", children: defisitKalori > 600 ? "Amaran: Defisit Terlalu Agresif" : "Status: Defisit Optimum Kekal Otot" }),
+                /* @__PURE__ */ jsx("p", { className: "text-muted-foreground mt-0.5 leading-relaxed", children: defisitKalori > 600 ? "Kadar defisit melebihi 600 kcal berisiko mengurangkan jisim otot walaupun pengambilan protein tinggi." : "Kadar defisit ini sesuai untuk membakar lemak dengan cekap sambil memelihara tisu otot berharga." })
+              ] })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "mt-5 pt-4 border-t border-border flex items-center justify-between gap-4", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
+              /* @__PURE__ */ jsx(TrendingDown, { className: "text-success", size: 16 }),
+              /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground", children: "Anggaran pengurangan lemak" })
+            ] }),
+            /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums bg-background px-3 py-1 rounded-full border border-border", children: [
+              "~",
+              anggaranTurunLemakMinggu.toFixed(2),
+              " kg / minggu"
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "bg-card rounded-2xl p-5 border border-border flex flex-col justify-between shadow-xs", children: [
+          /* @__PURE__ */ jsxs("div", { children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between mb-4", children: [
+              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ jsx(Target, { className: "text-primary", size: 18 }),
+                /* @__PURE__ */ jsx("h2", { className: "text-sm font-medium text-foreground", children: "Agihan Makro Nutrisi (Kekal Otot)" })
+              ] }),
+              /* @__PURE__ */ jsx("span", { className: "text-[11px] bg-success/10 text-success font-medium px-2 py-0.5 rounded-full", children: "Kadar Protein Tinggi" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "w-full h-4 bg-muted rounded-full overflow-hidden flex my-4", children: [
+              /* @__PURE__ */ jsx("div", { style: { width: `${proteinPercent}%` }, className: "h-full bg-[#2ec4b6]", title: "Protein" }),
+              /* @__PURE__ */ jsx("div", { style: { width: `${carbPercent}%` }, className: "h-full bg-[#ff9f1c]", title: "Karbohidrat" }),
+              /* @__PURE__ */ jsx("div", { style: { width: `${fatPercent}%` }, className: "h-full bg-[#e71d36]", title: "Lemak" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4", children: [
+              /* @__PURE__ */ jsxs("div", { className: "p-3 bg-background rounded-xl border border-border/60", children: [
+                /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
+                  /* @__PURE__ */ jsx("div", { className: "w-2.5 h-2.5 rounded-full bg-[#2ec4b6]" }),
+                  /* @__PURE__ */ jsx("span", { className: "text-xs font-medium text-muted-foreground", children: "Protein" })
                 ] }),
-                /* @__PURE__ */ jsx("circle", { cx: 6, cy: 20, r: 5, fill: "#ff9f1c" }),
-                /* @__PURE__ */ jsxs("text", { x: 16, y: 24, fontSize: 11, fill: "var(--color-foreground)", children: [
-                  "Karbohidrat: ",
+                /* @__PURE__ */ jsxs("div", { className: "text-sm font-bold text-foreground", children: [
+                  targetProteinGrams,
+                  "g"
+                ] }),
+                /* @__PURE__ */ jsxs("div", { className: "text-[10px] text-muted-foreground mt-0.5", children: [
+                  proteinPercent,
+                  "% • ",
+                  proteinCalories,
+                  " kcal"
+                ] })
+              ] }),
+              /* @__PURE__ */ jsxs("div", { className: "p-3 bg-background rounded-xl border border-border/60", children: [
+                /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
+                  /* @__PURE__ */ jsx("div", { className: "w-2.5 h-2.5 rounded-full bg-[#ff9f1c]" }),
+                  /* @__PURE__ */ jsx("span", { className: "text-xs font-medium text-muted-foreground", children: "Karbohidrat" })
+                ] }),
+                /* @__PURE__ */ jsxs("div", { className: "text-sm font-bold text-foreground", children: [
                   targetCarbGrams,
                   "g"
                 ] }),
-                /* @__PURE__ */ jsx("circle", { cx: 6, cy: 40, r: 5, fill: "#e71d36" }),
-                /* @__PURE__ */ jsxs("text", { x: 16, y: 44, fontSize: 11, fill: "var(--color-foreground)", children: [
-                  "Lemak: ",
+                /* @__PURE__ */ jsxs("div", { className: "text-[10px] text-muted-foreground mt-0.5", children: [
+                  carbPercent,
+                  "% • ",
+                  targetCarbGrams * 4,
+                  " kcal"
+                ] })
+              ] }),
+              /* @__PURE__ */ jsxs("div", { className: "p-3 bg-background rounded-xl border border-border/60", children: [
+                /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 mb-1", children: [
+                  /* @__PURE__ */ jsx("div", { className: "w-2.5 h-2.5 rounded-full bg-[#e71d36]" }),
+                  /* @__PURE__ */ jsx("span", { className: "text-xs font-medium text-muted-foreground", children: "Lemak" })
+                ] }),
+                /* @__PURE__ */ jsxs("div", { className: "text-sm font-bold text-foreground", children: [
                   targetFatGrams,
                   "g"
+                ] }),
+                /* @__PURE__ */ jsxs("div", { className: "text-[10px] text-muted-foreground mt-0.5", children: [
+                  fatPercent,
+                  "% • ",
+                  fatCalories,
+                  " kcal"
                 ] })
               ] })
-            ] }),
-            /* @__PURE__ */ jsx(
-              "path",
-              {
-                d: `M ${width * 0.05} ${height * 0.82} Q ${width * 0.5} ${height * 0.78} ${width * 0.95} ${height * 0.82}`,
-                fill: "none",
-                stroke: "var(--color-border)",
-                strokeWidth: "1.5",
-                strokeDasharray: "4 4"
-              }
-            )
-          ]
-        }
-      ),
-      /* @__PURE__ */ jsxs("div", { className: "absolute left-[8%] bottom-[24%] bg-card/60 text-muted-foreground px-2 py-0.5 rounded-full text-xs font-medium pointer-events-none", children: [
-        "TDEE Asal: ",
-        tdee,
-        " kcal"
-      ] }),
-      /* @__PURE__ */ jsx("div", { className: "absolute right-[8%] bottom-[24%] bg-card/60 text-success rounded-full px-2 py-0.5 text-xs font-medium pointer-events-none", children: "Fokus: Protein 2.2g/kg" })
-    ] }),
-    /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0", children: [
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
-        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Sasaran Kalori" }),
-        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
-          finalTotalCaloriesCalculated,
-          " kcal/hari"
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
-        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Target Protein" }),
-        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-success tabular-nums truncate text-center w-full", children: [
-          targetProteinGrams,
-          " g/hari"
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col items-center gap-0.5 min-w-0 flex-1", children: [
-        /* @__PURE__ */ jsx("span", { className: "text-xs text-muted-foreground font-medium truncate text-center w-full", children: "Kadar Turun Lemak" }),
-        /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium text-foreground tabular-nums truncate text-center w-full", children: [
-          "~",
-          anggaranTurunLemakMinggu.toFixed(2),
-          " kg/minggu"
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "mt-4 p-2.5 bg-muted/50 rounded-lg text-[11px] text-muted-foreground flex gap-1.5 items-center", children: [
+            /* @__PURE__ */ jsx(Info, { size: 14, className: "shrink-0 text-primary" }),
+            /* @__PURE__ */ jsx("span", { children: "Sasaran protein dikira pada formula optimum 2.2g bagi setiap kg berat badan anda." })
+          ] })
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ jsxs("div", { className: "p-5 flex flex-col gap-4", children: [
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Berat Badan Semasa" }),
-        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
-          /* @__PURE__ */ jsxs(
-            Slider.Root,
-            {
-              className: "relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer",
-              value: [berat],
-              onValueChange: (val) => setBerat(val[0]),
-              min: 40,
-              max: 150,
-              step: 1,
-              "aria-label": "Slaid berat badan semasa",
-              children: [
-                /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
-                /* @__PURE__ */ jsx(
-                  Slider.Thumb,
-                  {
-                    className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11",
-                    "aria-label": "Penunjuk berat"
-                  }
-                )
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[7ch]", children: [
+    /* @__PURE__ */ jsx("div", { className: "p-5 bg-card border-t border-border mt-auto w-full", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto flex flex-col gap-5", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between text-xs font-medium", children: [
+          /* @__PURE__ */ jsx("label", { className: "text-muted-foreground", children: "Berat Badan Semasa" }),
+          /* @__PURE__ */ jsxs("span", { className: "text-foreground font-bold tabular-nums bg-muted px-2 py-0.5 rounded-md", children: [
             berat,
             " kg"
           ] })
-        ] })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "flex items-center gap-3 w-full", children: /* @__PURE__ */ jsxs(
+          Slider.Root,
+          {
+            className: "relative flex items-center select-none touch-none w-full h-9 py-2 cursor-pointer",
+            value: [berat],
+            onValueChange: (val) => setBerat(val[0]),
+            min: 40,
+            max: 150,
+            step: 1,
+            "aria-label": "Slaid berat badan semasa",
+            children: [
+              /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1.5 grow bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+              /* @__PURE__ */ jsx(
+                Slider.Thumb,
+                {
+                  className: "block w-4 h-4 rounded-full bg-primary border-none shadow-sm focus:outline-none transition-transform active:scale-110",
+                  "aria-label": "Penunjuk berat"
+                }
+              )
+            ]
+          }
+        ) })
       ] }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
-        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Intensiti Defisit Kalori" }),
-        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 w-full", children: [
-          /* @__PURE__ */ jsxs(
-            Slider.Root,
-            {
-              className: "relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer",
-              value: [defisitKalori],
-              onValueChange: (val) => setIntensiti(val[0].toString()),
-              min: 200,
-              max: 900,
-              step: 50,
-              "aria-label": "Slaid intensiti defisit kalori",
-              children: [
-                /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1 grow !bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
-                /* @__PURE__ */ jsx(
-                  Slider.Thumb,
-                  {
-                    className: "block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11",
-                    "aria-label": "Penunjuk defisit"
-                  }
-                )
-              ]
-            }
-          ),
-          /* @__PURE__ */ jsxs("span", { className: "text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[9ch]", children: [
+      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
+        /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between text-xs font-medium", children: [
+          /* @__PURE__ */ jsx("label", { className: "text-muted-foreground", children: "Intensiti Defisit Kalori" }),
+          /* @__PURE__ */ jsxs("span", { className: "text-foreground font-bold tabular-nums bg-muted px-2 py-0.5 rounded-md", children: [
             defisitKalori,
             " kcal"
           ] })
-        ] })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "flex items-center gap-3 w-full", children: /* @__PURE__ */ jsxs(
+          Slider.Root,
+          {
+            className: "relative flex items-center select-none touch-none w-full h-9 py-2 cursor-pointer",
+            value: [defisitKalori],
+            onValueChange: (val) => setIntensiti(val[0].toString()),
+            min: 100,
+            max: 1e3,
+            step: 50,
+            "aria-label": "Slaid intensiti defisit kalori",
+            children: [
+              /* @__PURE__ */ jsx(Slider.Track, { className: "relative h-1.5 grow bg-muted rounded-full", children: /* @__PURE__ */ jsx(Slider.Range, { className: "absolute h-full bg-primary rounded-full" }) }),
+              /* @__PURE__ */ jsx(
+                Slider.Thumb,
+                {
+                  className: "block w-4 h-4 rounded-full bg-primary border-none shadow-sm focus:outline-none transition-transform active:scale-110",
+                  "aria-label": "Penunjuk defisit"
+                }
+              )
+            ]
+          }
+        ) })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1.5", children: [
-        /* @__PURE__ */ jsx("label", { className: "text-sm font-medium text-muted-foreground", children: "Tahap Aktiviti Harian" }),
+        /* @__PURE__ */ jsx("label", { className: "text-xs font-medium text-muted-foreground", children: "Tahap Aktiviti Harian" }),
         /* @__PURE__ */ jsxs(
           ToggleGroup.Root,
           {
@@ -327,22 +347,22 @@ function App() {
             onValueChange: (val) => {
               if (val) setAktiviti(val);
             },
-            className: "rounded-full flex w-full bg-muted h-9 p-1",
+            className: "rounded-xl flex w-full bg-muted p-1 border border-border/40 overflow-hidden",
             "aria-label": "Pilihan tahap aktiviti harian",
             children: [
               /* @__PURE__ */ jsx(
                 ToggleGroup.Item,
                 {
                   value: "1.2",
-                  className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
-                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Sikit (Sedentary)" })
+                  className: "flex-1 min-w-0 text-center py-2 px-1 rounded-lg text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Sedentary" })
                 }
               ),
               /* @__PURE__ */ jsx(
                 ToggleGroup.Item,
                 {
                   value: "1.375",
-                  className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
+                  className: "flex-1 min-w-0 text-center py-2 px-1 rounded-lg text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs",
                   children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Sederhana" })
                 }
               ),
@@ -350,15 +370,15 @@ function App() {
                 ToggleGroup.Item,
                 {
                   value: "1.55",
-                  className: "flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white",
-                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Aktif (Sukan)" })
+                  className: "flex-1 min-w-0 text-center py-2 px-1 rounded-lg text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs",
+                  children: /* @__PURE__ */ jsx("span", { className: "truncate block w-full", children: "Aktif" })
                 }
               )
             ]
           }
         )
       ] })
-    ] })
+    ] }) })
   ] }) });
 }
 
@@ -377,6 +397,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       --tw-skew-x: initial;
       --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-leading: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
       --tw-ordinal: initial;
@@ -399,10 +420,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
+      --tw-duration: initial;
       --tw-content: "";
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
     }
   }
 }
@@ -413,6 +438,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-white: #fff;
     --spacing: .25rem;
+    --container-3xl: 48rem;
+    --container-7xl: 80rem;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1 / .75);
     --text-sm: .875rem;
@@ -420,8 +447,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-medium: 500;
+    --font-weight-bold: 700;
     --tracking-wider: .05em;
+    --leading-relaxed: 1.625;
+    --radius-md: .375rem;
     --radius-lg: .5rem;
+    --radius-xl: .75rem;
+    --radius-2xl: 1rem;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.31, .94, .34, 1);
     --default-font-family: var(--font-sans);
@@ -722,8 +754,56 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     left: 8%;
   }
 
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
+
+  .mx-auto {
+    margin-inline: auto;
+  }
+
   .-my-3 {
     margin-block: calc(var(--spacing) * -3);
+  }
+
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
+
+  .my-5 {
+    margin-block: calc(var(--spacing) * 5);
+  }
+
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * .5);
+  }
+
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
+
+  .mt-auto {
+    margin-top: auto;
+  }
+
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
   }
 
   .block {
@@ -734,12 +814,32 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     display: flex;
   }
 
+  .grid {
+    display: grid;
+  }
+
   .table {
     display: table;
   }
 
   .h-1 {
     height: calc(var(--spacing) * 1);
+  }
+
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+
+  .h-2\.5 {
+    height: calc(var(--spacing) * 2.5);
+  }
+
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+
+  .h-7 {
+    height: calc(var(--spacing) * 7);
   }
 
   .h-9 {
@@ -758,6 +858,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     height: 100%;
   }
 
+  .min-h-screen {
+    min-height: 100vh;
+  }
+
+  .w-2\.5 {
+    width: calc(var(--spacing) * 2.5);
+  }
+
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+
   .w-\[7ch\] {
     width: 7ch;
   }
@@ -772,6 +884,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
   .w-full {
     width: 100%;
+  }
+
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+
+  .max-w-7xl {
+    max-width: var(--container-7xl);
   }
 
   .max-w-\[280px\] {
@@ -818,6 +938,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     resize: both;
   }
 
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .flex-col {
     flex-direction: column;
   }
@@ -826,8 +950,24 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     align-items: center;
   }
 
+  .items-start {
+    align-items: flex-start;
+  }
+
+  .items-stretch {
+    align-items: stretch;
+  }
+
+  .justify-between {
+    justify-content: space-between;
+  }
+
   .justify-center {
     justify-content: center;
+  }
+
+  .justify-end {
+    justify-content: flex-end;
   }
 
   .gap-0 {
@@ -846,12 +986,28 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     gap: calc(var(--spacing) * 1.5);
   }
 
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .gap-2\.5 {
+    gap: calc(var(--spacing) * 2.5);
+  }
+
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
 
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
 
   .gap-x-4 {
@@ -872,6 +1028,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     overflow: visible;
   }
 
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+
   .rounded-full {
     border-radius: 3.40282e38px;
   }
@@ -880,9 +1040,22 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     border-radius: var(--radius-lg);
   }
 
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
+  }
+
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
   }
 
   .border-b {
@@ -895,12 +1068,40 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     border-style: none;
   }
 
-  .border-border {
+  .border-border, .border-border\/40 {
     border-color: var(--color-border);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-border\/40 {
+      border-color: color-mix(in oklab, var(--color-border) 40%, transparent);
+    }
+  }
+
+  .border-border\/60 {
+    border-color: var(--color-border);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-border\/60 {
+      border-color: color-mix(in oklab, var(--color-border) 60%, transparent);
+    }
   }
 
   .\!bg-muted {
     background-color: var(--color-muted) !important;
+  }
+
+  .bg-\[\#2ec4b6\] {
+    background-color: #2ec4b6;
+  }
+
+  .bg-\[\#e71d36\] {
+    background-color: #e71d36;
+  }
+
+  .bg-\[\#ff9f1c\] {
+    background-color: #ff9f1c;
   }
 
   .bg-background {
@@ -917,16 +1118,68 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     }
   }
 
-  .bg-muted {
+  .bg-muted, .bg-muted\/50 {
     background-color: var(--color-muted);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-muted\/50 {
+      background-color: color-mix(in oklab, var(--color-muted) 50%, transparent);
+    }
   }
 
   .bg-primary {
     background-color: var(--color-primary);
   }
 
+  .bg-success\/10 {
+    background-color: var(--color-success);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-success\/10 {
+      background-color: color-mix(in oklab, var(--color-success) 10%, transparent);
+    }
+  }
+
+  .bg-success\/20 {
+    background-color: var(--color-success);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-success\/20 {
+      background-color: color-mix(in oklab, var(--color-success) 20%, transparent);
+    }
+  }
+
+  .bg-warning\/10 {
+    background-color: var(--color-warning);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-warning\/10 {
+      background-color: color-mix(in oklab, var(--color-warning) 10%, transparent);
+    }
+  }
+
   .p-1 {
     padding: calc(var(--spacing) * 1);
+  }
+
+  .p-1\.5 {
+    padding: calc(var(--spacing) * 1.5);
+  }
+
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
+  }
+
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
   }
 
   .p-4 {
@@ -937,8 +1190,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     padding: calc(var(--spacing) * 5);
   }
 
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
+
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
   }
 
   .px-4 {
@@ -957,8 +1218,32 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     padding-block: calc(var(--spacing) * .5);
   }
 
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
+  }
+
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+
+  .pr-3 {
+    padding-right: calc(var(--spacing) * 3);
+  }
+
+  .pl-3 {
+    padding-left: calc(var(--spacing) * 3);
   }
 
   .text-center {
@@ -988,6 +1273,24 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
 
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -1010,12 +1313,30 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     color: var(--color-foreground);
   }
 
-  .text-muted-foreground {
+  .text-muted-foreground, .text-muted-foreground\/80 {
     color: var(--color-muted-foreground);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .text-muted-foreground\/80 {
+      color: color-mix(in oklab, var(--color-muted-foreground) 80%, transparent);
+    }
+  }
+
+  .text-primary {
+    color: var(--color-primary);
   }
 
   .text-success {
     color: var(--color-success);
+  }
+
+  .text-warning {
+    color: var(--color-warning);
+  }
+
+  .text-white {
+    color: var(--color-white);
   }
 
   .uppercase {
@@ -1031,8 +1352,23 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     text-decoration-line: underline;
   }
 
+  .antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   .shadow-none {
     --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow-xs {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #0000000d);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
@@ -1041,15 +1377,52 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     outline-width: 1px;
   }
 
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
   .transition-colors {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
 
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .duration-300 {
+    --tw-duration: .3s;
+    transition-duration: .3s;
+  }
+
   .select-none {
     -webkit-user-select: none;
     user-select: none;
+  }
+
+  .selection\:bg-primary\/20 ::selection {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .selection\:bg-primary\/20 ::selection {
+      background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+    }
+  }
+
+  .selection\:bg-primary\/20::selection {
+    background-color: var(--color-primary);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .selection\:bg-primary\/20::selection {
+      background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+    }
   }
 
   .selection\:bg-primary\/30 ::selection {
@@ -1124,6 +1497,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     outline-style: none;
   }
 
+  .active\:scale-110:active {
+    --tw-scale-x: 110%;
+    --tw-scale-y: 110%;
+    --tw-scale-z: 110%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+
   .data-\[state\=on\]\:bg-primary[data-state="on"] {
     background-color: var(--color-primary);
   }
@@ -1132,15 +1512,42 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     color: var(--color-white);
   }
 
+  .data-\[state\=on\]\:shadow-xs[data-state="on"] {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, #0000000d);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
   @media (min-width: 40rem) {
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sm\:flex-row {
+      flex-direction: row;
+    }
+
     .sm\:gap-x-8 {
       column-gap: calc(var(--spacing) * 8);
+    }
+
+    .sm\:p-6 {
+      padding: calc(var(--spacing) * 6);
     }
   }
 
   @media (min-width: 48rem) {
     .md\:gap-x-12 {
       column-gap: calc(var(--spacing) * 12);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .lg\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lg\:p-8 {
+      padding: calc(var(--spacing) * 8);
     }
   }
 }
@@ -1220,6 +1627,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+
+@property --tw-leading {
+  syntax: "*";
+  inherits: false
 }
 
 @property --tw-font-weight {
@@ -1342,6 +1754,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   initial-value: solid;
 }
 
+@property --tw-duration {
+  syntax: "*";
+  inherits: false
+}
+
 @property --tw-content {
   syntax: "*";
   inherits: false;
@@ -1366,7 +1783,25 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   initial-value: 0;
 }
 
-</style><link href="123_files/m=capy_widget_colors_9vWv.css" rel="stylesheet"></head>
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+
+</style><link href="123_files/m=capy_widget_colors_l6Uj.css" rel="stylesheet"></head>
     <body class="">
   
-  <div id="root"><div class="w-full bg-card text-foreground font-sans selection:bg-primary/30 flex flex-col"><div class="p-4 bg-background border-b border-border flex flex-col gap-1.5 items-center justify-center"><span class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Jantina (Gender)</span><div role="group" dir="ltr" class="rounded-full flex bg-muted h-9 p-1 max-w-[280px] w-full" aria-label="Pilihan jantina" tabindex="0" style="outline: none;"><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item="">Lelaki</button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 text-center px-4 rounded-full text-sm font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item="">Perempuan</button></div></div><div class="w-full relative border-b border-border overflow-hidden select-none" style="height: 326.25px;"><svg role="img" aria-label="Grafik pembahagian kalori dan makro untuk pemeliharaan otot semasa fasa penurunan lemak" viewBox="0 0 652.5 326.25" class="w-full h-full"><line x1="326.25" y1="0" x2="326.25" y2="326.25" stroke="var(--color-border)" stroke-width="1" stroke-dasharray="4 4"></line><g transform="translate(52.2, 48.9375)"><text x="0" y="0" font-size="13" font-weight="500" fill="var(--color-muted-foreground)">Keperluan Harian (TDEE)</text><rect x="0" y="15" width="221.85000000000002" height="24" rx="6" fill="var(--color-muted)"></rect><rect x="0" y="15" width="193.7913996627319" height="24" rx="6" fill="var(--color-primary)" opacity="0.85"></rect><rect x="193.7913996627319" y="15" width="28.058600337268132" height="24" rx="4" fill="var(--color-success)" opacity="0.35"></rect><text x="10" y="31" font-size="11" font-weight="500" fill="white">2072 kcal (Sasaran)</text><text x="216.85000000000002" y="31" font-size="11" font-weight="500" fill="var(--color-success)" text-anchor="end">-300</text><g transform="translate(0, 97.875)"><text x="0" y="0" font-size="12" font-weight="500" fill="var(--color-muted-foreground)">Zon Selamat Otot (Muscle Retention)</text><circle cx="65.25" cy="18" r="6" fill="var(--color-success)"></circle><text x="77.25" y="22" font-size="11" fill="var(--color-foreground)">Defisit optimum untuk pelihara otot</text></g></g><g transform="translate(365.40000000000003, 48.9375)"><text x="0" y="0" font-size="13" font-weight="500" fill="var(--color-muted-foreground)">Agihan Makro (Fokus Kekal Otot)</text><g transform="translate(0, 15)"><rect x="0" y="0" width="89.51154734411087" height="24" rx="4" fill="#2ec4b6"></rect><rect x="89.51154734411087" y="0" width="108.4988452655889" height="24" rx="4" fill="#ff9f1c"></rect><rect x="198.01039260969978" y="0" width="36.88960739030023" height="24" rx="4" fill="#e71d36"></rect></g><g transform="translate(0, 71.775)"><circle cx="6" cy="0" r="5" fill="#2ec4b6"></circle><text x="16" y="4" font-size="11" font-weight="500" fill="var(--color-foreground)">Protein: 165g (Tinggi untuk otot)</text><circle cx="6" cy="20" r="5" fill="#ff9f1c"></circle><text x="16" y="24" font-size="11" fill="var(--color-foreground)">Karbohidrat: 200g</text><circle cx="6" cy="40" r="5" fill="#e71d36"></circle><text x="16" y="44" font-size="11" fill="var(--color-foreground)">Lemak: 68g</text></g></g><path d="M 32.625 267.525 Q 326.25 254.47500000000002 619.875 267.525" fill="none" stroke="var(--color-border)" stroke-width="1.5" stroke-dasharray="4 4"></path></svg><div class="absolute left-[8%] bottom-[24%] bg-card/60 text-muted-foreground px-2 py-0.5 rounded-full text-xs font-medium pointer-events-none">TDEE Asal: 2372 kcal</div><div class="absolute right-[8%] bottom-[24%] bg-card/60 text-success rounded-full px-2 py-0.5 text-xs font-medium pointer-events-none">Fokus: Protein 2.2g/kg</div></div><div class="flex items-center justify-center gap-x-4 sm:gap-x-8 md:gap-x-12 border-b border-border px-5 py-3 shrink-0"><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Sasaran Kalori</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">2072 kcal/hari</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Target Protein</span><span class="text-sm font-medium text-success tabular-nums truncate text-center w-full">165 g/hari</span></div><div class="flex flex-col items-center gap-0.5 min-w-0 flex-1"><span class="text-xs text-muted-foreground font-medium truncate text-center w-full">Kadar Turun Lemak</span><span class="text-sm font-medium text-foreground tabular-nums truncate text-center w-full">~0.27 kg/minggu</span></div></div><div class="p-5 flex flex-col gap-4"><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Berat Badan Semasa</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer" aria-label="Slaid berat badan semasa" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 68.1818%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(31.8182% + 3.27273px);"><span role="slider" aria-label="Penunjuk berat" aria-valuemin="40" aria-valuemax="150" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="75"></span></span></span><span class="text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[7ch]">75 kg</span></div></div><div class="flex flex-col gap-1"><label class="text-sm font-medium text-muted-foreground">Intensiti Defisit Kalori</label><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-11 py-3 -my-3 grow cursor-pointer" aria-label="Slaid intensiti defisit kalori" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1 grow !bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 85.7143%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(14.2857% + 6.42857px);"><span role="slider" aria-label="Penunjuk defisit" aria-valuemin="200" aria-valuemax="900" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-[18px] h-[18px] rounded-full bg-primary border-none shadow-none focus:outline-none relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:w-11 after:h-11" style="" data-radix-collection-item="" aria-valuenow="300"></span></span></span><span class="text-sm font-medium tabular-nums text-right shrink-0 whitespace-nowrap w-[9ch]">300 kcal</span></div></div><div class="flex flex-col gap-1.5"><label class="text-sm font-medium text-muted-foreground">Tahap Aktiviti Harian</label><div role="group" dir="ltr" class="rounded-full flex w-full bg-muted h-9 p-1" aria-label="Pilihan tahap aktiviti harian" tabindex="0" style="outline: none;"><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Sikit (Sedentary)</span></button><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Sederhana</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center px-2 rounded-full text-sm font-medium transition-colors cursor-pointer relative after:absolute after:-inset-y-2 after:inset-x-0 overflow-visible data-[state=on]:bg-primary data-[state=on]:text-white" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Aktif (Sukan)</span></button></div></div></div></div></div></body></html>
+  <div id="root"><div class="w-full min-h-screen bg-background text-foreground font-sans antialiased flex flex-col justify-between selection:bg-primary/20"><div class="p-4 sm:p-6 lg:p-8 flex flex-col gap-6 max-w-7xl mx-auto w-full"><div class="bg-card rounded-2xl p-4 border border-border flex flex-col sm:flex-row gap-4 items-center justify-between shadow-xs"><div class="flex items-center gap-2.5"><div class="p-2 bg-muted rounded-full text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div><div class="text-xs font-medium text-muted-foreground uppercase tracking-wider">Profil Jantina</div><div class="text-xs text-muted-foreground/80">Mempengaruhi formula kadar metabolik asas (BMR)</div></div></div><div role="group" dir="ltr" class="rounded-full flex bg-muted p-1 max-w-[280px] w-full border border-border" aria-label="Pilihan jantina" tabindex="0" style="outline: none;"><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 text-center py-1.5 px-4 rounded-full text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs" tabindex="-1" data-radix-collection-item="">Lelaki</button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 text-center py-1.5 px-4 rounded-full text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs" tabindex="-1" data-radix-collection-item="">Perempuan</button></div></div><div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch"><div class="bg-card rounded-2xl p-5 border border-border flex flex-col justify-between shadow-xs"><div><div class="flex items-center justify-between mb-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-error"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg><h2 class="text-sm font-medium text-foreground">Analisis Tenaga &amp; Defisit</h2></div><span class="text-[11px] bg-muted text-muted-foreground px-2 py-0.5 rounded-full">TDEE Semasa: 2372 kcal</span></div><div class="my-5"><div class="flex justify-between text-xs mb-1.5 text-muted-foreground"><span>Pelan Pemakanan</span><span class="font-medium text-foreground">1972 / 2372 kcal</span></div><div class="w-full h-7 bg-muted rounded-lg overflow-hidden relative flex border border-border/40"><div class="h-full bg-primary flex items-center pl-3 transition-all duration-300" style="width: 83.1366%;"><span class="text-[11px] text-white font-medium whitespace-nowrap">Sasaran: 1972 kcal</span></div><div class="h-full bg-success/20 flex items-center justify-end pr-3 transition-all duration-300 flex-1" title="Zon Defisit Kalori"><span class="text-[11px] text-success font-medium whitespace-nowrap">-400 kcal</span></div></div></div><div class="p-3 bg-background rounded-xl border border-border/60 flex gap-3 items-start"><div class="p-1.5 rounded-full mt-0.5 shrink-0 bg-success/10 text-success"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dumbbell"><path d="m6.5 6.5 11 11"></path><path d="m21 21-1-1"></path><path d="m3 3 1 1"></path><path d="m18 22 4-4"></path><path d="m2 6 4-4"></path><path d="m3 10 7-7"></path><path d="m14 21 7-7"></path></svg></div><div class="text-xs"><span class="font-medium text-foreground block">Status: Defisit Optimum Kekal Otot</span><p class="text-muted-foreground mt-0.5 leading-relaxed">Kadar defisit ini sesuai untuk membakar lemak dengan cekap sambil memelihara tisu otot berharga.</p></div></div></div><div class="mt-5 pt-4 border-t border-border flex items-center justify-between gap-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-success"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"></polyline><polyline points="16 17 22 17 22 11"></polyline></svg><span class="text-xs text-muted-foreground">Anggaran pengurangan lemak</span></div><span class="text-sm font-medium text-foreground tabular-nums bg-background px-3 py-1 rounded-full border border-border">~0.36 kg / minggu</span></div></div><div class="bg-card rounded-2xl p-5 border border-border flex flex-col justify-between shadow-xs"><div><div class="flex items-center justify-between mb-4"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg><h2 class="text-sm font-medium text-foreground">Agihan Makro Nutrisi (Kekal Otot)</h2></div><span class="text-[11px] bg-success/10 text-success font-medium px-2 py-0.5 rounded-full">Kadar Protein Tinggi</span></div><div class="w-full h-4 bg-muted rounded-full overflow-hidden flex my-4"><div style="width: 40%;" class="h-full bg-[#2ec4b6]" title="Protein"></div><div style="width: 43%;" class="h-full bg-[#ff9f1c]" title="Karbohidrat"></div><div style="width: 17%;" class="h-full bg-[#e71d36]" title="Lemak"></div></div><div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4"><div class="p-3 bg-background rounded-xl border border-border/60"><div class="flex items-center gap-2 mb-1"><div class="w-2.5 h-2.5 rounded-full bg-[#2ec4b6]"></div><span class="text-xs font-medium text-muted-foreground">Protein</span></div><div class="text-sm font-bold text-foreground">165g</div><div class="text-[10px] text-muted-foreground mt-0.5">40% • 660 kcal</div></div><div class="p-3 bg-background rounded-xl border border-border/60"><div class="flex items-center gap-2 mb-1"><div class="w-2.5 h-2.5 rounded-full bg-[#ff9f1c]"></div><span class="text-xs font-medium text-muted-foreground">Karbohidrat</span></div><div class="text-sm font-bold text-foreground">175g</div><div class="text-[10px] text-muted-foreground mt-0.5">43% • 700 kcal</div></div><div class="p-3 bg-background rounded-xl border border-border/60"><div class="flex items-center gap-2 mb-1"><div class="w-2.5 h-2.5 rounded-full bg-[#e71d36]"></div><span class="text-xs font-medium text-muted-foreground">Lemak</span></div><div class="text-sm font-bold text-foreground">68g</div><div class="text-[10px] text-muted-foreground mt-0.5">17% • 612 kcal</div></div></div></div><div class="mt-4 p-2.5 bg-muted/50 rounded-lg text-[11px] text-muted-foreground flex gap-1.5 items-center"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 text-primary"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span>Sasaran protein dikira pada formula optimum 2.2g bagi setiap kg berat badan anda.</span></div></div></div></div><div class="p-5 bg-card border-t border-border mt-auto w-full"><div class="max-w-3xl mx-auto flex flex-col gap-5"><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between text-xs font-medium"><label class="text-muted-foreground">Berat Badan Semasa</label><span class="text-foreground font-bold tabular-nums bg-muted px-2 py-0.5 rounded-md">75 kg</span></div><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-9 py-2 cursor-pointer" aria-label="Slaid berat badan semasa" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1.5 grow bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 68.1818%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(31.8182% + 2.90909px);"><span role="slider" aria-label="Penunjuk berat" aria-valuemin="40" aria-valuemax="150" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-4 h-4 rounded-full bg-primary border-none shadow-sm focus:outline-none transition-transform active:scale-110" style="" data-radix-collection-item="" aria-valuenow="75"></span></span></span></div></div><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between text-xs font-medium"><label class="text-muted-foreground">Intensiti Defisit Kalori</label><span class="text-foreground font-bold tabular-nums bg-muted px-2 py-0.5 rounded-md">400 kcal</span></div><div class="flex items-center gap-3 w-full"><span dir="ltr" data-orientation="horizontal" aria-disabled="false" class="relative flex items-center select-none touch-none w-full h-9 py-2 cursor-pointer" aria-label="Slaid intensiti defisit kalori" style="--radix-slider-thumb-transform: translateX(-50%);"><span data-orientation="horizontal" class="relative h-1.5 grow bg-muted rounded-full"><span data-orientation="horizontal" class="absolute h-full bg-primary rounded-full" style="left: 0%; right: 66.6667%;"></span></span><span style="transform: var(--radix-slider-thumb-transform); position: absolute; left: calc(33.3333% + 2.66667px);"><span role="slider" aria-label="Penunjuk defisit" aria-valuemin="100" aria-valuemax="1000" aria-orientation="horizontal" data-orientation="horizontal" tabindex="0" class="block w-4 h-4 rounded-full bg-primary border-none shadow-sm focus:outline-none transition-transform active:scale-110" style="" data-radix-collection-item="" aria-valuenow="400"></span></span></span></div></div><div class="flex flex-col gap-1.5"><label class="text-xs font-medium text-muted-foreground">Tahap Aktiviti Harian</label><div role="group" dir="ltr" class="rounded-xl flex w-full bg-muted p-1 border border-border/40 overflow-hidden" aria-label="Pilihan tahap aktiviti harian" tabindex="0" style="outline: none;"><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center py-2 px-1 rounded-lg text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Sedentary</span></button><button type="button" data-state="on" role="radio" aria-checked="true" class="flex-1 min-w-0 text-center py-2 px-1 rounded-lg text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Sederhana</span></button><button type="button" data-state="off" role="radio" aria-checked="false" class="flex-1 min-w-0 text-center py-2 px-1 rounded-lg text-xs font-medium transition-colors cursor-pointer data-[state=on]:bg-primary data-[state=on]:text-white data-[state=on]:shadow-xs" tabindex="-1" data-radix-collection-item=""><span class="truncate block w-full">Aktif</span></button></div></div></div></div></div></div></body></html>
