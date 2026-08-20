@@ -48,7 +48,10 @@
           <div class="metric"><span>Item</span><strong id="sumItems">0</strong></div>
         </div>
         <div class="total"><div class="total-line"><span>Total Kcal</span><strong id="sumKcal">0</strong></div></div>
-        <button id="saveBtn" class="btn btn-primary">Simpan ke snek_logs</button>
+        <!-- Butang Copy -->
+<button id="btn-copy" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-medium py-2.5 px-4 rounded-lg transition-colors cursor-pointer text-sm">
+    Copy Total Kcal
+</button>
         <button id="clearBtn" class="btn btn-secondary" style="width:100%;margin-top:8px">Kosongkan pilihan</button>
         <div id="saveStatus" class="status"></div>
       </aside>
@@ -197,6 +200,38 @@
     }
     await searchGAS('');
   })();
+
+  // Ambil elemen dari HTML
+const totalKcalEl = document.getElementById("total-kcal");
+const btnCopy = document.getElementById("btn-copy");
+
+// Event listener apabila butang ditekan
+btnCopy.addEventListener("click", () => {
+    // 1. Ambil teks nilai kcal semasa
+    const nilaiKcal = totalKcalEl.innerText;
+    
+    // 2. Guna API Clipboard untuk salin teks
+    navigator.clipboard.writeText(nilaiKcal).then(() => {
+        // Simpan teks asal butang ("Copy Total Kcal")
+        const textAsal = btnCopy.innerText;
+        
+        // 3. Tukar teks dan warna butang kepada hijau (sukses)
+        btnCopy.innerText = "✓ Copied!";
+        btnCopy.classList.replace("bg-slate-900", "bg-emerald-600");
+        
+        // 4. Kembalikan butang ke rupa asal selepas 1.5 saat
+        setTimeout(() => {
+            btnCopy.innerText = textAsal;
+            btnCopy.classList.replace("bg-emerald-600", "bg-slate-900");
+        }, 1500);
+        
+    }).catch(err => {
+        // Jika browser tidak menyokong atau ada ralat
+        console.error("Gagal menyalin teks: ", err);
+        alert("Gagal menyalin nilai kcal.");
+    });
+});
+
 </script>
 </body>
 </html>
