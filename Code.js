@@ -666,3 +666,37 @@ function doGet(e) {
     message: "GAS backend aktif"
   });
 }
+
+// 1. Isytiharkan pembolehubah (state) global aplikasi anda
+let sasaranKalori = 2000; 
+let kaloriHariIni = 0; // Gantikan dengan jumlah kalori sebenar yang dimakan hari ini
+
+// 2. Ambil elemen input daripada HTML
+const inputSasaran = document.getElementById('calorieTarget');
+
+// 3. FUNGSI AUTOSAVE: Kesan perubahan secara langsung tanpa butang
+inputSasaran.addEventListener('input', function() {
+    // Ambil nilai baru, tukar kepada nombor. Jika kosong, letak nilai 0.
+    sasaranKalori = parseInt(this.value) || 0;
+    
+    // Log pada konsol pelayar untuk semakan (Boleh dibuang nanti)
+    console.log("Autosave berjaya! Sasaran terkini:", sasaranKalori);
+    
+    // Panggil fungsi untuk kemas kini peratusan paparan di skrin
+    kemaskiniProgressBar();
+});
+
+// 4. Fungsi untuk kira semula peratusan (%) selesai
+function kemaskiniProgressBar() {
+    const paparanProgress = document.getElementById('progressText');
+    
+    if (sasaranKalori > 0) {
+        // Formula: (Kalori Dimakan / Sasaran) * 100
+        const peratusan = (kaloriHariIni / sasaranKalori) * 100;
+        
+        // Paparkan hasil yang telah dibundarkan
+        paparanProgress.innerText = `${Math.round(peratusan)}% Selesai`;
+    } else {
+        paparanProgress.innerText = `0% Selesai`;
+    }
+}
