@@ -4,215 +4,177 @@
   <base target="_top">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#111827">
   <title>Kalkulator Snek</title>
   <style>
-    :root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e5e7eb;--primary:#2563eb;--primary2:#1d4ed8;--danger:#dc2626;--ok:#16a34a;--shadow:0 10px 30px rgba(15,23,42,.08)}
-    *{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-    body{min-height:100vh}.app{width:min(1180px,100%);margin:auto;padding:18px}
-    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.brand{display:flex;align-items:center;gap:10px}.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#111827;color:#fff;font-size:22px}.title{font-weight:800;font-size:20px}.subtitle{font-size:12px;color:var(--muted);margin-top:2px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
-    .login{max-width:430px;margin:7vh auto;padding:24px}.login h1{margin:0 0 6px;font-size:24px}.login p{color:var(--muted);font-size:14px;margin:0 0 20px}.field{display:flex;flex-direction:column;gap:7px;margin:13px 0}.field label{font-size:13px;font-weight:700}.field input{width:100%;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 13px;font-size:15px;outline:none;background:#fff}.field input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
-    button{border:0;cursor:pointer;font-weight:750}.btn{height:42px;border-radius:11px;padding:0 15px;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary2)}.btn-light{background:#eef2ff;color:#1e40af}.btn-danger{background:#fee2e2;color:#991b1b}.btn-ghost{background:transparent;color:var(--muted)}.btn:disabled{opacity:.55;cursor:not-allowed}
-    .toolbar{padding:15px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;margin-bottom:14px}.search{height:46px;border:1px solid var(--line);border-radius:13px;padding:0 14px;font-size:15px;outline:none;width:100%}.chips{grid-column:1/-1;display:flex;gap:7px;overflow:auto;padding-bottom:2px}.chip{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 11px;color:var(--muted);font-size:12px}
-    .layout{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:14px}.list{padding:14px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.food{border:1px solid var(--line);border-radius:15px;padding:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;transition:.15s;background:#fff}.food:hover{border-color:#bfdbfe;transform:translateY(-1px)}.food-name{font-size:14px;font-weight:750}.serving{font-size:12px;color:var(--muted);margin-top:4px}.food-right{text-align:right;white-space:nowrap}.kcal{font-size:15px;font-weight:800}.macro{font-size:11px;color:var(--muted);margin-top:3px}
-    .panel{padding:17px;position:sticky;top:12px;height:max-content}.panel h2{font-size:16px;margin:0 0 13px}.selected{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:12px;background:#f8fafc;border:1px solid var(--line);border-radius:13px;margin-bottom:10px}.selected-name{font-weight:750;font-size:13px}.selected-meta{font-size:11px;color:var(--muted);margin-top:4px}.remove{color:var(--danger);background:transparent;font-size:18px}.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}.metric{padding:10px;border-radius:12px;background:#f8fafc;border:1px solid var(--line)}.metric span{display:block;font-size:11px;color:var(--muted)}.metric strong{font-size:16px}.total{padding:14px;border-radius:14px;background:#eff6ff;margin-top:10px}.total-line{display:flex;justify-content:space-between;align-items:center}.total strong{font-size:24px}.status{min-height:22px;font-size:12px;margin-top:10px;color:var(--muted)}.status.ok{color:var(--ok)}.status.err{color:var(--danger)}
-    .logs{margin-top:14px;padding:14px}.logs-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.logs h2{font-size:15px;margin:0}.log-row{display:grid;grid-template-columns:1.2fr 2fr .9fr .8fr .8fr .8fr;gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px;align-items:center}.log-row.head{font-size:10px;color:var(--muted);font-weight:800;text-transform:uppercase}.empty{text-align:center;color:var(--muted);padding:18px;font-size:13px}
-    .hidden{display:none!important}.loading{opacity:.65;pointer-events:none}.userbox{display:flex;align-items:center;gap:8px}.user-pill{font-size:12px;background:#eef2ff;color:#3730a3;border-radius:999px;padding:7px 10px}
-    @media(max-width:900px){.layout{grid-template-columns:1fr}.panel{position:static}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media(max-width:620px){.app{padding:10px}.topbar{align-items:flex-start}.title{font-size:17px}.subtitle{font-size:11px}.logo{width:38px;height:38px}.toolbar{grid-template-columns:1fr}.toolbar .btn{width:100%}.grid{grid-template-columns:1fr}.panel{padding:14px}.summary{grid-template-columns:repeat(2,1fr)}.log-row{grid-template-columns:1.2fr 2fr .9fr;gap:5px}.log-row>*:nth-child(n+4){display:none}.logs{overflow:hidden}.login{margin:4vh 0;padding:20px}}
+    :root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e5e7eb;--primary:#111827;--accent:#f59e0b;--ok:#15803d;--danger:#b91c1c;--shadow:0 12px 35px rgba(15,23,42,.08)}
+    *{box-sizing:border-box}html{font-size:16px}body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    button,input{font:inherit}button{cursor:pointer}.app{width:min(1120px,100%);margin:auto;padding:18px}
+    .hero{padding:18px 2px 14px}.brand{display:flex;gap:12px;align-items:center}.logo{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--primary);color:#fff;font-size:24px;box-shadow:0 7px 18px rgba(17,24,39,.18)}h1{font-size:clamp(20px,3vw,28px);margin:0;font-weight:850;letter-spacing:-.03em}.sub{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+    .search-card{padding:14px;margin-bottom:14px}.search-wrap{position:relative}.search{width:100%;height:52px;border:1px solid var(--line);border-radius:15px;padding:0 46px 0 16px;outline:none;background:#fff;color:var(--text);font-size:16px}.search:focus{border-color:#9ca3af;box-shadow:0 0 0 4px rgba(17,24,39,.07)}.search-icon{position:absolute;right:15px;top:50%;transform:translateY(-50%);color:#98a2b3;font-size:19px}.hint{display:flex;justify-content:space-between;gap:10px;margin-top:9px;font-size:11px;color:var(--muted)}
+    .layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px;align-items:start}.results{padding:14px}.results-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:2px 2px 12px}.results-title{font-size:15px;font-weight:800}.count{font-size:11px;color:var(--muted);background:#f2f4f7;border-radius:999px;padding:6px 9px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.food{appearance:none;text-align:left;border:1px solid var(--line);border-radius:16px;background:#fff;padding:14px;min-height:108px;display:flex;justify-content:space-between;gap:12px;transition:.15s}.food:hover{border-color:#cbd5e1;transform:translateY(-1px);box-shadow:0 7px 18px rgba(15,23,42,.06)}.food:active{transform:scale(.99)}.food-name{font-size:14px;font-weight:800;line-height:1.35}.food-meta{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5}.food-kcal{font-weight:850;font-size:16px;white-space:nowrap;text-align:right}.food-macro{font-size:10px;color:var(--muted);margin-top:4px;text-align:right;white-space:nowrap}.tag{display:inline-block;margin-top:7px;padding:4px 7px;border-radius:999px;background:#fff7e6;color:#9a6700;font-size:10px;font-weight:750}
+    .side{padding:16px;position:sticky;top:12px}.side h2{font-size:15px;margin:0 0 12px}.selected-empty{font-size:12px;color:var(--muted);padding:15px 0}.selected{display:flex;justify-content:space-between;gap:10px;padding:11px;border:1px solid var(--line);border-radius:13px;background:#f8fafc;margin-bottom:8px}.selected-name{font-size:12px;font-weight:800}.selected-meta{font-size:10px;color:var(--muted);margin-top:3px}.remove{border:0;background:transparent;color:var(--danger);font-size:20px;line-height:1;padding:0 2px}.summary{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin:12px 0}.metric{padding:9px;border:1px solid var(--line);border-radius:12px;background:#fafafa}.metric span{display:block;color:var(--muted);font-size:10px}.metric strong{font-size:15px}.total{padding:12px 13px;border-radius:14px;background:#fff8e8;border:1px solid #fde7b0}.total-line{display:flex;justify-content:space-between;align-items:center}.total-line strong{font-size:24px}.btn{border:0;border-radius:12px;height:44px;padding:0 14px;font-weight:800}.btn-primary{background:var(--primary);color:#fff;width:100%;margin-top:10px}.btn-secondary{background:#eef2f6;color:#344054}.btn:disabled{opacity:.55;cursor:not-allowed}.status{min-height:19px;margin-top:9px;font-size:11px;color:var(--muted)}.status.ok{color:var(--ok)}.status.err{color:var(--danger)}
+    .loading{opacity:.55;pointer-events:none}.empty{padding:35px 15px;text-align:center;color:var(--muted);font-size:13px;border:1px dashed var(--line);border-radius:15px;grid-column:1/-1}.source{margin-top:12px;font-size:10px;color:#98a2b3;text-align:right}.source b{color:#667085}
+    @media(max-width:850px){.layout{grid-template-columns:1fr}.side{position:static}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){.app{padding:10px}.hero{padding:12px 2px}.logo{width:40px;height:40px;font-size:21px;border-radius:12px}.grid{grid-template-columns:1fr}.food{min-height:96px;padding:13px}.food-kcal{font-size:15px}.search-card{padding:11px}.search{height:50px}.hint{font-size:10px}.side{padding:14px}.card{border-radius:17px}.results{padding:11px}}
   </style>
 </head>
 <body>
-<div id="loginView" class="app">
-  <div class="card login">
-    <h1>🥨 Kalkulator Snek</h1>
-    <p>Login menggunakan akaun GAS anda. Selepas login, data snek akan dibaca dan disimpan terus ke <b>snek_logs</b>.</p>
-    <div class="field"><label>Username</label><input id="username" autocomplete="username"></div>
-    <div class="field"><label>Password</label><input id="password" type="password" autocomplete="current-password"></div>
-    <button id="loginBtn" class="btn btn-primary" style="width:100%">Login</button>
-    <div id="loginStatus" class="status"></div>
-  </div>
-</div>
+  <main class="app">
+    <header class="hero">
+      <div class="brand"><div class="logo">🥨</div><div><h1>Kalkulator Snek</h1><p class="sub">Cari terus daripada database GAS. Default: 10 jenis kuih teratas.</p></div></div>
+    </header>
 
-<div id="appView" class="app hidden">
-  <div class="topbar">
-    <div class="brand"><div class="logo">🥨</div><div><div class="title">Kalkulator Snek</div><div class="subtitle">Pilih snek, semak makro & simpan ke GAS</div></div></div>
-    <div class="userbox"><span id="userPill" class="user-pill"></span><button id="logoutBtn" class="btn btn-ghost">Log keluar</button></div>
-  </div>
+    <section class="card search-card">
+      <div class="search-wrap"><input id="search" class="search" type="search" autocomplete="off" placeholder="Cari nama snek..." aria-label="Cari nama snek"><span class="search-icon">⌕</span></div>
+      <div class="hint"><span id="hintText">Sedang membaca database GAS…</span><span id="countText"></span></div>
+    </section>
 
-  <div class="card toolbar">
-    <input id="search" class="search" placeholder="Cari snek / makanan...">
-    <button id="refreshBtn" class="btn btn-light">↻ Refresh GAS</button>
-    <div id="chips" class="chips"></div>
-  </div>
+    <div class="layout">
+      <section class="card results">
+        <div class="results-head"><div class="results-title" id="resultsTitle">10 kuih teratas</div><div class="count" id="countBadge">—</div></div>
+        <div id="foodGrid" class="grid"></div>
+        <div class="source" id="sourceText"></div>
+      </section>
 
-  <div class="layout">
-    <section class="card list"><div id="foodGrid" class="grid"></div></section>
-    <aside class="card panel">
-      <h2>Snek dipilih</h2>
-      <div id="selectedList"></div>
-      <div class="summary">
-        <div class="metric"><span>Karbo</span><strong id="sumCarb">0 g</strong></div>
-        <div class="metric"><span>Protein</span><strong id="sumProtein">0 g</strong></div>
-        <div class="metric"><span>Lemak</span><strong id="sumFat">0 g</strong></div>
-        <div class="metric"><span>Item</span><strong id="sumItems">0</strong></div>
-      </div>
-      <div class="total"><div class="total-line"><span>Total Kcal</span><strong id="sumKcal">0</strong></div><div class="status">Tekan <b>Simpan ke GAS</b> untuk masuk ke sheet.</div></div>
-      <button id="saveBtn" class="btn btn-primary" style="width:100%;margin-top:10px">💾 Simpan ke GAS</button>
-      <div id="saveStatus" class="status"></div>
-    </aside>
-  </div>
-
-  <section class="card logs">
-    <div class="logs-head"><h2>Rekod snek dari GAS</h2><button id="clearBtn" class="btn btn-danger">Kosongkan log</button></div>
-    <div id="logTable"></div>
-  </section>
-</div>
+      <aside class="card side">
+        <h2>Snek dipilih</h2>
+        <div id="selectedList"><div class="selected-empty">Tekan mana-mana snek untuk pilih.</div></div>
+        <div class="summary">
+          <div class="metric"><span>Karbo</span><strong id="sumCarb">0 g</strong></div>
+          <div class="metric"><span>Protein</span><strong id="sumProtein">0 g</strong></div>
+          <div class="metric"><span>Lemak</span><strong id="sumFat">0 g</strong></div>
+          <div class="metric"><span>Item</span><strong id="sumItems">0</strong></div>
+        </div>
+        <div class="total"><div class="total-line"><span>Total Kcal</span><strong id="sumKcal">0</strong></div></div>
+        <button id="saveBtn" class="btn btn-primary">Simpan ke snek_logs</button>
+        <button id="clearBtn" class="btn btn-secondary" style="width:100%;margin-top:8px">Kosongkan pilihan</button>
+        <div id="saveStatus" class="status"></div>
+      </aside>
+    </div>
+  </main>
 
 <script>
-const FOOD_DATABASE = [
- {id:'karipap',name:'Karipap (Curry Puff)',calories:128,serving:'1 biji (40g)',category:'Kuih',carbs:15,protein:2,fat:7,emoji:'🥟'},
- {id:'serimuka',name:'Kuih Seri Muka',calories:145,serving:'1 potong (50g)',category:'Kuih',carbs:22,protein:3,fat:5,emoji:'🟩'},
- {id:'pisang_goreng',name:'Pisang Goreng',calories:120,serving:'1 biji (45g)',category:'Snek',carbs:18,protein:1,fat:5,emoji:'🍌'},
- {id:'keropok_lekor',name:'Keropok Lekor',calories:160,serving:'3 batang (60g)',category:'Snek',carbs:20,protein:7,fat:6,emoji:'🍢'},
- {id:'onde_onde',name:'Onde-Onde',calories:62,serving:'1 biji (20g)',category:'Kuih',carbs:11,protein:1,fat:1.5,emoji:'🟢'},
- {id:'nasi_lemak',name:'Nasi Lemak Biasa',calories:400,serving:'1 pinggan (230g)',category:'Makanan Utama',carbs:58,protein:10,fat:14,emoji:'🍛'},
- {id:'roti_canai',name:'Roti Canai',calories:300,serving:'1 keping',category:'Makanan Utama',carbs:46,protein:6,fat:10,emoji:'🫓'},
- {id:'satay',name:'Satay Ayam',calories:365,serving:'5 cucuk',category:'Snek',carbs:12,protein:22,fat:25,emoji:'🍢'},
- {id:'char_kway_teow',name:'Char Kway Teow',calories:744,serving:'1 pinggan',category:'Makanan Utama',carbs:74,protein:23,fat:38,emoji:'🍝'},
- {id:'cendol',name:'Cendol',calories:245,serving:'1 mangkuk',category:'Pencuci Mulut',carbs:44,protein:3,fat:6,emoji:'🍧'},
- {id:'teh_tarik',name:'Teh Tarik',calories:140,serving:'1 gelas',category:'Minuman',carbs:22,protein:2,fat:5,emoji:'☕'},
- {id:'popia_goreng',name:'Popia Goreng',calories:110,serving:'1 biji',category:'Snek',carbs:12,protein:2,fat:6,emoji:'🌯'}
-];
+  let selected = [];
+  let searchTimer = null;
+  let requestSeq = 0;
+  let lastResults = [];
 
-let token = localStorage.getItem('snek_gas_token') || '';
-let currentUser = localStorage.getItem('snek_gas_username') || '';
-let selected = [];
-let snackLogs = [];
-let query = '';
+  const $ = id => document.getElementById(id);
+  const hasGas = () => !!(window.google && google.script && google.script.run);
 
-const $ = id => document.getElementById(id);
-const hasGoogleRun = () => !!(window.google && google.script && google.script.run);
+  function gas(fn, ...args){
+    return new Promise((resolve,reject)=>{
+      if(!hasGas()){ reject(new Error('Buka halaman ini melalui Web App Google Apps Script.')); return; }
+      google.script.run.withSuccessHandler(resolve).withFailureHandler(reject)[fn](...args);
+    });
+  }
 
-function setStatus(el, msg, type=''){ el.textContent = msg || ''; el.className = 'status ' + type; }
-function setLoading(el, on){ if(el) el.classList.toggle('loading', on); }
+  function fmt(n){
+    const x=Number(n||0);
+    if(Number.isInteger(x)) return String(x);
+    return x.toFixed(1).replace(/\.0$/,'');
+  }
+  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function setStatus(msg,type=''){ $('saveStatus').textContent=msg||''; $('saveStatus').className='status '+type; }
 
-function callGas(functionName, ...args){
-  return new Promise((resolve,reject)=>{
-    if(!hasGoogleRun()) { reject(new Error('HTML ini mesti dibuka melalui Web App GAS.')); return; }
-    const runner = google.script.run.withSuccessHandler(resolve).withFailureHandler(err=>reject(err));
-    runner[functionName](...args);
+  function renderFoods(items, query){
+    lastResults = items || [];
+    const searching = String(query||'').trim().length > 0;
+    $('resultsTitle').textContent = searching ? 'Hasil carian' : '10 kuih teratas';
+    $('countBadge').textContent = `${lastResults.length} item`;
+    $('countText').textContent = searching ? `${lastResults.length} padanan` : 'Default';
+
+    if(!lastResults.length){
+      $('foodGrid').innerHTML = `<div class="empty">${searching ? 'Tiada snek yang sepadan dengan carian.' : 'Tiada data kuih ditemui dalam database GAS.'}</div>`;
+      return;
+    }
+
+    $('foodGrid').innerHTML = lastResults.map((f,i)=>`
+      <button class="food" data-index="${i}" type="button">
+        <div>
+          <div class="food-name">${esc(f.name || 'Tanpa nama')}</div>
+          <div class="food-meta">${f.serving ? esc(f.serving)+' · ' : ''}${f.id ? 'ID: '+esc(f.id) : ''}</div>
+          ${f.category ? `<span class="tag">${esc(f.category)}</span>` : ''}
+        </div>
+        <div>
+          <div class="food-kcal">${fmt(f.calories)} kcal</div>
+          <div class="food-macro">C ${fmt(f.carbs)}g · P ${fmt(f.protein)}g · F ${fmt(f.fat)}g</div>
+        </div>
+      </button>`).join('');
+
+    $('foodGrid').querySelectorAll('.food').forEach(btn=>btn.addEventListener('click',()=>addFood(lastResults[Number(btn.dataset.index)])));
+  }
+
+  async function searchGAS(query=''){
+    const seq = ++requestSeq;
+    $('foodGrid').classList.add('loading');
+    $('hintText').textContent = query.trim() ? 'Mencari dalam database GAS…' : 'Memuatkan 10 kuih teratas…';
+    try{
+      const res = await gas('publicGetSnek', query);
+      if(seq !== requestSeq) return;
+      if(!res || res.status !== 'success') throw new Error(res?.message || 'Gagal membaca database GAS.');
+      renderFoods(res.results || [], query);
+      $('sourceText').innerHTML = res.sourceSheet ? `Sumber: <b>${esc(res.sourceSheet)}</b>` : '';
+      $('hintText').textContent = query.trim() ? 'Paparan hanya hasil yang sepadan dengan carian.' : 'Paparan default hanya 10 kuih teratas.';
+    }catch(e){
+      if(seq !== requestSeq) return;
+      $('foodGrid').innerHTML = `<div class="empty">${esc(e.message || String(e))}</div>`;
+      $('hintText').textContent = 'Ralat membaca database GAS.';
+      $('countBadge').textContent = 'Ralat';
+    }finally{
+      if(seq === requestSeq) $('foodGrid').classList.remove('loading');
+    }
+  }
+
+  function addFood(food){
+    if(!food) return;
+    selected.push({...food});
+    renderSelected();
+    setStatus('');
+  }
+  function removeFood(i){selected.splice(i,1);renderSelected();}
+  function renderSelected(){
+    $('selectedList').innerHTML = selected.length ? selected.map((f,i)=>`
+      <div class="selected"><div><div class="selected-name">${esc(f.name)}</div><div class="selected-meta">${fmt(f.calories)} kcal · C ${fmt(f.carbs)}g · P ${fmt(f.protein)}g · F ${fmt(f.fat)}g</div></div><button class="remove" type="button" data-remove="${i}">×</button></div>`).join('') : '<div class="selected-empty">Tekan mana-mana snek untuk pilih.</div>';
+    $('selectedList').querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>removeFood(Number(b.dataset.remove)));
+    const t=selected.reduce((a,f)=>({k:a.k+Number(f.calories||0),c:a.c+Number(f.carbs||0),p:a.p+Number(f.protein||0),f:a.f+Number(f.fat||0)}),{k:0,c:0,p:0,f:0});
+    $('sumKcal').textContent=fmt(t.k); $('sumCarb').textContent=fmt(t.c)+' g'; $('sumProtein').textContent=fmt(t.p)+' g'; $('sumFat').textContent=fmt(t.f)+' g'; $('sumItems').textContent=selected.length;
+  }
+
+  async function saveSelected(){
+    if(!selected.length){setStatus('Pilih sekurang-kurangnya satu snek.','err');return;}
+    const t=selected.reduce((a,f)=>({k:a.k+Number(f.calories||0),c:a.c+Number(f.carbs||0),p:a.p+Number(f.protein||0),f:a.f+Number(f.fat||0)}),{k:0,c:0,p:0,f:0});
+    const names=selected.map(x=>x.name).join(' + ');
+    const id=selected.length===1 ? (selected[0].id || '') : 'combo_'+Date.now();
+    $('saveBtn').disabled=true; setStatus('Menyimpan ke snek_logs…');
+    try{
+      const res=await gas('publicSaveSnekLog',{snekId:id,namaSnek:names,totalKcal:t.k,karbo:t.c,protein:t.p,lemak:t.f});
+      if(!res || res.status!=='success') throw new Error(res?.message || 'Gagal simpan.');
+      setStatus('✓ Berjaya disimpan ke snek_logs.','ok');
+      selected=[]; renderSelected();
+    }catch(e){setStatus(e.message||String(e),'err');}
+    finally{$('saveBtn').disabled=false;}
+  }
+
+  $('search').addEventListener('input',e=>{
+    const q=e.target.value;
+    clearTimeout(searchTimer);
+    searchTimer=setTimeout(()=>searchGAS(q),250);
   });
-}
+  $('saveBtn').onclick=saveSelected;
+  $('clearBtn').onclick=()=>{selected=[];renderSelected();setStatus('');};
 
-async function login(){
-  const username = $('username').value.trim();
-  const password = $('password').value;
-  setStatus($('loginStatus'),'Memeriksa login...');
-  $('loginBtn').disabled = true;
-  try{
-    const result = await callGas('loginUser', username, password);
-    if(result.status !== 'success') throw new Error(result.message || 'Login gagal.');
-    token = result.token; currentUser = result.username || username;
-    localStorage.setItem('snek_gas_token',token); localStorage.setItem('snek_gas_username',currentUser);
-    showApp();
-    await loadLogs();
-  }catch(e){ setStatus($('loginStatus'),e.message || String(e),'err'); }
-  finally{$('loginBtn').disabled=false;}
-}
-
-function logout(){
-  token='';currentUser='';selected=[];snackLogs=[];
-  localStorage.removeItem('snek_gas_token');localStorage.removeItem('snek_gas_username');
-  $('appView').classList.add('hidden');$('loginView').classList.remove('hidden');
-}
-
-function showApp(){
-  $('loginView').classList.add('hidden');$('appView').classList.remove('hidden');$('userPill').textContent=currentUser || 'User';
-  renderChips(); renderFoods(); renderSelected();
-}
-
-function renderChips(){
-  const cats=['Semua',...new Set(FOOD_DATABASE.map(x=>x.category))];
-  $('chips').innerHTML=cats.map(c=>`<button class="chip" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
-  $('chips').querySelectorAll('.chip').forEach(btn=>btn.onclick=()=>{query=btn.dataset.cat==='Semua'?'':btn.dataset.cat;$('search').value=query;renderFoods();});
-}
-function renderFoods(){
-  const q=query.toLowerCase().trim();
-  const foods=FOOD_DATABASE.filter(f=>!q||f.name.toLowerCase().includes(q)||f.category.toLowerCase().includes(q));
-  $('foodGrid').innerHTML=foods.length?foods.map(f=>`<button class="food" data-id="${esc(f.id)}"><div style="text-align:left"><div class="food-name">${f.emoji} ${esc(f.name)}</div><div class="serving">${esc(f.serving)} · ${esc(f.category)}</div></div><div class="food-right"><div class="kcal">${fmt(f.calories)} kcal</div><div class="macro">C ${fmt(f.carbs)}g · P ${fmt(f.protein)}g · F ${fmt(f.fat)}g</div></div></button>`).join(''):`<div class="empty" style="grid-column:1/-1">Tiada snek dijumpai.</div>`;
-  $('foodGrid').querySelectorAll('.food').forEach(btn=>btn.onclick=()=>addFood(btn.dataset.id));
-}
-function addFood(id){const f=FOOD_DATABASE.find(x=>x.id===id);if(!f)return;selected.push({...f});renderSelected();}
-function removeFood(i){selected.splice(i,1);renderSelected();}
-function renderSelected(){
-  $('selectedList').innerHTML=selected.length?selected.map((f,i)=>`<div class="selected"><div><div class="selected-name">${f.emoji} ${esc(f.name)}</div><div class="selected-meta">${fmt(f.calories)} kcal · C ${fmt(f.carbs)}g · P ${fmt(f.protein)}g · F ${fmt(f.fat)}g</div></div><button class="remove" data-remove="${i}" title="Buang">×</button></div>`).join(''):`<div class="empty" style="padding:12px 0">Belum ada snek dipilih.</div>`;
-  $('selectedList').querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>removeFood(Number(b.dataset.remove)));
-  const t=selected.reduce((a,f)=>({k:a.k+f.calories,c:a.c+f.carbs,p:a.p+f.protein,f:a.f+f.fat}),{k:0,c:0,p:0,f:0});
-  $('sumKcal').textContent=fmt(t.k);$('sumCarb').textContent=fmt(t.c)+' g';$('sumProtein').textContent=fmt(t.p)+' g';$('sumFat').textContent=fmt(t.f)+' g';$('sumItems').textContent=selected.length;
-}
-
-async function saveSelected(){
-  if(!selected.length){setStatus($('saveStatus'),'Pilih sekurang-kurangnya satu snek.','err');return;}
-  const t=selected.reduce((a,f)=>({k:a.k+f.calories,c:a.c+f.carbs,p:a.p+f.protein,f:a.f+f.fat}),{k:0,c:0,p:0,f:0});
-  const names=selected.map(x=>x.name).join(' + ');
-  const id=selected.length===1?selected[0].id:'combo_'+Date.now();
-  setLoading($('saveBtn'),true);setStatus($('saveStatus'),'Menyimpan ke snek_logs...');
-  try{
-    const result=await callGas('saveSnackLog',token,{snekId:id,namaSnek:names,totalKcal:t.k,karbo:t.c,protein:t.p,lemak:t.f});
-    if(result.status==='unauthorized'){logout();throw new Error(result.message);}
-    if(result.status!=='success')throw new Error(result.message||'Gagal simpan.');
-    setStatus($('saveStatus'),'✓ Berjaya disimpan ke snek_logs.','ok');
-    selected=[];renderSelected();await loadLogs();
-  }catch(e){setStatus($('saveStatus'),e.message||String(e),'err');}
-  finally{setLoading($('saveBtn'),false);}
-}
-
-async function loadLogs(){
-  if(!token)return;
-  setLoading($('refreshBtn'),true);
-  try{
-    const result=await callGas('getSnackLogs',token);
-    if(result.status==='unauthorized'){logout();return;}
-    if(result.status!=='success')throw new Error(result.message||'Gagal baca GAS.');
-    snackLogs=result.logs||[];renderLogs();
-  }catch(e){setStatus($('saveStatus'),'Gagal baca snek_logs: '+(e.message||e),'err');}
-  finally{setLoading($('refreshBtn'),false);}
-}
-
-function renderLogs(){
-  if(!snackLogs.length){$('logTable').innerHTML='<div class="empty">Belum ada rekod dalam snek_logs.</div>';return;}
-  $('logTable').innerHTML=`<div class="log-row head"><div>Snek ID</div><div>Nama Snek</div><div>Kcal</div><div>Karbo</div><div>Protein</div><div>Lemak</div></div>`+snackLogs.slice().reverse().map(x=>`<div class="log-row"><div>${esc(x.snekId)}</div><div>${esc(x.namaSnek)}</div><div>${fmt(x.totalKcal)}</div><div>${fmt(x.karbo)}g</div><div>${fmt(x.protein)}g</div><div>${fmt(x.lemak)}g</div></div>`).join('');
-}
-
-async function clearLogs(){
-  if(!confirm('Kosongkan semua rekod dalam snek_logs?'))return;
-  try{
-    const result=await callGas('clearSnackLogs',token);
-    if(result.status==='unauthorized'){logout();return;}
-    if(result.status!=='success')throw new Error(result.message||'Gagal.');
-    await loadLogs();setStatus($('saveStatus'),'Log snek telah dikosongkan.','ok');
-  }catch(e){setStatus($('saveStatus'),e.message||String(e),'err');}
-}
-
-function fmt(n){return Number.isInteger(Number(n))?String(Number(n)):Number(n||0).toFixed(1).replace(/\.0$/,'');}
-function esc(s){return String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-
-$('loginBtn').onclick=login;$('logoutBtn').onclick=logout;$('refreshBtn').onclick=loadLogs;$('saveBtn').onclick=saveSelected;$('clearBtn').onclick=clearLogs;
-$('search').addEventListener('input',e=>{query=e.target.value;renderFoods();});
-$('password').addEventListener('keydown',e=>{if(e.key==='Enter')login();});
-$('username').addEventListener('keydown',e=>{if(e.key==='Enter')$('password').focus();});
-
-(async function boot(){
-  if(!hasGoogleRun()){
-    setStatus($('loginStatus'),'Buka URL Web App GAS dengan ?page=snek. Jangan buka fail HTML secara terus.','err');
-    return;
-  }
-  if(token){
-    try{showApp();await loadLogs();return;}catch(e){logout();}
-  }
-})();
+  (async function boot(){
+    renderSelected();
+    if(!hasGas()){
+      $('hintText').textContent='HTML ini mesti dibuka melalui Web App GAS.';
+      $('foodGrid').innerHTML='<div class="empty">Buka URL Web App Apps Script, bukan fail HTML secara terus.</div>';
+      return;
+    }
+    await searchGAS('');
+  })();
 </script>
 </body>
 </html>
