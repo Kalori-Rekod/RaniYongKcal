@@ -62,13 +62,35 @@
   let lastResults = [];
 
   const $ = id => document.getElementById(id);
-  const hasGas = () => !!(window.google && google.script && google.script.run);
+  const API_URL = 'https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec';
 
-  function gas(fn, ...args){
-    return new Promise((resolve,reject)=>{
-      if(!hasGas()){ reject(new Error('Buka halaman ini melalui Web App Google Apps Script.')); return; }
-      google.script.run.withSuccessHandler(resolve).withFailureHandler(reject)[fn](...args);
+  async function apiGet(action, params={}){
+    const url = new URL(API_URL);
+    url.searchParams.set('api', action);
+    Object.entries(params).forEach(([k,v]) => url.searchParams.set(k, v ?? ''));
+    const response = await fetch(url.toString(), { method:'GET', cache:'no-store', credentials:'omit' });
+    const text = await response.text();
+    let data;
+    try { data = JSON.parse(text); } catch(e) { throw new Error('API GAS tidak memulangkan JSON yang sah.'); }
+    if(!response.ok || data.status === 'error') throw new Error(data.message || 'API GAS gagal.');
+    return data;
+  }
+
+  async function apiPost(action, payload={}){
+    const url = new URL(API_URL);
+    url.searchParams.set('api', action);
+    const response = await fetch(url.toString(), {
+      method:'POST',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body:JSON.stringify(payload),
+      cache:'no-store',
+      credentials:'omit'
     });
+    const text = await response.text();
+    let data;
+    try { data = JSON.parse(text); } catch(e) { throw new Error('API GAS tidak memulangkan JSON yang sah.'); }
+    if(!response.ok || data.status === 'error') throw new Error(data.message || 'API GAS gagal.');
+    return data;
   }
 
   function fmt(n){
@@ -112,7 +134,7 @@
     $('foodGrid').classList.add('loading');
     $('hintText').textContent = query.trim() ? 'Mencari dalam database GAS…' : 'Memuatkan 10 kuih teratas…';
     try{
-      const res = await gas('publicGetSnek', query);
+      const res = await apiGet('getSnek', { q: query });
       if(seq !== requestSeq) return;
       if(!res || res.status !== 'success') throw new Error(res?.message || 'Gagal membaca database GAS.');
       renderFoods(res.results || [], query);
@@ -150,13 +172,13 @@
     const id=selected.length===1 ? (selected[0].id || '') : 'combo_'+Date.now();
     $('saveBtn').disabled=true; setStatus('Menyimpan ke snek_logs…');
     try{
-      const res=await gas('publicSaveSnekLog',{snekId:id,namaSnek:names,totalKcal:t.k,karbo:t.c,protein:t.p,lemak:t.f});
+      const res=await apiPost('saveSnekLog',{snekId:id,namaSnek:names,totalKcal:t.k,karbo:t.c,protein:t.p,lemak:t.f});
       if(!res || res.status!=='success') throw new Error(res?.message || 'Gagal simpan.');
       setStatus('✓ Berjaya disimpan ke snek_logs.','ok');
       selected=[]; renderSelected();
     }catch(e){setStatus(e.message||String(e),'err');}
     finally{$('saveBtn').disabled=false;}
-  } 
+  }
 
   $('search').addEventListener('input',e=>{
     const q=e.target.value;
@@ -168,9 +190,9 @@
 
   (async function boot(){
     renderSelected();
-    if(!hasGas()){
-      $('hintText').textContent='HTML ini mesti dibuka melalui Web App GAS.';
-      $('foodGrid').innerHTML='<div class="empty">Buka URL Web App Apps Script, bukan fail HTML secara terus.</div>';
+    if(!API_URL || API_URL === '__API_URL__'){
+      $('hintText').textContent='API GAS belum dikonfigurasi.';
+      $('foodGrid').innerHTML='<div class="empty">API URL belum disambungkan.</div>';
       return;
     }
     await searchGAS('');
