@@ -1,6 +1,19 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en"><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta data-sandbox-injected="" http-equiv="Content-Security-Policy" content="
+          default-src 'none';
+          base-uri 'none';
+          connect-src https://fonts.gstatic.com https://www.gstatic.com https://esm.sh/;
+          font-src https://fonts.gstatic.com;
+          form-action 'none';
+          
+          worker-src blob: https://*.scf.usercontent.goog;
+          img-src data: https://encrypted-tbn0.gstatic.com https://encrypted-tbn1.gstatic.com https://encrypted-tbn2.gstatic.com https://encrypted-tbn3.gstatic.com ;
+          media-src 'none';
+          object-src 'none';
+          script-src 'unsafe-inline' 'unsafe-eval' https://www.gstatic.com https://widgetlibs.static.usercontent.goog https://*.scf.usercontent.goog https://esm.sh/;
+          style-src 'unsafe-inline' 'unsafe-eval' https://fonts.googleapis.com https://www.gstatic.com/ https://esm.sh/;">
       <meta data-sandbox-injected="" charset="UTF-8">
       <meta data-sandbox-injected="" name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="enable-onep-api" content="false"><script data-sandbox-injected="true">(function(){var g=Object.defineProperty,k=globalThis,l=function(a,b){if(b)a:{var c=k;a=a.split(".");for(var d=0;d<a.length-1;d++){var e=a[d];if(!(e in c))break a;c=c[e]}a=a[a.length-1];d=c[a];b=b(d);b!=d&&b!=null&&g(c,a,{configurable:!0,writable:!0,value:b})}};l("Promise.withResolvers",function(a){return a?a:function(){var b,c;return{promise:new Promise(function(d,e){b=d;c=e}),resolve:b,reject:c}}});var m=function(a){return typeof a==="object"&&a!==null&&"kind"in a&&typeof a.kind==="string"&&("payload"in a||a.kind==="___CROSS_FRAME_HANDSHAKE___")},n=class{constructor(){this.j=new Map}i(a){var b=a.data;if(m(b)){let c=b.payload;if(b=this.j.get(b.kind))(a=a.ports&&a.ports.length>0?a.ports:void 0)?b(c,a):b(c)}}sendMessage(a,b,c){if(!this.port)throw Error("a");a={kind:String(a),payload:b||{}};c&&c.length>0?this.port.postMessage(a,c):this.port.postMessage(a)}},p=async function(a){var b=window.parent;
@@ -77,9 +90,11 @@ function CalorieTrackerWidget() {
   const LOGIN_PAGE = "login.html";
   const AUTH_TOKEN_KEY = "kalori_auth_token";
   const AUTH_USER_KEY = "calorie_current_user";
+  const AUTH_USER_ID_KEY = "calorie_current_user_id";
 
   const [profiles, setProfiles] = useState([]);
   const [currentUser, setCurrentUser] = useState("");
+  const [currentUserId, setCurrentUserId] = useState("");
   const [dailyGoal, setDailyGoal] = useState(2000);
   const [logs, setLogs] = useState([]);
   const [inputDate, setInputDate] = useState(TODAY_DATE);
@@ -101,8 +116,14 @@ function CalorieTrackerWidget() {
     try {
       localStorage.removeItem(AUTH_TOKEN_KEY);
       localStorage.removeItem(AUTH_USER_KEY);
+      localStorage.removeItem(AUTH_USER_ID_KEY);
     } catch (_) {}
     window.location.replace(LOGIN_PAGE);
+  };
+
+  const getAuthUserId = () => {
+    try { return localStorage.getItem(AUTH_USER_ID_KEY) || ""; }
+    catch (_) { return ""; }
   };
 
   const getAuthToken = () => {
@@ -116,7 +137,8 @@ function CalorieTrackerWidget() {
     }
 
     const token = getAuthToken();
-    if (!token) {
+    const userId = getAuthUserId();
+    if (!token || !userId) {
       redirectToLogin();
       throw new Error("Sesi login diperlukan.");
     }
@@ -124,7 +146,7 @@ function CalorieTrackerWidget() {
     const response = await fetch(GAS_API_URL, {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body: JSON.stringify({ ...payload, token })
+      body: JSON.stringify({ ...payload, token, userId })
     });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
@@ -142,6 +164,7 @@ function CalorieTrackerWidget() {
   const normaliseLog = (log) => ({
     id: String(log.id),
     user: currentUser,
+    userId: String(log.userId || currentUserId),
     foodName: log.foodName || "Lain-lain",
     mealType: log.foodName || "Lain-lain",
     calories: Number(log.calories) || 0,
@@ -154,9 +177,17 @@ function CalorieTrackerWidget() {
     setLoading(true);
     setError("");
     try {
-      const data = await apiPost({ action: "fetchData", username });
-      setProfiles(Array.isArray(data.allUsers) ? data.allUsers : []);
+      const data = await apiPost({ action: "fetchData" });
+      setProfiles(Array.isArray(data.allUsers) ? data.allUsers : [data.username || username]);
       setDailyGoal(Number(data.dailyGoal) || 2000);
+      if (data.userId) {
+        setCurrentUserId(String(data.userId));
+        try { localStorage.setItem(AUTH_USER_ID_KEY, String(data.userId)); } catch (_) {}
+      }
+      if (data.username) {
+        setCurrentUser(String(data.username));
+        try { localStorage.setItem(AUTH_USER_KEY, String(data.username)); } catch (_) {}
+      }
       setLogs((Array.isArray(data.logs) ? data.logs : []).map(normaliseLog));
     } catch (e) {
       setError(e.message || "Gagal mengambil data daripada GAS.");
@@ -170,13 +201,17 @@ function CalorieTrackerWidget() {
     const savedUser = typeof localStorage !== "undefined"
       ? localStorage.getItem(AUTH_USER_KEY)
       : "";
+    const savedUserId = typeof localStorage !== "undefined"
+      ? localStorage.getItem(AUTH_USER_ID_KEY)
+      : "";
 
-    if (!token || !savedUser) {
+    if (!token || !savedUser || !savedUserId) {
       redirectToLogin();
       return;
     }
 
     setCurrentUser(savedUser);
+    setCurrentUserId(savedUserId);
     setAuthReady(true);
   }, []);
 
@@ -186,7 +221,7 @@ function CalorieTrackerWidget() {
       localStorage.setItem(AUTH_USER_KEY, currentUser);
     }
     loadData(currentUser);
-  }, [authReady, currentUser]);
+  }, [authReady, currentUser, currentUserId]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -211,49 +246,8 @@ function CalorieTrackerWidget() {
     setInputCalories("");
   };
 
-  const handleAddNewUser = async (e) => {
-    e.preventDefault();
-    const username = newUserName.trim();
-    if (!username) return;
-    setSaving(true);
-    setError("");
-    try {
-      const data = await apiPost({
-        action: "addUser",
-        username,
-        dailyGoal: dailyGoal || 2000
-      });
-      if (data.status === "denied") throw new Error(data.message);
-      setNewUserName("");
-      setCurrentUser(username);
-      showMessage("Profil berjaya ditambah.");
-    } catch (e) {
-      setError(e.message || "Gagal menambah profil.");
-    } finally {
-      setSaving(false);
-    }
-  };
-
-  const handleDeleteUserProfile = async () => {
-    if (profiles.length <= 1) {
-      alert("Tidak boleh memadam profil terakhir.");
-      return;
-    }
-    if (!window.confirm(`Adakah anda pasti untuk memadam profil "${currentUser}" dan semua rekodnya?`)) return;
-
-    setSaving(true);
-    setError("");
-    try {
-      await apiPost({ action: "deleteUser", username: currentUser });
-      const remaining = profiles.filter((p) => p !== currentUser);
-      setCurrentUser(remaining[0] || "");
-      showMessage("Profil dan semua rekod berjaya dipadam.");
-    } catch (e) {
-      setError(e.message || "Gagal memadam profil.");
-    } finally {
-      setSaving(false);
-    }
-  };
+  // Setiap login kini terikat kepada satu User ID.
+  // Tiada lagi pertukaran profil daripada browser.
 
   const handleSubmitLog = async (e) => {
     e.preventDefault();
@@ -269,7 +263,6 @@ function CalorieTrackerWidget() {
       if (editingLog) {
         await apiPost({
           action: "updateLog",
-          username: currentUser,
           logId: editingLog.id,
           foodName: inputMeal.trim(),
           calories: cals,
@@ -278,7 +271,6 @@ function CalorieTrackerWidget() {
       } else {
         await apiPost({
           action: "addLog",
-          username: currentUser,
           foodName: inputMeal.trim(),
           calories: cals,
           recordDate: inputDate
@@ -310,7 +302,6 @@ function CalorieTrackerWidget() {
     try {
       await apiPost({
         action: "deleteLog",
-        username: currentUser,
         logId: id
       });
       await loadData(currentUser);
@@ -329,7 +320,7 @@ function CalorieTrackerWidget() {
     setError("");
     try {
       for (const log of userLogs) {
-        await apiPost({ action: "deleteLog", username: currentUser, logId: log.id });
+        await apiPost({ action: "deleteLog", logId: log.id });
       }
       await loadData(currentUser);
       showMessage("Semua rekod berjaya dipadam.");
@@ -359,7 +350,7 @@ function CalorieTrackerWidget() {
       </style></head>
       <body>
         <div class="header"><h2>Laporan Kalori 30 Hari Terkini</h2>
-        <p><b>Pengguna:</b> ${currentUser} &nbsp; <b>Tarikh:</b> ${TODAY_DATE}</p></div>
+        <p><b>Pengguna:</b> ${currentUser} &nbsp; <b>User ID:</b> ${currentUserId} &nbsp; <b>Tarikh:</b> ${TODAY_DATE}</p></div>
         <table><thead><tr><th>Tarikh</th><th>Jenis Makanan</th><th>Kalori</th></tr></thead>
         <tbody>${oneMonthLogs.length ? oneMonthLogs.map(l => `<tr><td>${l.date}</td><td>${l.foodName}</td><td>${l.calories} kcal</td></tr>`).join("") : `<tr><td colspan="3">Tiada rekod.</td></tr>`}
         <tr class="total"><td colspan="2">Jumlah</td><td>${totalCals} kcal</td></tr></tbody></table>
@@ -376,7 +367,7 @@ function CalorieTrackerWidget() {
     URL.revokeObjectURL(url);
   };
 
-  const userLogs = logs.filter((l) => l.user === currentUser);
+  const userLogs = logs.filter((l) => l.userId === currentUserId);
   const filteredLogs = logs;
 
   useEffect(() => {
@@ -389,7 +380,6 @@ function CalorieTrackerWidget() {
         }
         const data = await apiPost({
           action: "searchLog",
-          username: currentUser,
           query: searchText.trim()
         });
         setLogs((Array.isArray(data.logs) ? data.logs : []).map(normaliseLog));
@@ -506,19 +496,15 @@ function CalorieTrackerWidget() {
           /* @__PURE__ */ jsxs("div",{className:"grid grid-cols-1 sm:grid-cols-2 gap-3 items-center",children:[
             /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[
               /* @__PURE__ */ jsx("span",{className:"text-[11px] font-medium text-muted-foreground uppercase tracking-wider",children:"Pengguna Aktif"}),
-              /* @__PURE__ */ jsxs("div",{className:"flex gap-1.5 items-center",children:[
-                /* @__PURE__ */ jsx("select",{value:currentUser,onChange:e=>setCurrentUser(e.target.value),className:"h-9 rounded-lg bg-muted text-xs font-medium px-2 grow cursor-pointer",children:profiles.map(p=>/* @__PURE__ */ jsx("option",{value:p,children:p},p))}),
-                /* @__PURE__ */ jsx("button",{type:"button",onClick:handleDeleteUserProfile,disabled:saving,className:"h-9 w-9 shrink-0 bg-muted hover:bg-error/10 hover:text-error rounded-lg flex items-center justify-center disabled:opacity-50",title:"Padam profil",children:/* @__PURE__ */ jsx("span",{className:"material-icons !text-sm",children:"delete"})})
+              /* @__PURE__ */ jsxs("div",{className:"h-9 rounded-lg bg-muted text-xs font-medium px-3 grow flex items-center justify-between gap-2",children:[
+                /* @__PURE__ */ jsx("span",{children:currentUser || "—"}),
+                /* @__PURE__ */ jsxs("span",{className:"text-[10px] text-muted-foreground",children:["User ID: ",currentUserId || "—"]})
               ]})
             ]}),
             /* @__PURE__ */ jsxs("div",{className:"flex flex-col gap-1",children:[
               /* @__PURE__ */ jsx("span",{className:"text-[11px] font-medium text-muted-foreground uppercase tracking-wider",children:"Sasaran Kalori (kcal)"}),
               /* @__PURE__ */ jsx("input",{type:"number",value:dailyGoal,readOnly:true,className:"h-9 rounded-lg bg-muted text-xs font-medium px-3 w-full opacity-80",min:"500",max:"10000",title:"Sasaran dibaca daripada sheet users melalui GAS."})
             ]})
-          ]}),
-          /* @__PURE__ */ jsxs("form",{onSubmit:handleAddNewUser,className:"flex gap-2 items-center bg-muted/50 p-2 rounded-lg border border-border/60",children:[
-            /* @__PURE__ */ jsx("input",{type:"text",placeholder:profiles.length>=3?"Had 3 profil penuh...":"Daftar pengguna baru...",disabled:profiles.length>=3||saving,value:newUserName,onChange:e=>setNewUserName(e.target.value),className:"h-8 bg-background rounded px-2 text-xs grow disabled:opacity-50"}),
-            /* @__PURE__ */ jsx("button",{type:"submit",disabled:profiles.length>=3||saving,className:"h-8 px-3 bg-primary text-white rounded-full text-xs font-medium disabled:opacity-50",children:"Tambah Profil"})
           ]}),
           error && /* @__PURE__ */ jsx("div",{className:"p-2.5 bg-error/10 text-error rounded-lg text-xs font-medium border border-error/20",children:error}),
           message && /* @__PURE__ */ jsx("div",{className:"p-2.5 bg-success/10 text-success rounded-lg text-xs font-medium border border-success/20",children:message}),
