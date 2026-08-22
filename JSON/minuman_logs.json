@@ -18798,5 +18798,2005 @@
     "Karbo": 17,
     "Protein": 4,
     "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2351",
+    "Nama Minuman": "Kopi 3-in-1 + Gula",
+    "Total Kcal": 125,
+    "Karbo": 22,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2352",
+    "Nama Minuman": "Kopi 3-in-1 + Susu",
+    "Total Kcal": 145,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2353",
+    "Nama Minuman": "Kopi 3-in-1 + Susu Cair",
+    "Total Kcal": 155,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2354",
+    "Nama Minuman": "Kopi 3-in-1 + Susu Fresh",
+    "Total Kcal": 150,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2355",
+    "Nama Minuman": "Kopi 3-in-1 + Susu Low Fat",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2356",
+    "Nama Minuman": "Kopi 3-in-1 + Gula + Susu",
+    "Total Kcal": 165,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2357",
+    "Nama Minuman": "Kopi 3-in-1 + Gula + Susu Cair",
+    "Total Kcal": 175,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2358",
+    "Nama Minuman": "Kopi 3-in-1 + Gula + Susu Fresh",
+    "Total Kcal": 170,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2359",
+    "Nama Minuman": "Kopi 3-in-1 + Gula + Susu Low Fat",
+    "Total Kcal": 155,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2360",
+    "Nama Minuman": "Kopi O Sachet + Gula",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2361",
+    "Nama Minuman": "Kopi O Sachet + Susu",
+    "Total Kcal": 75,
+    "Karbo": 7,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2362",
+    "Nama Minuman": "Kopi O Sachet + Susu Cair",
+    "Total Kcal": 85,
+    "Karbo": 7,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2363",
+    "Nama Minuman": "Kopi O Sachet + Susu Fresh",
+    "Total Kcal": 80,
+    "Karbo": 7,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2364",
+    "Nama Minuman": "Kopi O Sachet + Susu Low Fat",
+    "Total Kcal": 65,
+    "Karbo": 7,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2365",
+    "Nama Minuman": "Kopi O Sachet + Gula + Susu",
+    "Total Kcal": 95,
+    "Karbo": 10,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2366",
+    "Nama Minuman": "Kopi O Sachet + Gula + Susu Cair",
+    "Total Kcal": 105,
+    "Karbo": 10,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2367",
+    "Nama Minuman": "Kopi O Sachet + Gula + Susu Fresh",
+    "Total Kcal": 100,
+    "Karbo": 10,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2368",
+    "Nama Minuman": "Kopi O Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 85,
+    "Karbo": 10,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2369",
+    "Nama Minuman": "White Coffee + Gula",
+    "Total Kcal": 135,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2370",
+    "Nama Minuman": "White Coffee + Susu",
+    "Total Kcal": 155,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2371",
+    "Nama Minuman": "White Coffee + Susu Cair",
+    "Total Kcal": 165,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2372",
+    "Nama Minuman": "White Coffee + Susu Fresh",
+    "Total Kcal": 160,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2373",
+    "Nama Minuman": "White Coffee + Susu Low Fat",
+    "Total Kcal": 145,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2374",
+    "Nama Minuman": "White Coffee + Gula + Susu",
+    "Total Kcal": 175,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2375",
+    "Nama Minuman": "White Coffee + Gula + Susu Cair",
+    "Total Kcal": 185,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2376",
+    "Nama Minuman": "White Coffee + Gula + Susu Fresh",
+    "Total Kcal": 180,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2377",
+    "Nama Minuman": "White Coffee + Gula + Susu Low Fat",
+    "Total Kcal": 165,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2378",
+    "Nama Minuman": "Teh Tarik Sachet + Gula",
+    "Total Kcal": 125,
+    "Karbo": 22,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2379",
+    "Nama Minuman": "Teh Tarik Sachet + Susu",
+    "Total Kcal": 145,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2380",
+    "Nama Minuman": "Teh Tarik Sachet + Susu Cair",
+    "Total Kcal": 155,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2381",
+    "Nama Minuman": "Teh Tarik Sachet + Susu Fresh",
+    "Total Kcal": 150,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2382",
+    "Nama Minuman": "Teh Tarik Sachet + Susu Low Fat",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2383",
+    "Nama Minuman": "Teh Tarik Sachet + Gula + Susu",
+    "Total Kcal": 165,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2384",
+    "Nama Minuman": "Teh Tarik Sachet + Gula + Susu Cair",
+    "Total Kcal": 175,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2385",
+    "Nama Minuman": "Teh Tarik Sachet + Gula + Susu Fresh",
+    "Total Kcal": 170,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2386",
+    "Nama Minuman": "Teh Tarik Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 155,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2387",
+    "Nama Minuman": "Teh O 3-in-1 + Gula",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2388",
+    "Nama Minuman": "Teh O 3-in-1 + Susu",
+    "Total Kcal": 110,
+    "Karbo": 17,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2389",
+    "Nama Minuman": "Teh O 3-in-1 + Susu Cair",
+    "Total Kcal": 120,
+    "Karbo": 17,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2390",
+    "Nama Minuman": "Teh O 3-in-1 + Susu Fresh",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2391",
+    "Nama Minuman": "Teh O 3-in-1 + Susu Low Fat",
+    "Total Kcal": 100,
+    "Karbo": 17,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2392",
+    "Nama Minuman": "Teh O 3-in-1 + Gula + Susu",
+    "Total Kcal": 130,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2393",
+    "Nama Minuman": "Teh O 3-in-1 + Gula + Susu Cair",
+    "Total Kcal": 140,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2394",
+    "Nama Minuman": "Teh O 3-in-1 + Gula + Susu Fresh",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2395",
+    "Nama Minuman": "Teh O 3-in-1 + Gula + Susu Low Fat",
+    "Total Kcal": 120,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2396",
+    "Nama Minuman": "Milo Sachet + Gula",
+    "Total Kcal": 125,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2397",
+    "Nama Minuman": "Milo Sachet + Susu",
+    "Total Kcal": 145,
+    "Karbo": 20,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2398",
+    "Nama Minuman": "Milo Sachet + Susu Cair",
+    "Total Kcal": 155,
+    "Karbo": 20,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2399",
+    "Nama Minuman": "Milo Sachet + Susu Fresh",
+    "Total Kcal": 150,
+    "Karbo": 20,
+    "Protein": 7,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2400",
+    "Nama Minuman": "Milo Sachet + Susu Low Fat",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 7,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2401",
+    "Nama Minuman": "Milo Sachet + Gula + Susu",
+    "Total Kcal": 165,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2402",
+    "Nama Minuman": "Milo Sachet + Gula + Susu Cair",
+    "Total Kcal": 175,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2403",
+    "Nama Minuman": "Milo Sachet + Gula + Susu Fresh",
+    "Total Kcal": 170,
+    "Karbo": 23,
+    "Protein": 7,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2404",
+    "Nama Minuman": "Milo Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 155,
+    "Karbo": 23,
+    "Protein": 7,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2405",
+    "Nama Minuman": "Horlicks Sachet + Gula",
+    "Total Kcal": 145,
+    "Karbo": 25,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2406",
+    "Nama Minuman": "Horlicks Sachet + Susu",
+    "Total Kcal": 165,
+    "Karbo": 22,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2407",
+    "Nama Minuman": "Horlicks Sachet + Susu Cair",
+    "Total Kcal": 175,
+    "Karbo": 22,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2408",
+    "Nama Minuman": "Horlicks Sachet + Susu Fresh",
+    "Total Kcal": 170,
+    "Karbo": 22,
+    "Protein": 7,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2409",
+    "Nama Minuman": "Horlicks Sachet + Susu Low Fat",
+    "Total Kcal": 155,
+    "Karbo": 22,
+    "Protein": 7,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2410",
+    "Nama Minuman": "Horlicks Sachet + Gula + Susu",
+    "Total Kcal": 185,
+    "Karbo": 25,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2411",
+    "Nama Minuman": "Horlicks Sachet + Gula + Susu Cair",
+    "Total Kcal": 195,
+    "Karbo": 25,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2412",
+    "Nama Minuman": "Horlicks Sachet + Gula + Susu Fresh",
+    "Total Kcal": 190,
+    "Karbo": 25,
+    "Protein": 7,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2413",
+    "Nama Minuman": "Horlicks Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 175,
+    "Karbo": 25,
+    "Protein": 7,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2414",
+    "Nama Minuman": "Ovaltine Sachet + Gula",
+    "Total Kcal": 130,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2415",
+    "Nama Minuman": "Ovaltine Sachet + Susu",
+    "Total Kcal": 150,
+    "Karbo": 20,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2416",
+    "Nama Minuman": "Ovaltine Sachet + Susu Cair",
+    "Total Kcal": 160,
+    "Karbo": 20,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2417",
+    "Nama Minuman": "Ovaltine Sachet + Susu Fresh",
+    "Total Kcal": 155,
+    "Karbo": 20,
+    "Protein": 7,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2418",
+    "Nama Minuman": "Ovaltine Sachet + Susu Low Fat",
+    "Total Kcal": 140,
+    "Karbo": 20,
+    "Protein": 7,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2419",
+    "Nama Minuman": "Ovaltine Sachet + Gula + Susu",
+    "Total Kcal": 170,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2420",
+    "Nama Minuman": "Ovaltine Sachet + Gula + Susu Cair",
+    "Total Kcal": 180,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2421",
+    "Nama Minuman": "Ovaltine Sachet + Gula + Susu Fresh",
+    "Total Kcal": 175,
+    "Karbo": 23,
+    "Protein": 7,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2422",
+    "Nama Minuman": "Ovaltine Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 160,
+    "Karbo": 23,
+    "Protein": 7,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2423",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Gula",
+    "Total Kcal": 135,
+    "Karbo": 24,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2424",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Susu",
+    "Total Kcal": 155,
+    "Karbo": 21,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2425",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Susu Cair",
+    "Total Kcal": 165,
+    "Karbo": 21,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2426",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Susu Fresh",
+    "Total Kcal": 160,
+    "Karbo": 21,
+    "Protein": 7,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2427",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Susu Low Fat",
+    "Total Kcal": 145,
+    "Karbo": 21,
+    "Protein": 7,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2428",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Gula + Susu",
+    "Total Kcal": 175,
+    "Karbo": 24,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2429",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Gula + Susu Cair",
+    "Total Kcal": 185,
+    "Karbo": 24,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2430",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Gula + Susu Fresh",
+    "Total Kcal": 180,
+    "Karbo": 24,
+    "Protein": 7,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2431",
+    "Nama Minuman": "Coklat 3-in-1 Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 165,
+    "Karbo": 24,
+    "Protein": 7,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2432",
+    "Nama Minuman": "Teh Halia Sachet + Gula",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2433",
+    "Nama Minuman": "Teh Halia Sachet + Susu",
+    "Total Kcal": 120,
+    "Karbo": 18,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2434",
+    "Nama Minuman": "Teh Halia Sachet + Susu Cair",
+    "Total Kcal": 130,
+    "Karbo": 18,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2435",
+    "Nama Minuman": "Teh Halia Sachet + Susu Fresh",
+    "Total Kcal": 125,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2436",
+    "Nama Minuman": "Teh Halia Sachet + Susu Low Fat",
+    "Total Kcal": 110,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2437",
+    "Nama Minuman": "Teh Halia Sachet + Gula + Susu",
+    "Total Kcal": 140,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2438",
+    "Nama Minuman": "Teh Halia Sachet + Gula + Susu Cair",
+    "Total Kcal": 150,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2439",
+    "Nama Minuman": "Teh Halia Sachet + Gula + Susu Fresh",
+    "Total Kcal": 145,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2440",
+    "Nama Minuman": "Teh Halia Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 130,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2441",
+    "Nama Minuman": "Bandung Sachet + Gula",
+    "Total Kcal": 120,
+    "Karbo": 25,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2442",
+    "Nama Minuman": "Bandung Sachet + Susu",
+    "Total Kcal": 140,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2443",
+    "Nama Minuman": "Bandung Sachet + Susu Cair",
+    "Total Kcal": 150,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2444",
+    "Nama Minuman": "Bandung Sachet + Susu Fresh",
+    "Total Kcal": 145,
+    "Karbo": 22,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2445",
+    "Nama Minuman": "Bandung Sachet + Susu Low Fat",
+    "Total Kcal": 130,
+    "Karbo": 22,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2446",
+    "Nama Minuman": "Bandung Sachet + Gula + Susu",
+    "Total Kcal": 160,
+    "Karbo": 25,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2447",
+    "Nama Minuman": "Bandung Sachet + Gula + Susu Cair",
+    "Total Kcal": 170,
+    "Karbo": 25,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2448",
+    "Nama Minuman": "Bandung Sachet + Gula + Susu Fresh",
+    "Total Kcal": 165,
+    "Karbo": 25,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2449",
+    "Nama Minuman": "Bandung Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 150,
+    "Karbo": 25,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2450",
+    "Nama Minuman": "Air Soya Sachet + Gula",
+    "Total Kcal": 125,
+    "Karbo": 21,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2451",
+    "Nama Minuman": "Air Soya Sachet + Susu",
+    "Total Kcal": 145,
+    "Karbo": 17,
+    "Protein": 8,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2452",
+    "Nama Minuman": "Air Soya Sachet + Susu Cair",
+    "Total Kcal": 155,
+    "Karbo": 17,
+    "Protein": 8,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2453",
+    "Nama Minuman": "Air Soya Sachet + Susu Fresh",
+    "Total Kcal": 150,
+    "Karbo": 17,
+    "Protein": 9,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2454",
+    "Nama Minuman": "Air Soya Sachet + Susu Low Fat",
+    "Total Kcal": 135,
+    "Karbo": 17,
+    "Protein": 9,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2455",
+    "Nama Minuman": "Air Soya Sachet + Gula + Susu",
+    "Total Kcal": 165,
+    "Karbo": 20,
+    "Protein": 8,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2456",
+    "Nama Minuman": "Air Soya Sachet + Gula + Susu Cair",
+    "Total Kcal": 175,
+    "Karbo": 20,
+    "Protein": 8,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2457",
+    "Nama Minuman": "Air Soya Sachet + Gula + Susu Fresh",
+    "Total Kcal": 170,
+    "Karbo": 20,
+    "Protein": 9,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2458",
+    "Nama Minuman": "Air Soya Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 155,
+    "Karbo": 20,
+    "Protein": 9,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2459",
+    "Nama Minuman": "Air Barli Sachet + Gula",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2460",
+    "Nama Minuman": "Air Barli Sachet + Susu",
+    "Total Kcal": 105,
+    "Karbo": 17,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2461",
+    "Nama Minuman": "Air Barli Sachet + Susu Cair",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2462",
+    "Nama Minuman": "Air Barli Sachet + Susu Fresh",
+    "Total Kcal": 110,
+    "Karbo": 17,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2463",
+    "Nama Minuman": "Air Barli Sachet + Susu Low Fat",
+    "Total Kcal": 95,
+    "Karbo": 17,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2464",
+    "Nama Minuman": "Air Barli Sachet + Gula + Susu",
+    "Total Kcal": 125,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2465",
+    "Nama Minuman": "Air Barli Sachet + Gula + Susu Cair",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2466",
+    "Nama Minuman": "Air Barli Sachet + Gula + Susu Fresh",
+    "Total Kcal": 130,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2467",
+    "Nama Minuman": "Air Barli Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2468",
+    "Nama Minuman": "Air Jagung Sachet + Gula",
+    "Total Kcal": 105,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2469",
+    "Nama Minuman": "Air Jagung Sachet + Susu",
+    "Total Kcal": 125,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2470",
+    "Nama Minuman": "Air Jagung Sachet + Susu Cair",
+    "Total Kcal": 135,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2471",
+    "Nama Minuman": "Air Jagung Sachet + Susu Fresh",
+    "Total Kcal": 130,
+    "Karbo": 21,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2472",
+    "Nama Minuman": "Air Jagung Sachet + Susu Low Fat",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2473",
+    "Nama Minuman": "Air Jagung Sachet + Gula + Susu",
+    "Total Kcal": 145,
+    "Karbo": 24,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2474",
+    "Nama Minuman": "Air Jagung Sachet + Gula + Susu Cair",
+    "Total Kcal": 155,
+    "Karbo": 24,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2475",
+    "Nama Minuman": "Air Jagung Sachet + Gula + Susu Fresh",
+    "Total Kcal": 150,
+    "Karbo": 24,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2476",
+    "Nama Minuman": "Air Jagung Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 135,
+    "Karbo": 24,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2477",
+    "Nama Minuman": "Air Bandung + Susu Cair",
+    "Total Kcal": 130,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2478",
+    "Nama Minuman": "Air Bandung + Susu Fresh",
+    "Total Kcal": 125,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2479",
+    "Nama Minuman": "Air Bandung + Susu Low Fat",
+    "Total Kcal": 110,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2480",
+    "Nama Minuman": "Air Bandung + Gula + Susu Cair",
+    "Total Kcal": 150,
+    "Karbo": 26,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2481",
+    "Nama Minuman": "Air Bandung + Gula + Susu Fresh",
+    "Total Kcal": 145,
+    "Karbo": 26,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2482",
+    "Nama Minuman": "Air Bandung + Gula + Susu Low Fat",
+    "Total Kcal": 130,
+    "Karbo": 26,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2483",
+    "Nama Minuman": "Air Cincau Sachet + Susu",
+    "Total Kcal": 100,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2484",
+    "Nama Minuman": "Air Cincau Sachet + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2485",
+    "Nama Minuman": "Air Cincau Sachet + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 18,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2486",
+    "Nama Minuman": "Air Cincau Sachet + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 18,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2487",
+    "Nama Minuman": "Air Cincau Sachet + Gula + Susu",
+    "Total Kcal": 130,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2488",
+    "Nama Minuman": "Air Cincau Sachet + Gula + Susu Cair",
+    "Total Kcal": 140,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2489",
+    "Nama Minuman": "Air Cincau Sachet + Gula + Susu Fresh",
+    "Total Kcal": 135,
+    "Karbo": 21,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2490",
+    "Nama Minuman": "Air Cincau Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 120,
+    "Karbo": 21,
+    "Protein": 5,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2491",
+    "Nama Minuman": "Susu Kambing Sachet + Gula",
+    "Total Kcal": 135,
+    "Karbo": 15,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2492",
+    "Nama Minuman": "Susu Kambing Sachet + Susu Cair",
+    "Total Kcal": 150,
+    "Karbo": 15,
+    "Protein": 7,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2493",
+    "Nama Minuman": "Susu Kambing Sachet + Susu Fresh",
+    "Total Kcal": 145,
+    "Karbo": 15,
+    "Protein": 8,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2494",
+    "Nama Minuman": "Susu Kambing Sachet + Susu Low Fat",
+    "Total Kcal": 130,
+    "Karbo": 15,
+    "Protein": 8,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2495",
+    "Nama Minuman": "Susu Kambing Sachet + Gula + Susu Cair",
+    "Total Kcal": 170,
+    "Karbo": 18,
+    "Protein": 7,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2496",
+    "Nama Minuman": "Susu Kambing Sachet + Gula + Susu Fresh",
+    "Total Kcal": 165,
+    "Karbo": 18,
+    "Protein": 8,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2497",
+    "Nama Minuman": "Susu Kambing Sachet + Gula + Susu Low Fat",
+    "Total Kcal": 150,
+    "Karbo": 18,
+    "Protein": 8,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2498",
+    "Nama Minuman": "Halia Madu Sachet + Gula",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2499",
+    "Nama Minuman": "Halia Madu Sachet + Susu",
+    "Total Kcal": 125,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2500",
+    "Nama Minuman": "Halia Madu Sachet + Susu Cair",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2501",
+    "Nama Minuman": "Extra Joss Original + Gula",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2502",
+    "Nama Minuman": "Extra Joss Original + Susu",
+    "Total Kcal": 85,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2503",
+    "Nama Minuman": "Extra Joss Original + Susu Cair",
+    "Total Kcal": 95,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2504",
+    "Nama Minuman": "Extra Joss Original + Susu Fresh",
+    "Total Kcal": 90,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2505",
+    "Nama Minuman": "Extra Joss Original + Susu Low Fat",
+    "Total Kcal": 75,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2506",
+    "Nama Minuman": "Extra Joss Original + Gula + Susu",
+    "Total Kcal": 115,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2507",
+    "Nama Minuman": "Extra Joss Original + Gula + Susu Cair",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2508",
+    "Nama Minuman": "Extra Joss Original + Gula + Susu Fresh",
+    "Total Kcal": 120,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2509",
+    "Nama Minuman": "Extra Joss Original + Gula + Susu Low Fat",
+    "Total Kcal": 105,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2510",
+    "Nama Minuman": "Extra Joss Anggur + Gula",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2511",
+    "Nama Minuman": "Extra Joss Anggur + Susu",
+    "Total Kcal": 85,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2512",
+    "Nama Minuman": "Extra Joss Anggur + Susu Cair",
+    "Total Kcal": 95,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2513",
+    "Nama Minuman": "Extra Joss Anggur + Susu Fresh",
+    "Total Kcal": 90,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2514",
+    "Nama Minuman": "Extra Joss Anggur + Susu Low Fat",
+    "Total Kcal": 75,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2515",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Susu",
+    "Total Kcal": 115,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2516",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Susu Cair",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2517",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Susu Fresh",
+    "Total Kcal": 120,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2518",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Susu Low Fat",
+    "Total Kcal": 105,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2519",
+    "Nama Minuman": "Extra Joss Mangga + Gula",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2520",
+    "Nama Minuman": "Extra Joss Mangga + Susu",
+    "Total Kcal": 85,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2521",
+    "Nama Minuman": "Extra Joss Mangga + Susu Cair",
+    "Total Kcal": 95,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2522",
+    "Nama Minuman": "Extra Joss Mangga + Susu Fresh",
+    "Total Kcal": 90,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2523",
+    "Nama Minuman": "Extra Joss Mangga + Susu Low Fat",
+    "Total Kcal": 75,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2524",
+    "Nama Minuman": "Extra Joss Mangga + Gula + Susu",
+    "Total Kcal": 115,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2525",
+    "Nama Minuman": "Extra Joss Mangga + Gula + Susu Cair",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2526",
+    "Nama Minuman": "Extra Joss Mangga + Gula + Susu Fresh",
+    "Total Kcal": 120,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2527",
+    "Nama Minuman": "Extra Joss Mangga + Gula + Susu Low Fat",
+    "Total Kcal": 105,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2528",
+    "Nama Minuman": "Extra Joss Sirsak + Gula",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2529",
+    "Nama Minuman": "Extra Joss Sirsak + Susu",
+    "Total Kcal": 85,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2530",
+    "Nama Minuman": "Extra Joss Sirsak + Susu Cair",
+    "Total Kcal": 95,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2531",
+    "Nama Minuman": "Extra Joss Sirsak + Susu Fresh",
+    "Total Kcal": 90,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2532",
+    "Nama Minuman": "Extra Joss Sirsak + Susu Low Fat",
+    "Total Kcal": 75,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2533",
+    "Nama Minuman": "Extra Joss Sirsak + Gula + Susu",
+    "Total Kcal": 115,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2534",
+    "Nama Minuman": "Extra Joss Sirsak + Gula + Susu Cair",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2535",
+    "Nama Minuman": "Extra Joss Sirsak + Gula + Susu Fresh",
+    "Total Kcal": 120,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2536",
+    "Nama Minuman": "Extra Joss Sirsak + Gula + Susu Low Fat",
+    "Total Kcal": 105,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2537",
+    "Nama Minuman": "Extra Joss Stamina Plus + Gula",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2538",
+    "Nama Minuman": "Extra Joss Stamina Plus + Susu",
+    "Total Kcal": 85,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2539",
+    "Nama Minuman": "Extra Joss Stamina Plus + Susu Cair",
+    "Total Kcal": 95,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2540",
+    "Nama Minuman": "Extra Joss Stamina Plus + Susu Fresh",
+    "Total Kcal": 90,
+    "Karbo": 11,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2541",
+    "Nama Minuman": "Extra Joss Stamina Plus + Susu Low Fat",
+    "Total Kcal": 75,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2542",
+    "Nama Minuman": "Extra Joss Stamina Plus + Gula + Susu",
+    "Total Kcal": 115,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2543",
+    "Nama Minuman": "Extra Joss Stamina Plus + Gula + Susu Cair",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2544",
+    "Nama Minuman": "Extra Joss Stamina Plus + Gula + Susu Fresh",
+    "Total Kcal": 120,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2545",
+    "Nama Minuman": "Extra Joss Stamina Plus + Gula + Susu Low Fat",
+    "Total Kcal": 105,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2546",
+    "Nama Minuman": "Extra Joss Lemon + Gula",
+    "Total Kcal": 60,
+    "Karbo": 15,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2547",
+    "Nama Minuman": "Extra Joss Lemon + Susu",
+    "Total Kcal": 80,
+    "Karbo": 10,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2548",
+    "Nama Minuman": "Extra Joss Lemon + Susu Cair",
+    "Total Kcal": 90,
+    "Karbo": 10,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2549",
+    "Nama Minuman": "Extra Joss Lemon + Susu Fresh",
+    "Total Kcal": 85,
+    "Karbo": 10,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2550",
+    "Nama Minuman": "Extra Joss Lemon + Susu Low Fat",
+    "Total Kcal": 70,
+    "Karbo": 10,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2551",
+    "Nama Minuman": "Extra Joss Lemon + Gula + Susu",
+    "Total Kcal": 110,
+    "Karbo": 13,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2552",
+    "Nama Minuman": "Extra Joss Lemon + Gula + Susu Cair",
+    "Total Kcal": 120,
+    "Karbo": 13,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2553",
+    "Nama Minuman": "Extra Joss Lemon + Gula + Susu Fresh",
+    "Total Kcal": 115,
+    "Karbo": 13,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2554",
+    "Nama Minuman": "Extra Joss Lemon + Gula + Susu Low Fat",
+    "Total Kcal": 100,
+    "Karbo": 13,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2555",
+    "Nama Minuman": "Extra Joss Jeruk + Gula",
+    "Total Kcal": 60,
+    "Karbo": 15,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2556",
+    "Nama Minuman": "Extra Joss Jeruk + Susu",
+    "Total Kcal": 80,
+    "Karbo": 10,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2557",
+    "Nama Minuman": "Extra Joss Jeruk + Susu Cair",
+    "Total Kcal": 90,
+    "Karbo": 10,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2558",
+    "Nama Minuman": "Extra Joss Jeruk + Susu Fresh",
+    "Total Kcal": 85,
+    "Karbo": 10,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2559",
+    "Nama Minuman": "Extra Joss Jeruk + Susu Low Fat",
+    "Total Kcal": 70,
+    "Karbo": 10,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2560",
+    "Nama Minuman": "Extra Joss Jeruk + Gula + Susu",
+    "Total Kcal": 110,
+    "Karbo": 13,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2561",
+    "Nama Minuman": "Extra Joss Jeruk + Gula + Susu Cair",
+    "Total Kcal": 120,
+    "Karbo": 13,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2562",
+    "Nama Minuman": "Extra Joss Jeruk + Gula + Susu Fresh",
+    "Total Kcal": 115,
+    "Karbo": 13,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2563",
+    "Nama Minuman": "Extra Joss Jeruk + Gula + Susu Low Fat",
+    "Total Kcal": 100,
+    "Karbo": 13,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2564",
+    "Nama Minuman": "Extra Joss Kopi + Gula",
+    "Total Kcal": 70,
+    "Karbo": 16,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2565",
+    "Nama Minuman": "Extra Joss Kopi + Susu",
+    "Total Kcal": 90,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2566",
+    "Nama Minuman": "Extra Joss Kopi + Susu Cair",
+    "Total Kcal": 100,
+    "Karbo": 11,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2567",
+    "Nama Minuman": "Extra Joss Kopi + Susu Fresh",
+    "Total Kcal": 95,
+    "Karbo": 11,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2568",
+    "Nama Minuman": "Extra Joss Kopi + Susu Low Fat",
+    "Total Kcal": 80,
+    "Karbo": 11,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2569",
+    "Nama Minuman": "Extra Joss Kopi + Gula + Susu",
+    "Total Kcal": 120,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2570",
+    "Nama Minuman": "Extra Joss Kopi + Gula + Susu Cair",
+    "Total Kcal": 130,
+    "Karbo": 14,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2571",
+    "Nama Minuman": "Extra Joss Kopi + Gula + Susu Fresh",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2572",
+    "Nama Minuman": "Extra Joss Kopi + Gula + Susu Low Fat",
+    "Total Kcal": 110,
+    "Karbo": 14,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2573",
+    "Nama Minuman": "Extra Joss Blend Original",
+    "Total Kcal": 55,
+    "Karbo": 13,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2574",
+    "Nama Minuman": "Extra Joss Blend Original + Gula",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2575",
+    "Nama Minuman": "Extra Joss Blend Original + Susu",
+    "Total Kcal": 95,
+    "Karbo": 13,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2576",
+    "Nama Minuman": "Extra Joss Blend Original + Susu Cair",
+    "Total Kcal": 105,
+    "Karbo": 13,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2577",
+    "Nama Minuman": "Extra Joss Blend Original + Susu Fresh",
+    "Total Kcal": 100,
+    "Karbo": 13,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2578",
+    "Nama Minuman": "Extra Joss Blend Original + Susu Low Fat",
+    "Total Kcal": 85,
+    "Karbo": 13,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2579",
+    "Nama Minuman": "Extra Joss Blend Original + Gula + Susu",
+    "Total Kcal": 125,
+    "Karbo": 16,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2580",
+    "Nama Minuman": "Extra Joss Blend Original + Gula + Susu Cair",
+    "Total Kcal": 135,
+    "Karbo": 16,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2581",
+    "Nama Minuman": "Extra Joss Blend Original + Gula + Susu Fresh",
+    "Total Kcal": 130,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2582",
+    "Nama Minuman": "Extra Joss Blend Original + Gula + Susu Low Fat",
+    "Total Kcal": 115,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2583",
+    "Nama Minuman": "Extra Joss Blend Kopi + Gula",
+    "Total Kcal": 80,
+    "Karbo": 18,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2584",
+    "Nama Minuman": "Extra Joss Blend Kopi + Susu",
+    "Total Kcal": 100,
+    "Karbo": 13,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2585",
+    "Nama Minuman": "Extra Joss Blend Kopi + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 13,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2586",
+    "Nama Minuman": "Extra Joss Blend Kopi + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 13,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2587",
+    "Nama Minuman": "Extra Joss Blend Kopi + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 13,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2588",
+    "Nama Minuman": "Extra Joss Blend Kopi + Gula + Susu",
+    "Total Kcal": 130,
+    "Karbo": 16,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2589",
+    "Nama Minuman": "Extra Joss Blend Kopi + Gula + Susu Cair",
+    "Total Kcal": 140,
+    "Karbo": 16,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2590",
+    "Nama Minuman": "Extra Joss Blend Kopi + Gula + Susu Fresh",
+    "Total Kcal": 135,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2591",
+    "Nama Minuman": "Extra Joss Blend Kopi + Gula + Susu Low Fat",
+    "Total Kcal": 120,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2592",
+    "Nama Minuman": "Extra Joss Blend Soda + Gula",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2593",
+    "Nama Minuman": "Extra Joss Blend Soda + Susu",
+    "Total Kcal": 90,
+    "Karbo": 12,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2594",
+    "Nama Minuman": "Extra Joss Blend Soda + Susu Cair",
+    "Total Kcal": 100,
+    "Karbo": 12,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2595",
+    "Nama Minuman": "Extra Joss Blend Soda + Susu Fresh",
+    "Total Kcal": 95,
+    "Karbo": 12,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2596",
+    "Nama Minuman": "Extra Joss Blend Soda + Susu Low Fat",
+    "Total Kcal": 80,
+    "Karbo": 12,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2597",
+    "Nama Minuman": "Extra Joss Blend Soda + Gula + Susu",
+    "Total Kcal": 120,
+    "Karbo": 15,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2598",
+    "Nama Minuman": "Extra Joss Blend Soda + Gula + Susu Cair",
+    "Total Kcal": 130,
+    "Karbo": 15,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2599",
+    "Nama Minuman": "Extra Joss Blend Soda + Gula + Susu Fresh",
+    "Total Kcal": 125,
+    "Karbo": 15,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2600",
+    "Nama Minuman": "Extra Joss Blend Soda + Gula + Susu Low Fat",
+    "Total Kcal": 110,
+    "Karbo": 15,
+    "Protein": 4,
+    "Lemak": 1
   }
 ]
