@@ -20798,5 +20798,2405 @@
     "Karbo": 15,
     "Protein": 4,
     "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2601",
+    "Nama Minuman": "Extra Joss Original Ais",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2602",
+    "Nama Minuman": "Extra Joss Anggur Ais",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2603",
+    "Nama Minuman": "Extra Joss Mangga Ais",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2604",
+    "Nama Minuman": "Extra Joss Sirsak Ais",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2605",
+    "Nama Minuman": "Extra Joss Stamina Plus Ais",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2606",
+    "Nama Minuman": "Extra Joss Original + Soda",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2607",
+    "Nama Minuman": "Extra Joss Anggur + Soda",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2608",
+    "Nama Minuman": "Extra Joss Mangga + Soda",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2609",
+    "Nama Minuman": "Extra Joss Sirsak + Soda",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2610",
+    "Nama Minuman": "Extra Joss Stamina Plus + Soda",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2611",
+    "Nama Minuman": "Extra Joss Original + Lemon",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2612",
+    "Nama Minuman": "Extra Joss Anggur + Lemon",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2613",
+    "Nama Minuman": "Extra Joss Mangga + Lemon",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2614",
+    "Nama Minuman": "Extra Joss Sirsak + Lemon",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2615",
+    "Nama Minuman": "Extra Joss Original + Limau",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2616",
+    "Nama Minuman": "Extra Joss Anggur + Limau",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2617",
+    "Nama Minuman": "Extra Joss Mangga + Limau",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2618",
+    "Nama Minuman": "Extra Joss Sirsak + Limau",
+    "Total Kcal": 55,
+    "Karbo": 14,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2619",
+    "Nama Minuman": "Extra Joss Original + Madu",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2620",
+    "Nama Minuman": "Extra Joss Anggur + Madu",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2621",
+    "Nama Minuman": "Extra Joss Mangga + Madu",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2622",
+    "Nama Minuman": "Extra Joss Sirsak + Madu",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2623",
+    "Nama Minuman": "Extra Joss Original + Lemon + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2624",
+    "Nama Minuman": "Extra Joss Anggur + Lemon + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2625",
+    "Nama Minuman": "Extra Joss Mangga + Lemon + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2626",
+    "Nama Minuman": "Extra Joss Sirsak + Lemon + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2627",
+    "Nama Minuman": "Extra Joss Original + Limau + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2628",
+    "Nama Minuman": "Extra Joss Anggur + Limau + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2629",
+    "Nama Minuman": "Extra Joss Mangga + Limau + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2630",
+    "Nama Minuman": "Extra Joss Sirsak + Limau + Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2631",
+    "Nama Minuman": "Extra Joss Original + Air Kelapa",
+    "Total Kcal": 90,
+    "Karbo": 17,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2632",
+    "Nama Minuman": "Extra Joss Anggur + Air Kelapa",
+    "Total Kcal": 90,
+    "Karbo": 17,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2633",
+    "Nama Minuman": "Extra Joss Mangga + Air Kelapa",
+    "Total Kcal": 90,
+    "Karbo": 17,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2634",
+    "Nama Minuman": "Extra Joss Sirsak + Air Kelapa",
+    "Total Kcal": 90,
+    "Karbo": 17,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2635",
+    "Nama Minuman": "Extra Joss Original + Nata De Coco",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2636",
+    "Nama Minuman": "Extra Joss Anggur + Nata De Coco",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2637",
+    "Nama Minuman": "Extra Joss Mangga + Nata De Coco",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2638",
+    "Nama Minuman": "Extra Joss Sirsak + Nata De Coco",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2639",
+    "Nama Minuman": "Extra Joss Original + Selasih",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2640",
+    "Nama Minuman": "Extra Joss Anggur + Selasih",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2641",
+    "Nama Minuman": "Extra Joss Mangga + Selasih",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2642",
+    "Nama Minuman": "Extra Joss Sirsak + Selasih",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2643",
+    "Nama Minuman": "Extra Joss Original + Jelly",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2644",
+    "Nama Minuman": "Extra Joss Anggur + Jelly",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2645",
+    "Nama Minuman": "Extra Joss Mangga + Jelly",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2646",
+    "Nama Minuman": "Extra Joss Sirsak + Jelly",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2647",
+    "Nama Minuman": "Extra Joss Original + Cincau",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2648",
+    "Nama Minuman": "Extra Joss Anggur + Cincau",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2649",
+    "Nama Minuman": "Extra Joss Mangga + Cincau",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2650",
+    "Nama Minuman": "Extra Joss Sirsak + Cincau",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2651",
+    "Nama Minuman": "Extra Joss Original + Strawberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2652",
+    "Nama Minuman": "Extra Joss Anggur + Strawberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2653",
+    "Nama Minuman": "Extra Joss Mangga + Strawberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2654",
+    "Nama Minuman": "Extra Joss Sirsak + Strawberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2655",
+    "Nama Minuman": "Extra Joss Original + Mango",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2656",
+    "Nama Minuman": "Extra Joss Anggur + Mango",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2657",
+    "Nama Minuman": "Extra Joss Mangga + Mango",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2658",
+    "Nama Minuman": "Extra Joss Sirsak + Mango",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2659",
+    "Nama Minuman": "Extra Joss Original + Lychee",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2660",
+    "Nama Minuman": "Extra Joss Anggur + Lychee",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2661",
+    "Nama Minuman": "Extra Joss Mangga + Lychee",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2662",
+    "Nama Minuman": "Extra Joss Sirsak + Lychee",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2663",
+    "Nama Minuman": "Extra Joss Original + Peach",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2664",
+    "Nama Minuman": "Extra Joss Anggur + Peach",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2665",
+    "Nama Minuman": "Extra Joss Mangga + Peach",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2666",
+    "Nama Minuman": "Extra Joss Sirsak + Peach",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2667",
+    "Nama Minuman": "Extra Joss Original + Watermelon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2668",
+    "Nama Minuman": "Extra Joss Anggur + Watermelon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2669",
+    "Nama Minuman": "Extra Joss Mangga + Watermelon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2670",
+    "Nama Minuman": "Extra Joss Sirsak + Watermelon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2671",
+    "Nama Minuman": "Extra Joss Original + Pineapple",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2672",
+    "Nama Minuman": "Extra Joss Anggur + Pineapple",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2673",
+    "Nama Minuman": "Extra Joss Mangga + Pineapple",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2674",
+    "Nama Minuman": "Extra Joss Sirsak + Pineapple",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2675",
+    "Nama Minuman": "Extra Joss Original + Passion Fruit",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2676",
+    "Nama Minuman": "Extra Joss Anggur + Passion Fruit",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2677",
+    "Nama Minuman": "Extra Joss Mangga + Passion Fruit",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2678",
+    "Nama Minuman": "Extra Joss Sirsak + Passion Fruit",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2679",
+    "Nama Minuman": "Extra Joss Original + Blueberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2680",
+    "Nama Minuman": "Extra Joss Anggur + Blueberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2681",
+    "Nama Minuman": "Extra Joss Mangga + Blueberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2682",
+    "Nama Minuman": "Extra Joss Sirsak + Blueberry",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2683",
+    "Nama Minuman": "Extra Joss Original + Strawberry + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2684",
+    "Nama Minuman": "Extra Joss Anggur + Strawberry + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2685",
+    "Nama Minuman": "Extra Joss Mangga + Strawberry + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2686",
+    "Nama Minuman": "Extra Joss Sirsak + Strawberry + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2687",
+    "Nama Minuman": "Extra Joss Original + Mango + Susu",
+    "Total Kcal": 105,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2688",
+    "Nama Minuman": "Extra Joss Anggur + Mango + Susu",
+    "Total Kcal": 105,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2689",
+    "Nama Minuman": "Extra Joss Mangga + Mango + Susu",
+    "Total Kcal": 105,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2690",
+    "Nama Minuman": "Extra Joss Sirsak + Mango + Susu",
+    "Total Kcal": 105,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2691",
+    "Nama Minuman": "Extra Joss Original + Lychee + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2692",
+    "Nama Minuman": "Extra Joss Anggur + Lychee + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2693",
+    "Nama Minuman": "Extra Joss Mangga + Lychee + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2694",
+    "Nama Minuman": "Extra Joss Sirsak + Lychee + Susu",
+    "Total Kcal": 100,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2695",
+    "Nama Minuman": "Extra Joss Original + Strawberry + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2696",
+    "Nama Minuman": "Extra Joss Anggur + Strawberry + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2697",
+    "Nama Minuman": "Extra Joss Mangga + Strawberry + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2698",
+    "Nama Minuman": "Extra Joss Sirsak + Strawberry + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2699",
+    "Nama Minuman": "Extra Joss Original + Mango + Susu Cair",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2700",
+    "Nama Minuman": "Extra Joss Anggur + Mango + Susu Cair",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2701",
+    "Nama Minuman": "Extra Joss Mangga + Mango + Susu Cair",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2702",
+    "Nama Minuman": "Extra Joss Sirsak + Mango + Susu Cair",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2703",
+    "Nama Minuman": "Extra Joss Original + Lychee + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2704",
+    "Nama Minuman": "Extra Joss Anggur + Lychee + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2705",
+    "Nama Minuman": "Extra Joss Mangga + Lychee + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2706",
+    "Nama Minuman": "Extra Joss Sirsak + Lychee + Susu Cair",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2707",
+    "Nama Minuman": "Extra Joss Original + Strawberry + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2708",
+    "Nama Minuman": "Extra Joss Anggur + Strawberry + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2709",
+    "Nama Minuman": "Extra Joss Mangga + Strawberry + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2710",
+    "Nama Minuman": "Extra Joss Sirsak + Strawberry + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2711",
+    "Nama Minuman": "Extra Joss Original + Mango + Susu Fresh",
+    "Total Kcal": 110,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2712",
+    "Nama Minuman": "Extra Joss Anggur + Mango + Susu Fresh",
+    "Total Kcal": 110,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2713",
+    "Nama Minuman": "Extra Joss Mangga + Mango + Susu Fresh",
+    "Total Kcal": 110,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2714",
+    "Nama Minuman": "Extra Joss Sirsak + Mango + Susu Fresh",
+    "Total Kcal": 110,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2715",
+    "Nama Minuman": "Extra Joss Original + Lychee + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2716",
+    "Nama Minuman": "Extra Joss Anggur + Lychee + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2717",
+    "Nama Minuman": "Extra Joss Mangga + Lychee + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2718",
+    "Nama Minuman": "Extra Joss Sirsak + Lychee + Susu Fresh",
+    "Total Kcal": 105,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2719",
+    "Nama Minuman": "Extra Joss Original + Strawberry + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2720",
+    "Nama Minuman": "Extra Joss Anggur + Strawberry + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2721",
+    "Nama Minuman": "Extra Joss Mangga + Strawberry + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2722",
+    "Nama Minuman": "Extra Joss Sirsak + Strawberry + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2723",
+    "Nama Minuman": "Extra Joss Original + Mango + Susu Low Fat",
+    "Total Kcal": 95,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2724",
+    "Nama Minuman": "Extra Joss Anggur + Mango + Susu Low Fat",
+    "Total Kcal": 95,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2725",
+    "Nama Minuman": "Extra Joss Mangga + Mango + Susu Low Fat",
+    "Total Kcal": 95,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2726",
+    "Nama Minuman": "Extra Joss Sirsak + Mango + Susu Low Fat",
+    "Total Kcal": 95,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2727",
+    "Nama Minuman": "Extra Joss Original + Lychee + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2728",
+    "Nama Minuman": "Extra Joss Anggur + Lychee + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2729",
+    "Nama Minuman": "Extra Joss Mangga + Lychee + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2730",
+    "Nama Minuman": "Extra Joss Sirsak + Lychee + Susu Low Fat",
+    "Total Kcal": 90,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2731",
+    "Nama Minuman": "Extra Joss Original + Yogurt",
+    "Total Kcal": 105,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2732",
+    "Nama Minuman": "Extra Joss Anggur + Yogurt",
+    "Total Kcal": 105,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2733",
+    "Nama Minuman": "Extra Joss Mangga + Yogurt",
+    "Total Kcal": 105,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2734",
+    "Nama Minuman": "Extra Joss Sirsak + Yogurt",
+    "Total Kcal": 105,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2735",
+    "Nama Minuman": "Extra Joss Original + Yogurt Strawberry",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2736",
+    "Nama Minuman": "Extra Joss Anggur + Yogurt Strawberry",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2737",
+    "Nama Minuman": "Extra Joss Mangga + Yogurt Strawberry",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2738",
+    "Nama Minuman": "Extra Joss Sirsak + Yogurt Strawberry",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2739",
+    "Nama Minuman": "Extra Joss Original + Yogurt Mango",
+    "Total Kcal": 120,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2740",
+    "Nama Minuman": "Extra Joss Anggur + Yogurt Mango",
+    "Total Kcal": 120,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2741",
+    "Nama Minuman": "Extra Joss Mangga + Yogurt Mango",
+    "Total Kcal": 120,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2742",
+    "Nama Minuman": "Extra Joss Sirsak + Yogurt Mango",
+    "Total Kcal": 120,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2743",
+    "Nama Minuman": "Extra Joss Original + Soda + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2744",
+    "Nama Minuman": "Extra Joss Anggur + Soda + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2745",
+    "Nama Minuman": "Extra Joss Mangga + Soda + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2746",
+    "Nama Minuman": "Extra Joss Sirsak + Soda + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2747",
+    "Nama Minuman": "Extra Joss Original + Soda + Limau",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2748",
+    "Nama Minuman": "Extra Joss Anggur + Soda + Limau",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2749",
+    "Nama Minuman": "Extra Joss Mangga + Soda + Limau",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2750",
+    "Nama Minuman": "Extra Joss Sirsak + Soda + Limau",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2751",
+    "Nama Minuman": "Extra Joss Original + Soda + Madu",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2752",
+    "Nama Minuman": "Extra Joss Anggur + Soda + Madu",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2753",
+    "Nama Minuman": "Extra Joss Mangga + Soda + Madu",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2754",
+    "Nama Minuman": "Extra Joss Sirsak + Soda + Madu",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2755",
+    "Nama Minuman": "Extra Joss Original + Soda + Nata De Coco",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2756",
+    "Nama Minuman": "Extra Joss Anggur + Soda + Nata De Coco",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2757",
+    "Nama Minuman": "Extra Joss Mangga + Soda + Nata De Coco",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2758",
+    "Nama Minuman": "Extra Joss Sirsak + Soda + Nata De Coco",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2759",
+    "Nama Minuman": "Extra Joss Original + Soda + Jelly",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2760",
+    "Nama Minuman": "Extra Joss Anggur + Soda + Jelly",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2761",
+    "Nama Minuman": "Extra Joss Mangga + Soda + Jelly",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2762",
+    "Nama Minuman": "Extra Joss Sirsak + Soda + Jelly",
+    "Total Kcal": 100,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2763",
+    "Nama Minuman": "Extra Joss Original + Ais Lemon Tea",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2764",
+    "Nama Minuman": "Extra Joss Anggur + Ais Lemon Tea",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2765",
+    "Nama Minuman": "Extra Joss Mangga + Ais Lemon Tea",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2766",
+    "Nama Minuman": "Extra Joss Sirsak + Ais Lemon Tea",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2767",
+    "Nama Minuman": "Extra Joss Original + Teh O Ais",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2768",
+    "Nama Minuman": "Extra Joss Anggur + Teh O Ais",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2769",
+    "Nama Minuman": "Extra Joss Mangga + Teh O Ais",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2770",
+    "Nama Minuman": "Extra Joss Sirsak + Teh O Ais",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2771",
+    "Nama Minuman": "Extra Joss Original + Air Bandung",
+    "Total Kcal": 95,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2772",
+    "Nama Minuman": "Extra Joss Anggur + Air Bandung",
+    "Total Kcal": 95,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2773",
+    "Nama Minuman": "Extra Joss Mangga + Air Bandung",
+    "Total Kcal": 95,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2774",
+    "Nama Minuman": "Extra Joss Sirsak + Air Bandung",
+    "Total Kcal": 95,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2775",
+    "Nama Minuman": "Extra Joss Original + Bandung Soda",
+    "Total Kcal": 115,
+    "Karbo": 27,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2776",
+    "Nama Minuman": "Extra Joss Anggur + Bandung Soda",
+    "Total Kcal": 115,
+    "Karbo": 27,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2777",
+    "Nama Minuman": "Extra Joss Mangga + Bandung Soda",
+    "Total Kcal": 115,
+    "Karbo": 27,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2778",
+    "Nama Minuman": "Extra Joss Sirsak + Bandung Soda",
+    "Total Kcal": 115,
+    "Karbo": 27,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2779",
+    "Nama Minuman": "Extra Joss Original + Air Kelapa + Lemon",
+    "Total Kcal": 95,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2780",
+    "Nama Minuman": "Extra Joss Anggur + Air Kelapa + Lemon",
+    "Total Kcal": 95,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2781",
+    "Nama Minuman": "Extra Joss Mangga + Air Kelapa + Lemon",
+    "Total Kcal": 95,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2782",
+    "Nama Minuman": "Extra Joss Sirsak + Air Kelapa + Lemon",
+    "Total Kcal": 95,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2783",
+    "Nama Minuman": "Extra Joss Original + Madu + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2784",
+    "Nama Minuman": "Extra Joss Anggur + Madu + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2785",
+    "Nama Minuman": "Extra Joss Mangga + Madu + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2786",
+    "Nama Minuman": "Extra Joss Sirsak + Madu + Lemon",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2787",
+    "Nama Minuman": "Extra Joss Original + Madu + Limau",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2788",
+    "Nama Minuman": "Extra Joss Anggur + Madu + Limau",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2789",
+    "Nama Minuman": "Extra Joss Mangga + Madu + Limau",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2790",
+    "Nama Minuman": "Extra Joss Sirsak + Madu + Limau",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2791",
+    "Nama Minuman": "Extra Joss Original + Gula + Soda",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2792",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Soda",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2793",
+    "Nama Minuman": "Extra Joss Mangga + Gula + Soda",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2794",
+    "Nama Minuman": "Extra Joss Sirsak + Gula + Soda",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2795",
+    "Nama Minuman": "Extra Joss Original + Gula + Lemon",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2796",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Lemon",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2797",
+    "Nama Minuman": "Extra Joss Mangga + Gula + Lemon",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2798",
+    "Nama Minuman": "Extra Joss Sirsak + Gula + Lemon",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2799",
+    "Nama Minuman": "Extra Joss Original + Gula + Limau",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2800",
+    "Nama Minuman": "Extra Joss Anggur + Gula + Limau",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2801",
+    "Nama Minuman": "Air Sirap Ais",
+    "Total Kcal": 90,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2802",
+    "Nama Minuman": "Air Sirap Limau",
+    "Total Kcal": 95,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2803",
+    "Nama Minuman": "Air Sirap Bandung",
+    "Total Kcal": 120,
+    "Karbo": 24,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2804",
+    "Nama Minuman": "Air Sirap Selasih",
+    "Total Kcal": 100,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2805",
+    "Nama Minuman": "Air Sirap Soda",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2806",
+    "Nama Minuman": "Air Bandung Ais",
+    "Total Kcal": 130,
+    "Karbo": 24,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2807",
+    "Nama Minuman": "Air Bandung Cincau",
+    "Total Kcal": 145,
+    "Karbo": 27,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2808",
+    "Nama Minuman": "Air Bandung Soda",
+    "Total Kcal": 140,
+    "Karbo": 29,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2809",
+    "Nama Minuman": "Air Bandung Selasih",
+    "Total Kcal": 135,
+    "Karbo": 26,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2810",
+    "Nama Minuman": "Air Bandung Nata De Coco",
+    "Total Kcal": 155,
+    "Karbo": 31,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2811",
+    "Nama Minuman": "Air Limau Ais",
+    "Total Kcal": 45,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2812",
+    "Nama Minuman": "Air Limau Kasturi",
+    "Total Kcal": 50,
+    "Karbo": 13,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2813",
+    "Nama Minuman": "Air Limau Kasturi Ais",
+    "Total Kcal": 45,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2814",
+    "Nama Minuman": "Air Limau Soda",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2815",
+    "Nama Minuman": "Air Limau Asam Boi",
+    "Total Kcal": 75,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2816",
+    "Nama Minuman": "Air Limau Selasih",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2817",
+    "Nama Minuman": "Air Lemon Ais",
+    "Total Kcal": 50,
+    "Karbo": 13,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2818",
+    "Nama Minuman": "Air Lemon Madu",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2819",
+    "Nama Minuman": "Air Lemon Soda",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2820",
+    "Nama Minuman": "Air Lemon Selasih",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2821",
+    "Nama Minuman": "Air Asam Boi",
+    "Total Kcal": 70,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2822",
+    "Nama Minuman": "Air Asam Boi Soda",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2823",
+    "Nama Minuman": "Air Asam Jawa",
+    "Total Kcal": 75,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2824",
+    "Nama Minuman": "Air Asam Jawa Soda",
+    "Total Kcal": 95,
+    "Karbo": 23,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2825",
+    "Nama Minuman": "Air Asam Jawa Madu",
+    "Total Kcal": 100,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2826",
+    "Nama Minuman": "Air Mata Kucing",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2827",
+    "Nama Minuman": "Air Mata Kucing Longan",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2828",
+    "Nama Minuman": "Air Mata Kucing Selasih",
+    "Total Kcal": 110,
+    "Karbo": 26,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2829",
+    "Nama Minuman": "Air Cincau Ais",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2830",
+    "Nama Minuman": "Air Cincau Susu",
+    "Total Kcal": 120,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2831",
+    "Nama Minuman": "Air Cincau Susu Cair",
+    "Total Kcal": 130,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2832",
+    "Nama Minuman": "Air Cincau Susu Fresh",
+    "Total Kcal": 125,
+    "Karbo": 18,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2833",
+    "Nama Minuman": "Air Cincau Susu Low Fat",
+    "Total Kcal": 110,
+    "Karbo": 18,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2834",
+    "Nama Minuman": "Air Cincau Gula Melaka",
+    "Total Kcal": 105,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2835",
+    "Nama Minuman": "Air Cincau Bandung",
+    "Total Kcal": 135,
+    "Karbo": 25,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2836",
+    "Nama Minuman": "Air Cincau Soda",
+    "Total Kcal": 95,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2837",
+    "Nama Minuman": "Air Jagung",
+    "Total Kcal": 120,
+    "Karbo": 27,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2838",
+    "Nama Minuman": "Air Jagung Susu",
+    "Total Kcal": 145,
+    "Karbo": 24,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2839",
+    "Nama Minuman": "Air Jagung Susu Cair",
+    "Total Kcal": 155,
+    "Karbo": 24,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2840",
+    "Nama Minuman": "Air Jagung Susu Fresh",
+    "Total Kcal": 150,
+    "Karbo": 24,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2841",
+    "Nama Minuman": "Air Jagung Susu Low Fat",
+    "Total Kcal": 135,
+    "Karbo": 24,
+    "Protein": 6,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2842",
+    "Nama Minuman": "Air Jagung Gula Melaka",
+    "Total Kcal": 140,
+    "Karbo": 30,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2843",
+    "Nama Minuman": "Air Jagung Cincau",
+    "Total Kcal": 135,
+    "Karbo": 29,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2844",
+    "Nama Minuman": "Air Jagung Selasih",
+    "Total Kcal": 125,
+    "Karbo": 28,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2845",
+    "Nama Minuman": "Air Soya Ais",
+    "Total Kcal": 110,
+    "Karbo": 12,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2846",
+    "Nama Minuman": "Air Soya Gula Melaka",
+    "Total Kcal": 135,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2847",
+    "Nama Minuman": "Air Soya Cincau",
+    "Total Kcal": 125,
+    "Karbo": 19,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2848",
+    "Nama Minuman": "Air Soya Bandung",
+    "Total Kcal": 145,
+    "Karbo": 23,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2849",
+    "Nama Minuman": "Air Soya Pandan",
+    "Total Kcal": 125,
+    "Karbo": 17,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2850",
+    "Nama Minuman": "Air Soya Coklat",
+    "Total Kcal": 145,
+    "Karbo": 21,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2851",
+    "Nama Minuman": "Air Soya Strawberry",
+    "Total Kcal": 140,
+    "Karbo": 22,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2852",
+    "Nama Minuman": "Air Soya Vanilla",
+    "Total Kcal": 135,
+    "Karbo": 19,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2853",
+    "Nama Minuman": "Air Soya Kurma",
+    "Total Kcal": 145,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2854",
+    "Nama Minuman": "Air Soya Matcha",
+    "Total Kcal": 140,
+    "Karbo": 18,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2855",
+    "Nama Minuman": "Air Barli",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2856",
+    "Nama Minuman": "Air Barli Lemon",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2857",
+    "Nama Minuman": "Air Barli Limau",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2858",
+    "Nama Minuman": "Air Barli Selasih",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2859",
+    "Nama Minuman": "Air Barli Madu",
+    "Total Kcal": 105,
+    "Karbo": 25,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2860",
+    "Nama Minuman": "Air Barli Asam Boi",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2861",
+    "Nama Minuman": "Air Longan",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2862",
+    "Nama Minuman": "Air Longan Selasih",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2863",
+    "Nama Minuman": "Air Longan Kundur",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2864",
+    "Nama Minuman": "Air Longan Kering",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2865",
+    "Nama Minuman": "Air Kundur",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2866",
+    "Nama Minuman": "Air Kundur Lemon",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2867",
+    "Nama Minuman": "Air Kundur Selasih",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2868",
+    "Nama Minuman": "Air Roselle",
+    "Total Kcal": 60,
+    "Karbo": 15,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2869",
+    "Nama Minuman": "Air Roselle Madu",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2870",
+    "Nama Minuman": "Air Roselle Lemon",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2871",
+    "Nama Minuman": "Air Roselle Selasih",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2872",
+    "Nama Minuman": "Air Roselle Soda",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2873",
+    "Nama Minuman": "Air Kelapa",
+    "Total Kcal": 45,
+    "Karbo": 9,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2874",
+    "Nama Minuman": "Air Kelapa Muda",
+    "Total Kcal": 45,
+    "Karbo": 9,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2875",
+    "Nama Minuman": "Air Kelapa Madu",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2876",
+    "Nama Minuman": "Air Kelapa Lemon",
+    "Total Kcal": 55,
+    "Karbo": 12,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2877",
+    "Nama Minuman": "Air Kelapa Limau",
+    "Total Kcal": 55,
+    "Karbo": 12,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2878",
+    "Nama Minuman": "Air Kelapa Selasih",
+    "Total Kcal": 60,
+    "Karbo": 13,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2879",
+    "Nama Minuman": "Air Kelapa Soda",
+    "Total Kcal": 80,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2880",
+    "Nama Minuman": "Air Kelapa Gula Melaka",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 2,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2881",
+    "Nama Minuman": "Air Tebu",
+    "Total Kcal": 150,
+    "Karbo": 38,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2882",
+    "Nama Minuman": "Air Tebu Lemon",
+    "Total Kcal": 155,
+    "Karbo": 39,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2883",
+    "Nama Minuman": "Air Tebu Limau",
+    "Total Kcal": 155,
+    "Karbo": 39,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2884",
+    "Nama Minuman": "Air Tebu Selasih",
+    "Total Kcal": 160,
+    "Karbo": 40,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2885",
+    "Nama Minuman": "Air Tebu Asam Boi",
+    "Total Kcal": 165,
+    "Karbo": 41,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2886",
+    "Nama Minuman": "Air Tebu Soda",
+    "Total Kcal": 175,
+    "Karbo": 43,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2887",
+    "Nama Minuman": "Air Tebu Lemon Soda",
+    "Total Kcal": 180,
+    "Karbo": 44,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2888",
+    "Nama Minuman": "Air Tebu Halia",
+    "Total Kcal": 160,
+    "Karbo": 39,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2889",
+    "Nama Minuman": "Air Nenas",
+    "Total Kcal": 120,
+    "Karbo": 30,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2890",
+    "Nama Minuman": "Air Nenas Soda",
+    "Total Kcal": 140,
+    "Karbo": 34,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2891",
+    "Nama Minuman": "Air Nenas Selasih",
+    "Total Kcal": 125,
+    "Karbo": 31,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2892",
+    "Nama Minuman": "Air Nenas Lemon",
+    "Total Kcal": 125,
+    "Karbo": 31,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2893",
+    "Nama Minuman": "Air Nenas Limau",
+    "Total Kcal": 125,
+    "Karbo": 31,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2894",
+    "Nama Minuman": "Air Nenas Asam Boi",
+    "Total Kcal": 135,
+    "Karbo": 33,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2895",
+    "Nama Minuman": "Air Mangga",
+    "Total Kcal": 130,
+    "Karbo": 32,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2896",
+    "Nama Minuman": "Air Mangga Soda",
+    "Total Kcal": 150,
+    "Karbo": 36,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2897",
+    "Nama Minuman": "Air Mangga Lemon",
+    "Total Kcal": 135,
+    "Karbo": 33,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2898",
+    "Nama Minuman": "Air Mangga Selasih",
+    "Total Kcal": 135,
+    "Karbo": 33,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2899",
+    "Nama Minuman": "Air Mangga Susu",
+    "Total Kcal": 160,
+    "Karbo": 27,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2900",
+    "Nama Minuman": "Air Mangga Susu Fresh",
+    "Total Kcal": 155,
+    "Karbo": 27,
+    "Protein": 6,
+    "Lemak": 4
   }
 ]
