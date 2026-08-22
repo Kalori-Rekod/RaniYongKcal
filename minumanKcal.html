@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator Minumam</title>
+    <title>Kalkulator Minuman</title>
     <style>
         body { font-family: sans-serif; padding: 20px; background-color: #f6f8fa; color: #24292e; }
         .search-box { width: 100%; padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; margin-bottom: 20px; }
@@ -44,12 +44,12 @@
 </head>
 <body>
 
-    <h1>🥤 Kalkulator Kcal Minumam</h1>
+    <h1>🥤 Kalkulator Kcal Minuman</h1>
 
     <!-- BAHAGIAN MINUMAN DIPILIH -->
     <div class="summary-panel">
         <div class="summary-header">
-            <h2 class="summary-title">Minumam Dipilih (<span id="itemCount">0</span> Item)</h2>
+            <h2 class="summary-title">Minuman Dipilih (<span id="itemCount">0</span> Item)</h2>
         </div>
 
         <ul id="selectedList" class="selected-list"></ul>
@@ -87,16 +87,16 @@
     <script>
         const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Kalori-Rekod/RaniYongKcal/refs/heads/main/JSON/minumam_logs.json";
 
-        let semuaMinumam = [];       
-        let pilihanMinumamUser = []; 
+        let semuaMinuman = [];       
+        let pilihanMinumanUser = []; 
 
-        async function muatDataMinumam() {
+        async function muatDataMinuman() {
             try {
                 const response = await fetch(GITHUB_RAW_URL);
                 if (!response.ok) throw new Error("Gagal memanggil fail JSON");
-                semuaMinumam = await response.json();
+                semuaMinuman = await response.json();
                 document.getElementById("loadingStatus").style.display = "none";
-                paparkanSenarai(semuaMinumam);
+                paparkanSenarai(semuaMinuman);
             } catch (error) {
                 console.error("Ralat:", error);
                 document.getElementById("loadingStatus").innerText = "Gagal memuatkan data.";
@@ -108,7 +108,7 @@
             container.innerHTML = "";
 
             if (senarai.length === 0) {
-                container.innerHTML = "<li class='loading'>Minumam tidak dijumpai...</li>";
+                container.innerHTML = "<li class='loading'>Minuman tidak dijumpai...</li>";
                 return;
             }
 
@@ -116,7 +116,7 @@
                 const li = document.createElement("li");
                 li.className = "minumam-item";
                 
-                const namaminumam = minumam["Nama Minumam"] || "Tiada Nama";
+                const namaminumam = minumam["Nama Minuman"] || "Tiada Nama";
                 const totalKcal = minumam["Total Kcal"] || 0;
                 const karbo = minumam["Karbo"] || 0;
                 const protein = minumam["Protein"] || 0;
@@ -124,24 +124,24 @@
 
                 li.innerHTML = `
                     <div class="minumam-info">
-                        <span class="minumam-name">${namaMinumam}</span>
+                        <span class="minumam-name">${namaMinuman}</span>
                         <span class="minumam-macro">C: ${karbo}g | P: ${protein}g | L: ${lemak}g</span>
                     </div>
                     <div class="minumam-kcal">${totalKcal} Kcal</div>
                 `;
                 
-                li.onclick = () => pilihMinumam(minumam);
+                li.onclick = () => pilihMinuman(minumam);
                 container.appendChild(li);
             });
         }
 
-        function pilihMinumam(minumam) {
-            pilihanMinumamUser.push(minumam);
+        function pilihMinuman(minumam) {
+            pilihanMinumanUser.push(minumam);
             kemasKiniPaparanSummary();
         }
 
-        function buangMinumamPilihan(index) {
-            pilihanMinumamUser.splice(index, 1);
+        function buangMinumanPilihan(index) {
+            pilihanMinumanUser.splice(index, 1);
             kemasKiniPaparanSummary();
         }
 
@@ -154,8 +154,8 @@
             let totalProtein = 0;
             let totalLemak = 0;
 
-            pilihanMinumamUser.forEach((minumam, index) => {
-                const namaMinumam = minumam["Nama Minumam"] || "Tiada Nama";
+            pilihanMinumanUser.forEach((minumam, index) => {
+                const namaMinuman = minumam["Nama Minuman"] || "Tiada Nama";
                 const kcal = Number(minumam["Total Kcal"]) || 0;
                 const karbo = Number(minumam["Karbo"]) || 0;
                 const protein = Number(minumam["Protein"]) || 0;
@@ -169,13 +169,13 @@
                 const li = document.createElement("li");
                 li.className = "selected-item";
                 li.innerHTML = `
-                    <span><strong>${namaMinumam}</strong> (${kcal} Kcal)</span>
-                    <button class="btn-remove" onclick="buangMinumamPilihan(${index})">✕</button>
+                    <span><strong>${namaMinuman}</strong> (${kcal} Kcal)</span>
+                    <button class="btn-remove" onclick="buangMinumanPilihan(${index})">✕</button>
                 `;
                 selectedListContainer.appendChild(li);
             });
 
-            document.getElementById("itemCount").innerText = pilihanMinumamUser.length;
+            document.getElementById("itemCount").innerText = pilihanMinumanUser.length;
             document.getElementById("totalKcal").innerText = totalKcal;
             document.getElementById("totalKarbo").innerText = totalKarbo + "g";
             document.getElementById("totalProtein").innerText = totalProtein + "g";
@@ -184,7 +184,7 @@
 
         function copyTotalKcal() {
             const totalKcalText = document.getElementById("totalKcal").innerText;
-            if (pilihanMinumamUser.length === 0) {
+            if (pilihanMinumanUser.length === 0) {
                 alert("Sila pilih minumam terlebih dahulu!");
                 return;
             }
@@ -194,9 +194,9 @@
         }
 
         function kosongkanPilihan() {
-            if (pilihanMinumamUser.length === 0) return;
+            if (pilihanMinumanUser.length === 0) return;
             if (confirm("Kosongkan semua pilihan?")) {
-                pilihanMinumamUser = [];
+                pilihanMinumanUser = [];
                 kemasKiniPaparanSummary();
             }
         }
@@ -204,14 +204,14 @@
         const searchBar = document.getElementById("searchBar");
         searchBar.addEventListener("input", (e) => {
             const carianUser = e.target.value.toLowerCase().trim();
-            const hasilTapis = semuaMinumam.filter(minumam => {
-                const nama = (minumam["Nama Minumam"] || "").toLowerCase();
+            const hasilTapis = semuaMinuman.filter(minumam => {
+                const nama = (minumam["Nama Minuman"] || "").toLowerCase();
                 return nama.includes(carianUser);
             });
             paparkanSenarai(hasilTapis);
         });
 
-        muatDataMinumam();
+        muatDataMinuman();
     </script>
 </body>
 </html>
