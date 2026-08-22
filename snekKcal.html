@@ -5,487 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Snek</title>
     <style>
-        :root {
-            --primary: #d35400;
-            --primary-light: #f39c12;
-            --bg: #fafafa;
-            --card-bg: #ffffff;
-            --text: #2c3e50;
-            --text-light: #7f8c8d;
-            --border: #e0e0e0;
-            --accent: #27ae60;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 600px;
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text);
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 10px;
-        }
-
-        .search-box {
-            position: relative;
-            margin-bottom: 25px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 40px 12px 15px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 16px;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .search-box input:focus {
-            border-color: var(--primary);
-        }
-
-        .search-box .search-icon {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-light);
-        }
-
-        h2 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: var(--text);
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .snek-list {
-            max-height: 300px;
-            overflow-y: auto;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: #fff;
-        }
-
-        .snek-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid var(--border);
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .snek-item:last-child {
-            border-bottom: none;
-        }
-
-        .snek-item:hover {
-            background-color: #fff9f5;
-        }
-
-        .snek-info .snek-name {
-            font-weight: 600;
-            font-size: 15px;
-            margin-bottom: 4px;
-        }
-
-        .snek-info .snek-serving {
-            font-size: 13px;
-            color: var(--text-light);
-        }
-
-        .snek-kcal {
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 15px;
-        }
-
-        .selected-box {
-            border: 2px dashed #e67e22;
-            background: #fffdfb;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .selected-items-list {
-            margin-bottom: 15px;
-        }
-
-        .selected-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px dashed var(--border);
-            font-size: 15px;
-        }
-
-        .selected-item:last-child {
-            border-bottom: none;
-        }
-
-        .remove-btn {
-            color: #e74c3c;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 0 5px;
-        }
-
-        .macro-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .macro-card {
-            background: #fdfdfd;
-            border: 1px solid var(--border);
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .macro-label {
-            font-size: 12px;
-            color: var(--text-light);
-            margin-bottom: 5px;
-        }
-
-        .macro-value {
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-        .total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 15px;
-            border-top: 1px solid var(--border);
-            font-size: 15px;
-        }
-
-        .total-kcal {
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 18px;
-        }
-
-        .btn-group {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 25px;
-        }
-
-        .btn {
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.2s;
-            text-align: center;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .btn-secondary {
-            background-color: #ecf0f1;
-            color: var(--text);
-        }
-
-        .loading, .empty-msg {
-            padding: 20px;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 14px;
-        }
+        body { font-family: sans-serif; padding: 20px; background-color: #f6f8fa; }
+        .search-box { width: 100%; padding: 12px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; margin-bottom: 20px; }
+        .snek-list { list-style: none; padding: 0; margin: 0; }
+        .snek-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer; transition: 0.2s; display: flex; justify-content: space-between; align-items: center; }
+        .snek-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .snek-info { display: flex; flex-direction: column; }
+        .snek-name { font-weight: bold; font-size: 16px; color: #24292e; }
+        .snek-macro { font-size: 13px; color: #586069; margin-top: 4px; }
+        .snek-kcal { font-weight: bold; color: #2ea44f; font-size: 16px; }
+        .loading { text-align: center; color: #666; font-style: italic; }
     </style>
 </head>
 <body>
 
-<div class="container">
     <h1>🥨 Kalkulator Snek</h1>
 
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Cari terus daripada database GAS...">
-        <span class="search-icon">⌕</span>
-    </div>
+    <!-- 1. Ruangan Kotak Carian (Live Search) -->
+    <input type="text" id="searchBar" class="search-box" placeholder="Taip nama snek di sini (Auto-search)...">
 
-    <div class="section">
-        <h2 id="listTitle">10 Kuih Teratas</h2>
-        <div class="snek-list" id="snekList">
-            <div class="loading">Memuatkan data dari Google Sheets...</div>
-        </div>
-    </div>
+    <!-- 2. Ruangan Memaparkan Senarai Snek -->
+    <div id="loadingStatus" class="loading">Memuatkan data snek dari GitHub...</div>
+    <ul id="snekList" class="snek-list"></ul>
 
-    <div class="section selected-box">
-        <h2>Snek dipilih</h2>
-        <div class="selected-items-list" id="selectedItems">
-            <div class="empty-msg" style="padding:0; text-align:left;">Tekan mana-mana snek untuk pilih.</div>
-        </div>
+    <script>
+        // MASUKKAN URL RAW GITHUB ANDA DI SINI
+        const GITHUB_RAW_URL = "https://github.com/Kalori-Rekod/RaniYongKcal/raw/refs/heads/main/JSON/snek_logs.json";
 
-        <div class="macro-container">
-            <div class="macro-card">
-                <div class="macro-label">Karbo</div>
-                <div class="macro-value" id="totalCarbs">0 g</div>
-            </div>
-            <div class="macro-card">
-                <div class="macro-label">Protein</div>
-                <div class="macro-value" id="totalProtein">0 g</div>
-            </div>
-            <div class="macro-card">
-                <div class="macro-label">Lemak</div>
-                <div class="macro-value" id="totalFat">0 g</div>
-            </div>
-        </div>
+        let semuaSnek = []; // Tempat simpanan data asal asal dari JSON
 
-        <div class="total-row">
-            <div id="totalItemsCount">0 Item</div>
-            <div>Total Kcal <span class="total-kcal" id="totalKcal">0</span></div>
-        </div>
-    </div>
+        // Fungsi Ambil Data dari Fail JSON GitHub
+        async function muatDataSnek() {
+            try {
+                const response = await fetch(GITHUB_RAW_URL);
+                if (!response.ok) throw new Error("Gagal memanggil fail JSON");
+                
+                semuaSnek = await response.json();
+                
+                // Sembunyikan tulisan loading selepas data sedia
+                document.getElementById("loadingStatus").style.display = "none";
+                
+                // Paparkan senarai penuh buat kali pertama
+                paparkanSenarai(semuaSnek);
+            } catch (error) {
+                console.error("Ralat:", error);
+                document.getElementById("loadingStatus").innerText = "Gagal memuatkan data. Sila periksa sambungan internet.";
+            }
+        }
 
-    <div class="btn-group">
-        <button class="btn btn-primary" onclick="copyTotalKcal()">Copy Total Kcal</button>
-        <button class="btn btn-secondary" onclick="clearSelection()">Kosongkan pilihan</button>
-    </div>
-</div>
+        // Fungsi Membina Struktur HTML Senarai Snek di Layar
+        function paparkanSenarai(senarai) {
+            const container = document.getElementById("snekList");
+            container.innerHTML = ""; // Bersihkan senarai lama
 
-<script>
-    // =========================================================================
-    // ⚠️ SILA GANTIKAN URL INI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA ⚠️
-    // =========================================================================
-    const API_URL = "https://script.google.com/macros/s/AKfycbwtJWh9oAxMqSr_Fs32n64puyFbhfhvuVecjO85eyzpNX4xRVTJBEZ39iR3zWOrVHqfKg/exec";
+            if (senarai.length === 0) {
+                container.innerHTML = "<li class='loading'>Snek tidak dijumpai...</li>";
+                return;
+            }
 
-    let snekDataStore = [];
-    let selectedSnekList = [];
-    let searchTimeout = null;
+            senarai.forEach(snek => {
+                const li = document.createElement("li");
+                li.className = "snek-item";
+                
+                // Ambil nilai daripada pengepala Kolum Google Sheets anda (Suaikan huruf besar/kecil jika perlu)
+                const namaSnek = snek["Nama Snek"] || snek["nama_snek"] || "Tiada Nama";
+                const totalKcal = snek["Total Kcal"] || snek["kcal"] || 0;
+                const karbo = snek["Karbo"] || 0;
+                const protein = snek["Protein"] || 0;
+                const lemak = snek["Lemak"] || 0;
 
-    // Ambil data permulaan (10 Teratas) apabila halaman dimuatkan
-    document.addEventListener("DOMContentLoaded", () => {
-        fetchSnekData("");
+                li.innerHTML = `
+                    <div class="snek-info">
+                        <span class="snek-name">${namaSnek}</span>
+                        <span class="snek-macro">C: ${karbo}g | P: ${protein}g | L: ${lemak}g</span>
+                    </div>
+                    <div class="snek-kcal">${totalKcal} Kcal</div>
+                `;
+                
+                // Fungsi aksi apabila item snek ditekan (untuk kegunaan kalkulator anda)
+                li.onclick = () => pilihSnek(snek);
+                
+                container.appendChild(li);
+            });
+        }
+
+        // 2. IMPLEMENTASI LIVE SEARCH (SOFT SEARCH / NO ENTER KEY)
+        const searchBar = document.getElementById("searchBar");
         
-        // Setup fungsi carian (dengan debouncing 500ms untuk jimat kuota API)
-        document.getElementById("searchInput").addEventListener("input", (e) => {
-            clearTimeout(searchTimeout);
-            const query = e.target.value.trim();
-            searchTimeout = setTimeout(() => {
-                fetchSnekData(query);
-            }, 5000); // 500ms debounce
-        });
-    });
+        searchBar.addEventListener("input", (e) => {
+            const carianUser = e.target.value.toLowerCase().trim();
 
-    // Fungsi Fetch Data daripada Google Apps Script Web API
-    async function fetchSnekData(query = "") {
-        const listContainer = document.getElementById("snekList");
-        const listTitle = document.getElementById("listTitle");
+            // Tapis data secara real-time berdasarkan input huruf user
+            const hasilTapis = semuaSnek.filter(snek => {
+                const nama = (snek["Nama Snek"] || snek["nama_snek"] || "").toLowerCase();
+                return nama.includes(carianUser);
+            });
 
-        if (query) {
-            listTitle.textContent = `Hasil Carian ("${query}")`;
-            listContainer.innerHTML = '<div class="loading">Mencari snek sepadan...</div>';
-        } else {
-            listTitle.textContent = "10 Kuih Teratas";
-            listContainer.innerHTML = '<div class="loading">Memuatkan data dari Google Sheets...</div>';
-        }
+            // Susun (Sort) keputusan supaya teks yang bermula dengan huruf carian berada di atas sekali
+            hasilTapis.sort((a, b) => {
+                const namaA = (a["Nama Snek"] || a["nama_snek"] || "").toLowerCase();
+                const namaB = (b["Nama Snek"] || b["nama_snek"] || "").toLowerCase();
+                
+                const startA = namaA.startsWith(carianUser);
+                const startB = namaB.startsWith(carianUser);
 
-        try {
-            // Memanggil API dengan parameter searchSnek
-            const url = `${API_URL}?api=searchSnek&query=${encodeURIComponent(query)}&limit=${query ? 5000 : 10}`;
-            const response = await fetch(url);
-            const json = await response.json();
+                if (startA && !startB) return -1;
+                if (!startA && startB) return 1;
+                return namaA.localeCompare(namaB); // Ikut susunan alfabetikal sekiranya sama status
+            });
 
-            if (json.status === "success" && json.results) {
-                snekDataStore = json.results;
-                renderSnekList(snekDataStore);
-            } else {
-                listContainer.innerHTML = `<div class="loading">Ralat: ${json.message || "Gagal mengambil data"}</div>`;
-            }
-        } catch (error) {
-            console.error("Fetch Error:", error);
-            listContainer.innerHTML = '<div class="loading">Sambungan API gagal. Sila semak API_URL anda.</div>';
-        }
-    }
-
-    // Paparkan senarai snek ke dalam UI HTML
-    function renderSnekList(items) {
-        const listContainer = document.getElementById("snekList");
-        if (!items || items.length === 0) {
-            listContainer.innerHTML = '<div class="loading">Tiada rekod snek ditemui.</div>';
-            return;
-        }
-
-        listContainer.innerHTML = "";
-        items.forEach((item, index) => {
-            // DOUBLE FALLBACK SYSTEM UNTUK MENANGANI MASALAH 0 KCAL / COLUMN C
-            // 1. Cuba ambil nilai property item.calories yang dipetakan oleh GAS
-            // 2. Jika 0 atau tiada, cari terus dalam objek item.raw menggunakan nama kunci standard
-            let kCalValue = item.calories;
-            
-            if (!kCalValue || kCalValue === 0) {
-                if (item.raw) {
-                    // Cari sebarang key/header mentah di dalam objek raw yang membawa maksud kalori
-                    const rawKeys = Object.keys(item.raw);
-                    const calorieKey = rawKeys.find(k => {
-                        const nk = k.toLowerCase().trim();
-                        return nk === "calories" || nk === "kcal" || nk === "kalori" || nk === "tenaga" || nk === "column 3";
-                    });
-                    if (calorieKey) {
-                        const parsedRaw = parseFloat(String(item.raw[calorieKey]).replace(/[^\d.-]/g, ""));
-                        if (!isNaN(parsedRaw)) {
-                            kCalValue = parsedRaw;
-                        }
-                    }
-                }
-            }
-
-            // Pastikan fallback ke 0 jika masih tidak ditemui
-            kCalValue = kCalValue || 0;
-
-            const div = document.createElement("div");
-            div.className = "snek-item";
-            div.onclick = () => selectSnek(index, kCalValue);
-
-            div.innerHTML = `
-                <div class="snek-info">
-                    <div class="snek-name">${item.name || "Snek Tanpa Nama"}</div>
-                    <div class="snek-serving">${item.serving || "1 hidangan"}</div>
-                </div>
-                <div class="snek-kcal">${kCalValue} kcal</div>
-            `;
-            listContainer.appendChild(div);
-        });
-    }
-
-    // Fungsi apabila pengguna menekan mana-mana snek dari senarai carian
-    function selectSnek(index, verifiedKcal) {
-        const item = snekDataStore[index];
-        if (!item) return;
-
-        // Gandingkan maklumat snek bersama nilai kalori yang telah ditapis sah
-        const selectedItem = {
-            id: item.id || Date.now().toString(),
-            name: item.name,
-            calories: verifiedKcal,
-            carbs: item.carbs || 0,
-            protein: item.protein || 0,
-            fat: item.fat || 0
-        };
-
-        selectedSnekList.push(selectedItem);
-        updateSelectedUI();
-    }
-
-    // Buang item daripada senarai snek terpilih
-    function removeSelectedSnek(idx) {
-        selectedSnekList.splice(idx, 1);
-        updateSelectedUI();
-    }
-
-    // Kosongkan semua pilihan
-    function clearSelection() {
-        selectedSnekList = [];
-        updateSelectedUI();
-    }
-
-    // Kemaskini Bahagian "Snek dipilih", Nilai Makro, dan Total Kcal
-    function updateSelectedUI() {
-        const container = document.getElementById("selectedItems");
-        const totalCarbsEl = document.getElementById("totalCarbs");
-        const totalProteinEl = document.getElementById("totalProtein");
-        const totalFatEl = document.getElementById("totalFat");
-        const totalItemsCountEl = document.getElementById("totalItemsCount");
-        const totalKcalEl = document.getElementById("totalKcal");
-
-        if (selectedSnekList.length === 0) {
-            container.innerHTML = '<div class="empty-msg">Tekan mana-mana snek untuk pilih.</div>';
-            totalCarbsEl.textContent = "0 g";
-            totalProteinEl.textContent = "0 g";
-            totalFatEl.textContent = "0 g";
-            totalItemsCountEl.textContent = "0 Item";
-            totalKcalEl.textContent = "0";
-            return;
-        }
-
-        container.innerHTML = "";
-        let tCarbs = 0, tProtein = 0, tFat = 0, tKcal = 0;
-
-        selectedSnekList.forEach((item, idx) => {
-            tCarbs += item.carbs;
-            tProtein += item.protein;
-            tFat += item.fat;
-            tKcal += item.calories;
-
-            const div = document.createElement("div");
-            div.className = "selected-item";
-            div.innerHTML = `
-                <div>${item.name} (${item.calories} kcal)</div>
-                <span class="remove-btn" onclick="removeSelectedSnek(${idx})">×</span>
-            `;
-            container.appendChild(div);
+            // Kemas kini paparan senarai di bawah kotak carian
+            paparkanSenarai(hasilTapis);
         });
 
-        // Papar nilai makro berformat (tanpa perpuluhan melampau)
-        totalCarbsEl.textContent = `${Math.round(tCarbs)} g`;
-        totalProteinEl.textContent = `${Math.round(tProtein)} g`;
-        totalFatEl.textContent = `${Math.round(tFat)} g`;
-        totalItemsCountEl.textContent = `${selectedSnekList.length} Item`;
-        totalKcalEl.textContent = Math.round(tKcal);
-    }
+        // Contoh fungsi pembantu apabila kad snek diklik
+        function pilihSnek(snek) {
+            alert("Anda memilih: " + (snek["Nama Snek"] || "Snek"));
+            // Masukkan logik penambahan kalori aplikasi anda di sini
+        }
 
-    // Fungsi salin jumlah kalori ke clipboard papan keratan
-    function copyTotalKcal() {
-        const totalKcal = document.getElementById("totalKcal").textContent;
-        navigator.clipboard.writeText(totalKcal).then(() => {
-            alert(`Total Kcal (${totalKcal}) berjaya dicopy!`);
-        }).catch(err => {
-            console.error("Gagal menyalin teks: ", err);
-        });
-    }
-</script>
-
+        // Jalankan fungsi muat data apabila halaman dibuka
+        muatDataSnek();
+    </script>
 </body>
 </html>
