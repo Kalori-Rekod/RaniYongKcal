@@ -15998,5 +15998,1605 @@
     "Karbo": 31,
     "Protein": 3,
     "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2001",
+    "Nama Minuman": "Strawberry Cream Soda",
+    "Total Kcal": 180,
+    "Karbo": 34,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2002",
+    "Nama Minuman": "Mango Cream Soda",
+    "Total Kcal": 190,
+    "Karbo": 36,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2003",
+    "Nama Minuman": "Peach Cream Soda",
+    "Total Kcal": 180,
+    "Karbo": 34,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2004",
+    "Nama Minuman": "Lychee Cream Soda",
+    "Total Kcal": 185,
+    "Karbo": 35,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2005",
+    "Nama Minuman": "Blueberry Cream Soda",
+    "Total Kcal": 185,
+    "Karbo": 35,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2006",
+    "Nama Minuman": "Grape Cream Soda",
+    "Total Kcal": 190,
+    "Karbo": 36,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2007",
+    "Nama Minuman": "Passion Fruit Cream Soda",
+    "Total Kcal": 190,
+    "Karbo": 36,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2008",
+    "Nama Minuman": "Kiwi Cream Soda",
+    "Total Kcal": 180,
+    "Karbo": 33,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2009",
+    "Nama Minuman": "Yuzu Cream Soda",
+    "Total Kcal": 170,
+    "Karbo": 31,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2010",
+    "Nama Minuman": "Lemon Cream Soda",
+    "Total Kcal": 165,
+    "Karbo": 30,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2011",
+    "Nama Minuman": "Strawberry Cheese Soda",
+    "Total Kcal": 220,
+    "Karbo": 34,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2012",
+    "Nama Minuman": "Mango Cheese Soda",
+    "Total Kcal": 225,
+    "Karbo": 36,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2013",
+    "Nama Minuman": "Peach Cheese Soda",
+    "Total Kcal": 215,
+    "Karbo": 34,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2014",
+    "Nama Minuman": "Lychee Cheese Soda",
+    "Total Kcal": 220,
+    "Karbo": 35,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2015",
+    "Nama Minuman": "Blueberry Cheese Soda",
+    "Total Kcal": 225,
+    "Karbo": 35,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2016",
+    "Nama Minuman": "Grape Cheese Soda",
+    "Total Kcal": 225,
+    "Karbo": 36,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2017",
+    "Nama Minuman": "Passion Fruit Cheese Soda",
+    "Total Kcal": 225,
+    "Karbo": 36,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2018",
+    "Nama Minuman": "Kiwi Cheese Soda",
+    "Total Kcal": 215,
+    "Karbo": 33,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2019",
+    "Nama Minuman": "Yuzu Cheese Soda",
+    "Total Kcal": 205,
+    "Karbo": 31,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2020",
+    "Nama Minuman": "Lemon Cheese Soda",
+    "Total Kcal": 200,
+    "Karbo": 30,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2021",
+    "Nama Minuman": "Strawberry Cream Tea",
+    "Total Kcal": 180,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2022",
+    "Nama Minuman": "Mango Cream Tea",
+    "Total Kcal": 185,
+    "Karbo": 32,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2023",
+    "Nama Minuman": "Peach Cream Tea",
+    "Total Kcal": 175,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2024",
+    "Nama Minuman": "Lychee Cream Tea",
+    "Total Kcal": 180,
+    "Karbo": 31,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2025",
+    "Nama Minuman": "Blueberry Cream Tea",
+    "Total Kcal": 180,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2026",
+    "Nama Minuman": "Grape Cream Tea",
+    "Total Kcal": 185,
+    "Karbo": 32,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2027",
+    "Nama Minuman": "Passion Fruit Cream Tea",
+    "Total Kcal": 185,
+    "Karbo": 32,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2028",
+    "Nama Minuman": "Kiwi Cream Tea",
+    "Total Kcal": 175,
+    "Karbo": 29,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2029",
+    "Nama Minuman": "Yuzu Cream Tea",
+    "Total Kcal": 165,
+    "Karbo": 27,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2030",
+    "Nama Minuman": "Lemon Cream Tea",
+    "Total Kcal": 160,
+    "Karbo": 26,
+    "Protein": 5,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2031",
+    "Nama Minuman": "Strawberry Cheese Tea",
+    "Total Kcal": 230,
+    "Karbo": 31,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2032",
+    "Nama Minuman": "Mango Cheese Tea",
+    "Total Kcal": 235,
+    "Karbo": 33,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2033",
+    "Nama Minuman": "Peach Cheese Tea",
+    "Total Kcal": 225,
+    "Karbo": 31,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2034",
+    "Nama Minuman": "Lychee Cheese Tea",
+    "Total Kcal": 230,
+    "Karbo": 32,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2035",
+    "Nama Minuman": "Blueberry Cheese Tea",
+    "Total Kcal": 235,
+    "Karbo": 32,
+    "Protein": 7,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2036",
+    "Nama Minuman": "Grape Cheese Tea",
+    "Total Kcal": 235,
+    "Karbo": 33,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2037",
+    "Nama Minuman": "Passion Fruit Cheese Tea",
+    "Total Kcal": 235,
+    "Karbo": 33,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2038",
+    "Nama Minuman": "Kiwi Cheese Tea",
+    "Total Kcal": 225,
+    "Karbo": 30,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2039",
+    "Nama Minuman": "Yuzu Cheese Tea",
+    "Total Kcal": 215,
+    "Karbo": 28,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2040",
+    "Nama Minuman": "Lemon Cheese Tea",
+    "Total Kcal": 210,
+    "Karbo": 27,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2041",
+    "Nama Minuman": "Strawberry Boba Tea",
+    "Total Kcal": 300,
+    "Karbo": 48,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2042",
+    "Nama Minuman": "Mango Boba Tea",
+    "Total Kcal": 310,
+    "Karbo": 51,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2043",
+    "Nama Minuman": "Peach Boba Tea",
+    "Total Kcal": 300,
+    "Karbo": 49,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2044",
+    "Nama Minuman": "Lychee Boba Tea",
+    "Total Kcal": 300,
+    "Karbo": 48,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2045",
+    "Nama Minuman": "Blueberry Boba Tea",
+    "Total Kcal": 305,
+    "Karbo": 49,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2046",
+    "Nama Minuman": "Grape Boba Tea",
+    "Total Kcal": 310,
+    "Karbo": 51,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2047",
+    "Nama Minuman": "Passion Fruit Boba Tea",
+    "Total Kcal": 305,
+    "Karbo": 50,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2048",
+    "Nama Minuman": "Kiwi Boba Tea",
+    "Total Kcal": 295,
+    "Karbo": 47,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2049",
+    "Nama Minuman": "Yuzu Boba Tea",
+    "Total Kcal": 285,
+    "Karbo": 45,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2050",
+    "Nama Minuman": "Lemon Boba Tea",
+    "Total Kcal": 280,
+    "Karbo": 44,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2051",
+    "Nama Minuman": "Strawberry Popping Boba Tea",
+    "Total Kcal": 250,
+    "Karbo": 43,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2052",
+    "Nama Minuman": "Mango Popping Boba Tea",
+    "Total Kcal": 260,
+    "Karbo": 46,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2053",
+    "Nama Minuman": "Peach Popping Boba Tea",
+    "Total Kcal": 250,
+    "Karbo": 44,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2054",
+    "Nama Minuman": "Lychee Popping Boba Tea",
+    "Total Kcal": 250,
+    "Karbo": 43,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2055",
+    "Nama Minuman": "Blueberry Popping Boba Tea",
+    "Total Kcal": 255,
+    "Karbo": 44,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2056",
+    "Nama Minuman": "Grape Popping Boba Tea",
+    "Total Kcal": 260,
+    "Karbo": 46,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2057",
+    "Nama Minuman": "Passion Fruit Popping Boba Tea",
+    "Total Kcal": 255,
+    "Karbo": 45,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2058",
+    "Nama Minuman": "Kiwi Popping Boba Tea",
+    "Total Kcal": 245,
+    "Karbo": 42,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2059",
+    "Nama Minuman": "Yuzu Popping Boba Tea",
+    "Total Kcal": 235,
+    "Karbo": 40,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2060",
+    "Nama Minuman": "Lemon Popping Boba Tea",
+    "Total Kcal": 230,
+    "Karbo": 39,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2061",
+    "Nama Minuman": "Strawberry Crystal Boba Milk",
+    "Total Kcal": 280,
+    "Karbo": 43,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2062",
+    "Nama Minuman": "Mango Crystal Boba Milk",
+    "Total Kcal": 290,
+    "Karbo": 46,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2063",
+    "Nama Minuman": "Peach Crystal Boba Milk",
+    "Total Kcal": 280,
+    "Karbo": 44,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2064",
+    "Nama Minuman": "Lychee Crystal Boba Milk",
+    "Total Kcal": 280,
+    "Karbo": 43,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2065",
+    "Nama Minuman": "Blueberry Crystal Boba Milk",
+    "Total Kcal": 285,
+    "Karbo": 44,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2066",
+    "Nama Minuman": "Grape Crystal Boba Milk",
+    "Total Kcal": 290,
+    "Karbo": 46,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2067",
+    "Nama Minuman": "Passion Fruit Crystal Boba Milk",
+    "Total Kcal": 285,
+    "Karbo": 45,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2068",
+    "Nama Minuman": "Kiwi Crystal Boba Milk",
+    "Total Kcal": 275,
+    "Karbo": 42,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2069",
+    "Nama Minuman": "Yuzu Crystal Boba Milk",
+    "Total Kcal": 265,
+    "Karbo": 40,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2070",
+    "Nama Minuman": "Lemon Crystal Boba Milk",
+    "Total Kcal": 260,
+    "Karbo": 39,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2071",
+    "Nama Minuman": "Strawberry Pudding Boba",
+    "Total Kcal": 320,
+    "Karbo": 50,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2072",
+    "Nama Minuman": "Mango Pudding Boba",
+    "Total Kcal": 330,
+    "Karbo": 53,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2073",
+    "Nama Minuman": "Peach Pudding Boba",
+    "Total Kcal": 320,
+    "Karbo": 51,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2074",
+    "Nama Minuman": "Lychee Pudding Boba",
+    "Total Kcal": 320,
+    "Karbo": 50,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2075",
+    "Nama Minuman": "Blueberry Pudding Boba",
+    "Total Kcal": 325,
+    "Karbo": 51,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2076",
+    "Nama Minuman": "Grape Pudding Boba",
+    "Total Kcal": 330,
+    "Karbo": 53,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2077",
+    "Nama Minuman": "Passion Fruit Pudding Boba",
+    "Total Kcal": 325,
+    "Karbo": 52,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2078",
+    "Nama Minuman": "Kiwi Pudding Boba",
+    "Total Kcal": 315,
+    "Karbo": 49,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2079",
+    "Nama Minuman": "Yuzu Pudding Boba",
+    "Total Kcal": 305,
+    "Karbo": 47,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2080",
+    "Nama Minuman": "Lemon Pudding Boba",
+    "Total Kcal": 300,
+    "Karbo": 46,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2081",
+    "Nama Minuman": "Strawberry Grass Jelly Milk",
+    "Total Kcal": 260,
+    "Karbo": 39,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2082",
+    "Nama Minuman": "Mango Grass Jelly Milk",
+    "Total Kcal": 270,
+    "Karbo": 42,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2083",
+    "Nama Minuman": "Peach Grass Jelly Milk",
+    "Total Kcal": 260,
+    "Karbo": 40,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2084",
+    "Nama Minuman": "Lychee Grass Jelly Milk",
+    "Total Kcal": 260,
+    "Karbo": 39,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2085",
+    "Nama Minuman": "Blueberry Grass Jelly Milk",
+    "Total Kcal": 265,
+    "Karbo": 40,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2086",
+    "Nama Minuman": "Grape Grass Jelly Milk",
+    "Total Kcal": 270,
+    "Karbo": 42,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2087",
+    "Nama Minuman": "Passion Fruit Grass Jelly Milk",
+    "Total Kcal": 265,
+    "Karbo": 41,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2088",
+    "Nama Minuman": "Kiwi Grass Jelly Milk",
+    "Total Kcal": 255,
+    "Karbo": 38,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2089",
+    "Nama Minuman": "Yuzu Grass Jelly Milk",
+    "Total Kcal": 245,
+    "Karbo": 36,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2090",
+    "Nama Minuman": "Lemon Grass Jelly Milk",
+    "Total Kcal": 240,
+    "Karbo": 35,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2091",
+    "Nama Minuman": "Strawberry Coconut Milk",
+    "Total Kcal": 190,
+    "Karbo": 29,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2092",
+    "Nama Minuman": "Mango Coconut Milk",
+    "Total Kcal": 200,
+    "Karbo": 33,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2093",
+    "Nama Minuman": "Peach Coconut Milk",
+    "Total Kcal": 190,
+    "Karbo": 30,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2094",
+    "Nama Minuman": "Lychee Coconut Milk",
+    "Total Kcal": 190,
+    "Karbo": 29,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2095",
+    "Nama Minuman": "Blueberry Coconut Milk",
+    "Total Kcal": 195,
+    "Karbo": 30,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2096",
+    "Nama Minuman": "Grape Coconut Milk",
+    "Total Kcal": 200,
+    "Karbo": 33,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2097",
+    "Nama Minuman": "Passion Fruit Coconut Milk",
+    "Total Kcal": 195,
+    "Karbo": 31,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2098",
+    "Nama Minuman": "Kiwi Coconut Milk",
+    "Total Kcal": 185,
+    "Karbo": 28,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2099",
+    "Nama Minuman": "Yuzu Coconut Milk",
+    "Total Kcal": 175,
+    "Karbo": 26,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2100",
+    "Nama Minuman": "Lemon Coconut Milk",
+    "Total Kcal": 170,
+    "Karbo": 25,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2101",
+    "Nama Minuman": "Strawberry Coconut Boba",
+    "Total Kcal": 300,
+    "Karbo": 47,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2102",
+    "Nama Minuman": "Mango Coconut Boba",
+    "Total Kcal": 310,
+    "Karbo": 50,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2103",
+    "Nama Minuman": "Peach Coconut Boba",
+    "Total Kcal": 300,
+    "Karbo": 48,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2104",
+    "Nama Minuman": "Lychee Coconut Boba",
+    "Total Kcal": 300,
+    "Karbo": 47,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2105",
+    "Nama Minuman": "Blueberry Coconut Boba",
+    "Total Kcal": 305,
+    "Karbo": 48,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2106",
+    "Nama Minuman": "Grape Coconut Boba",
+    "Total Kcal": 310,
+    "Karbo": 50,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2107",
+    "Nama Minuman": "Passion Fruit Coconut Boba",
+    "Total Kcal": 305,
+    "Karbo": 49,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2108",
+    "Nama Minuman": "Kiwi Coconut Boba",
+    "Total Kcal": 295,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2109",
+    "Nama Minuman": "Yuzu Coconut Boba",
+    "Total Kcal": 285,
+    "Karbo": 44,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2110",
+    "Nama Minuman": "Lemon Coconut Boba",
+    "Total Kcal": 280,
+    "Karbo": 43,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2111",
+    "Nama Minuman": "Strawberry Coconut Cream",
+    "Total Kcal": 240,
+    "Karbo": 32,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2112",
+    "Nama Minuman": "Mango Coconut Cream",
+    "Total Kcal": 250,
+    "Karbo": 36,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2113",
+    "Nama Minuman": "Peach Coconut Cream",
+    "Total Kcal": 240,
+    "Karbo": 33,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2114",
+    "Nama Minuman": "Lychee Coconut Cream",
+    "Total Kcal": 240,
+    "Karbo": 32,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2115",
+    "Nama Minuman": "Blueberry Coconut Cream",
+    "Total Kcal": 245,
+    "Karbo": 33,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2116",
+    "Nama Minuman": "Grape Coconut Cream",
+    "Total Kcal": 250,
+    "Karbo": 36,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2117",
+    "Nama Minuman": "Passion Fruit Coconut Cream",
+    "Total Kcal": 245,
+    "Karbo": 34,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2118",
+    "Nama Minuman": "Kiwi Coconut Cream",
+    "Total Kcal": 235,
+    "Karbo": 31,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2119",
+    "Nama Minuman": "Yuzu Coconut Cream",
+    "Total Kcal": 225,
+    "Karbo": 29,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2120",
+    "Nama Minuman": "Lemon Coconut Cream",
+    "Total Kcal": 220,
+    "Karbo": 28,
+    "Protein": 4,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2121",
+    "Nama Minuman": "Strawberry Almond Latte",
+    "Total Kcal": 190,
+    "Karbo": 25,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2122",
+    "Nama Minuman": "Mango Almond Latte",
+    "Total Kcal": 200,
+    "Karbo": 29,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2123",
+    "Nama Minuman": "Peach Almond Latte",
+    "Total Kcal": 190,
+    "Karbo": 26,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2124",
+    "Nama Minuman": "Blueberry Almond Latte",
+    "Total Kcal": 195,
+    "Karbo": 27,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2125",
+    "Nama Minuman": "Pistachio Almond Latte",
+    "Total Kcal": 230,
+    "Karbo": 25,
+    "Protein": 7,
+    "Lemak": 13
+  },
+  {
+    "Minuman ID": "MNM2126",
+    "Nama Minuman": "Hazelnut Almond Latte",
+    "Total Kcal": 220,
+    "Karbo": 27,
+    "Protein": 6,
+    "Lemak": 12
+  },
+  {
+    "Minuman ID": "MNM2127",
+    "Nama Minuman": "Vanilla Almond Latte",
+    "Total Kcal": 200,
+    "Karbo": 26,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2128",
+    "Nama Minuman": "Caramel Almond Latte",
+    "Total Kcal": 210,
+    "Karbo": 29,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2129",
+    "Nama Minuman": "Chocolate Almond Latte",
+    "Total Kcal": 220,
+    "Karbo": 30,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2130",
+    "Nama Minuman": "Matcha Almond Latte",
+    "Total Kcal": 200,
+    "Karbo": 24,
+    "Protein": 7,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2131",
+    "Nama Minuman": "Strawberry Oat Latte",
+    "Total Kcal": 190,
+    "Karbo": 29,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2132",
+    "Nama Minuman": "Mango Oat Latte",
+    "Total Kcal": 200,
+    "Karbo": 32,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2133",
+    "Nama Minuman": "Peach Oat Latte",
+    "Total Kcal": 190,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2134",
+    "Nama Minuman": "Blueberry Oat Latte",
+    "Total Kcal": 195,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2135",
+    "Nama Minuman": "Vanilla Oat Latte",
+    "Total Kcal": 180,
+    "Karbo": 25,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2136",
+    "Nama Minuman": "Caramel Oat Latte",
+    "Total Kcal": 195,
+    "Karbo": 28,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2137",
+    "Nama Minuman": "Hazelnut Oat Latte",
+    "Total Kcal": 200,
+    "Karbo": 27,
+    "Protein": 5,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2138",
+    "Nama Minuman": "Chocolate Oat Latte",
+    "Total Kcal": 210,
+    "Karbo": 30,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2139",
+    "Nama Minuman": "Matcha Oat Latte",
+    "Total Kcal": 190,
+    "Karbo": 24,
+    "Protein": 5,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2140",
+    "Nama Minuman": "Strawberry Oat Matcha",
+    "Total Kcal": 210,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2141",
+    "Nama Minuman": "Caramel Macchiato",
+    "Total Kcal": 190,
+    "Karbo": 25,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2142",
+    "Nama Minuman": "Vanilla Macchiato",
+    "Total Kcal": 180,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2143",
+    "Nama Minuman": "Hazelnut Macchiato",
+    "Total Kcal": 190,
+    "Karbo": 24,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2144",
+    "Nama Minuman": "Coconut Macchiato",
+    "Total Kcal": 185,
+    "Karbo": 22,
+    "Protein": 5,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2145",
+    "Nama Minuman": "Pistachio Macchiato",
+    "Total Kcal": 210,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2146",
+    "Nama Minuman": "Almond Macchiato",
+    "Total Kcal": 180,
+    "Karbo": 22,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2147",
+    "Nama Minuman": "Biscoff Macchiato",
+    "Total Kcal": 270,
+    "Karbo": 36,
+    "Protein": 7,
+    "Lemak": 12
+  },
+  {
+    "Minuman ID": "MNM2148",
+    "Nama Minuman": "Oreo Macchiato",
+    "Total Kcal": 260,
+    "Karbo": 35,
+    "Protein": 7,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2149",
+    "Nama Minuman": "Strawberry Macchiato",
+    "Total Kcal": 210,
+    "Karbo": 30,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2150",
+    "Nama Minuman": "Mango Macchiato",
+    "Total Kcal": 215,
+    "Karbo": 33,
+    "Protein": 6,
+    "Lemak": 7
+  },
+  {
+    "Minuman ID": "MNM2151",
+    "Nama Minuman": "Caramel Cloud Coffee",
+    "Total Kcal": 220,
+    "Karbo": 30,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2152",
+    "Nama Minuman": "Vanilla Cloud Coffee",
+    "Total Kcal": 210,
+    "Karbo": 28,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2153",
+    "Nama Minuman": "Hazelnut Cloud Coffee",
+    "Total Kcal": 220,
+    "Karbo": 29,
+    "Protein": 6,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2154",
+    "Nama Minuman": "Mocha Cloud Coffee",
+    "Total Kcal": 240,
+    "Karbo": 32,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2155",
+    "Nama Minuman": "Biscoff Cloud Coffee",
+    "Total Kcal": 300,
+    "Karbo": 40,
+    "Protein": 7,
+    "Lemak": 14
+  },
+  {
+    "Minuman ID": "MNM2156",
+    "Nama Minuman": "Oreo Cloud Coffee",
+    "Total Kcal": 290,
+    "Karbo": 39,
+    "Protein": 7,
+    "Lemak": 13
+  },
+  {
+    "Minuman ID": "MNM2157",
+    "Nama Minuman": "Matcha Cloud Coffee",
+    "Total Kcal": 230,
+    "Karbo": 27,
+    "Protein": 7,
+    "Lemak": 10
+  },
+  {
+    "Minuman ID": "MNM2158",
+    "Nama Minuman": "Strawberry Cloud Coffee",
+    "Total Kcal": 220,
+    "Karbo": 31,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Minuman ID": "MNM2159",
+    "Nama Minuman": "Mango Cloud Coffee",
+    "Total Kcal": 225,
+    "Karbo": 34,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Minuman ID": "MNM2160",
+    "Nama Minuman": "Coconut Cloud Coffee",
+    "Total Kcal": 220,
+    "Karbo": 28,
+    "Protein": 5,
+    "Lemak": 11
+  },
+  {
+    "Minuman ID": "MNM2161",
+    "Nama Minuman": "Strawberry Tea Soda",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2162",
+    "Nama Minuman": "Mango Tea Soda",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2163",
+    "Nama Minuman": "Peach Tea Soda",
+    "Total Kcal": 100,
+    "Karbo": 25,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2164",
+    "Nama Minuman": "Lychee Tea Soda",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2165",
+    "Nama Minuman": "Blueberry Tea Soda",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2166",
+    "Nama Minuman": "Grape Tea Soda",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2167",
+    "Nama Minuman": "Passion Fruit Tea Soda",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2168",
+    "Nama Minuman": "Kiwi Tea Soda",
+    "Total Kcal": 100,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2169",
+    "Nama Minuman": "Yuzu Tea Soda",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2170",
+    "Nama Minuman": "Lemon Tea Soda",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2171",
+    "Nama Minuman": "Strawberry Honey Tea",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2172",
+    "Nama Minuman": "Mango Honey Tea",
+    "Total Kcal": 115,
+    "Karbo": 29,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2173",
+    "Nama Minuman": "Peach Honey Tea",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2174",
+    "Nama Minuman": "Lychee Honey Tea",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2175",
+    "Nama Minuman": "Blueberry Honey Tea",
+    "Total Kcal": 110,
+    "Karbo": 27,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2176",
+    "Nama Minuman": "Grape Honey Tea",
+    "Total Kcal": 115,
+    "Karbo": 29,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2177",
+    "Nama Minuman": "Passion Fruit Honey Tea",
+    "Total Kcal": 115,
+    "Karbo": 29,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2178",
+    "Nama Minuman": "Kiwi Honey Tea",
+    "Total Kcal": 105,
+    "Karbo": 26,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2179",
+    "Nama Minuman": "Yuzu Honey Tea",
+    "Total Kcal": 95,
+    "Karbo": 24,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2180",
+    "Nama Minuman": "Lemon Honey Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2181",
+    "Nama Minuman": "Strawberry Jasmine Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2182",
+    "Nama Minuman": "Mango Jasmine Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2183",
+    "Nama Minuman": "Peach Jasmine Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2184",
+    "Nama Minuman": "Lychee Jasmine Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2185",
+    "Nama Minuman": "Blueberry Jasmine Tea",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2186",
+    "Nama Minuman": "Grape Jasmine Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2187",
+    "Nama Minuman": "Passion Fruit Jasmine Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2188",
+    "Nama Minuman": "Kiwi Jasmine Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2189",
+    "Nama Minuman": "Yuzu Jasmine Tea",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2190",
+    "Nama Minuman": "Lemon Jasmine Tea",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2191",
+    "Nama Minuman": "Strawberry Oolong Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2192",
+    "Nama Minuman": "Mango Oolong Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2193",
+    "Nama Minuman": "Peach Oolong Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2194",
+    "Nama Minuman": "Lychee Oolong Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2195",
+    "Nama Minuman": "Blueberry Oolong Tea",
+    "Total Kcal": 85,
+    "Karbo": 21,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2196",
+    "Nama Minuman": "Grape Oolong Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2197",
+    "Nama Minuman": "Passion Fruit Oolong Tea",
+    "Total Kcal": 90,
+    "Karbo": 22,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2198",
+    "Nama Minuman": "Kiwi Oolong Tea",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2199",
+    "Nama Minuman": "Yuzu Oolong Tea",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2200",
+    "Nama Minuman": "Lemon Oolong Tea",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
   }
 ]
