@@ -17598,5 +17598,1205 @@
     "Karbo": 16,
     "Protein": 0,
     "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2201",
+    "Nama Minuman": "Extra Joss",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2202",
+    "Nama Minuman": "Extra Joss Anggur",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2203",
+    "Nama Minuman": "Extra Joss Mangga",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2204",
+    "Nama Minuman": "Extra Joss Sirsak",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2205",
+    "Nama Minuman": "Extra Joss Stamina Plus",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2206",
+    "Nama Minuman": "Kuku Bima Ener-G Original",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2207",
+    "Nama Minuman": "Kuku Bima Ener-G Anggur",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2208",
+    "Nama Minuman": "Kuku Bima Ener-G Jeruk",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2209",
+    "Nama Minuman": "Kuku Bima Ener-G Mangga",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2210",
+    "Nama Minuman": "Kuku Bima Ener-G Jambu",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2211",
+    "Nama Minuman": "Kuku Bima Ener-G Kopi",
+    "Total Kcal": 55,
+    "Karbo": 13,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2212",
+    "Nama Minuman": "Kuku Bima Ener-G Plus",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2213",
+    "Nama Minuman": "Kopi Janggut Original",
+    "Total Kcal": 110,
+    "Karbo": 16,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2214",
+    "Nama Minuman": "Kopi Janggut 3-in-1",
+    "Total Kcal": 120,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2215",
+    "Nama Minuman": "Kopi Janggut Tongkat Ali",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2216",
+    "Nama Minuman": "Kopi Janggut Ginseng",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2217",
+    "Nama Minuman": "Kopi Janggut Kopi O",
+    "Total Kcal": 35,
+    "Karbo": 5,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2218",
+    "Nama Minuman": "Kopi Janggut Hazelnut",
+    "Total Kcal": 125,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2219",
+    "Nama Minuman": "Kopi Janggut Mocha",
+    "Total Kcal": 130,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2220",
+    "Nama Minuman": "Kopi Janggut Caramel",
+    "Total Kcal": 130,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2221",
+    "Nama Minuman": "Kopi 3-in-1 Original",
+    "Total Kcal": 110,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2222",
+    "Nama Minuman": "Kopi 3-in-1 Strong",
+    "Total Kcal": 105,
+    "Karbo": 16,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2223",
+    "Nama Minuman": "Kopi 3-in-1 Less Sugar",
+    "Total Kcal": 85,
+    "Karbo": 11,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2224",
+    "Nama Minuman": "Kopi 3-in-1 Hazelnut",
+    "Total Kcal": 120,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2225",
+    "Nama Minuman": "Kopi 3-in-1 Mocha",
+    "Total Kcal": 125,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2226",
+    "Nama Minuman": "Kopi 3-in-1 Caramel",
+    "Total Kcal": 125,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2227",
+    "Nama Minuman": "Kopi 3-in-1 White Coffee",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2228",
+    "Nama Minuman": "Kopi Putih 3-in-1",
+    "Total Kcal": 120,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2229",
+    "Nama Minuman": "Kopi O Sachet",
+    "Total Kcal": 35,
+    "Karbo": 5,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2230",
+    "Nama Minuman": "Kopi O Kosong Sachet",
+    "Total Kcal": 10,
+    "Karbo": 1,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2231",
+    "Nama Minuman": "Kopi O Kurang Manis Sachet",
+    "Total Kcal": 25,
+    "Karbo": 4,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2232",
+    "Nama Minuman": "White Coffee Original Sachet",
+    "Total Kcal": 120,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2233",
+    "Nama Minuman": "White Coffee Hazelnut Sachet",
+    "Total Kcal": 125,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2234",
+    "Nama Minuman": "White Coffee Mocha Sachet",
+    "Total Kcal": 130,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2235",
+    "Nama Minuman": "White Coffee Caramel Sachet",
+    "Total Kcal": 130,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2236",
+    "Nama Minuman": "White Coffee Coconut Sachet",
+    "Total Kcal": 125,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2237",
+    "Nama Minuman": "Teh Tarik 3-in-1",
+    "Total Kcal": 110,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2238",
+    "Nama Minuman": "Teh Tarik Kurang Manis 3-in-1",
+    "Total Kcal": 80,
+    "Karbo": 12,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2239",
+    "Nama Minuman": "Teh Susu 3-in-1",
+    "Total Kcal": 105,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2240",
+    "Nama Minuman": "Teh O 3-in-1",
+    "Total Kcal": 75,
+    "Karbo": 16,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2241",
+    "Nama Minuman": "Teh Hijau 3-in-1",
+    "Total Kcal": 80,
+    "Karbo": 17,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2242",
+    "Nama Minuman": "Teh Lemon 3-in-1",
+    "Total Kcal": 85,
+    "Karbo": 20,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2243",
+    "Nama Minuman": "Teh Halia 3-in-1",
+    "Total Kcal": 95,
+    "Karbo": 18,
+    "Protein": 1,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2244",
+    "Nama Minuman": "Teh Coklat 3-in-1",
+    "Total Kcal": 110,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2245",
+    "Nama Minuman": "Teh Masala 3-in-1",
+    "Total Kcal": 100,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2246",
+    "Nama Minuman": "Milo 3-in-1 Sachet",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2247",
+    "Nama Minuman": "Milo Kurang Gula Sachet",
+    "Total Kcal": 95,
+    "Karbo": 17,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2248",
+    "Nama Minuman": "Milo Coklat Sachet",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2249",
+    "Nama Minuman": "Milo Ais Sachet",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2250",
+    "Nama Minuman": "Milo Horlicks Sachet",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2251",
+    "Nama Minuman": "Horlicks Original Sachet",
+    "Total Kcal": 130,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2252",
+    "Nama Minuman": "Horlicks Chocolate Sachet",
+    "Total Kcal": 135,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2253",
+    "Nama Minuman": "Horlicks Malt Sachet",
+    "Total Kcal": 130,
+    "Karbo": 22,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2254",
+    "Nama Minuman": "Ovaltine Original Sachet",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2255",
+    "Nama Minuman": "Ovaltine Chocolate Sachet",
+    "Total Kcal": 120,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2256",
+    "Nama Minuman": "Ovaltine Malt Sachet",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2257",
+    "Nama Minuman": "Nesquik Chocolate Sachet",
+    "Total Kcal": 110,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2258",
+    "Nama Minuman": "Nesquik Strawberry Sachet",
+    "Total Kcal": 110,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2259",
+    "Nama Minuman": "Nesquik Banana Sachet",
+    "Total Kcal": 110,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2260",
+    "Nama Minuman": "Nesquik Milo Mix Sachet",
+    "Total Kcal": 115,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2261",
+    "Nama Minuman": "Susu Coklat 3-in-1",
+    "Total Kcal": 120,
+    "Karbo": 19,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2262",
+    "Nama Minuman": "Susu Vanila 3-in-1",
+    "Total Kcal": 115,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2263",
+    "Nama Minuman": "Susu Strawberry 3-in-1",
+    "Total Kcal": 115,
+    "Karbo": 19,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2264",
+    "Nama Minuman": "Susu Pisang 3-in-1",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2265",
+    "Nama Minuman": "Susu Malt 3-in-1",
+    "Total Kcal": 120,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2266",
+    "Nama Minuman": "Susu Kurma Sachet",
+    "Total Kcal": 125,
+    "Karbo": 21,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2267",
+    "Nama Minuman": "Susu Kurma Coklat Sachet",
+    "Total Kcal": 135,
+    "Karbo": 23,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2268",
+    "Nama Minuman": "Susu Kambing Sachet",
+    "Total Kcal": 120,
+    "Karbo": 12,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2269",
+    "Nama Minuman": "Susu Kambing Halia Sachet",
+    "Total Kcal": 125,
+    "Karbo": 14,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2270",
+    "Nama Minuman": "Susu Kambing Coklat Sachet",
+    "Total Kcal": 130,
+    "Karbo": 19,
+    "Protein": 6,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2271",
+    "Nama Minuman": "Coklat Malt 3-in-1",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2272",
+    "Nama Minuman": "Coklat Hazelnut Sachet",
+    "Total Kcal": 125,
+    "Karbo": 20,
+    "Protein": 3,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2273",
+    "Nama Minuman": "Coklat Caramel Sachet",
+    "Total Kcal": 125,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2274",
+    "Nama Minuman": "Coklat Mocha Sachet",
+    "Total Kcal": 125,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2275",
+    "Nama Minuman": "Coklat Dark Chocolate Sachet",
+    "Total Kcal": 100,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2276",
+    "Nama Minuman": "Coklat Kurang Gula Sachet",
+    "Total Kcal": 90,
+    "Karbo": 14,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2277",
+    "Nama Minuman": "Coklat Putih Sachet",
+    "Total Kcal": 125,
+    "Karbo": 18,
+    "Protein": 3,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2278",
+    "Nama Minuman": "Coklat Mint Sachet",
+    "Total Kcal": 120,
+    "Karbo": 19,
+    "Protein": 3,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2279",
+    "Nama Minuman": "Coklat Strawberry Sachet",
+    "Total Kcal": 120,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2280",
+    "Nama Minuman": "Coklat Biscoff Sachet",
+    "Total Kcal": 140,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2281",
+    "Nama Minuman": "Air Barli Serbuk Sachet",
+    "Total Kcal": 70,
+    "Karbo": 16,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2282",
+    "Nama Minuman": "Air Jagung Serbuk Sachet",
+    "Total Kcal": 90,
+    "Karbo": 21,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2283",
+    "Nama Minuman": "Air Soya Serbuk Sachet",
+    "Total Kcal": 100,
+    "Karbo": 13,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2284",
+    "Nama Minuman": "Air Kacang Merah Serbuk Sachet",
+    "Total Kcal": 105,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2285",
+    "Nama Minuman": "Air Cincau Serbuk Sachet",
+    "Total Kcal": 80,
+    "Karbo": 18,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2286",
+    "Nama Minuman": "Air Bandung Serbuk Sachet",
+    "Total Kcal": 100,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2287",
+    "Nama Minuman": "Air Sarsi Serbuk Sachet",
+    "Total Kcal": 80,
+    "Karbo": 20,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2288",
+    "Nama Minuman": "Air Sirap Serbuk Sachet",
+    "Total Kcal": 75,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2289",
+    "Nama Minuman": "Air Limau Serbuk Sachet",
+    "Total Kcal": 60,
+    "Karbo": 15,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2290",
+    "Nama Minuman": "Air Asam Jawa Serbuk Sachet",
+    "Total Kcal": 65,
+    "Karbo": 16,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2291",
+    "Nama Minuman": "Teh Halia Serbuk",
+    "Total Kcal": 80,
+    "Karbo": 18,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2292",
+    "Nama Minuman": "Halia Susu 3-in-1",
+    "Total Kcal": 105,
+    "Karbo": 17,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2293",
+    "Nama Minuman": "Halia Madu Serbuk",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2294",
+    "Nama Minuman": "Halia Lemon Serbuk",
+    "Total Kcal": 70,
+    "Karbo": 17,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2295",
+    "Nama Minuman": "Serai Halia Serbuk",
+    "Total Kcal": 65,
+    "Karbo": 15,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2296",
+    "Nama Minuman": "Kunyit Halia Serbuk",
+    "Total Kcal": 70,
+    "Karbo": 14,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2297",
+    "Nama Minuman": "Minuman Roselle Serbuk",
+    "Total Kcal": 55,
+    "Karbo": 13,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2298",
+    "Nama Minuman": "Minuman Roselle Madu Serbuk",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2299",
+    "Nama Minuman": "Minuman Pegaga Serbuk",
+    "Total Kcal": 45,
+    "Karbo": 10,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2300",
+    "Nama Minuman": "Minuman Spirulina Sachet",
+    "Total Kcal": 35,
+    "Karbo": 4,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2301",
+    "Nama Minuman": "Extra Joss Blend Kopi",
+    "Total Kcal": 60,
+    "Karbo": 13,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2302",
+    "Nama Minuman": "Extra Joss Blend Soda",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2303",
+    "Nama Minuman": "Extra Joss Blend Mangga",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2304",
+    "Nama Minuman": "Extra Joss Blend Lemon",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2305",
+    "Nama Minuman": "Extra Joss Blend Anggur",
+    "Total Kcal": 45,
+    "Karbo": 11,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2306",
+    "Nama Minuman": "Kuku Bima Kopi Susu",
+    "Total Kcal": 100,
+    "Karbo": 16,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2307",
+    "Nama Minuman": "Kuku Bima Susu",
+    "Total Kcal": 105,
+    "Karbo": 18,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2308",
+    "Nama Minuman": "Kuku Bima Teh",
+    "Total Kcal": 55,
+    "Karbo": 13,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2309",
+    "Nama Minuman": "Kuku Bima Jeruk Nipis",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2310",
+    "Nama Minuman": "Kuku Bima Mangga Lemon",
+    "Total Kcal": 50,
+    "Karbo": 12,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2311",
+    "Nama Minuman": "Kopi Tongkat Ali Sachet",
+    "Total Kcal": 110,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2312",
+    "Nama Minuman": "Kopi Ginseng Sachet",
+    "Total Kcal": 105,
+    "Karbo": 16,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2313",
+    "Nama Minuman": "Kopi Kacip Fatimah Sachet",
+    "Total Kcal": 105,
+    "Karbo": 17,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2314",
+    "Nama Minuman": "Kopi Herba Sachet",
+    "Total Kcal": 100,
+    "Karbo": 15,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2315",
+    "Nama Minuman": "Kopi Halia Sachet",
+    "Total Kcal": 105,
+    "Karbo": 16,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2316",
+    "Nama Minuman": "Kopi Kurma Sachet",
+    "Total Kcal": 120,
+    "Karbo": 20,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2317",
+    "Nama Minuman": "Kopi Madu Sachet",
+    "Total Kcal": 115,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2318",
+    "Nama Minuman": "Kopi Susu Gula Melaka Sachet",
+    "Total Kcal": 130,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2319",
+    "Nama Minuman": "Kopi Pandan Sachet",
+    "Total Kcal": 115,
+    "Karbo": 18,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2320",
+    "Nama Minuman": "Kopi Durian Sachet",
+    "Total Kcal": 130,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 5
+  },
+  {
+    "Minuman ID": "MNM2321",
+    "Nama Minuman": "Teh Tarik Pandan Sachet",
+    "Total Kcal": 115,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2322",
+    "Nama Minuman": "Teh Tarik Halia Sachet",
+    "Total Kcal": 115,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2323",
+    "Nama Minuman": "Teh Tarik Gula Melaka Sachet",
+    "Total Kcal": 120,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2324",
+    "Nama Minuman": "Teh Tarik Caramel Sachet",
+    "Total Kcal": 125,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2325",
+    "Nama Minuman": "Teh Tarik Hazelnut Sachet",
+    "Total Kcal": 125,
+    "Karbo": 20,
+    "Protein": 2,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2326",
+    "Nama Minuman": "Teh Tarik Chocolate Sachet",
+    "Total Kcal": 125,
+    "Karbo": 21,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2327",
+    "Nama Minuman": "Teh Tarik Biscoff Sachet",
+    "Total Kcal": 140,
+    "Karbo": 22,
+    "Protein": 3,
+    "Lemak": 6
+  },
+  {
+    "Minuman ID": "MNM2328",
+    "Nama Minuman": "Teh Tarik Matcha Sachet",
+    "Total Kcal": 120,
+    "Karbo": 19,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2329",
+    "Nama Minuman": "Teh Tarik Strawberry Sachet",
+    "Total Kcal": 120,
+    "Karbo": 21,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2330",
+    "Nama Minuman": "Teh Tarik Vanilla Sachet",
+    "Total Kcal": 115,
+    "Karbo": 19,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2331",
+    "Nama Minuman": "Bandung 3-in-1 Sachet",
+    "Total Kcal": 105,
+    "Karbo": 22,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2332",
+    "Nama Minuman": "Bandung Cincau Sachet",
+    "Total Kcal": 110,
+    "Karbo": 23,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Minuman ID": "MNM2333",
+    "Nama Minuman": "Bandung Soda Sachet",
+    "Total Kcal": 95,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2334",
+    "Nama Minuman": "Bandung Lychee Sachet",
+    "Total Kcal": 105,
+    "Karbo": 24,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2335",
+    "Nama Minuman": "Bandung Strawberry Sachet",
+    "Total Kcal": 105,
+    "Karbo": 23,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2336",
+    "Nama Minuman": "Bandung Rose Sachet",
+    "Total Kcal": 100,
+    "Karbo": 22,
+    "Protein": 1,
+    "Lemak": 1
+  },
+  {
+    "Minuman ID": "MNM2337",
+    "Nama Minuman": "Air Mata Kucing Serbuk",
+    "Total Kcal": 75,
+    "Karbo": 18,
+    "Protein": 0,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2338",
+    "Nama Minuman": "Air Lai Chi Kang Serbuk",
+    "Total Kcal": 80,
+    "Karbo": 19,
+    "Protein": 1,
+    "Lemak": 0
+  },
+  {
+    "Minuman ID": "MNM2339",
+    "Nama Minuman": "Air Soya Gula Melaka Sachet",
+    "Total Kcal": 110,
+    "Karbo": 17,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2340",
+    "Nama Minuman": "Air Soya Pandan Sachet",
+    "Total Kcal": 105,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2341",
+    "Nama Minuman": "Air Soya Cincau Sachet",
+    "Total Kcal": 110,
+    "Karbo": 18,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2342",
+    "Nama Minuman": "Air Soya Coklat Sachet",
+    "Total Kcal": 120,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2343",
+    "Nama Minuman": "Air Soya Strawberry Sachet",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2344",
+    "Nama Minuman": "Air Soya Matcha Sachet",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2345",
+    "Nama Minuman": "Air Soya Vanilla Sachet",
+    "Total Kcal": 110,
+    "Karbo": 17,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2346",
+    "Nama Minuman": "Air Soya Kurma Sachet",
+    "Total Kcal": 120,
+    "Karbo": 20,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Minuman ID": "MNM2347",
+    "Nama Minuman": "Air Oat Coklat Sachet",
+    "Total Kcal": 120,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2348",
+    "Nama Minuman": "Air Oat Vanilla Sachet",
+    "Total Kcal": 110,
+    "Karbo": 18,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2349",
+    "Nama Minuman": "Air Oat Strawberry Sachet",
+    "Total Kcal": 115,
+    "Karbo": 20,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Minuman ID": "MNM2350",
+    "Nama Minuman": "Air Oat Matcha Sachet",
+    "Total Kcal": 115,
+    "Karbo": 17,
+    "Protein": 4,
+    "Lemak": 5
   }
 ]
