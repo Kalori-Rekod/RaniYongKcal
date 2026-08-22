@@ -17598,5 +17598,1205 @@
     "Karbo": 18,
     "Protein": 6,
     "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2201",
+    "Nama Snek": "Siomai Ayam 1pc",
+    "Total Kcal": 45,
+    "Karbo": 4,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2202",
+    "Nama Snek": "Siomai Udang 1pc",
+    "Total Kcal": 50,
+    "Karbo": 4,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2203",
+    "Nama Snek": "Siomai Daging 1pc",
+    "Total Kcal": 55,
+    "Karbo": 4,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2204",
+    "Nama Snek": "Siomai Sayur 1pc",
+    "Total Kcal": 40,
+    "Karbo": 5,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2205",
+    "Nama Snek": "Siomai Keju 1pc",
+    "Total Kcal": 55,
+    "Karbo": 4,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2206",
+    "Nama Snek": "Har Gao 1pc",
+    "Total Kcal": 45,
+    "Karbo": 4,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2207",
+    "Nama Snek": "Har Gao 3pcs",
+    "Total Kcal": 135,
+    "Karbo": 12,
+    "Protein": 9,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2208",
+    "Nama Snek": "Dumpling Ayam Rebus 1pc",
+    "Total Kcal": 50,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2209",
+    "Nama Snek": "Dumpling Ayam Goreng 1pc",
+    "Total Kcal": 70,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Snek ID": "SNK2210",
+    "Nama Snek": "Dumpling Udang Rebus 1pc",
+    "Total Kcal": 50,
+    "Karbo": 4,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2211",
+    "Nama Snek": "Dumpling Udang Goreng 1pc",
+    "Total Kcal": 75,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2212",
+    "Nama Snek": "Dumpling Sayur 1pc",
+    "Total Kcal": 45,
+    "Karbo": 6,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2213",
+    "Nama Snek": "Dumpling Daging 1pc",
+    "Total Kcal": 60,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2214",
+    "Nama Snek": "Gyoza Ayam 1pc",
+    "Total Kcal": 55,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2215",
+    "Nama Snek": "Gyoza Ayam 5pcs",
+    "Total Kcal": 275,
+    "Karbo": 25,
+    "Protein": 15,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2216",
+    "Nama Snek": "Gyoza Daging 1pc",
+    "Total Kcal": 60,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2217",
+    "Nama Snek": "Gyoza Sayur 1pc",
+    "Total Kcal": 50,
+    "Karbo": 6,
+    "Protein": 2,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2218",
+    "Nama Snek": "Gyoza Udang 1pc",
+    "Total Kcal": 55,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2219",
+    "Nama Snek": "Gyoza Cheese 1pc",
+    "Total Kcal": 70,
+    "Karbo": 5,
+    "Protein": 3,
+    "Lemak": 4
+  },
+  {
+    "Snek ID": "SNK2220",
+    "Nama Snek": "Gyoza Goreng Ayam 5pcs",
+    "Total Kcal": 320,
+    "Karbo": 26,
+    "Protein": 16,
+    "Lemak": 18
+  },
+  {
+    "Snek ID": "SNK2221",
+    "Nama Snek": "Bao Ayam",
+    "Total Kcal": 180,
+    "Karbo": 24,
+    "Protein": 7,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2222",
+    "Nama Snek": "Bao Daging",
+    "Total Kcal": 190,
+    "Karbo": 24,
+    "Protein": 7,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2223",
+    "Nama Snek": "Bao Char Siu",
+    "Total Kcal": 200,
+    "Karbo": 27,
+    "Protein": 7,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2224",
+    "Nama Snek": "Bao Kaya",
+    "Total Kcal": 190,
+    "Karbo": 30,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2225",
+    "Nama Snek": "Bao Custard",
+    "Total Kcal": 200,
+    "Karbo": 28,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2226",
+    "Nama Snek": "Bao Pandan",
+    "Total Kcal": 185,
+    "Karbo": 29,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2227",
+    "Nama Snek": "Bao Coklat",
+    "Total Kcal": 210,
+    "Karbo": 29,
+    "Protein": 5,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2228",
+    "Nama Snek": "Bao Red Bean",
+    "Total Kcal": 190,
+    "Karbo": 31,
+    "Protein": 5,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2229",
+    "Nama Snek": "Bao Lotus",
+    "Total Kcal": 200,
+    "Karbo": 30,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2230",
+    "Nama Snek": "Mini Bao Ayam 3pcs",
+    "Total Kcal": 210,
+    "Karbo": 28,
+    "Protein": 8,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2231",
+    "Nama Snek": "Mini Bao Daging 3pcs",
+    "Total Kcal": 220,
+    "Karbo": 28,
+    "Protein": 8,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2232",
+    "Nama Snek": "Mini Bao Custard 3pcs",
+    "Total Kcal": 230,
+    "Karbo": 32,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2233",
+    "Nama Snek": "Mini Bao Coklat 3pcs",
+    "Total Kcal": 240,
+    "Karbo": 33,
+    "Protein": 6,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2234",
+    "Nama Snek": "Char Siu Bao",
+    "Total Kcal": 200,
+    "Karbo": 27,
+    "Protein": 7,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2235",
+    "Nama Snek": "Liu Sha Bao",
+    "Total Kcal": 210,
+    "Karbo": 25,
+    "Protein": 5,
+    "Lemak": 10
+  },
+  {
+    "Snek ID": "SNK2236",
+    "Nama Snek": "Taro Bao",
+    "Total Kcal": 190,
+    "Karbo": 30,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2237",
+    "Nama Snek": "Matcha Bao",
+    "Total Kcal": 195,
+    "Karbo": 29,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2238",
+    "Nama Snek": "Pumpkin Bao",
+    "Total Kcal": 180,
+    "Karbo": 29,
+    "Protein": 4,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2239",
+    "Nama Snek": "Red Bean Mochi Bao",
+    "Total Kcal": 220,
+    "Karbo": 35,
+    "Protein": 4,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2240",
+    "Nama Snek": "Chicken Pau Goreng",
+    "Total Kcal": 230,
+    "Karbo": 22,
+    "Protein": 9,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2241",
+    "Nama Snek": "Curry Pau",
+    "Total Kcal": 210,
+    "Karbo": 23,
+    "Protein": 7,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2242",
+    "Nama Snek": "Sambal Pau",
+    "Total Kcal": 200,
+    "Karbo": 22,
+    "Protein": 6,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2243",
+    "Nama Snek": "Dim Sum Chicken Feet",
+    "Total Kcal": 180,
+    "Karbo": 5,
+    "Protein": 13,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2244",
+    "Nama Snek": "Dim Sum Spare Ribs",
+    "Total Kcal": 220,
+    "Karbo": 7,
+    "Protein": 15,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2245",
+    "Nama Snek": "Steamed Chicken Roll",
+    "Total Kcal": 130,
+    "Karbo": 6,
+    "Protein": 10,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2246",
+    "Nama Snek": "Steamed Beef Roll",
+    "Total Kcal": 150,
+    "Karbo": 7,
+    "Protein": 10,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2247",
+    "Nama Snek": "Steamed Tofu Skin Roll",
+    "Total Kcal": 160,
+    "Karbo": 8,
+    "Protein": 8,
+    "Lemak": 10
+  },
+  {
+    "Snek ID": "SNK2248",
+    "Nama Snek": "Bean Curd Roll",
+    "Total Kcal": 170,
+    "Karbo": 10,
+    "Protein": 7,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2249",
+    "Nama Snek": "Fried Bean Curd Roll",
+    "Total Kcal": 220,
+    "Karbo": 13,
+    "Protein": 8,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2250",
+    "Nama Snek": "Fried Dumpling",
+    "Total Kcal": 80,
+    "Karbo": 6,
+    "Protein": 3,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2251",
+    "Nama Snek": "Takoyaki 1pc",
+    "Total Kcal": 45,
+    "Karbo": 4,
+    "Protein": 2,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2252",
+    "Nama Snek": "Takoyaki 4pcs",
+    "Total Kcal": 180,
+    "Karbo": 16,
+    "Protein": 8,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2253",
+    "Nama Snek": "Takoyaki 6pcs",
+    "Total Kcal": 270,
+    "Karbo": 24,
+    "Protein": 12,
+    "Lemak": 18
+  },
+  {
+    "Snek ID": "SNK2254",
+    "Nama Snek": "Takoyaki 8pcs",
+    "Total Kcal": 360,
+    "Karbo": 32,
+    "Protein": 16,
+    "Lemak": 24
+  },
+  {
+    "Snek ID": "SNK2255",
+    "Nama Snek": "Cheese Takoyaki 6pcs",
+    "Total Kcal": 310,
+    "Karbo": 24,
+    "Protein": 13,
+    "Lemak": 20
+  },
+  {
+    "Snek ID": "SNK2256",
+    "Nama Snek": "Spicy Takoyaki 6pcs",
+    "Total Kcal": 280,
+    "Karbo": 25,
+    "Protein": 12,
+    "Lemak": 17
+  },
+  {
+    "Snek ID": "SNK2257",
+    "Nama Snek": "Takoyaki Chicken 6pcs",
+    "Total Kcal": 290,
+    "Karbo": 24,
+    "Protein": 14,
+    "Lemak": 17
+  },
+  {
+    "Snek ID": "SNK2258",
+    "Nama Snek": "Takoyaki Shrimp 6pcs",
+    "Total Kcal": 280,
+    "Karbo": 23,
+    "Protein": 14,
+    "Lemak": 16
+  },
+  {
+    "Snek ID": "SNK2259",
+    "Nama Snek": "Okonomiyaki Mini",
+    "Total Kcal": 220,
+    "Karbo": 23,
+    "Protein": 8,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2260",
+    "Nama Snek": "Okonomiyaki Chicken",
+    "Total Kcal": 280,
+    "Karbo": 24,
+    "Protein": 14,
+    "Lemak": 14
+  },
+  {
+    "Snek ID": "SNK2261",
+    "Nama Snek": "Okonomiyaki Seafood",
+    "Total Kcal": 290,
+    "Karbo": 24,
+    "Protein": 14,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2262",
+    "Nama Snek": "Okonomiyaki Cheese",
+    "Total Kcal": 310,
+    "Karbo": 24,
+    "Protein": 12,
+    "Lemak": 18
+  },
+  {
+    "Snek ID": "SNK2263",
+    "Nama Snek": "Japanese Corn Dog",
+    "Total Kcal": 230,
+    "Karbo": 25,
+    "Protein": 7,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2264",
+    "Nama Snek": "Cheese Corn Dog",
+    "Total Kcal": 280,
+    "Karbo": 27,
+    "Protein": 9,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2265",
+    "Nama Snek": "Mozzarella Corn Dog",
+    "Total Kcal": 300,
+    "Karbo": 29,
+    "Protein": 10,
+    "Lemak": 16
+  },
+  {
+    "Snek ID": "SNK2266",
+    "Nama Snek": "Potato Corn Dog",
+    "Total Kcal": 270,
+    "Karbo": 31,
+    "Protein": 7,
+    "Lemak": 13
+  },
+  {
+    "Snek ID": "SNK2267",
+    "Nama Snek": "Sausage Corn Dog",
+    "Total Kcal": 260,
+    "Karbo": 25,
+    "Protein": 8,
+    "Lemak": 14
+  },
+  {
+    "Snek ID": "SNK2268",
+    "Nama Snek": "Half Cheese Half Sausage Corn Dog",
+    "Total Kcal": 280,
+    "Karbo": 26,
+    "Protein": 9,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2269",
+    "Nama Snek": "Mini Corn Dog",
+    "Total Kcal": 110,
+    "Karbo": 12,
+    "Protein": 3,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2270",
+    "Nama Snek": "Mini Cheese Corn Dog",
+    "Total Kcal": 130,
+    "Karbo": 12,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2271",
+    "Nama Snek": "Karaage Chicken 3pcs",
+    "Total Kcal": 220,
+    "Karbo": 8,
+    "Protein": 17,
+    "Lemak": 13
+  },
+  {
+    "Snek ID": "SNK2272",
+    "Nama Snek": "Karaage Chicken 5pcs",
+    "Total Kcal": 360,
+    "Karbo": 13,
+    "Protein": 28,
+    "Lemak": 21
+  },
+  {
+    "Snek ID": "SNK2273",
+    "Nama Snek": "Karaage Chicken 8pcs",
+    "Total Kcal": 570,
+    "Karbo": 21,
+    "Protein": 45,
+    "Lemak": 33
+  },
+  {
+    "Snek ID": "SNK2274",
+    "Nama Snek": "Chicken Katsu Slice",
+    "Total Kcal": 250,
+    "Karbo": 16,
+    "Protein": 18,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2275",
+    "Nama Snek": "Chicken Katsu Bite",
+    "Total Kcal": 120,
+    "Karbo": 8,
+    "Protein": 8,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2276",
+    "Nama Snek": "Pork Katsu Bite",
+    "Total Kcal": 140,
+    "Karbo": 7,
+    "Protein": 8,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2277",
+    "Nama Snek": "Ebi Fry 2pcs",
+    "Total Kcal": 150,
+    "Karbo": 9,
+    "Protein": 8,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2278",
+    "Nama Snek": "Ebi Fry 4pcs",
+    "Total Kcal": 300,
+    "Karbo": 18,
+    "Protein": 16,
+    "Lemak": 18
+  },
+  {
+    "Snek ID": "SNK2279",
+    "Nama Snek": "Calamari Ring 5pcs",
+    "Total Kcal": 180,
+    "Karbo": 12,
+    "Protein": 9,
+    "Lemak": 10
+  },
+  {
+    "Snek ID": "SNK2280",
+    "Nama Snek": "Calamari Ring 8pcs",
+    "Total Kcal": 285,
+    "Karbo": 19,
+    "Protein": 14,
+    "Lemak": 16
+  },
+  {
+    "Snek ID": "SNK2281",
+    "Nama Snek": "Edamame",
+    "Total Kcal": 120,
+    "Karbo": 9,
+    "Protein": 11,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2282",
+    "Nama Snek": "Edamame Garlic",
+    "Total Kcal": 140,
+    "Karbo": 10,
+    "Protein": 11,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2283",
+    "Nama Snek": "Edamame Spicy",
+    "Total Kcal": 135,
+    "Karbo": 11,
+    "Protein": 10,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2284",
+    "Nama Snek": "Edamame Sea Salt",
+    "Total Kcal": 125,
+    "Karbo": 9,
+    "Protein": 11,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2285",
+    "Nama Snek": "Chawanmushi",
+    "Total Kcal": 90,
+    "Karbo": 3,
+    "Protein": 7,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2286",
+    "Nama Snek": "Chawanmushi Chicken",
+    "Total Kcal": 110,
+    "Karbo": 4,
+    "Protein": 9,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2287",
+    "Nama Snek": "Chawanmushi Seafood",
+    "Total Kcal": 120,
+    "Karbo": 4,
+    "Protein": 10,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2288",
+    "Nama Snek": "Onigiri Tuna Mayo",
+    "Total Kcal": 190,
+    "Karbo": 28,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2289",
+    "Nama Snek": "Onigiri Salmon",
+    "Total Kcal": 180,
+    "Karbo": 27,
+    "Protein": 8,
+    "Lemak": 4
+  },
+  {
+    "Snek ID": "SNK2290",
+    "Nama Snek": "Onigiri Chicken Teriyaki",
+    "Total Kcal": 200,
+    "Karbo": 29,
+    "Protein": 7,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2291",
+    "Nama Snek": "Onigiri Tuna Spicy",
+    "Total Kcal": 190,
+    "Karbo": 28,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2292",
+    "Nama Snek": "Onigiri Egg Mayo",
+    "Total Kcal": 180,
+    "Karbo": 27,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2293",
+    "Nama Snek": "Onigiri Seaweed",
+    "Total Kcal": 160,
+    "Karbo": 28,
+    "Protein": 4,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2294",
+    "Nama Snek": "Onigiri Ume",
+    "Total Kcal": 150,
+    "Karbo": 29,
+    "Protein": 3,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2295",
+    "Nama Snek": "Onigiri Beef",
+    "Total Kcal": 210,
+    "Karbo": 28,
+    "Protein": 9,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2296",
+    "Nama Snek": "Onigiri Karaage",
+    "Total Kcal": 220,
+    "Karbo": 27,
+    "Protein": 10,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2297",
+    "Nama Snek": "Onigiri Cheese",
+    "Total Kcal": 200,
+    "Karbo": 27,
+    "Protein": 7,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2298",
+    "Nama Snek": "Onigiri Unagi",
+    "Total Kcal": 220,
+    "Karbo": 28,
+    "Protein": 9,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2299",
+    "Nama Snek": "Onigiri Salmon Mayo",
+    "Total Kcal": 210,
+    "Karbo": 27,
+    "Protein": 8,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2300",
+    "Nama Snek": "Onigiri Chicken Mayo",
+    "Total Kcal": 205,
+    "Karbo": 28,
+    "Protein": 8,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2301",
+    "Nama Snek": "Sushi Salmon 2pcs",
+    "Total Kcal": 100,
+    "Karbo": 15,
+    "Protein": 6,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2302",
+    "Nama Snek": "Sushi Tuna 2pcs",
+    "Total Kcal": 105,
+    "Karbo": 15,
+    "Protein": 7,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2303",
+    "Nama Snek": "Sushi Egg 2pcs",
+    "Total Kcal": 90,
+    "Karbo": 15,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2304",
+    "Nama Snek": "Sushi Ebi 2pcs",
+    "Total Kcal": 95,
+    "Karbo": 15,
+    "Protein": 6,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2305",
+    "Nama Snek": "Sushi Crab Stick 2pcs",
+    "Total Kcal": 100,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2306",
+    "Nama Snek": "Sushi Inari 2pcs",
+    "Total Kcal": 150,
+    "Karbo": 27,
+    "Protein": 4,
+    "Lemak": 4
+  },
+  {
+    "Snek ID": "SNK2307",
+    "Nama Snek": "Sushi Avocado 2pcs",
+    "Total Kcal": 130,
+    "Karbo": 18,
+    "Protein": 3,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2308",
+    "Nama Snek": "Sushi Cucumber 2pcs",
+    "Total Kcal": 80,
+    "Karbo": 15,
+    "Protein": 2,
+    "Lemak": 1
+  },
+  {
+    "Snek ID": "SNK2309",
+    "Nama Snek": "Sushi Tamago 2pcs",
+    "Total Kcal": 100,
+    "Karbo": 16,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Snek ID": "SNK2310",
+    "Nama Snek": "Sushi Unagi 2pcs",
+    "Total Kcal": 140,
+    "Karbo": 16,
+    "Protein": 7,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2311",
+    "Nama Snek": "Sushi Spicy Tuna 2pcs",
+    "Total Kcal": 120,
+    "Karbo": 15,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2312",
+    "Nama Snek": "Sushi Spicy Salmon 2pcs",
+    "Total Kcal": 125,
+    "Karbo": 15,
+    "Protein": 6,
+    "Lemak": 5
+  },
+  {
+    "Snek ID": "SNK2313",
+    "Nama Snek": "California Roll 6pcs",
+    "Total Kcal": 250,
+    "Karbo": 34,
+    "Protein": 9,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2314",
+    "Nama Snek": "California Roll 8pcs",
+    "Total Kcal": 330,
+    "Karbo": 45,
+    "Protein": 12,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2315",
+    "Nama Snek": "Salmon Roll 6pcs",
+    "Total Kcal": 240,
+    "Karbo": 30,
+    "Protein": 13,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2316",
+    "Nama Snek": "Tuna Roll 6pcs",
+    "Total Kcal": 230,
+    "Karbo": 30,
+    "Protein": 14,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2317",
+    "Nama Snek": "Chicken Teriyaki Roll 6pcs",
+    "Total Kcal": 270,
+    "Karbo": 35,
+    "Protein": 13,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2318",
+    "Nama Snek": "Tempura Roll 6pcs",
+    "Total Kcal": 300,
+    "Karbo": 35,
+    "Protein": 10,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2319",
+    "Nama Snek": "Spicy Salmon Roll 6pcs",
+    "Total Kcal": 260,
+    "Karbo": 31,
+    "Protein": 12,
+    "Lemak": 10
+  },
+  {
+    "Snek ID": "SNK2320",
+    "Nama Snek": "Spicy Tuna Roll 6pcs",
+    "Total Kcal": 255,
+    "Karbo": 31,
+    "Protein": 13,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2321",
+    "Nama Snek": "Dragon Roll 8pcs",
+    "Total Kcal": 380,
+    "Karbo": 45,
+    "Protein": 14,
+    "Lemak": 16
+  },
+  {
+    "Snek ID": "SNK2322",
+    "Nama Snek": "Rainbow Roll 8pcs",
+    "Total Kcal": 360,
+    "Karbo": 43,
+    "Protein": 17,
+    "Lemak": 13
+  },
+  {
+    "Snek ID": "SNK2323",
+    "Nama Snek": "Philadelphia Roll 6pcs",
+    "Total Kcal": 320,
+    "Karbo": 32,
+    "Protein": 13,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2324",
+    "Nama Snek": "Avocado Roll 6pcs",
+    "Total Kcal": 220,
+    "Karbo": 35,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2325",
+    "Nama Snek": "Cucumber Roll 6pcs",
+    "Total Kcal": 180,
+    "Karbo": 34,
+    "Protein": 3,
+    "Lemak": 3
+  },
+  {
+    "Snek ID": "SNK2326",
+    "Nama Snek": "Ebi Tempura Roll 6pcs",
+    "Total Kcal": 300,
+    "Karbo": 36,
+    "Protein": 11,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2327",
+    "Nama Snek": "Chicken Katsu Roll 6pcs",
+    "Total Kcal": 310,
+    "Karbo": 36,
+    "Protein": 13,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2328",
+    "Nama Snek": "Beef Teriyaki Roll 6pcs",
+    "Total Kcal": 300,
+    "Karbo": 34,
+    "Protein": 14,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2329",
+    "Nama Snek": "Salmon Aburi Roll 6pcs",
+    "Total Kcal": 290,
+    "Karbo": 31,
+    "Protein": 14,
+    "Lemak": 13
+  },
+  {
+    "Snek ID": "SNK2330",
+    "Nama Snek": "Tuna Aburi Roll 6pcs",
+    "Total Kcal": 285,
+    "Karbo": 31,
+    "Protein": 15,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2331",
+    "Nama Snek": "Kimbap Original",
+    "Total Kcal": 300,
+    "Karbo": 43,
+    "Protein": 10,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2332",
+    "Nama Snek": "Kimbap Tuna",
+    "Total Kcal": 330,
+    "Karbo": 43,
+    "Protein": 13,
+    "Lemak": 11
+  },
+  {
+    "Snek ID": "SNK2333",
+    "Nama Snek": "Kimbap Chicken",
+    "Total Kcal": 320,
+    "Karbo": 44,
+    "Protein": 14,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2334",
+    "Nama Snek": "Kimbap Beef",
+    "Total Kcal": 340,
+    "Karbo": 43,
+    "Protein": 15,
+    "Lemak": 12
+  },
+  {
+    "Snek ID": "SNK2335",
+    "Nama Snek": "Kimbap Cheese",
+    "Total Kcal": 350,
+    "Karbo": 43,
+    "Protein": 13,
+    "Lemak": 14
+  },
+  {
+    "Snek ID": "SNK2336",
+    "Nama Snek": "Kimbap Egg",
+    "Total Kcal": 310,
+    "Karbo": 43,
+    "Protein": 11,
+    "Lemak": 10
+  },
+  {
+    "Snek ID": "SNK2337",
+    "Nama Snek": "Kimbap Vegetable",
+    "Total Kcal": 270,
+    "Karbo": 45,
+    "Protein": 7,
+    "Lemak": 7
+  },
+  {
+    "Snek ID": "SNK2338",
+    "Nama Snek": "Kimbap Spam",
+    "Total Kcal": 360,
+    "Karbo": 43,
+    "Protein": 13,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2339",
+    "Nama Snek": "Kimbap Kimchi",
+    "Total Kcal": 290,
+    "Karbo": 44,
+    "Protein": 8,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2340",
+    "Nama Snek": "Kimbap Bulgogi",
+    "Total Kcal": 350,
+    "Karbo": 42,
+    "Protein": 16,
+    "Lemak": 13
+  },
+  {
+    "Snek ID": "SNK2341",
+    "Nama Snek": "Mandu Steamed",
+    "Total Kcal": 180,
+    "Karbo": 20,
+    "Protein": 8,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2342",
+    "Nama Snek": "Mandu Fried",
+    "Total Kcal": 240,
+    "Karbo": 21,
+    "Protein": 8,
+    "Lemak": 13
+  },
+  {
+    "Snek ID": "SNK2343",
+    "Nama Snek": "Mandu Chicken",
+    "Total Kcal": 190,
+    "Karbo": 20,
+    "Protein": 9,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2344",
+    "Nama Snek": "Mandu Beef",
+    "Total Kcal": 200,
+    "Karbo": 19,
+    "Protein": 9,
+    "Lemak": 9
+  },
+  {
+    "Snek ID": "SNK2345",
+    "Nama Snek": "Mandu Kimchi",
+    "Total Kcal": 185,
+    "Karbo": 21,
+    "Protein": 7,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2346",
+    "Nama Snek": "Mandu Vegetable",
+    "Total Kcal": 170,
+    "Karbo": 23,
+    "Protein": 6,
+    "Lemak": 6
+  },
+  {
+    "Snek ID": "SNK2347",
+    "Nama Snek": "Mini Mandu 5pcs",
+    "Total Kcal": 210,
+    "Karbo": 23,
+    "Protein": 8,
+    "Lemak": 10
+  },
+  {
+    "Snek ID": "SNK2348",
+    "Nama Snek": "Mini Mandu Fried 5pcs",
+    "Total Kcal": 280,
+    "Karbo": 25,
+    "Protein": 9,
+    "Lemak": 15
+  },
+  {
+    "Snek ID": "SNK2349",
+    "Nama Snek": "Kimchi Pancake Mini",
+    "Total Kcal": 170,
+    "Karbo": 19,
+    "Protein": 4,
+    "Lemak": 8
+  },
+  {
+    "Snek ID": "SNK2350",
+    "Nama Snek": "Korean Sweet Pancake Hotteok",
+    "Total Kcal": 230,
+    "Karbo": 34,
+    "Protein": 4,
+    "Lemak": 8
   }
 ]
