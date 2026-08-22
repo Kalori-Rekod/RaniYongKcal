@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <input type="text" id="searchBar" class="search-box" placeholder="Taip nama makanan di sini...">
+    <input type="text" id="searchBar" class="search-box" placeholder="Taip nama makanan...">
 
     <div id="loadingStatus" class="loading">Memuatkan data makanan...</div>
     <ul id="makananList" class="makanan-list"></ul>
@@ -116,7 +116,7 @@
                 const li = document.createElement("li");
                 li.className = "makanan-item";
                 
-                const namamakanan = makanan["Nama Makanan"] || "Tiada Nama";
+                const namaMakanan = makanan["Nama Makanan"] || "Tiada Nama";
                 const totalKcal = makanan["Total Kcal"] || 0;
                 const karbo = makanan["Karbo"] || 0;
                 const protein = makanan["Protein"] || 0;
