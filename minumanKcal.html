@@ -32,13 +32,13 @@
         .btn-clear:hover { background-color: #cb2431; }
         
         /* SENARAI MINUMAN UTAMA */
-        .minumam-list { list-style: none; padding: 0; margin: 0; }
-        .minumam-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer; transition: 0.2s; display: flex; justify-content: space-between; align-items: center; }
-        .minumam-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .minumam-info { display: flex; flex-direction: column; }
-        .minumam-name { font-weight: bold; font-size: 16px; }
-        .minumam-macro { font-size: 13px; color: #586069; margin-top: 4px; }
-        .minumam-kcal { font-weight: bold; color: #2ea44f; font-size: 16px; }
+        .minuman-list { list-style: none; padding: 0; margin: 0; }
+        .minuman-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); cursor: pointer; transition: 0.2s; display: flex; justify-content: space-between; align-items: center; }
+        .minuman-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .minuman-info { display: flex; flex-direction: column; }
+        .minuman-name { font-weight: bold; font-size: 16px; }
+        .minuman-macro { font-size: 13px; color: #586069; margin-top: 4px; }
+        .minuman-kcal { font-weight: bold; color: #2ea44f; font-size: 16px; }
         .loading { text-align: center; color: #666; font-style: italic; }
     </style>
 </head>
@@ -79,13 +79,13 @@
         </div>
     </div>
 
-    <input type="text" id="searchBar" class="search-box" placeholder="Taip nama minumam di sini...">
+    <input type="text" id="searchBar" class="search-box" placeholder="Taip nama minuman...">
 
-    <div id="loadingStatus" class="loading">Memuatkan data minumam...</div>
-    <ul id="minumamList" class="minumam-list"></ul>
+    <div id="loadingStatus" class="loading">Memuatkan data minuman...</div>
+    <ul id="minumanList" class="minuman-list"></ul>
 
     <script>
-        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Kalori-Rekod/RaniYongKcal/refs/heads/main/JSON/minumam_logs.json";
+        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/Kalori-Rekod/RaniYongKcal/refs/heads/main/JSON/minuman_logs.json";
 
         let semuaMinuman = [];       
         let pilihanMinumanUser = []; 
@@ -104,7 +104,7 @@
         }
 
         function paparkanSenarai(senarai) {
-            const container = document.getElementById("minumamList");
+            const container = document.getElementById("minumanList");
             container.innerHTML = "";
 
             if (senarai.length === 0) {
@@ -112,31 +112,31 @@
                 return;
             }
 
-            senarai.forEach(minumam => {
+            senarai.forEach(minuman => {
                 const li = document.createElement("li");
-                li.className = "minumam-item";
+                li.className = "minuman-item";
                 
-                const namaminumam = minumam["Nama Minuman"] || "Tiada Nama";
-                const totalKcal = minumam["Total Kcal"] || 0;
-                const karbo = minumam["Karbo"] || 0;
-                const protein = minumam["Protein"] || 0;
-                const lemak = minumam["Lemak"] || 0;
+                const namaMinuman = minuman["Nama Minuman"] || "Tiada Nama";
+                const totalKcal = minuman["Total Kcal"] || 0;
+                const karbo = minuman["Karbo"] || 0;
+                const protein = minuman["Protein"] || 0;
+                const lemak = minuman["Lemak"] || 0;
 
                 li.innerHTML = `
-                    <div class="minumam-info">
-                        <span class="minumam-name">${namaMinuman}</span>
-                        <span class="minumam-macro">C: ${karbo}g | P: ${protein}g | L: ${lemak}g</span>
+                    <div class="minuman-info">
+                        <span class="minuman-name">${namaMinuman}</span>
+                        <span class="minuman-macro">C: ${karbo}g | P: ${protein}g | L: ${lemak}g</span>
                     </div>
-                    <div class="minumam-kcal">${totalKcal} Kcal</div>
+                    <div class="minuman-kcal">${totalKcal} Kcal</div>
                 `;
                 
-                li.onclick = () => pilihMinuman(minumam);
+                li.onclick = () => pilihMinuman(minuman);
                 container.appendChild(li);
             });
         }
 
-        function pilihMinuman(minumam) {
-            pilihanMinumanUser.push(minumam);
+        function pilihMinuman(minuman) {
+            pilihanMinumanUser.push(minuman);
             kemasKiniPaparanSummary();
         }
 
@@ -154,12 +154,12 @@
             let totalProtein = 0;
             let totalLemak = 0;
 
-            pilihanMinumanUser.forEach((minumam, index) => {
-                const namaMinuman = minumam["Nama Minuman"] || "Tiada Nama";
-                const kcal = Number(minumam["Total Kcal"]) || 0;
-                const karbo = Number(minumam["Karbo"]) || 0;
-                const protein = Number(minumam["Protein"]) || 0;
-                const lemak = Number(minumam["Lemak"]) || 0;
+            pilihanMinumanUser.forEach((minuman, index) => {
+                const namaMinuman = minuman["Nama Minuman"] || "Tiada Nama";
+                const kcal = Number(minuman["Total Kcal"]) || 0;
+                const karbo = Number(minuman["Karbo"]) || 0;
+                const protein = Number(minuman["Protein"]) || 0;
+                const lemak = Number(minuman["Lemak"]) || 0;
 
                 totalKcal += kcal;
                 totalKarbo += karbo;
@@ -185,7 +185,7 @@
         function copyTotalKcal() {
             const totalKcalText = document.getElementById("totalKcal").innerText;
             if (pilihanMinumanUser.length === 0) {
-                alert("Sila pilih minumam terlebih dahulu!");
+                alert("Sila pilih minuman terlebih dahulu!");
                 return;
             }
             navigator.clipboard.writeText(totalKcalText + " Kcal").then(() => {
@@ -204,8 +204,8 @@
         const searchBar = document.getElementById("searchBar");
         searchBar.addEventListener("input", (e) => {
             const carianUser = e.target.value.toLowerCase().trim();
-            const hasilTapis = semuaMinuman.filter(minumam => {
-                const nama = (minumam["Nama Minuman"] || "").toLowerCase();
+            const hasilTapis = semuaMinuman.filter(minuman => {
+                const nama = (minuman["Nama Minuman"] || "").toLowerCase();
                 return nama.includes(carianUser);
             });
             paparkanSenarai(hasilTapis);
