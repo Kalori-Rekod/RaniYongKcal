@@ -1,0 +1,1610 @@
+[
+  {
+    "Makanan ID": "Makanan ID",
+    "Nama Makanan": "Nama Makanan",
+    "Total Kcal": "Total Kcal",
+    "Karbo": "Karbo",
+    "Protein": "Protein",
+    "Lemak": "Lemak"
+  },
+  {
+    "Makanan ID": "MKN0001",
+    "Nama Makanan": "Nasi Putih",
+    "Total Kcal": 204,
+    "Karbo": 44.5,
+    "Protein": 4.2,
+    "Lemak": 0.4
+  },
+  {
+    "Makanan ID": "MKN0002",
+    "Nama Makanan": "Nasi Beriani",
+    "Total Kcal": 250,
+    "Karbo": 48,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0003",
+    "Nama Makanan": "Nasi Minyak",
+    "Total Kcal": 260,
+    "Karbo": 45,
+    "Protein": 4.5,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0004",
+    "Nama Makanan": "Nasi Tomato",
+    "Total Kcal": 230,
+    "Karbo": 46,
+    "Protein": 4.5,
+    "Lemak": 3
+  },
+  {
+    "Makanan ID": "MKN0005",
+    "Nama Makanan": "Nasi Hujan Panas",
+    "Total Kcal": 245,
+    "Karbo": 47,
+    "Protein": 4.5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0006",
+    "Nama Makanan": "Nasi Lemak",
+    "Total Kcal": 350,
+    "Karbo": 40,
+    "Protein": 6,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0007",
+    "Nama Makanan": "Nasi Kerabu",
+    "Total Kcal": 220,
+    "Karbo": 42,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Makanan ID": "MKN0008",
+    "Nama Makanan": "Nasi Dagang",
+    "Total Kcal": 280,
+    "Karbo": 48,
+    "Protein": 5,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0009",
+    "Nama Makanan": "Nasi Kuning",
+    "Total Kcal": 230,
+    "Karbo": 44,
+    "Protein": 4.5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0010",
+    "Nama Makanan": "Nasi Uduk",
+    "Total Kcal": 260,
+    "Karbo": 43,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0011",
+    "Nama Makanan": "Ayam Goreng",
+    "Total Kcal": 260,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0012",
+    "Nama Makanan": "Ayam Goreng Berempah",
+    "Total Kcal": 280,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0013",
+    "Nama Makanan": "Ayam Goreng Kunyit",
+    "Total Kcal": 270,
+    "Karbo": 7,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0014",
+    "Nama Makanan": "Ayam Bakar",
+    "Total Kcal": 210,
+    "Karbo": 3,
+    "Protein": 28,
+    "Lemak": 10
+  },
+  {
+    "Makanan ID": "MKN0015",
+    "Nama Makanan": "Ayam Panggang",
+    "Total Kcal": 205,
+    "Karbo": 2,
+    "Protein": 29,
+    "Lemak": 9
+  },
+  {
+    "Makanan ID": "MKN0016",
+    "Nama Makanan": "Ayam Kukus",
+    "Total Kcal": 190,
+    "Karbo": 1,
+    "Protein": 29,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0017",
+    "Nama Makanan": "Sup Ayam",
+    "Total Kcal": 120,
+    "Karbo": 5,
+    "Protein": 17,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0018",
+    "Nama Makanan": "Sup Daging",
+    "Total Kcal": 150,
+    "Karbo": 5,
+    "Protein": 18,
+    "Lemak": 6
+  },
+  {
+    "Makanan ID": "MKN0019",
+    "Nama Makanan": "Sup Kambing",
+    "Total Kcal": 200,
+    "Karbo": 5,
+    "Protein": 18,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0020",
+    "Nama Makanan": "Kangkung Belacan",
+    "Total Kcal": 130,
+    "Karbo": 8,
+    "Protein": 4,
+    "Lemak": 9
+  },
+  {
+    "Makanan ID": "MKN0021",
+    "Nama Makanan": "Nasi Perang",
+    "Total Kcal": 215,
+    "Karbo": 45,
+    "Protein": 5,
+    "Lemak": 1.5
+  },
+  {
+    "Makanan ID": "MKN0022",
+    "Nama Makanan": "Nasi Pulut",
+    "Total Kcal": 180,
+    "Karbo": 39,
+    "Protein": 3.5,
+    "Lemak": 0.5
+  },
+  {
+    "Makanan ID": "MKN0023",
+    "Nama Makanan": "Nasi Pulut Kuning",
+    "Total Kcal": 190,
+    "Karbo": 40,
+    "Protein": 3.5,
+    "Lemak": 1
+  },
+  {
+    "Makanan ID": "MKN0024",
+    "Nama Makanan": "Nasi Pulut Hitam",
+    "Total Kcal": 210,
+    "Karbo": 43,
+    "Protein": 4,
+    "Lemak": 1.5
+  },
+  {
+    "Makanan ID": "MKN0025",
+    "Nama Makanan": "Nasi Jagung",
+    "Total Kcal": 210,
+    "Karbo": 43,
+    "Protein": 5,
+    "Lemak": 2
+  },
+  {
+    "Makanan ID": "MKN0026",
+    "Nama Makanan": "Nasi Briyani Basmathi",
+    "Total Kcal": 250,
+    "Karbo": 47,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0027",
+    "Nama Makanan": "Nasi Arab",
+    "Total Kcal": 240,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0028",
+    "Nama Makanan": "Nasi Mandi",
+    "Total Kcal": 245,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0029",
+    "Nama Makanan": "Nasi Kabsa",
+    "Total Kcal": 245,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0030",
+    "Nama Makanan": "Nasi Bukhari",
+    "Total Kcal": 250,
+    "Karbo": 47,
+    "Protein": 5,
+    "Lemak": 4.5
+  },
+  {
+    "Makanan ID": "MKN0031",
+    "Nama Makanan": "Nasi Jepun",
+    "Total Kcal": 200,
+    "Karbo": 44,
+    "Protein": 4,
+    "Lemak": 0.5
+  },
+  {
+    "Makanan ID": "MKN0032",
+    "Nama Makanan": "Nasi Sushi",
+    "Total Kcal": 210,
+    "Karbo": 45,
+    "Protein": 4,
+    "Lemak": 0.5
+  },
+  {
+    "Makanan ID": "MKN0033",
+    "Nama Makanan": "Nasi Pulut Santan",
+    "Total Kcal": 230,
+    "Karbo": 39,
+    "Protein": 4,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0034",
+    "Nama Makanan": "Nasi Lemak Pandan",
+    "Total Kcal": 360,
+    "Karbo": 41,
+    "Protein": 6,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0035",
+    "Nama Makanan": "Nasi Lemak Daun Pisang",
+    "Total Kcal": 350,
+    "Karbo": 40,
+    "Protein": 6,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0036",
+    "Nama Makanan": "Nasi Lemak Kukus",
+    "Total Kcal": 340,
+    "Karbo": 40,
+    "Protein": 6,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0037",
+    "Nama Makanan": "Nasi Minyak Beriani",
+    "Total Kcal": 270,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0038",
+    "Nama Makanan": "Nasi Tomato Berempah",
+    "Total Kcal": 240,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0039",
+    "Nama Makanan": "Nasi Herba",
+    "Total Kcal": 225,
+    "Karbo": 45,
+    "Protein": 5,
+    "Lemak": 3
+  },
+  {
+    "Makanan ID": "MKN0040",
+    "Nama Makanan": "Nasi Bawang",
+    "Total Kcal": 240,
+    "Karbo": 46,
+    "Protein": 5,
+    "Lemak": 4
+  },
+  {
+    "Makanan ID": "MKN0041",
+    "Nama Makanan": "Nasi Goreng Telur",
+    "Total Kcal": 380,
+    "Karbo": 49,
+    "Protein": 12,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0042",
+    "Nama Makanan": "Nasi Goreng Ikan Bilis",
+    "Total Kcal": 370,
+    "Karbo": 47,
+    "Protein": 12,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0043",
+    "Nama Makanan": "Nasi Goreng Udang",
+    "Total Kcal": 390,
+    "Karbo": 48,
+    "Protein": 17,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0044",
+    "Nama Makanan": "Nasi Goreng Sotong",
+    "Total Kcal": 390,
+    "Karbo": 48,
+    "Protein": 16,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0045",
+    "Nama Makanan": "Nasi Goreng Kerang",
+    "Total Kcal": 390,
+    "Karbo": 48,
+    "Protein": 15,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0046",
+    "Nama Makanan": "Nasi Goreng Ketam",
+    "Total Kcal": 390,
+    "Karbo": 48,
+    "Protein": 16,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0047",
+    "Nama Makanan": "Nasi Goreng Kambing",
+    "Total Kcal": 450,
+    "Karbo": 48,
+    "Protein": 20,
+    "Lemak": 21
+  },
+  {
+    "Makanan ID": "MKN0048",
+    "Nama Makanan": "Nasi Goreng Daging Merah",
+    "Total Kcal": 410,
+    "Karbo": 49,
+    "Protein": 17,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0049",
+    "Nama Makanan": "Nasi Goreng Cili Padi",
+    "Total Kcal": 360,
+    "Karbo": 48,
+    "Protein": 10,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0050",
+    "Nama Makanan": "Nasi Goreng Sambal Hijau",
+    "Total Kcal": 370,
+    "Karbo": 48,
+    "Protein": 9,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0051",
+    "Nama Makanan": "Nasi Goreng Belacan",
+    "Total Kcal": 350,
+    "Karbo": 48,
+    "Protein": 8,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0052",
+    "Nama Makanan": "Nasi Goreng Ikan Masin",
+    "Total Kcal": 370,
+    "Karbo": 47,
+    "Protein": 10,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0053",
+    "Nama Makanan": "Nasi Goreng Petai",
+    "Total Kcal": 370,
+    "Karbo": 49,
+    "Protein": 9,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0054",
+    "Nama Makanan": "Nasi Goreng Cendawan",
+    "Total Kcal": 340,
+    "Karbo": 50,
+    "Protein": 9,
+    "Lemak": 11
+  },
+  {
+    "Makanan ID": "MKN0055",
+    "Nama Makanan": "Nasi Goreng Sayur",
+    "Total Kcal": 330,
+    "Karbo": 52,
+    "Protein": 8,
+    "Lemak": 11
+  },
+  {
+    "Makanan ID": "MKN0056",
+    "Nama Makanan": "Nasi Goreng Nanas",
+    "Total Kcal": 370,
+    "Karbo": 55,
+    "Protein": 8,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0057",
+    "Nama Makanan": "Nasi Goreng Thai",
+    "Total Kcal": 360,
+    "Karbo": 50,
+    "Protein": 10,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0058",
+    "Nama Makanan": "Nasi Goreng Tomyam",
+    "Total Kcal": 380,
+    "Karbo": 49,
+    "Protein": 15,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0059",
+    "Nama Makanan": "Nasi Goreng Paprik",
+    "Total Kcal": 400,
+    "Karbo": 49,
+    "Protein": 17,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0060",
+    "Nama Makanan": "Nasi Goreng Cina Special",
+    "Total Kcal": 410,
+    "Karbo": 50,
+    "Protein": 17,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0061",
+    "Nama Makanan": "Ayam Goreng",
+    "Total Kcal": 260,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0062",
+    "Nama Makanan": "Ayam Goreng Berempah",
+    "Total Kcal": 280,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0063",
+    "Nama Makanan": "Ayam Goreng Kunyit",
+    "Total Kcal": 270,
+    "Karbo": 7,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0064",
+    "Nama Makanan": "Ayam Goreng Tepung",
+    "Total Kcal": 290,
+    "Karbo": 13,
+    "Protein": 25,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0065",
+    "Nama Makanan": "Ayam Goreng Crispy",
+    "Total Kcal": 300,
+    "Karbo": 12,
+    "Protein": 25,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0066",
+    "Nama Makanan": "Ayam Goreng Korea",
+    "Total Kcal": 310,
+    "Karbo": 18,
+    "Protein": 25,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0067",
+    "Nama Makanan": "Ayam Goreng Sambal",
+    "Total Kcal": 290,
+    "Karbo": 10,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0068",
+    "Nama Makanan": "Ayam Goreng Serai",
+    "Total Kcal": 275,
+    "Karbo": 7,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0069",
+    "Nama Makanan": "Ayam Goreng Halia",
+    "Total Kcal": 270,
+    "Karbo": 7,
+    "Protein": 26,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0070",
+    "Nama Makanan": "Ayam Goreng Bawang",
+    "Total Kcal": 280,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0071",
+    "Nama Makanan": "Ayam Bakar",
+    "Total Kcal": 210,
+    "Karbo": 3,
+    "Protein": 28,
+    "Lemak": 10
+  },
+  {
+    "Makanan ID": "MKN0072",
+    "Nama Makanan": "Ayam Panggang",
+    "Total Kcal": 205,
+    "Karbo": 2,
+    "Protein": 29,
+    "Lemak": 9
+  },
+  {
+    "Makanan ID": "MKN0073",
+    "Nama Makanan": "Ayam Kukus",
+    "Total Kcal": 190,
+    "Karbo": 1,
+    "Protein": 29,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0074",
+    "Nama Makanan": "Ayam Rebus",
+    "Total Kcal": 185,
+    "Karbo": 1,
+    "Protein": 28,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0075",
+    "Nama Makanan": "Ayam Percik",
+    "Total Kcal": 300,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0076",
+    "Nama Makanan": "Ayam Masak Merah",
+    "Total Kcal": 290,
+    "Karbo": 10,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0077",
+    "Nama Makanan": "Ayam Masak Kicap",
+    "Total Kcal": 270,
+    "Karbo": 9,
+    "Protein": 26,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0078",
+    "Nama Makanan": "Ayam Masak Lemak",
+    "Total Kcal": 320,
+    "Karbo": 6,
+    "Protein": 25,
+    "Lemak": 22
+  },
+  {
+    "Makanan ID": "MKN0079",
+    "Nama Makanan": "Ayam Rendang",
+    "Total Kcal": 310,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 20
+  },
+  {
+    "Makanan ID": "MKN0080",
+    "Nama Makanan": "Ayam Kari",
+    "Total Kcal": 290,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0081",
+    "Nama Makanan": "Ayam Kurma",
+    "Total Kcal": 300,
+    "Karbo": 10,
+    "Protein": 26,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0082",
+    "Nama Makanan": "Ayam Sambal",
+    "Total Kcal": 280,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0083",
+    "Nama Makanan": "Ayam Sambal Hijau",
+    "Total Kcal": 275,
+    "Karbo": 6,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0084",
+    "Nama Makanan": "Ayam Paprik",
+    "Total Kcal": 280,
+    "Karbo": 10,
+    "Protein": 25,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0085",
+    "Nama Makanan": "Ayam Halia",
+    "Total Kcal": 245,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 11
+  },
+  {
+    "Makanan ID": "MKN0086",
+    "Nama Makanan": "Ayam Black Pepper",
+    "Total Kcal": 270,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0087",
+    "Nama Makanan": "Ayam Kung Pao",
+    "Total Kcal": 310,
+    "Karbo": 13,
+    "Protein": 27,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0088",
+    "Nama Makanan": "Ayam Sweet Sour",
+    "Total Kcal": 300,
+    "Karbo": 18,
+    "Protein": 24,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0089",
+    "Nama Makanan": "Ayam Masam Manis",
+    "Total Kcal": 300,
+    "Karbo": 18,
+    "Protein": 24,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0090",
+    "Nama Makanan": "Ayam Thai Basil",
+    "Total Kcal": 280,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0091",
+    "Nama Makanan": "Ayam Teriyaki",
+    "Total Kcal": 270,
+    "Karbo": 12,
+    "Protein": 27,
+    "Lemak": 11
+  },
+  {
+    "Makanan ID": "MKN0092",
+    "Nama Makanan": "Ayam Katsu",
+    "Total Kcal": 320,
+    "Karbo": 16,
+    "Protein": 27,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0093",
+    "Nama Makanan": "Ayam Tandoori",
+    "Total Kcal": 220,
+    "Karbo": 4,
+    "Protein": 30,
+    "Lemak": 9
+  },
+  {
+    "Makanan ID": "MKN0094",
+    "Nama Makanan": "Ayam Tikka",
+    "Total Kcal": 230,
+    "Karbo": 5,
+    "Protein": 29,
+    "Lemak": 10
+  },
+  {
+    "Makanan ID": "MKN0095",
+    "Nama Makanan": "Ayam Butter",
+    "Total Kcal": 330,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 23
+  },
+  {
+    "Makanan ID": "MKN0096",
+    "Nama Makanan": "Butter Chicken",
+    "Total Kcal": 340,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 24
+  },
+  {
+    "Makanan ID": "MKN0097",
+    "Nama Makanan": "Chicken Tikka Masala",
+    "Total Kcal": 310,
+    "Karbo": 9,
+    "Protein": 27,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0098",
+    "Nama Makanan": "Chicken Korma",
+    "Total Kcal": 320,
+    "Karbo": 10,
+    "Protein": 26,
+    "Lemak": 21
+  },
+  {
+    "Makanan ID": "MKN0099",
+    "Nama Makanan": "Ayam Penyet",
+    "Total Kcal": 280,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0100",
+    "Nama Makanan": "Ayam Geprek",
+    "Total Kcal": 300,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0101",
+    "Nama Makanan": "Ayam Balado",
+    "Total Kcal": 280,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0102",
+    "Nama Makanan": "Ayam Rica-Rica",
+    "Total Kcal": 270,
+    "Karbo": 6,
+    "Protein": 27,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0103",
+    "Nama Makanan": "Ayam Woku",
+    "Total Kcal": 260,
+    "Karbo": 5,
+    "Protein": 28,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0104",
+    "Nama Makanan": "Ayam Betutu",
+    "Total Kcal": 280,
+    "Karbo": 6,
+    "Protein": 28,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0105",
+    "Nama Makanan": "Ayam Inasal",
+    "Total Kcal": 230,
+    "Karbo": 4,
+    "Protein": 29,
+    "Lemak": 10
+  },
+  {
+    "Makanan ID": "MKN0106",
+    "Nama Makanan": "Ayam Adobo",
+    "Total Kcal": 280,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0107",
+    "Nama Makanan": "Ayam Caldereta",
+    "Total Kcal": 300,
+    "Karbo": 10,
+    "Protein": 26,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0108",
+    "Nama Makanan": "Ayam Salted Egg",
+    "Total Kcal": 330,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 23
+  },
+  {
+    "Makanan ID": "MKN0109",
+    "Nama Makanan": "Ayam Buttermilk",
+    "Total Kcal": 320,
+    "Karbo": 12,
+    "Protein": 25,
+    "Lemak": 21
+  },
+  {
+    "Makanan ID": "MKN0110",
+    "Nama Makanan": "Ayam Kam Heong",
+    "Total Kcal": 300,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0111",
+    "Nama Makanan": "Ayam Cili Kering",
+    "Total Kcal": 290,
+    "Karbo": 9,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0112",
+    "Nama Makanan": "Ayam Mongolian",
+    "Total Kcal": 300,
+    "Karbo": 12,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0113",
+    "Nama Makanan": "Ayam Lemon",
+    "Total Kcal": 280,
+    "Karbo": 14,
+    "Protein": 25,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0114",
+    "Nama Makanan": "Ayam Orange",
+    "Total Kcal": 300,
+    "Karbo": 17,
+    "Protein": 25,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0115",
+    "Nama Makanan": "Ayam Kung Pao Kacang",
+    "Total Kcal": 320,
+    "Karbo": 13,
+    "Protein": 27,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0116",
+    "Nama Makanan": "Ayam Masak Halia Cina",
+    "Total Kcal": 250,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0117",
+    "Nama Makanan": "Ayam Taucu",
+    "Total Kcal": 260,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0118",
+    "Nama Makanan": "Ayam Sos Tiram",
+    "Total Kcal": 270,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0119",
+    "Nama Makanan": "Ayam Cili Hijau",
+    "Total Kcal": 275,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0120",
+    "Nama Makanan": "Ayam Cili Merah",
+    "Total Kcal": 275,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0121",
+    "Nama Makanan": "Daging Goreng",
+    "Total Kcal": 280,
+    "Karbo": 5,
+    "Protein": 25,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0122",
+    "Nama Makanan": "Daging Goreng Kunyit",
+    "Total Kcal": 290,
+    "Karbo": 6,
+    "Protein": 25,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0123",
+    "Nama Makanan": "Daging Masak Merah",
+    "Total Kcal": 300,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0124",
+    "Nama Makanan": "Daging Masak Kicap",
+    "Total Kcal": 290,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0125",
+    "Nama Makanan": "Daging Black Pepper",
+    "Total Kcal": 285,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0126",
+    "Nama Makanan": "Daging Halia",
+    "Total Kcal": 260,
+    "Karbo": 6,
+    "Protein": 27,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0127",
+    "Nama Makanan": "Daging Kari",
+    "Total Kcal": 300,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0128",
+    "Nama Makanan": "Daging Rendang",
+    "Total Kcal": 330,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 23
+  },
+  {
+    "Makanan ID": "MKN0129",
+    "Nama Makanan": "Daging Masak Hitam",
+    "Total Kcal": 320,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 22
+  },
+  {
+    "Makanan ID": "MKN0130",
+    "Nama Makanan": "Daging Masak Lemak",
+    "Total Kcal": 330,
+    "Karbo": 6,
+    "Protein": 25,
+    "Lemak": 24
+  },
+  {
+    "Makanan ID": "MKN0131",
+    "Nama Makanan": "Daging Sambal",
+    "Total Kcal": 290,
+    "Karbo": 7,
+    "Protein": 26,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0132",
+    "Nama Makanan": "Daging Sambal Hijau",
+    "Total Kcal": 285,
+    "Karbo": 6,
+    "Protein": 26,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0133",
+    "Nama Makanan": "Daging Bistik",
+    "Total Kcal": 300,
+    "Karbo": 12,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0134",
+    "Nama Makanan": "Daging Paprik",
+    "Total Kcal": 290,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0135",
+    "Nama Makanan": "Daging Teriyaki",
+    "Total Kcal": 285,
+    "Karbo": 10,
+    "Protein": 26,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0136",
+    "Nama Makanan": "Daging Bulgogi",
+    "Total Kcal": 310,
+    "Karbo": 12,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0137",
+    "Nama Makanan": "Daging Balado",
+    "Total Kcal": 295,
+    "Karbo": 7,
+    "Protein": 26,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0138",
+    "Nama Makanan": "Daging Sambal Petai",
+    "Total Kcal": 310,
+    "Karbo": 10,
+    "Protein": 25,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0139",
+    "Nama Makanan": "Daging Masak Cili",
+    "Total Kcal": 290,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0140",
+    "Nama Makanan": "Daging Masak Taucu",
+    "Total Kcal": 285,
+    "Karbo": 8,
+    "Protein": 26,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0141",
+    "Nama Makanan": "Kambing Goreng",
+    "Total Kcal": 300,
+    "Karbo": 3,
+    "Protein": 25,
+    "Lemak": 21
+  },
+  {
+    "Makanan ID": "MKN0142",
+    "Nama Makanan": "Kambing Kari",
+    "Total Kcal": 320,
+    "Karbo": 7,
+    "Protein": 25,
+    "Lemak": 22
+  },
+  {
+    "Makanan ID": "MKN0143",
+    "Nama Makanan": "Kambing Rendang",
+    "Total Kcal": 340,
+    "Karbo": 7,
+    "Protein": 26,
+    "Lemak": 24
+  },
+  {
+    "Makanan ID": "MKN0144",
+    "Nama Makanan": "Kambing Masak Hitam",
+    "Total Kcal": 330,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 23
+  },
+  {
+    "Makanan ID": "MKN0145",
+    "Nama Makanan": "Kambing Kurma",
+    "Total Kcal": 330,
+    "Karbo": 10,
+    "Protein": 25,
+    "Lemak": 22
+  },
+  {
+    "Makanan ID": "MKN0146",
+    "Nama Makanan": "Kambing Bakar",
+    "Total Kcal": 270,
+    "Karbo": 2,
+    "Protein": 28,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0147",
+    "Nama Makanan": "Kambing Panggang",
+    "Total Kcal": 260,
+    "Karbo": 2,
+    "Protein": 29,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0148",
+    "Nama Makanan": "Kambing Black Pepper",
+    "Total Kcal": 300,
+    "Karbo": 7,
+    "Protein": 28,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0149",
+    "Nama Makanan": "Kambing Masak Merah",
+    "Total Kcal": 310,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 21
+  },
+  {
+    "Makanan ID": "MKN0150",
+    "Nama Makanan": "Kambing Masak Lemak",
+    "Total Kcal": 340,
+    "Karbo": 6,
+    "Protein": 24,
+    "Lemak": 25
+  },
+  {
+    "Makanan ID": "MKN0151",
+    "Nama Makanan": "Ikan Goreng",
+    "Total Kcal": 230,
+    "Karbo": 4,
+    "Protein": 25,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0152",
+    "Nama Makanan": "Ikan Goreng Kunyit",
+    "Total Kcal": 240,
+    "Karbo": 5,
+    "Protein": 25,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0153",
+    "Nama Makanan": "Ikan Goreng Tepung",
+    "Total Kcal": 290,
+    "Karbo": 13,
+    "Protein": 24,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0154",
+    "Nama Makanan": "Ikan Bakar",
+    "Total Kcal": 190,
+    "Karbo": 2,
+    "Protein": 27,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0155",
+    "Nama Makanan": "Ikan Panggang",
+    "Total Kcal": 185,
+    "Karbo": 1,
+    "Protein": 27,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0156",
+    "Nama Makanan": "Ikan Kukus",
+    "Total Kcal": 170,
+    "Karbo": 1,
+    "Protein": 27,
+    "Lemak": 6
+  },
+  {
+    "Makanan ID": "MKN0157",
+    "Nama Makanan": "Ikan Rebus",
+    "Total Kcal": 165,
+    "Karbo": 1,
+    "Protein": 26,
+    "Lemak": 6
+  },
+  {
+    "Makanan ID": "MKN0158",
+    "Nama Makanan": "Ikan Sambal",
+    "Total Kcal": 250,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0159",
+    "Nama Makanan": "Ikan Masak Asam",
+    "Total Kcal": 210,
+    "Karbo": 6,
+    "Protein": 26,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0160",
+    "Nama Makanan": "Ikan Masak Lemak",
+    "Total Kcal": 280,
+    "Karbo": 6,
+    "Protein": 25,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0161",
+    "Nama Makanan": "Ikan Kari",
+    "Total Kcal": 270,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0162",
+    "Nama Makanan": "Ikan Masak Kicap",
+    "Total Kcal": 240,
+    "Karbo": 7,
+    "Protein": 26,
+    "Lemak": 12
+  },
+  {
+    "Makanan ID": "MKN0163",
+    "Nama Makanan": "Ikan Masak Merah",
+    "Total Kcal": 260,
+    "Karbo": 9,
+    "Protein": 25,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0164",
+    "Nama Makanan": "Ikan Sambal Hijau",
+    "Total Kcal": 240,
+    "Karbo": 5,
+    "Protein": 26,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0165",
+    "Nama Makanan": "Ikan Balado",
+    "Total Kcal": 250,
+    "Karbo": 7,
+    "Protein": 25,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0166",
+    "Nama Makanan": "Ikan Percik",
+    "Total Kcal": 270,
+    "Karbo": 6,
+    "Protein": 25,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0167",
+    "Nama Makanan": "Ikan Patin Masak Tempoyak",
+    "Total Kcal": 280,
+    "Karbo": 5,
+    "Protein": 24,
+    "Lemak": 19
+  },
+  {
+    "Makanan ID": "MKN0168",
+    "Nama Makanan": "Ikan Kembung Goreng",
+    "Total Kcal": 240,
+    "Karbo": 2,
+    "Protein": 26,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0169",
+    "Nama Makanan": "Ikan Kembung Bakar",
+    "Total Kcal": 190,
+    "Karbo": 1,
+    "Protein": 27,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0170",
+    "Nama Makanan": "Ikan Siakap Stim",
+    "Total Kcal": 190,
+    "Karbo": 4,
+    "Protein": 28,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0171",
+    "Nama Makanan": "Ikan Siakap 3 Rasa",
+    "Total Kcal": 300,
+    "Karbo": 16,
+    "Protein": 27,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0172",
+    "Nama Makanan": "Ikan Siakap Goreng",
+    "Total Kcal": 280,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0173",
+    "Nama Makanan": "Ikan Tenggiri Goreng",
+    "Total Kcal": 240,
+    "Karbo": 3,
+    "Protein": 27,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0174",
+    "Nama Makanan": "Ikan Tongkol Sambal",
+    "Total Kcal": 250,
+    "Karbo": 7,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0175",
+    "Nama Makanan": "Ikan Bilis Goreng",
+    "Total Kcal": 250,
+    "Karbo": 5,
+    "Protein": 27,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0176",
+    "Nama Makanan": "Ikan Masin Goreng",
+    "Total Kcal": 180,
+    "Karbo": 2,
+    "Protein": 25,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0177",
+    "Nama Makanan": "Ikan Cencaru Sumbat",
+    "Total Kcal": 250,
+    "Karbo": 5,
+    "Protein": 26,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0178",
+    "Nama Makanan": "Ikan Pari Bakar",
+    "Total Kcal": 200,
+    "Karbo": 2,
+    "Protein": 27,
+    "Lemak": 9
+  },
+  {
+    "Makanan ID": "MKN0179",
+    "Nama Makanan": "Ikan Salmon Panggang",
+    "Total Kcal": 280,
+    "Karbo": 1,
+    "Protein": 28,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0180",
+    "Nama Makanan": "Ikan Salmon Teriyaki",
+    "Total Kcal": 310,
+    "Karbo": 10,
+    "Protein": 27,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0181",
+    "Nama Makanan": "Ikan Talapia Goreng",
+    "Total Kcal": 245,
+    "Karbo": 3,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0182",
+    "Nama Makanan": "Ikan Talapia Bakar",
+    "Total Kcal": 195,
+    "Karbo": 2,
+    "Protein": 28,
+    "Lemak": 8
+  },
+  {
+    "Makanan ID": "MKN0183",
+    "Nama Makanan": "Ikan Talapia Sambal",
+    "Total Kcal": 260,
+    "Karbo": 8,
+    "Protein": 27,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0184",
+    "Nama Makanan": "Ikan Selar Goreng",
+    "Total Kcal": 230,
+    "Karbo": 3,
+    "Protein": 26,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0185",
+    "Nama Makanan": "Ikan Selar Bakar",
+    "Total Kcal": 185,
+    "Karbo": 1,
+    "Protein": 27,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0186",
+    "Nama Makanan": "Ikan Keli Goreng",
+    "Total Kcal": 260,
+    "Karbo": 4,
+    "Protein": 25,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0187",
+    "Nama Makanan": "Ikan Keli Sambal",
+    "Total Kcal": 280,
+    "Karbo": 8,
+    "Protein": 25,
+    "Lemak": 17
+  },
+  {
+    "Makanan ID": "MKN0188",
+    "Nama Makanan": "Ikan Keli Bakar",
+    "Total Kcal": 210,
+    "Karbo": 2,
+    "Protein": 26,
+    "Lemak": 10
+  },
+  {
+    "Makanan ID": "MKN0189",
+    "Nama Makanan": "Ikan Haruan Goreng",
+    "Total Kcal": 230,
+    "Karbo": 3,
+    "Protein": 28,
+    "Lemak": 11
+  },
+  {
+    "Makanan ID": "MKN0190",
+    "Nama Makanan": "Ikan Haruan Bakar",
+    "Total Kcal": 190,
+    "Karbo": 1,
+    "Protein": 29,
+    "Lemak": 7
+  },
+  {
+    "Makanan ID": "MKN0191",
+    "Nama Makanan": "Sotong Goreng",
+    "Total Kcal": 250,
+    "Karbo": 8,
+    "Protein": 24,
+    "Lemak": 14
+  },
+  {
+    "Makanan ID": "MKN0192",
+    "Nama Makanan": "Sotong Goreng Tepung",
+    "Total Kcal": 300,
+    "Karbo": 16,
+    "Protein": 23,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0193",
+    "Nama Makanan": "Sotong Sambal",
+    "Total Kcal": 260,
+    "Karbo": 9,
+    "Protein": 24,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0194",
+    "Nama Makanan": "Sotong Masak Hitam",
+    "Total Kcal": 270,
+    "Karbo": 8,
+    "Protein": 24,
+    "Lemak": 16
+  },
+  {
+    "Makanan ID": "MKN0195",
+    "Nama Makanan": "Sotong Kari",
+    "Total Kcal": 280,
+    "Karbo": 8,
+    "Protein": 24,
+    "Lemak": 18
+  },
+  {
+    "Makanan ID": "MKN0196",
+    "Nama Makanan": "Sotong Masak Lemak",
+    "Total Kcal": 300,
+    "Karbo": 6,
+    "Protein": 23,
+    "Lemak": 21
+  },
+  {
+    "Makanan ID": "MKN0197",
+    "Nama Makanan": "Sotong Masak Kicap",
+    "Total Kcal": 250,
+    "Karbo": 8,
+    "Protein": 24,
+    "Lemak": 13
+  },
+  {
+    "Makanan ID": "MKN0198",
+    "Nama Makanan": "Udang Goreng",
+    "Total Kcal": 220,
+    "Karbo": 5,
+    "Protein": 24,
+    "Lemak": 11
+  },
+  {
+    "Makanan ID": "MKN0199",
+    "Nama Makanan": "Udang Goreng Tepung",
+    "Total Kcal": 280,
+    "Karbo": 14,
+    "Protein": 22,
+    "Lemak": 15
+  },
+  {
+    "Makanan ID": "MKN0200",
+    "Nama Makanan": "Udang Sambal",
+    "Total Kcal": 240,
+    "Karbo": 8,
+    "Protein": 24,
+    "Lemak": 12
+  }
+]
