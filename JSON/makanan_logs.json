@@ -1,13 +1,5 @@
 [
   {
-    "Makanan ID": "Makanan ID",
-    "Nama Makanan": "Nama Makanan",
-    "Total Kcal": "Total Kcal",
-    "Karbo": "Karbo",
-    "Protein": "Protein",
-    "Lemak": "Lemak"
-  },
-  {
     "Makanan ID": "MKN0001",
     "Nama Makanan": "Nasi Putih",
     "Total Kcal": 204,
